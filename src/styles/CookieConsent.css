@@ -1,0 +1,64 @@
+.cookie-consent {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.3); /* Crystal glass effect with black tint */
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 14px; /* Adjusted for a more rounded look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Light shadow for better contrast */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px); /* Apply blur for glass effect */
+}
+
+.cookie-consent p {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem; /* Slightly smaller font size for better balance */
+}
+
+.cookie-consent-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.cookie-consent button {
+  background: transparent; /* Transparent background for buttons */
+  color: #fff;
+  border: 2px solid; /* Gradient border */
+  background: linear-gradient(45deg, #7204ad, #3333ff); /* Gradient border on hover */
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 15px; /* Fully rounded corners for buttons */
+  margin-left: 10px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.cookie-consent button:hover {
+  background: linear-gradient(45deg, #ff00cc, #3333ff); /* Gradient border on hover */
+}
+
+@media (max-width: 768px) {
+  .cookie-consent {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;
+  }
+
+  .cookie-consent-buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    width: 100%;
+    align-items: stretch; /* Buttons fill the width */
+  }
+
+  .cookie-consent button {
+    margin-left: 0;
+    margin-bottom: 10px; /* Space between vertically stacked buttons */
+  }
+}
