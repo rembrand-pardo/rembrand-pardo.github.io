@@ -1,0 +1,63 @@
+nebula-tech-hub.github.io/
+├── .git/
+├── node_modules/
+├── public/
+│   ├── 404.html
+│   ├── structure.txt
+│   ├── index.html
+│   ├── manifest.json
+│   ├── robots.txt
+├── src/
+│   ├── assets/
+│   │   ├── filter_infographic.png
+│   │   ├── infographic.jpg
+│   │   ├── iphone_step1.jpg
+│   │   ├── iphone_step2.jpg
+│   │   ├── iphone_step3.jpg
+│   │   ├── iphone_step4.jpg
+│   │   ├── iphone_steps.jpg
+│   │   ├── like_infographic.png
+│   │   ├── list_infographic.png
+│   │   ├── message_infographic.png
+│   │   ├── nebula_logo.png
+│   │   ├── nebula-galaxy.png
+│   │   ├── nebula.ico
+│   │   ├── nebula.jpg
+│   │   ├── nebulaLogo.png
+│   │   ├── nebulaqrcode.png
+│   │   ├── search_infographic.png
+│   │   ├── small-nebula-galaxy.jpg
+│   ├── components/
+│   │   ├── AboutPage.js
+│   │   ├── ContactPage.js
+│   │   ├── CookieConsent.js
+│   │   ├── Footer.js
+│   │   ├── HomePage.js
+│   │   ├── HowToInstallPage.js
+│   │   ├── Navbar.js
+│   │   ├── NebulaBackground.js
+│   │   ├── NotFound.js
+│   │   ├── PolicyPage.js
+│   ├── styles/
+│   │   ├── AboutPage.css
+│   │   ├── App.css
+│   │   ├── ContactPage.css
+│   │   ├── CookieConsent.css
+│   │   ├── Footer.css
+│   │   ├── HomePage.css
+│   │   ├── HowToInstallPage.css
+│   │   ├── index.css
+│   │   ├── Navbar.css
+│   │   ├── NebulaBackground.css
+│   │   ├── PolicyPage.css
+│   ├── App.test.js
+│   ├── App.js
+│   ├── firebaseConfig.js
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── README.md
