@@ -65,7 +65,7 @@ const ContactPage = () => {
         message: formValues.message,
       };
 
-      emailjs.send('service_as2i5q9', 'template_cdvo85a', templateParams, 'r8cBQEI9j_RU5axeJ')
+      emailjs.send('service_2mq5ytk', 'template_hakpqus', templateParams, 'Aic1W4EbgDmAs8frO')
         .then((response) => {
           setFormState({
             successMessage: 'Thank you for contacting us. We will be in touch as soon as possible.',
