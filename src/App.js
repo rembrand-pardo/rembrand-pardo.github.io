@@ -44,6 +44,7 @@ function App() {
             src={process.env.PUBLIC_URL + '/intro.mp4'}
             autoPlay 
             muted 
+            playsInLine
             onEnded={handleVideoEnd}
             className="intro-video"
           >
