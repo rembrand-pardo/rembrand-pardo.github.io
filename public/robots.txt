@@ -3,4 +3,4 @@ User-agent: *
 Disallow: /admin/
 Disallow: /user-profile/
 Crawl-delay: 10
-Sitemap: https://nebula-tech-hub.github.io/
+Sitemap: https://rembrand-pardo.github.io/
