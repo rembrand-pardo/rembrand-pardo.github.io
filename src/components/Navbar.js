@@ -86,11 +86,11 @@ const Navbar = () => {
       <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
         <Link to="/install" className={isActive('/install') ? 'active' : ''} onClick={() => handleNavClick('How to Install')}>
           <MdInstallMobile className="icon" />
-          How to Install
+          Install
         </Link>
         <Link to="/terms" className={isActive('/terms') ? 'active' : ''} onClick={() => handleNavClick('Terms & Privacy Policy')}>
           <FaBook className="icon" />
-          Terms & Privacy Policy
+          Policy
         </Link>
         <Link to="/about" className={isActive('/about') ? 'active' : ''} onClick={() => handleNavClick('About')}>
           <FaInfoCircle className="icon" />
