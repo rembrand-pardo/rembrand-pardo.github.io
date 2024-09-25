@@ -48,6 +48,8 @@ function App() {
             onEnded={handleVideoEnd}
             className="intro-video"
           >
+            <source src={process.env.PUBLIC_URL + '/intro.mp4'} type="video/mp4" />
+            <source src={process.env.PUBLIC_URL + '/intro.webm'} type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </div>

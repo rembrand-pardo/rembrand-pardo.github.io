@@ -55,6 +55,7 @@
   color: white; /* Set the font color to white */
   margin-right: 20px; /* Add space between the links */
   text-decoration: none; /* Remove the underline */
+  font-size: 17px;
 }
 
 .navbar-menu a:hover {
