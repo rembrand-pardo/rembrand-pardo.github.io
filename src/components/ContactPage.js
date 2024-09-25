@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/ContactPage.css';
-import { FaLinkedin, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa';
 import { BsTwitterX } from "react-icons/bs";
 import { validateEmail, validateRequired } from '../utils/formValidations';
 
@@ -86,9 +86,9 @@ const ContactPage = () => {
       <NebulaBackground /> {/* */}
       
       <div className="contact-page">
-        <h1>Contact Us</h1>
+        <h1>Let's Connect</h1>
         <p>Have questions or inquiries?</p>
-        <p>Send us a message. We're here to help!</p>
+        <p>Send me a message. I am here to help!</p>
 
         {formState.successMessage && (
           <>
@@ -156,22 +156,19 @@ const ContactPage = () => {
           </form>
         )}
 
-        <p style={{ marginTop: '1.5rem' }}>Follow Nebula for more information and updates:</p>
+        <p style={{ marginTop: '1.5rem' }}>Discover more and get in touch though the following channels:</p>
         <div className="social-icons">
-          <a href="https://www.linkedin.com/company/nebula-software-technology/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/rembrandpardo/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
-          <a href="https://x.com/nebulatechspace" target="_blank" rel="noopener noreferrer">
-            <BsTwitterX />
+          <a href="https://github.com/Thebatman7" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
           </a>
-          <a href="https://www.tiktok.com/@nebula.software.company?_t=8oxBiAZJfAt&_r=1" target="_blank" rel="noopener noreferrer">
-            <FaTiktok />
-          </a>
-          <a href="https://www.facebook.com/share/4z39Hw2UkzYcWzyQ/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
-            <FaFacebook />
-          </a>
-          <a href="https://www.instagram.com/nebula.software.solutions?igsh=OHR3enJ5ZzRscmh0&utm_source=qr" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/rembrand.paul/" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
+          </a>
+          <a href="https://x.com/rembrandpardo" target="_blank" rel="noopener noreferrer">
+            <BsTwitterX />
           </a>
         </div>
       </div>

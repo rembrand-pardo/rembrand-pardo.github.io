@@ -6,6 +6,8 @@ nebula-tech-hub.github.io/
 │   ├── index.html
 │   ├── intro.mp4
 │   ├── manifest.json
+│   ├── Rembrand-logo.ico
+│   ├── Rembrand-logo.png
 │   ├── robots.txt
 │   ├── structure.txt
 ├── src/

@@ -32,7 +32,7 @@
 }
 
 .navbar-logo {
-  height: 40px;
+  height: 80px;
   /* Adjust the size as necessary */
 }
 
@@ -70,9 +70,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px; /* Set the width for the circle */
-  height: 50px; /* Set the height for the circle */
-  background-color: white; /* White background for the circle */
+  width: 65px; /* Set the width for the circle */
+  height: 65px; /* Set the height for the circle */
   border-radius: 50%; /* Make it a circle */
   overflow: hidden; /* Ensure the logo stays inside the circle */
 }
@@ -226,5 +225,14 @@
 
   .navbar-menu.open {
     max-height: 300px; /* Adjust this value based on your content */
+  }
+
+  .navbar-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px; /* Set the width for the circle */
+    height: 70px; /* Set the height for the circle */
+    overflow: hidden; /* Ensure the logo stays inside the circle */
   }
 }
