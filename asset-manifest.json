@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.cff89d9c.css",
-    "main.js": "/static/js/main.67f2a5a7.js",
+    "main.css": "/static/css/main.57c79c02.css",
+    "main.js": "/static/js/main.8c226082.js",
     "static/media/iphone_step1.jpg": "/static/media/iphone_step1.9e10a9875b24a704641c.jpg",
     "static/media/iphone_step2.jpg": "/static/media/iphone_step2.c321f57740220b1eb0e8.jpg",
     "static/media/infographic.jpg": "/static/media/infographic.1b225878a263823de4c1.jpg",
     "static/media/nebula_logo.png": "/static/media/nebula_logo.ca335f135d1274b9f247.png",
     "static/media/iphone_step4.jpg": "/static/media/iphone_step4.28d770b288791262b2cd.jpg",
     "static/media/iphone_step3.jpg": "/static/media/iphone_step3.1848c86843fc224949c3.jpg",
+    "static/media/r-logo.png": "/static/media/r-logo.d252c8711b273beca736.png",
     "static/media/message_infographic.png": "/static/media/message_infographic.662a438b94c72744b2d8.png",
     "static/media/filter_infographic.png": "/static/media/filter_infographic.68938e0a65bb5350bb12.png",
     "static/media/search_infographic.png": "/static/media/search_infographic.b74f479018f5ce104b9a.png",
@@ -18,11 +19,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.cff89d9c.css.map": "/static/css/main.cff89d9c.css.map",
-    "main.67f2a5a7.js.map": "/static/js/main.67f2a5a7.js.map"
+    "main.57c79c02.css.map": "/static/css/main.57c79c02.css.map",
+    "main.8c226082.js.map": "/static/js/main.8c226082.js.map"
   },
   "entrypoints": [
-    "static/css/main.cff89d9c.css",
-    "static/js/main.67f2a5a7.js"
+    "static/css/main.57c79c02.css",
+    "static/js/main.8c226082.js"
   ]
 }
