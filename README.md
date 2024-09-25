@@ -1,3 +1,12 @@
+## Project Overview
+
+`rembrand-pardo` is a modern website designed to showcase my software development skills, as well as my diverse professional experience. The site includes multiple pages, a responsive navigation bar, and fully customizable components, all built with cutting-edge web technologies.
+
+With an Associate's degree in Business Management and a Bachelor's degree in Computer Science (emphasizing software and business management), I bring a unique blend of technical and managerial expertise. My experience spans roles such as Software Engineer, Project Manager, Product Manager, Business Manager, Quality Assurance Engineer, and Business Administrator.
+
+This website highlights my skills in both software engineering and business management, demonstrating my capabilities in leading teams, ensuring software quality, and delivering impactful projects.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -80,10 +89,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 9. [Useful Resources](#useful-resources)
 10. [License](#license)
 
-## Project Overview
-
-`nebula-info-web` is a modern PWA that includes multiple pages, a responsive navbar, and customizable components. The goal is to create a seamless user experience across different devices while leveraging the latest web technologies.
-
 **Features:**
 - Responsive design with mobile-friendly navigation
 - Multi-page layout with React Router
@@ -94,7 +99,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Here's a little overview of the project's folder structure:
 
 ```
-nebula-tech-hub.github.io/
+rembrand-pardo.github.io/
 ├── .git/
 ├── node_modules/
 ├── public/
@@ -158,33 +163,6 @@ nebula-tech-hub.github.io/
 ├── package.json
 ├── README.md
 ```
-
-## Installation
-
-Before running or deploying the project, you need to set up your development environment. Follow these steps:
-
-1. **Clone the repository:**
-
-   ```powershell
-   git clone https://github.com/nebula-tech-hub/nebula-tech-hub.github.io.git
-   ```
-
-2. **Navigate to the project directory:**
-
-   ```powershell
-   cd nebula-tech-hub.github.io
-   ```
-
-3. **Install the required dependencies:**
-
-   Make sure you have Node.js installed. Then, run:
-
-   ```powershell
-   npm install
-   ```
-
-   This will install all the dependencies listed in the `package.json` file.
-
 ## Running Locally
 
 To preview the project on your local machine:
@@ -218,7 +196,7 @@ Deploying to GitHub Pages involves a few steps:
    The `homepage` field should be set to the URL where your app will be hosted:
 
    ```json
-   "homepage": "https://nebula-tech-hub.github.io"
+   "homepage": "https://rembrand-pardo.github.io"
    ```
 
 2. **Build the project:**
@@ -237,7 +215,7 @@ Deploying to GitHub Pages involves a few steps:
    npm run deploy
    ```
 
-   This command will create or update the `gh-pages` branch in your repository and push the built files there. Your site should be live at `https://nebula-tech-hub.github.io/`.
+   This command will create or update the `gh-pages` branch in your repository and push the built files there. Your site should be live at `https://rembrand-pardo.github.io/`.
 
 ## Customizing the App
 
@@ -347,4 +325,4 @@ Here are some resources to help you with development:
 
 ## License
 
-This project is protected. You cannot use, modify, and distribute the code, images, designs or anythign on this site.
+This project is protected. You cannot use, modify, and distribute the code, images, designs or anythign on this site without written permission.
