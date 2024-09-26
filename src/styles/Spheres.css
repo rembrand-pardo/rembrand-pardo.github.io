@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.app {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%; /* Adjust width as needed */
+}
+
+.tag-cloud-container {
+    position: relative;
+    width: 300px; /* Size of each tag cloud container */
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-cloud, .right-cloud {
+    width: 100%;
+    height: 100%;
+}
+
+/* Center the static word in the middle of the sphere */
+.static-core {
+    position: absolute;
+    z-index: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* You can customize this */
+}
+
+/* Styling for rotating tag clouds */
+.tagcloud {
+    font-size: 18px;
+    font-weight: 650;
+}
+
+.tagcloud--item:hover {
+    color: #36454F;
+}
