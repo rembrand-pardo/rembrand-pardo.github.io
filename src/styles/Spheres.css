@@ -6,18 +6,21 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    position: relative; /* Allow absolute positioning for children */
+    overflow: hidden; /* Prevent scrolling if content overflows */
 }
 
 .app {
+    position: absolute; /* Allow it to fill the background */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%; /* Adjust width as needed */
+    z-index: 0; /* Behind other content */
+    pointer-events: none; /* Prevents interaction with the background */
 }
 
 .tag-cloud-container {
@@ -37,7 +40,7 @@ body {
 /* Center the static word in the middle of the sphere */
 .static-core {
     position: absolute;
-    z-index: 1;
+    z-index: 1; /* Above the rotating clouds */
     font-size: 24px;
     font-weight: bold;
     color: #333; /* You can customize this */

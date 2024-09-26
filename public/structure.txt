@@ -41,6 +41,7 @@ nebula-tech-hub.github.io/
 │   │   ├── NebulaBackground.js
 │   │   ├── NotFound.js
 │   │   ├── PolicyPage.js
+│   │   ├── Spheres.js
 │   ├── styles/
 │   │   ├── AboutPage.css
 │   │   ├── App.css
@@ -53,8 +54,9 @@ nebula-tech-hub.github.io/
 │   │   ├── Navbar.css
 │   │   ├── NebulaBackground.css
 │   │   ├── PolicyPage.css
+│   │   ├── Spheres.css
 │   ├── App.test.js
-│   ├── App.js
+│   ├── App.js                          (entry point for rendering pages)
 │   ├── firebaseConfig.js
 │   ├── index.js
 │   ├── logo.svg

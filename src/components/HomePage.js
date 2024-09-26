@@ -8,6 +8,7 @@ import messageImg from '../assets/message_infographic.png';
 import likeImg from '../assets/like_infographic.png';
 import listImg from '../assets/list_infographic.png';
 import NebulaBackground from '../components/NebulaBackground';
+import Spheres from '../components/Spheres';
 import NebulaLogo from '../assets/nebula_logo.png';
 
 import { addDoc, collection } from 'firebase/firestore';
@@ -90,7 +91,7 @@ function HomePage() {
 
   return (
     <div className="homepage">
-      <NebulaBackground />
+      <Spheres />
       <div className="carousel-container">
         <Slider 
           ref={sliderRef} 

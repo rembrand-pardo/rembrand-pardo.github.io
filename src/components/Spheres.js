@@ -1,7 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import '../styles/Spheres.css';
 
+/* global TagCloud */ // Inform ESLint that TagCloud is a global variable
 
 const App = () => {
+  const [leftSpeed, setLeftSpeed] = useState('normal');
+  const [rightSpeed, setRightSpeed] = useState('normal');
+
   useEffect(() => {
     // Dynamically load TagCloud library from CDN
     const script = document.createElement('script');
@@ -29,19 +34,19 @@ const App = () => {
       ];
 
       // Initialize left sphere
-      TagCloud('.left-cloud', leftTags, {
+      const leftSphere = TagCloud('.left-cloud', leftTags, {
         radius: 200,
-        maxSpeed: 'fast',
-        initSpeed: 'fast',
+        maxSpeed: leftSpeed,
+        initSpeed: 'normal', // Start speed
         direction: 135,
         keep: true,
       });
 
       // Initialize right sphere
-      TagCloud('.right-cloud', rightTags, {
+      const rightSphere = TagCloud('.right-cloud', rightTags, {
         radius: 200,
-        maxSpeed: 'fast',
-        initSpeed: 'fast',
+        maxSpeed: rightSpeed,
+        initSpeed: 'normal',
         direction: 135,
         keep: true,
       });
@@ -52,12 +57,32 @@ const App = () => {
 
       document.querySelector('.left-cloud').style.color = random_color;
       document.querySelector('.right-cloud').style.color = random_color;
+
+      // Add mouse event listeners for speed control
+      const handleMouseEnterLeft = () => setLeftSpeed('fast');
+      const handleMouseLeaveLeft = () => setLeftSpeed('normal');
+      const handleMouseEnterRight = () => setRightSpeed('fast');
+      const handleMouseLeaveRight = () => setRightSpeed('normal');
+
+      document.querySelector('.left-cloud').addEventListener('mouseenter', handleMouseEnterLeft);
+      document.querySelector('.left-cloud').addEventListener('mouseleave', handleMouseLeaveLeft);
+      document.querySelector('.right-cloud').addEventListener('mouseenter', handleMouseEnterRight);
+      document.querySelector('.right-cloud').addEventListener('mouseleave', handleMouseLeaveRight);
+
+      // Cleanup function
+      return () => {
+        document.body.removeChild(script);
+        document.querySelector('.left-cloud').removeEventListener('mouseenter', handleMouseEnterLeft);
+        document.querySelector('.left-cloud').removeEventListener('mouseleave', handleMouseLeaveLeft);
+        document.querySelector('.right-cloud').removeEventListener('mouseenter', handleMouseEnterRight);
+        document.querySelector('.right-cloud').removeEventListener('mouseleave', handleMouseLeaveRight);
+      };
     };
 
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
+  }, [leftSpeed, rightSpeed]);
 
   return (
     <div className="app">

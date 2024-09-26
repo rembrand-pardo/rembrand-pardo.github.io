@@ -56,7 +56,6 @@ function App() {
       ) : (
         <>
           <Navbar />
-          <div className="content">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/install" element={<HomeToInstallPage />} />
@@ -65,7 +64,6 @@ function App() {
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </div>
           <Footer />
         </>
       )}
