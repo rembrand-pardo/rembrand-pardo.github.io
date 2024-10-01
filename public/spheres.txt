@@ -8,9 +8,9 @@ const App = () => {
   const [rightSpeed, setRightSpeed] = useState('normal');
 
   useEffect(() => {
-    // Load TagCloud script if it's not already loaded
+    // Dynamically load TagCloud library from CDN
     const script = document.createElement('script');
-    script.src = `${process.env.PUBLIC_URL}/libs/TagCloud.min.js`; // Use local path
+    script.src = 'https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js';
     script.async = true;
     document.body.appendChild(script);
 
@@ -33,33 +33,30 @@ const App = () => {
         'AWS', 'Next.js', 'Vercel'
       ];
 
-      // Ensure spheres are created only once
-      const leftSphereContainer = document.querySelector('.left-cloud');
-      const rightSphereContainer = document.querySelector('.right-cloud');
+      // Initialize left sphere
+      const leftSphere = TagCloud('.left-cloud', leftTags, {
+        radius: 200,
+        maxSpeed: leftSpeed,
+        initSpeed: 'normal', // Start speed
+        direction: 135,
+        keep: true,
+      });
 
-      if (!leftSphereContainer.hasChildNodes()) {
-        TagCloud('.left-cloud', leftTags, {
-          radius: 200,
-          maxSpeed: leftSpeed,
-          initSpeed: 'normal',
-          direction: 135,
-          keep: true,
-        });
-      }
+      // Initialize right sphere
+      const rightSphere = TagCloud('.right-cloud', rightTags, {
+        radius: 200,
+        maxSpeed: rightSpeed,
+        initSpeed: 'normal',
+        direction: 135,
+        keep: true,
+      });
 
-      if (!rightSphereContainer.hasChildNodes()) {
-        TagCloud('.right-cloud', rightTags, {
-          radius: 200,
-          maxSpeed: rightSpeed,
-          initSpeed: 'normal',
-          direction: 135,
-          keep: true,
-        });
-      }
+      // Random color for both spheres
+      const colors = ['#34A853', '#FBBC05', '#4285F4', '#7FBC00', '#FFBA01', '#01A6F0'];
+      const random_color = colors[Math.floor(Math.random() * colors.length)];
 
-      // Set the spheres' color to baby blue
-      document.querySelector('.left-cloud').style.color = '#89CFF0'; // Baby blue
-      document.querySelector('.right-cloud').style.color = '#89CFF0'; // Baby blue
+      document.querySelector('.left-cloud').style.color = random_color;
+      document.querySelector('.right-cloud').style.color = random_color;
 
       // Add mouse event listeners for speed control
       const handleMouseEnterLeft = () => setLeftSpeed('fast');
@@ -67,18 +64,18 @@ const App = () => {
       const handleMouseEnterRight = () => setRightSpeed('fast');
       const handleMouseLeaveRight = () => setRightSpeed('normal');
 
-      leftSphereContainer.addEventListener('mouseenter', handleMouseEnterLeft);
-      leftSphereContainer.addEventListener('mouseleave', handleMouseLeaveLeft);
-      rightSphereContainer.addEventListener('mouseenter', handleMouseEnterRight);
-      rightSphereContainer.addEventListener('mouseleave', handleMouseLeaveRight);
+      document.querySelector('.left-cloud').addEventListener('mouseenter', handleMouseEnterLeft);
+      document.querySelector('.left-cloud').addEventListener('mouseleave', handleMouseLeaveLeft);
+      document.querySelector('.right-cloud').addEventListener('mouseenter', handleMouseEnterRight);
+      document.querySelector('.right-cloud').addEventListener('mouseleave', handleMouseLeaveRight);
 
-      // Cleanup function to remove listeners and script
+      // Cleanup function
       return () => {
-        leftSphereContainer.removeEventListener('mouseenter', handleMouseEnterLeft);
-        leftSphereContainer.removeEventListener('mouseleave', handleMouseLeaveLeft);
-        rightSphereContainer.removeEventListener('mouseenter', handleMouseEnterRight);
-        rightSphereContainer.removeEventListener('mouseleave', handleMouseLeaveRight);
         document.body.removeChild(script);
+        document.querySelector('.left-cloud').removeEventListener('mouseenter', handleMouseEnterLeft);
+        document.querySelector('.left-cloud').removeEventListener('mouseleave', handleMouseLeaveLeft);
+        document.querySelector('.right-cloud').removeEventListener('mouseenter', handleMouseEnterRight);
+        document.querySelector('.right-cloud').removeEventListener('mouseleave', handleMouseLeaveRight);
       };
     };
 

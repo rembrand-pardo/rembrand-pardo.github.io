@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    z-index: 0; /* Behind other content */
+    z-index: -1; /* Behind other content */
     pointer-events: none; /* Prevents interaction with the background */
 }
 
@@ -30,11 +30,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .left-cloud, .right-cloud {
+    position: absolute; /* Make sure the cloud fills the container */
+    top: 50%; /* Start at 50% from the top */
+    left: 50%; /* Start at 50% from the left */
+    transform: translate(-50%, -50%); /* Center the sphere */
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
 }
 
 /* Center the static word in the middle of the sphere */
@@ -55,3 +64,5 @@ body {
 .tagcloud--item:hover {
     color: #36454F;
 }
+
+

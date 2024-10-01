@@ -1,14 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client'; // Import the updated ReactDOM API
 import { HashRouter as Router } from 'react-router-dom';
 import App from './App';
 import './styles/index.css'; // Import global styles if you have any
 
-ReactDOM.render(
+// Find the root DOM element
+const rootElement = document.getElementById('root');
+
+// Create a root using the new API
+const root = ReactDOM.createRoot(rootElement);
+
+// Render the application using the new API
+root.render(
   <React.StrictMode>
     <Router>
       <App />
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
