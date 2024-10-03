@@ -4,15 +4,13 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   padding: 20px 0;
   transform: translateY(-100%);
-  opacity: 0;
 }
 
 .navbar.visible {
   transform: translateY(0);
-  opacity: 1;
 }
 
 .navbar-container {
@@ -33,6 +31,11 @@
 
 .logo-section {
   padding: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.logo-section:hover {
+  background-color: #001fcc4a;
 }
 
 .navbar-logo img {
@@ -44,7 +47,8 @@
   display: flex;
   gap: 30px;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
+  box-shadow: 0 0 10px rgba(0, 106, 255, 0.3);
+  margin: 0 auto;
 }
 
 .nav-links-section a {
@@ -56,7 +60,13 @@
 
 .nav-links-section a:hover,
 .nav-links-section a.active {
-  color: #00ffaa;
+  color: #0066cc;
+}
+
+.navbar-right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .resume-section,
@@ -64,8 +74,7 @@
   padding: 0;
 }
 
-.resume-button,
-.language-button {
+.resume-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,19 +83,43 @@
   padding: 10px 20px;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: bold;
   transition: background-color 0.3s ease;
   border: none;
   cursor: pointer;
 }
 
-.resume-button:hover,
-.language-button:hover {
+.language-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0066cc1f;
+  color: #ffffff;
+  padding: 5px 5px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.resume-button:hover {
   background-color: #0052a3;
+}
+
+.language-button:hover {
+  background-color: #001ba3b8;
 }
 
 .language-section {
   position: relative;
+}
+
+.language-button {
+  padding: 8px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
 }
 
 .language-dropdown {
@@ -97,6 +130,7 @@
   border-radius: 10px;
   padding: 10px;
   display: none;
+  z-index: 1001;
 }
 
 .language-section:hover .language-dropdown {
@@ -132,8 +166,7 @@
   }
 
   .nav-links-section,
-  .resume-section,
-  .language-section {
+  .navbar-right-section {
     display: none;
   }
 
@@ -154,6 +187,12 @@
   .nav-links-section.open .resume-button,
   .nav-links-section.open .language-button {
     margin: 10px 0;
+  }
+
+  .nav-links-section.open .navbar-right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hamburger-menu {

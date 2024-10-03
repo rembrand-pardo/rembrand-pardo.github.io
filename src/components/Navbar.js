@@ -8,7 +8,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 
 const Navbar = ({ translations, setLanguage }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('EN');
   const location = useLocation();
@@ -17,12 +17,10 @@ const Navbar = ({ translations, setLanguage }) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > 100) {
-        setIsVisible(true);
-      } else if (currentScrollY < lastScrollY) {
-        setIsVisible(true);
-      } else {
+      if (currentScrollY > lastScrollY) {
         setIsVisible(false);
+      } else {
+        setIsVisible(true);
       }
       lastScrollY = currentScrollY;
     };
@@ -72,7 +70,7 @@ const Navbar = ({ translations, setLanguage }) => {
   };
 
   return (
-    <nav className={`navbar ${isVisible || isMenuOpen ? 'visible' : ''}`}>
+    <nav className={`navbar ${isVisible ? 'visible' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-section logo-section">
           <Link to="/" onClick={() => handleNavClick('Home')} className="navbar-logo">
@@ -93,19 +91,21 @@ const Navbar = ({ translations, setLanguage }) => {
             {translations.contact}
           </Link>
         </div>
-        <div className="navbar-section resume-section">
-          <Link to="/resume" className="resume-button" onClick={() => handleNavClick('Resume')}>
-            Resume
-          </Link>
-        </div>
-        <div className="navbar-section language-section">
-          <button className="language-button" onClick={() => handleNavClick('Language')}>
-            {currentLanguage} 🌐
-          </button>
-          <div className="language-dropdown">
-            <button onClick={() => handleLanguageChange('en')}>English</button>
-            <button onClick={() => handleLanguageChange('es')}>Español</button>
-            <button onClick={() => handleLanguageChange('ca')}>Català</button>
+        <div className="navbar-right-section">
+          <div className="navbar-section resume-section">
+            <Link to="/resume" className="resume-button" onClick={() => handleNavClick('Resume')}>
+              Resume
+            </Link>
+          </div>
+          <div className="navbar-section language-section">
+            <button className="language-button" onClick={() => handleNavClick('Language')}>
+              🌐
+            </button>
+            <div className="language-dropdown">
+              <button onClick={() => handleLanguageChange('en')}>English</button>
+              <button onClick={() => handleLanguageChange('es')}>Español</button>
+              <button onClick={() => handleLanguageChange('ca')}>Català</button>
+            </div>
           </div>
         </div>
         <div className="hamburger-menu" onClick={toggleMenu}>
