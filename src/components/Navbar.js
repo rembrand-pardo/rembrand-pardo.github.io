@@ -1,46 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaInfoCircle, FaEnvelope, FaBook } from 'react-icons/fa';
-import { GrClose } from "react-icons/gr";
-import { MdInstallMobile } from "react-icons/md";
 import '../styles/Navbar.css';
 import logo from '../assets/r-logo.png';
 import { logEvent } from 'firebase/analytics';
 import { analytics } from '../firebaseConfig';
-import { addDoc, collection } from 'firebase/firestore'; // Firestore imports
-import { db } from '../firebaseConfig'; // Firestore database
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../firebaseConfig';
 
-
-
-const Navbar = ({ translations, setLanguage }) => {  // Accept translations and setLanguage props
-  const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
+const Navbar = ({ translations, setLanguage }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('EN');
   const location = useLocation();
   let lastScrollY = 0;
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(() => {
-    let timer;
-    if (isOpen) {
-      timer = setTimeout(() => {
-        setIsOpen(false);
-      }, 15000);
-    }
-    return () => clearTimeout(timer);
-  }, [isOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY < 10) {
+      if (currentScrollY > 100) {
         setIsVisible(true);
-      } else if (currentScrollY > lastScrollY) {
-        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        setIsVisible(true);
       } else {
-        setIsVisible(true);
+        setIsVisible(false);
       }
       lastScrollY = currentScrollY;
     };
@@ -55,12 +37,10 @@ const Navbar = ({ translations, setLanguage }) => {  // Accept translations and 
     logEvent(analytics, 'navbar_click', { page: pageName });
     console.log(`Navbar clicked: ${pageName}`);
 
-    // Log the click event to Firestore
-    const timestamp = new Date();
     try {
       await addDoc(collection(db, 'userActivity'), {
         event: `Navbar Clicked: ${pageName}`,
-        timestamp
+        timestamp: new Date()
       });
       console.log('Navigation activity logged successfully to Firestore.');
     } catch (error) {
@@ -68,47 +48,72 @@ const Navbar = ({ translations, setLanguage }) => {  // Accept translations and 
     }
   };
 
+  const handleLanguageChange = async (language) => {
+    setLanguage(language);
+    const languageCode = language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'CA';
+    setCurrentLanguage(languageCode);
+    
+    logEvent(analytics, 'language_change', { language: languageCode });
+    console.log(`Language changed to: ${languageCode}`);
+
+    try {
+      await addDoc(collection(db, 'userActivity'), {
+        event: `Language Changed: ${languageCode}`,
+        timestamp: new Date()
+      });
+      console.log('Language change activity logged successfully to Firestore.');
+    } catch (error) {
+      console.error('Error logging language change activity to Firestore:', error);
+    }
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className={`navbar ${isVisible ? 'visible' : 'hidden'}`}>
-      <div className="navbar-right">
-        <div className="navbar-logo-container">
-          <Link to="/" onClick={() => handleNavClick('Home')}>
-            <img src={logo} alt="Logo" className="navbar-logo" />
+    <nav className={`navbar ${isVisible || isMenuOpen ? 'visible' : ''}`}>
+      <div className="navbar-container">
+        <div className="navbar-section logo-section">
+          <Link to="/" onClick={() => handleNavClick('Home')} className="navbar-logo">
+            <img src={logo} alt="Logo" />
           </Link>
         </div>
-      </div>
-      <div className={`navbar-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <div className="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div className={`navbar-section nav-links-section ${isMenuOpen ? 'open' : ''}`}>
+          <Link to="/install" className={isActive('/install') ? 'active' : ''} onClick={() => handleNavClick('How to Install')}>
+            {translations.install}
+          </Link>
+          <Link to="/terms" className={isActive('/terms') ? 'active' : ''} onClick={() => handleNavClick('Terms & Privacy Policy')}>
+            {translations.terms}
+          </Link>
+          <Link to="/about" className={isActive('/about') ? 'active' : ''} onClick={() => handleNavClick('About')}>
+            {translations.about}
+          </Link>
+          <Link to="/contact" className={isActive('/contact') ? 'active' : ''} onClick={() => handleNavClick('Contact')}>
+            {translations.contact}
+          </Link>
         </div>
-        <GrClose className="close-icon" />
-      </div>
-      <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
-        <Link to="/install" className={isActive('/install') ? 'active' : ''} onClick={() => handleNavClick('How to Install')}>
-          <MdInstallMobile className="icon" />
-          {translations.install}  {/* Use translations for 'Install' */}
-        </Link>
-        <Link to="/terms" className={isActive('/terms') ? 'active' : ''} onClick={() => handleNavClick('Terms & Privacy Policy')}>
-          <FaBook className="icon" />
-          {translations.terms}  {/* Use translations for 'Policy' */}
-        </Link>
-        <Link to="/about" className={isActive('/about') ? 'active' : ''} onClick={() => handleNavClick('About')}>
-          <FaInfoCircle className="icon" />
-          {translations.about}  {/* Use translations for 'About' */}
-        </Link>
-        <Link to="/contact" className={isActive('/contact') ? 'active' : ''} onClick={() => handleNavClick('Contact')}>
-          <FaEnvelope className="icon" />
-          {translations.contact}  {/* Use translations for 'Contact' */}
-        </Link>
-      </div>
-
-      {/* Language Selection Buttons */}
-      <div className="language-toggle">
-        <button onClick={() => setLanguage('en')}>English</button>
-        <button onClick={() => setLanguage('es')}>Español</button>
-        <button onClick={() => setLanguage('ca')}>Català</button>
+        <div className="navbar-section resume-section">
+          <Link to="/resume" className="resume-button" onClick={() => handleNavClick('Resume')}>
+            Resume
+          </Link>
+        </div>
+        <div className="navbar-section language-section">
+          <button className="language-button" onClick={() => handleNavClick('Language')}>
+            {currentLanguage} 🌐
+          </button>
+          <div className="language-dropdown">
+            <button onClick={() => handleLanguageChange('en')}>English</button>
+            <button onClick={() => handleLanguageChange('es')}>Español</button>
+            <button onClick={() => handleLanguageChange('ca')}>Català</button>
+          </div>
+        </div>
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <div className={`hamburger ${isMenuOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
     </nav>
   );

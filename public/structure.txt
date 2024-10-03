@@ -61,7 +61,7 @@ nebula-tech-hub.github.io/
 │   │   ├── PolicyPage.css
 │   │   ├── Spheres.css
 │   ├── App.test.js
-│   ├── App.js                          (entry point for rendering pages)
+│   ├── App.js                 (entry point for rendering pages)
 │   ├── firebaseConfig.js
 │   ├── index.js
 │   ├── logo.svg
@@ -70,4 +70,6 @@ nebula-tech-hub.github.io/
 ├── .gitignore
 ├── package-lock.json
 ├── package.json
+├── postcss.config.js
 ├── README.md
+├── tailwind.config.js

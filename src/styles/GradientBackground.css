@@ -1,0 +1,25 @@
+/* src/styles/GradientBackground.css */
+.background-gradient {
+    background: linear-gradient(-45deg, #070F33, #000053, #0B1131, #020635);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* To ensure it stays behind other content */
+}
+  
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+  

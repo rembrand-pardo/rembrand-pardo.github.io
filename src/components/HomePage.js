@@ -9,6 +9,7 @@ import likeImg from '../assets/like_infographic.png';
 import listImg from '../assets/list_infographic.png';
 import NebulaLogo from '../assets/nebula_logo.png';
 
+
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 
@@ -88,7 +89,12 @@ function HomePage() {
   );
 
   return (
-    <div className="homepage"> 
+    
+    <div className="homepage">
+
+      {/* Background Gradient */}
+      <div className="background-gradient"></div>
+
       <Slider 
         ref={sliderRef} 
         {...settings} 
@@ -134,7 +140,9 @@ function HomePage() {
           <button className="cta-button" onClick={() => handleButtonClick('Download The App')}>Download The App</button>
         </a>
       </div>
+      
     </div>
+
   );
 }
 

@@ -1,5 +1,12 @@
 /* src/styles/HomePage.css */
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative; /* Make sure the background stays fixed */
+}
+
 .homepage {
     display: flex;
     flex-direction: column;

@@ -1,258 +1,196 @@
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 20px;
-  background-color: rgba(0, 16, 46, 0.849);
-  transition: transform 0.3s ease-in-out;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.navbar.hidden {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  padding: 20px 0;
   transform: translateY(-100%);
+  opacity: 0;
 }
 
 .navbar.visible {
   transform: translateY(0);
-}
-
-.navbar-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.navbar-right {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-logo {
-  height: 80px;
-  /* Adjust the size as necessary */
-}
-
-.navbar-item {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.navbar-toggle {
-  display: none;
-  cursor: pointer;
-}
-
-.icon {
-  margin-right: 5px;
-}
-
-.navbar-menu a {
-  color: white; /* Set the font color to white */
-  margin-right: 20px; /* Add space between the links */
-  text-decoration: none; /* Remove the underline */
-  font-size: 17px;
-}
-
-.navbar-menu a:hover {
-  text-decoration: none; /* Ensure no underline on hover */
-  color: rgb(125, 14, 222)/* Change to your desired hover color */
-}
-
-.navbar-menu a:last-child {
-  margin-right: 0; /* No margin on the last item */
-}
-
-.navbar-logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 65px; /* Set the width for the circle */
-  height: 65px; /* Set the height for the circle */
-  border-radius: 50%; /* Make it a circle */
-  overflow: hidden; /* Ensure the logo stays inside the circle */
-}
-
-.navbar-logo-container a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.navbar-logo {
-  height: 80%; /* Adjust the size of the logo relative to the circle */
-  width: 80%; /* Adjust the size of the logo relative to the circle */
-}
-
-.navbar-menu a.active {
-  color: rgb(125, 14, 222); /* Replace with your desired highlight color */
-  font-weight: bold; /* Optional: make the text bold when active */
-}
-
-.main-content {
-  margin-top: 60px; /* Adjust this to match your navbar height */
-}
-
-.language-toggle {
-  margin-left: 20px;
-}
-
-.language-toggle button {
-  margin: 0 10px;
-  padding: 5px 10px;
-  font-size: 16px;
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  cursor: pointer;
-}
-
-.language-toggle button:hover {
-  background-color: #ddd;
-  color: #333;
-}
-
-/* Media query for mobile view */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    width: 100%; /* Ensure full width */
-  }
-
-  .navbar-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px; /* Space between logo and menu */
-  }
-
-  .navbar-toggle {
-    display: block;
-    margin-bottom: 10px; /* Space between logo and hamburger menu */
-  }
-
-  .navbar-menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .navbar-menu a {
-    margin-right: 0; /* Remove right margin in mobile view */
-    text-align: center; /* Center the text */
-  }
-
-  .navbar-menu.open {
-    display: flex;
-  }
-
-  .navbar-logo-container {
-    width: 50px; /* Adjust size for mobile */
-    height: 50px; /* Adjust size for mobile */
-  }
-
-  .navbar-logo {
-    height: 70%; /* Adjust size of the logo for mobile */
-    width: 70%; /* Adjust size of the logo for mobile */
-  }
-}
-
-/* New styles for hamburger menu animation */
-.navbar-toggle {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.hamburger {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 20px;
-}
-
-.hamburger span {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  transition: all 0.3s ease-in-out;
-}
-
-.hamburger span:nth-child(1) {
-  top: 0;
-}
-
-.hamburger span:nth-child(2) {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.hamburger span:nth-child(3) {
-  bottom: 0;
-}
-
-.close-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-  color: white;
-  font-size: 24px;
-}
-
-.navbar-toggle.open .hamburger span:nth-child(1) {
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-}
-
-.navbar-toggle.open .hamburger span:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar-toggle.open .hamburger span:nth-child(3) {
-  bottom: 50%;
-  transform: translateY(50%) rotate(-45deg);
-}
-
-.navbar-toggle.open .close-icon {
-  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
 
-.navbar-menu {
-  transition: all 0.3s ease-in-out;
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.navbar-section {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 6, 25, 0.5);
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.logo-section {
+  padding: 5px;
+}
+
+.navbar-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links-section {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
+}
+
+.nav-links-section a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links-section a:hover,
+.nav-links-section a.active {
+  color: #00ffaa;
+}
+
+.resume-section,
+.language-section {
+  padding: 0;
+}
+
+.resume-button,
+.language-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0066cc;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.resume-button:hover,
+.language-button:hover {
+  background-color: #0052a3;
+}
+
+.language-section {
+  position: relative;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(0, 6, 25, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+}
+
+.language-section:hover .language-dropdown {
+  display: block;
+}
+
+.language-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-dropdown button:hover {
+  color: #0066cc;
+}
+
+.hamburger-menu {
+  display: none;
 }
 
 @media (max-width: 768px) {
-  .navbar-menu {
-    max-height: 0;
-    overflow: hidden;
+  .navbar {
+    padding: 10px 0;
   }
 
-  .navbar-menu.open {
-    max-height: 300px; /* Adjust this value based on your content */
+  .navbar-container {
+    padding: 0 20px;
   }
 
-  .navbar-logo-container {
+  .nav-links-section,
+  .resume-section,
+  .language-section {
+    display: none;
+  }
+
+  .nav-links-section.open {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px; /* Set the width for the circle */
-    height: 70px; /* Set the height for the circle */
-    overflow: hidden; /* Ensure the logo stays inside the circle */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(0, 6, 25, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  .nav-links-section.open a,
+  .nav-links-section.open .resume-button,
+  .nav-links-section.open .language-button {
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+  }
+
+  .hamburger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    transition: 0.25s ease-in-out;
+  }
+
+  .hamburger span:nth-child(1) {
+    top: 0;
+  }
+
+  .hamburger span:nth-child(2) {
+    top: 18px;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    top: 9px;
+    transform: rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    top: 9px;
+    transform: rotate(-45deg);
   }
 }
