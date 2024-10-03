@@ -11,10 +11,15 @@ import './styles/App.css';
 import CookieConsent from './components/CookieConsent'; 
 import Footer from './components/Footer.js';
 
+import translations from '../src/assets/locales/translations.js'; // Import translations
+
 function App() {
   const [consentGiven, setConsentGiven] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
   const [fadeOut, setFadeOut] = useState(false); // State for fade-out transition
+  
+  const [language, setLanguage] = useState('en'); // Default language
+  
   const location = useLocation();
 
   // Show intro when on the home page
@@ -55,14 +60,14 @@ function App() {
         </div>
       ) : (
         <>
-          <Navbar />
+          <Navbar translations={translations[language]} setLanguage={setLanguage} /> {/* Pass translations to Navbar */}
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/install" element={<HomeToInstallPage />} />
-              <Route path="/terms" element={<PolicyPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="/" element={<HomePage translations={translations[language]} />} /> {/* Pass translations */}
+              <Route path="/install" element={<HomeToInstallPage translations={translations[language]} />} />
+              <Route path="/terms" element={<PolicyPage translations={translations[language]} />} />
+              <Route path="/about" element={<AboutPage translations={translations[language]} />} />
+              <Route path="/contact" element={<ContactPage translations={translations[language]} />} />
+              <Route path="*" element={<NotFound translations={translations[language]} />} />
             </Routes>
           <Footer />
         </>

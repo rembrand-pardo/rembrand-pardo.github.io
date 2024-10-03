@@ -99,6 +99,25 @@
   margin-top: 60px; /* Adjust this to match your navbar height */
 }
 
+.language-toggle {
+  margin-left: 20px;
+}
+
+.language-toggle button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.language-toggle button:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
 /* Media query for mobile view */
 @media (max-width: 768px) {
   .navbar {

@@ -10,7 +10,9 @@ import { analytics } from '../firebaseConfig';
 import { addDoc, collection } from 'firebase/firestore'; // Firestore imports
 import { db } from '../firebaseConfig'; // Firestore database
 
-const Navbar = () => {
+
+
+const Navbar = ({ translations, setLanguage }) => {  // Accept translations and setLanguage props
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const location = useLocation();
@@ -86,20 +88,27 @@ const Navbar = () => {
       <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
         <Link to="/install" className={isActive('/install') ? 'active' : ''} onClick={() => handleNavClick('How to Install')}>
           <MdInstallMobile className="icon" />
-          Install
+          {translations.install}  {/* Use translations for 'Install' */}
         </Link>
         <Link to="/terms" className={isActive('/terms') ? 'active' : ''} onClick={() => handleNavClick('Terms & Privacy Policy')}>
           <FaBook className="icon" />
-          Policy
+          {translations.terms}  {/* Use translations for 'Policy' */}
         </Link>
         <Link to="/about" className={isActive('/about') ? 'active' : ''} onClick={() => handleNavClick('About')}>
           <FaInfoCircle className="icon" />
-          About
+          {translations.about}  {/* Use translations for 'About' */}
         </Link>
         <Link to="/contact" className={isActive('/contact') ? 'active' : ''} onClick={() => handleNavClick('Contact')}>
           <FaEnvelope className="icon" />
-          Contact
+          {translations.contact}  {/* Use translations for 'Contact' */}
         </Link>
+      </div>
+
+      {/* Language Selection Buttons */}
+      <div className="language-toggle">
+        <button onClick={() => setLanguage('en')}>English</button>
+        <button onClick={() => setLanguage('es')}>Español</button>
+        <button onClick={() => setLanguage('ca')}>Català</button>
       </div>
     </nav>
   );

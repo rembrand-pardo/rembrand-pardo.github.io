@@ -7,8 +7,6 @@ import filterImg from '../assets/filter_infographic.png';
 import messageImg from '../assets/message_infographic.png';
 import likeImg from '../assets/like_infographic.png';
 import listImg from '../assets/list_infographic.png';
-import NebulaBackground from '../components/NebulaBackground';
-import Spheres from '../components/Spheres';
 import NebulaLogo from '../assets/nebula_logo.png';
 
 import { addDoc, collection } from 'firebase/firestore';
@@ -90,47 +88,45 @@ function HomePage() {
   );
 
   return (
-    <div className="homepage">
-      <Spheres />
-      <div className="carousel-container">
-        <Slider 
-          ref={sliderRef} 
-          {...settings} 
-          prevArrow={<CustomArrow direction="prev" />}
-          nextArrow={<CustomArrow direction="next" />}
-        >
-          <div className="carousel-card" onClick={() => handleCardClick('Welcome')}>
-            <div className="carousel-content first-card">
-              <img src={NebulaLogo} alt="Nebula Logo" className="first-card-image" />
+    <div className="homepage"> 
+      <Slider 
+        ref={sliderRef} 
+        {...settings} 
+        prevArrow={<CustomArrow direction="prev" />}
+        nextArrow={<CustomArrow direction="next" />}
+      >
+        <div className="carousel-card" onClick={() => handleCardClick('Welcome')}>
+          <div className="carousel-content first-card">
+            <img src={NebulaLogo} alt="Nebula Logo" className="first-card-image" />
+            <div className="overlay">
+              <h1>Welcome to Nebula PWA's Information Portal</h1>
+              <p>
+                Nebula Progressive Web App (PWA) is your gateway to your new place. Revolutionizing the way you search for rental housing.
+                Our progressive web app is designed to streamline the process of finding and securing your next home. 
+                Whether you're looking for a single room or an entire property, Nebula makes it easier, faster, and more efficient.
+              </p>
+            </div>
+          </div>
+        </div>
+        {[
+          { img: searchImg, alt: "Search Infographic", title: "Search", text: "Users can explore a variety of listings and view them on a list or a map for convenient location-based browsing." },
+          { img: filterImg, alt: "Filter Infographic", title: "Filter", text: "Nebula PWA offers tailored search options, including price, pet-friendly, room type, and much more for users to find their ideal match." },
+          { img: messageImg, alt: "Message Infographic", title: "Message", text: "Nebula streamlines communication between users and listing owners for inquiries and more details." },
+          { img: likeImg, alt: "Like Infographic", title: "Save", text: "Users can save rooms, apartments, and properties, helping them narrow down options and keep track of preferred properties for future reference." },
+          { img: listImg, alt: "List Infographic", title: "List", text: "Users can easily create a listing to sell their contract or advertise a place they want to rent out." }
+        ].map((slide, index) => (
+          <div key={index} className="carousel-card" onClick={() => handleCardClick(slide.alt.split(' ')[0])}>
+            <div className="carousel-content">
+              <img src={slide.img} alt={slide.alt} />
               <div className="overlay">
-                <h1>Welcome to Nebula PWA's Information Portal</h1>
-                <p>
-                  Nebula Progressive Web App (PWA) is your gateway to your new place. Revolutionizing the way you search for rental housing.
-                  Our progressive web app is designed to streamline the process of finding and securing your next home. 
-                  Whether you're looking for a single room or an entire property, Nebula makes it easier, faster, and more efficient.
-                </p>
+                <h1>{slide.title}</h1> {/* Add title here */}
+                <p>{slide.text}</p>
               </div>
             </div>
           </div>
-          {[
-            { img: searchImg, alt: "Search Infographic", title: "Search", text: "Users can explore a variety of listings and view them on a list or a map for convenient location-based browsing." },
-            { img: filterImg, alt: "Filter Infographic", title: "Filter", text: "Nebula PWA offers tailored search options, including price, pet-friendly, room type, and much more for users to find their ideal match." },
-            { img: messageImg, alt: "Message Infographic", title: "Message", text: "Nebula streamlines communication between users and listing owners for inquiries and more details." },
-            { img: likeImg, alt: "Like Infographic", title: "Save", text: "Users can save rooms, apartments, and properties, helping them narrow down options and keep track of preferred properties for future reference." },
-            { img: listImg, alt: "List Infographic", title: "List", text: "Users can easily create a listing to sell their contract or advertise a place they want to rent out." }
-          ].map((slide, index) => (
-            <div key={index} className="carousel-card" onClick={() => handleCardClick(slide.alt.split(' ')[0])}>
-              <div className="carousel-content">
-                <img src={slide.img} alt={slide.alt} />
-                <div className="overlay">
-                  <h1>{slide.title}</h1> {/* Add title here */}
-                  <p>{slide.text}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
+        ))}
+      </Slider>
+  
 
       <div className="content">
         <p>Explore Nebula PWA to find your perfect home.</p>

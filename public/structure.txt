@@ -15,6 +15,8 @@ nebula-tech-hub.github.io/
 │   ├── structure.txt
 ├── src/
 │   ├── assets/
+│   │   ├── locales/
+│   │   │   ├── translations.js
 │   │   ├── filter_infographic.png
 │   │   ├── infographic.jpg
 │   │   ├── iphone_step1.jpg
