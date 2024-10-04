@@ -1,12 +1,11 @@
 import React from 'react';
-import NebulaBackground from '../components/NebulaBackground';
 import '../styles/AboutPage.css';
 import infographic from '../assets/infographic.jpg';
 
 const AboutPage = () => {
   return (
     <div className="aboutpage">
-      <NebulaBackground /> {/* Nebula background should be behind everything */}
+    
       <div className="content">
         <h1>About Us</h1>
         <h2>Transforming the Rental Experience</h2>

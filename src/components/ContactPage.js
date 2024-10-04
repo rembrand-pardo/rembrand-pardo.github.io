@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/ContactPage.css';
-import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { BsTwitterX } from "react-icons/bs";
 import { validateEmail, validateRequired } from '../utils/formValidations';
 
-import NebulaBackground from '../components/NebulaBackground';
 
 const ContactPage = () => {
   const [formValues, setFormValues] = useState({
@@ -82,8 +81,6 @@ const ContactPage = () => {
 
   return (
     <div className="container">
-
-      <NebulaBackground /> {/* */}
       
       <div className="contact-page">
         <h1>Let's Connect</h1>

@@ -15,9 +15,10 @@ const Navbar = ({ translations, setLanguage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('EN');
   const location = useLocation();
-  let lastScrollY = 0;
+  
 
   useEffect(() => {
+    let lastScrollY = 0;
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY) {
