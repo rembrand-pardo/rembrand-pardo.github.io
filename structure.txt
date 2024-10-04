@@ -3,8 +3,6 @@ nebula-tech-hub.github.io/
 ├── build
 ├── node_modules/
 ├── public/
-│   ├── libs/
-│   │   ├── TagCloud.min.js
 │   ├── 404.html
 │   ├── index.html
 │   ├── intro.mp4
@@ -17,7 +15,6 @@ nebula-tech-hub.github.io/
 │   ├── assets/
 │   │   ├── locales/
 │   │   │   ├── translations.js
-│   │   ├── filter_infographic.png
 │   │   ├── infographic.jpg
 │   │   ├── iphone_step1.jpg
 │   │   ├── iphone_step2.jpg
@@ -27,39 +24,38 @@ nebula-tech-hub.github.io/
 │   │   ├── like_infographic.png
 │   │   ├── list_infographic.png
 │   │   ├── message_infographic.png
-│   │   ├── nebula_logo.png
 │   │   ├── nebula-galaxy.png
-│   │   ├── nebula.ico
-│   │   ├── nebula.jpg
-│   │   ├── nebulaLogo.png
-│   │   ├── nebulaqrcode.png
-│   │   ├── search_infographic.png
-│   │   ├── small-nebula-galaxy.jpg
+│   │   ├── r-logo.png
+│   │   ├── r-logo2.png
+│   │   ├── Rembrand-logo.ico
 │   ├── components/
 │   │   ├── AboutPage.js
 │   │   ├── ContactPage.js
 │   │   ├── CookieConsent.js
 │   │   ├── Footer.js
+│   │   ├── HeroHighlight.js
 │   │   ├── HomePage.js
 │   │   ├── HowToInstallPage.js
 │   │   ├── Navbar.js
 │   │   ├── NebulaBackground.js
 │   │   ├── NotFound.js
 │   │   ├── PolicyPage.js
-│   │   ├── Spheres.js
+│   ├── lib/
+│   │   ├── utils.js
 │   ├── styles/
 │   │   ├── AboutPage.css
 │   │   ├── App.css
 │   │   ├── ContactPage.css
 │   │   ├── CookieConsent.css
 │   │   ├── Footer.css
+│   │   ├── GradientBackground.css
 │   │   ├── HomePage.css
 │   │   ├── HowToInstallPage.css
 │   │   ├── index.css
 │   │   ├── Navbar.css
-│   │   ├── NebulaBackground.css
 │   │   ├── PolicyPage.css
-│   │   ├── Spheres.css
+│   ├── utils/
+│   │   ├── formValidations.css
 │   ├── App.test.js
 │   ├── App.js                 (entry point for rendering pages)
 │   ├── firebaseConfig.js
@@ -67,6 +63,7 @@ nebula-tech-hub.github.io/
 │   ├── logo.svg
 │   ├── reportWebVitals.js
 │   ├── setupTests.js
+├── .env
 ├── .gitignore
 ├── package-lock.json
 ├── package.json
