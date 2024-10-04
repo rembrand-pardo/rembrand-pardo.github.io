@@ -1,6 +1,6 @@
 /* src/styles/Footer.css */
 .footer {
-    background: rgba(132, 53, 142, 0.247);
+    background: rgba(1, 1, 51, 0.141);
     color: #fff;
     padding: 10px 20px;
     text-align: center;
@@ -28,11 +28,26 @@
 .footer .social-icons a {
     color: #fff;
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, filter 0.3s ease; /* Add transition for filter */
+    position: relative; /* Ensure relative positioning for hover effect */
+}
+
+
+.footer .social-icons a.github-icon {
+    margin-top: 2px; /* Adjust this value as needed */
+}
+.footer .social-icons a.instagram-icon {
+    margin-top: 2px; /* Adjust this value as needed */
+}
+.footer .social-icons a.x-icon {
+    margin-top: 2px; /* Adjust this value as needed */
 }
 
 .footer .social-icons a:hover {
-    color: #5010b1;
+    color: #0044ffd7; /* Change icon color on hover */
+    filter: drop-shadow(0 0 5px rgba(0, 162, 255, 0.455)) /* Add glow effect */
+            drop-shadow(0 0 12px rgba(0, 162, 255, 0.121)); /* Fading glow */
+    transform: translateY(-7px); /* Raise the icon slightly */
 }
 
 /* Responsive styles */
