@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/PolicyPage.css';
 
-import NebulaBackground from '../components/NebulaBackground';
+import '../styles/GradientBackground.css'; // Import the gradient background CSS
 
 const PolicyPage = () => {
 
@@ -14,7 +14,7 @@ const PolicyPage = () => {
 
   return (
     <div className="policypage">
-      <NebulaBackground /> {/* Nebula background should be behind everything */}
+      <div className="background-gradient" /> {/* Apply the gradient background */}
       <div className="content">
         <h1>Nebula Terms of Service & Privacy Policy</h1>
         

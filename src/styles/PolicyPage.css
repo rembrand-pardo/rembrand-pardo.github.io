@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh; /* Full viewport height */
-  background: linear-gradient(10deg, #0F044D 10%, #5010b1 80%); /* Deep purple galaxy gradient */
+  /* background: linear-gradient(10deg, #0F044D 10%, #5010b1 80%); Deep purple galaxy gradient */
   color: #fff;
   padding: 20px;
   box-sizing: border-box; /* Ensure padding is included in the element's total width and height */

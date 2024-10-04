@@ -16,6 +16,9 @@ import { db } from '../firebaseConfig';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
 
+
+import '../styles/GradientBackground.css'; // Import the gradient background CSS
+
 function HomePage() {
   const sliderRef = useRef(null);
 
@@ -92,8 +95,8 @@ function HomePage() {
     
     <div className="homepage">
 
-      {/* Background Gradient */}
-      <div className="background-gradient"></div>
+      <div className="background-gradient" /> {/* Apply the gradient background */}
+      
 
       <Slider 
         ref={sliderRef} 
