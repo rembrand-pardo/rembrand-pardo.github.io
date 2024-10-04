@@ -90,6 +90,19 @@ const Navbar = ({ translations, setLanguage }) => {
           <Link to="/contact" className={isActive('/contact') ? 'active' : ''} onClick={() => handleNavClick('Contact')}>
             {translations.contact}
           </Link>
+          <div className="mobile-only">
+            <Link to="/resume" className="resume-button" onClick={() => handleNavClick('Resume')}>
+              Resume
+            </Link>
+            <div className="mobile-language-dropdown">
+              <button className="mobile-language-button">🌐</button>
+              <div className="mobile-language-options">
+                <button onClick={() => handleLanguageChange('en')} className={currentLanguage === 'EN' ? 'active' : ''}>English</button>
+                <button onClick={() => handleLanguageChange('es')} className={currentLanguage === 'ES' ? 'active' : ''}>Español</button>
+                <button onClick={() => handleLanguageChange('ca')} className={currentLanguage === 'CA' ? 'active' : ''}>Català</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="navbar-right-section">
           <div className="navbar-section resume-section">
