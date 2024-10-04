@@ -1,26 +1,29 @@
 import React from 'react';
-import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa';
-import { BsTwitterX } from 'react-icons/bs';
-import '../styles/Footer.css'; // Import the CSS file for the footer
+
+import { Linkedin, X, GithubThick, Instagram } from '../icons/Iconbuddy'; 
+
+import '../styles/Footer.css';
+
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer">
-      <p className="copyright">© {currentYear} Nebula. All rights reserved.</p>
+      <p className="copyright">© {currentYear} All rights reserved.</p>
       <div className="social-icons">
       <a href="https://www.linkedin.com/in/rembrandpardo/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
+            <Linkedin />
           </a>
           <a href="https://github.com/Thebatman7" target="_blank" rel="noopener noreferrer">
-            <FaGithub />
+            <GithubThick />
           </a>
           <a href="https://www.instagram.com/rembrand.paul/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
+            <Instagram />
           </a>
           <a href="https://x.com/rembrandpardo" target="_blank" rel="noopener noreferrer">
-            <BsTwitterX />
+            <X />
           </a>
       </div>
     </footer>
