@@ -16,7 +16,7 @@
 body {
   margin: 0;
   font-family: 'Righteous', sans-serif;
-  background: linear-gradient(180deg, rgb(0, 16, 46) 48%, rgb(132, 53, 142) 97.8%);
+  background: linear-gradient(180deg, rgb(0, 1, 46) 48%, rgb(2, 9, 90) 97.8%);
   color: white;
   min-height: 100vh;
   display: flex;
