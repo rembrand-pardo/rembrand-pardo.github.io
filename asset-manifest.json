@@ -1,19 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.3e42684e.css",
-    "main.js": "/static/js/main.862f0aed.js",
-    "static/media/iphone_step1.jpg": "/static/media/iphone_step1.9e10a9875b24a704641c.jpg",
-    "static/media/iphone_step2.jpg": "/static/media/iphone_step2.c321f57740220b1eb0e8.jpg",
-    "static/media/infographic.jpg": "/static/media/infographic.1b225878a263823de4c1.jpg",
-    "static/media/iphone_step4.jpg": "/static/media/iphone_step4.28d770b288791262b2cd.jpg",
-    "static/media/iphone_step3.jpg": "/static/media/iphone_step3.1848c86843fc224949c3.jpg",
+    "main.css": "/static/css/main.8c47bdde.css",
+    "main.js": "/static/js/main.aa62fb6e.js",
     "static/media/r-logo.png": "/static/media/r-logo.d252c8711b273beca736.png",
     "index.html": "/index.html",
-    "main.3e42684e.css.map": "/static/css/main.3e42684e.css.map",
-    "main.862f0aed.js.map": "/static/js/main.862f0aed.js.map"
+    "main.8c47bdde.css.map": "/static/css/main.8c47bdde.css.map",
+    "main.aa62fb6e.js.map": "/static/js/main.aa62fb6e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e42684e.css",
-    "static/js/main.862f0aed.js"
+    "static/css/main.8c47bdde.css",
+    "static/js/main.aa62fb6e.js"
   ]
 }
