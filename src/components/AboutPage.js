@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/AboutPage.css';
-import infographic from '../assets/infographic.jpg';
 
 const AboutPage = () => {
   return (

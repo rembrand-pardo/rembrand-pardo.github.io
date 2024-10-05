@@ -1,9 +1,5 @@
 import React from 'react';
 import '../styles/HowToInstallPage.css';
-import iphone_step1 from '../assets/iphone_step1.jpg';
-import iphone_step2 from '../assets/iphone_step2.jpg';
-import iphone_step3 from '../assets/iphone_step3.jpg';
-import iphone_step4 from '../assets/iphone_step4.jpg';
 import nebulaqrcode from '../assets/nebulaqrcode.png';
 
 
