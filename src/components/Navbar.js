@@ -17,6 +17,7 @@ const Navbar = ({ translations, setLanguage }) => {
   const [isLanguageExpanded, setIsLanguageExpanded] = useState(false);
   const location = useLocation();
 
+
   useEffect(() => {
     let lastScrollY = 0;
     const handleScroll = () => {
@@ -106,6 +107,7 @@ const Navbar = ({ translations, setLanguage }) => {
           <Link to="/contact" className={isActive('/contact') ? 'active' : ''} onClick={() => handleNavClick('Contact')}>
             {translations.contact}
           </Link>
+
           <div className="mobile-only">
             {location.pathname !== '/resume' && (
               <Link to="/resume" className="resume-button" onClick={() => handleNavClick('Resume')}>
@@ -113,15 +115,25 @@ const Navbar = ({ translations, setLanguage }) => {
               </Link>
             )}
             <div className="mobile-language-dropdown">
-              <button className="mobile-language-button" onClick={toggleLanguageExpansion}>🌐</button>
-              <div className={`mobile-language-options ${isLanguageExpanded ? 'expanded' : ''}`}>
-                <button onClick={() => handleLanguageChange('en')} className={currentLanguage === 'EN' ? 'active' : ''}>English</button>
-                <button onClick={() => handleLanguageChange('es')} className={currentLanguage === 'ES' ? 'active' : ''}>Español</button>
-                <button onClick={() => handleLanguageChange('ca')} className={currentLanguage === 'CA' ? 'active' : ''}>Català</button>
+              <button className="mobile-language-button" onClick={toggleLanguageExpansion}>
+                🌐
+              </button>
+              <div className={`mobile-language-options ${isLanguageExpanded ? 'expanded' : ''}`}>             
+                <button onClick={() => handleLanguageChange('en')} className={currentLanguage === 'EN' ? 'active' : ''}>
+                  <USFlag /> English
+                </button>
+                <button onClick={() => handleLanguageChange('es')} className={currentLanguage === 'ES' ? 'active' : ''}>
+                  <FlagSpain /> Español
+                </button>
+                <button onClick={() => handleLanguageChange('ca')} className={currentLanguage === 'CA' ? 'active' : ''}>
+                  <CataloniaFlag /> Català
+                </button>
               </div>
             </div>
           </div>
+
         </div>
+
         <div className="navbar-right-section">
           {location.pathname !== '/resume' && (
             <div className="navbar-section resume-section">
