@@ -43,30 +43,6 @@ const AboutPage = () => {
           Installing Nebula as a PWA ensures you get the best experience, with quick access, smoother performance, and the ability to use it even when you’re offline.
         </p>
 
-        <h2>Why Nebula PWA?</h2>
-        <p>
-        <a href="https://nebula-topaz-seven.vercel.app/home" target="_blank" rel="noopener noreferrer">Nebula PWA</a> offers a powerful, 
-          user-friendly platform for rental housing searches. 
-          Unlike traditional rental platforms, Nebula is designed to cater to landlords and specially renters, 
-          providing a cost-effective and simple solution for listing and finding properties. 
-          Say goodbye to the complexities of outdated systems and hello to a new way of renting.
-        </p>
-
-        <h2>Discover the Power of Nebula:</h2>
-        <ul>
-          <li><strong>List:</strong> Easily list your property—whether it’s a private room, shared room, or entire unit—with detailed descriptions, photos, and key features to attract the right renters.</li>
-          <li><strong>Search:</strong> Find the perfect rental by browsing through a wide variety of listings tailored to your needs.</li>
-          <li><strong>Filter:</strong> Use advanced filters to narrow down your search by location, price range, property type, amenities, and more.</li>
-          <li><strong>Save:</strong> Bookmark properties you’re interested in and compare them to make informed decisions later.</li>
-          <li><strong>Message:</strong> Communicate directly with landlords or renters through the app, eliminating the need for third-party services and making the rental process smooth and efficient.</li>
-          <li><strong>Free Access<sup className="tiny-asterisk">*</sup>:</strong> Enjoy all of Nebula’s features at no cost, whether you’re searching for a rental or listing a property.</li>
-        </ul>
-
-        {/* Add the infographic image */}
-        <div className="infographic-container">
-          <img src={infographic} alt="Infographic" className="infographic" />
-        </div>
-
         {/* Add the disclaimer */}
         <p className="disclaimer">
           <sup>*</sup> Nebula provides free services with certain conditions: Free access is available for single users, not companies or people representing organizations or apartment management companies. 

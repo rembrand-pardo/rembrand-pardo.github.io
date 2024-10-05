@@ -3,8 +3,6 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh; /* Full viewport height */
-  background: linear-gradient(10deg, #0F044D 10%, #5010b1 80%); /* Deep purple galaxy gradient */
-  color: #fff;
   padding: 20px;
   box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
@@ -12,11 +10,9 @@
 .content {
   position: relative;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
   border-radius: 10px;
   max-width: 800px; /* Ensure the content does not become too wide */
   width: 100%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
@@ -52,19 +48,6 @@
   text-decoration: underline; /* Add underline on hover if desired */
 }
 
-.infographic-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* Add some space above the infographic */
-}
-
-.infographic {
-  max-width: 60%; /* Make the image responsive */
-  height: auto;
-  border-radius: 10px; /* Optional: Add some border radius for a polished look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
-}
-
 .tiny-asterisk {
   font-size: 0.4rem; /* Make the asterisk very small */
   vertical-align: super; /* Ensure it aligns correctly as a superscript */
@@ -88,15 +71,6 @@
 
   .content h2 {
     font-size: 1.5rem;
-  }
-
-  .content p, 
-  .content ul li {
-    font-size: 1rem;
-  }
-
-  .infographic {
-    max-width: 80%; /* Make the image a bit larger on smaller screens */
   }
 
   .disclaimer {

@@ -9,6 +9,11 @@
   transform: translateY(-100%);
 }
 
+/* Add padding to the top of the body or main content to prevent overlap */
+body, .main-content {
+  padding-top: 60px;
+}
+
 .navbar.visible {
   transform: translateY(0);
 }
