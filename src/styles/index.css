@@ -16,18 +16,11 @@
 body {
   margin: 0;
   font-family: 'Righteous', sans-serif;
-  background: linear-gradient(180deg, rgb(0, 1, 46) 48%, rgb(2, 9, 90) 97.8%);
+  background: linear-gradient(180deg, rgb(0, 1, 24) 48%, rgb(0, 6, 62) 97.8%);
   color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column; /* Flex container to align content */
-}
-
-/* Style the header */
-header {
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
 }
 
 header h1 {
@@ -38,9 +31,8 @@ header h1 {
 /* Style the footer */
 footer {
   flex-shrink: 0;
-  background: #3e0194;
+  background: #00032f13;
   color: #fff;
-  padding: 10px 0;
   text-align: center;
   margin-top: auto; /* Pushes the footer to the bottom in a flex container */
   width: 100%;
