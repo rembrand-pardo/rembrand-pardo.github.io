@@ -22,14 +22,16 @@ const Navbar = ({ translations, setLanguage }) => {
     let lastScrollY = 0;
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY) {
+      if (currentScrollY === 0) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
       lastScrollY = currentScrollY;
     };
-
+  
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
