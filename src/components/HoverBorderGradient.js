@@ -1,12 +1,6 @@
-// src/components/HoverBorderGradient.js
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs) {
-  return twMerge(clsx(inputs));
-}
+import { cn } from "../lib/utils";
 
 export function HoverBorderGradient({
   children,
@@ -20,6 +14,15 @@ export function HoverBorderGradient({
   const [hovered, setHovered] = useState(false);
   const [direction, setDirection] = useState("TOP");
 
+  const rotateDirection = useCallback((currentDirection) => {
+    const directions = ["TOP", "LEFT", "BOTTOM", "RIGHT"];
+    const currentIndex = directions.indexOf(currentDirection);
+    const nextIndex = clockwise
+      ? (currentIndex - 1 + directions.length) % directions.length
+      : (currentIndex + 1) % directions.length;
+    return directions[nextIndex];
+  }, [clockwise]);
+
   const movingMap = {
     TOP: "radial-gradient(20.7% 50% at 50% 0%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)",
     LEFT: "radial-gradient(16.6% 43.1% at 0% 50%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)",
@@ -30,23 +33,15 @@ export function HoverBorderGradient({
   const highlight = "radial-gradient(75% 181.15942028985506% at 50% 50%, #3275F8 0%, rgba(255, 255, 255, 0) 100%)";
 
   useEffect(() => {
-    const rotateDirection = (currentDirection) => {
-      const directions = ["TOP", "LEFT", "BOTTOM", "RIGHT"];
-      const currentIndex = directions.indexOf(currentDirection);
-      const nextIndex = clockwise
-        ? (currentIndex - 1 + directions.length) % directions.length
-        : (currentIndex + 1) % directions.length;
-      return directions[nextIndex];
-    };
-
     if (!hovered) {
       const interval = setInterval(() => {
         setDirection((prevState) => rotateDirection(prevState));
       }, duration * 1000);
       return () => clearInterval(interval);
     }
-  }, [hovered, duration, clockwise]); // Removed rotateDirection from dependencies
+  }, [hovered, duration, rotateDirection]);
 
+  //px-3 px-1 control the size of button
   return (
     <Tag
       onMouseEnter={() => setHovered(true)}
@@ -55,9 +50,9 @@ export function HoverBorderGradient({
         "relative flex rounded-full border content-center bg-black/20 hover:bg-black/10 transition duration-500 dark:bg-white/20 items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
         containerClassName
       )}
-      {...props}
-    >
-      <div className={cn("w-auto text-white z-10 bg-black px-4 py-2 rounded-[inherit]", className)}>
+      {...props}>
+      <div
+        className={cn("w-auto text-white z-10 bg-black px-3 py-0.8 rounded-[inherit]", className)}> 
         {children}
       </div>
       <motion.div
@@ -70,10 +65,11 @@ export function HoverBorderGradient({
         }}
         initial={{ background: movingMap[direction] }}
         animate={{
-          background: hovered ? [movingMap[direction], highlight] : movingMap[direction],
+          background: hovered
+            ? [movingMap[direction], highlight]
+            : movingMap[direction],
         }}
-        transition={{ ease: "linear", duration: duration ?? 1 }}
-      />
+        transition={{ ease: "linear", duration: duration ?? 1 }} />
       <div className="bg-black absolute z-1 flex-none inset-[2px] rounded-[100px]" />
     </Tag>
   );
