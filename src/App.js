@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className={`app-container ${fadeOut ? 'fade-out' : ''}`}>
-      {!consentGiven && <CookieConsent onConsent={() => setConsentGiven(true)} />}
+      {!consentGiven && <CookieConsent onConsent={() => setConsentGiven(true)} language={language} />}
 
       {showIntro ? (
         <div className="intro-video-container">
