@@ -36,7 +36,7 @@
   }
 
   .cookie-consent-buttons {
-    flex-direction: column;
+    flex-direction: vertical;
     gap: 12px; /* Add a gap between buttons when stacked in mobile view */
   }
 }

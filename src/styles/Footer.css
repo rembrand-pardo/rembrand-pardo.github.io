@@ -23,6 +23,7 @@
     justify-content: center;
     gap: 0.5rem; /* Reduce gap between icons */
     margin-top: 0; /* Remove any extra margin on top */
+    margin-bottom: 2.5px;
 }
 
 .footer .social-icons a {
@@ -45,8 +46,8 @@
 
 .footer .social-icons a:hover {
     color: #0044ffd7; /* Change icon color on hover */
-    filter: drop-shadow(0 0 5px rgba(0, 162, 255, 0.455)) /* Add glow effect */
-            drop-shadow(0 0 12px rgba(0, 162, 255, 0.121)); /* Fading glow */
+    filter: drop-shadow(0 0 3px rgba(0, 162, 255, 0.3)) /* Add glow effect */
+            drop-shadow(0 0 12px rgba(0, 162, 255, 0.05)); /* Fading glow */
     transform: translateY(-7px); /* Raise the icon slightly */
 }
 
