@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* Tailwind CSS directives */
 @tailwind base;
@@ -15,7 +16,7 @@
 /* Set a base font and color */
 body {
   margin: 0;
-  font-family: 'Righteous', sans-serif;
+  font-family: 'Rubik', sans-serif;
   background: linear-gradient(-45deg, #000000, #00031a, #000311, #02073c);
   color: white;
   min-height: 100vh;
@@ -34,7 +35,7 @@ footer {
   background: #00032f13;
   color: #fff;
   text-align: center;
-  margin-top: auto; /* Pushes the footer to the bottom in a flex container */
+  margin-top: auto; /*Pushes the footer to the bottom in a flex container */
   width: 100%;
 }
 

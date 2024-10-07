@@ -1,7 +1,88 @@
-html, body {
-    
+/* Base layout */
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: var(--background-gradient);
+}
+  
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left align */
+  justify-content: flex-start;
+  width: 70%;
+  max-width: 1200px;
+  height: 90%;
+  margin-top: 30vh;
+  padding: 0 20px;
+}
+  
+/* Typewriter text */
+.typewriter-container {
+  font-size: 8vw; /* Big responsive text */
+}
+  
+/* Small text "I am" */
+.small-text {
+  font-size: 4vw; /* Smaller responsive text */
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.homepage {
-    
+/* Image styling */
+.image-container {
+  margin-bottom: 20px;
 }
+
+.rembrand-image {
+  width: 100%; /* Responsive image */
+  max-width: 700px; /* Limit max size */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Flip words */
+.flip-words-container {
+  font-size: 6vw; /* Big words for the sentence */
+  margin-bottom: 20px;
+  /* font-weight: bold; */
+}
+
+/* Button styling */
+.learn-more-button {
+  padding: 10px 20px;
+  font-size: 3vw;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #0056b3;
+}
+  
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .typewriter-container {
+    font-size: 4rem; /* Larger text on bigger screens */
+  }
+
+  .small-text {
+    font-size: 1.5rem;
+  }
+
+  .flip-words-container {
+    font-size: 3rem;
+  }
+
+  .learn-more-button {
+    font-size: 1.5rem;
+  }
+}
+  

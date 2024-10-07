@@ -1,18 +1,20 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import '../styles/HomePage.css';
-
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
-
-
-import '../styles/GradientBackground.css'; // Import the gradient background CSS
+import rembrandPardoImage from '../assets/rembrand_pardo_removebg.png'; // Correct import syntax
+import { FlipWords } from '../components/FlipWords';
+import { TypewriterEffectSmooth } from '../components/TypeWritterEffect';
 
 function HomePage() {
-  
+  const words = ["excel.", "thrive.", "work together.", "innovate.", "unite.", "transform.", "lead.", "optimize.", "evolve.", "achieve.", "streamline.", "succeed.", "develop strategies.", "empower.", "deliver.", "focus.", "change.", "improve."];
+  const typeWords = [
+    { text: "Hello world!" },
+  ];
 
-  const handleCardClick = (info) => {
-    console.log(`Card clicked: ${info}`);
-    logUserActivity(`Card Clicked: ${info}`);
+  const handleButtonClick = async () => {
+    console.log("Learn More button clicked");
+    await logUserActivity("Home Page Learn More button clicked");
   };
 
   const logUserActivity = async (activity) => {
@@ -27,18 +29,37 @@ function HomePage() {
       console.error('Error logging user activity:', error);
     }
   };
-  
 
   return (
-    
     <div className="homepage">
+      {/* Center the content but left-align it */}
+      <div className="content-wrapper">
+        {/* Typewriter effect for 'Hello world!' */}
+        <div className="typewriter-container">
+          <TypewriterEffectSmooth words={typeWords} />
+        </div>
 
-      <div className="background-gradient" /> {/* Apply the gradient background */}
-  
+        {/* Small text "I am" */}
+        <div className="small-text">
+           I am
+        </div>
 
-      
+        {/* Image fades in after typewriter */}
+        <div className="image-container">
+          <img src={rembrandPardoImage} alt="Rembrand Pardo" className="rembrand-image" />
+        </div>
+
+        {/* Flip words effect */}
+        <div className="flip-words-container">
+        I am dedicated to helping teams, organizations, and businesses<FlipWords words={words} />
+        </div>
+
+        {/* Learn more button with click event tracking */}
+        <button className="learn-more-button" onClick={handleButtonClick}>
+          Learn More
+        </button>
+      </div>
     </div>
-
   );
 }
 
