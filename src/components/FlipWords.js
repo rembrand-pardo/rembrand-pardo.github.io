@@ -50,9 +50,9 @@ export const FlipWords = ({
           filter: "blur(8px)",
           scale: 2,
           position: "absolute",
-        }}
+        }} /*text-blue-500 changes the color of changing word*/
         className={cn(
-          "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2",
+          "z-10 inline-block relative text-left text-blue-500 dark:text-neutral-100 px-2",
           className
         )}
         key={currentWord}>
