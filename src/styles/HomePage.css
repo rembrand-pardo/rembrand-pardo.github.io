@@ -2,10 +2,11 @@
 .homepage {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  min-height: calc(100vh - 60px); /* Adjust based on your header height */
   width: 100%;
   background: var(--background-gradient);
+  padding: 2rem 0;
 }
   
 .content-wrapper {
@@ -15,8 +16,6 @@
   justify-content: flex-start;
   width: 70%;
   max-width: 1200px;
-  height: 90%;
-  margin-top: 30vh;
   padding: 0 20px;
 }
   

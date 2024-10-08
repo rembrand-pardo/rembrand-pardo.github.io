@@ -4,12 +4,8 @@
     color: #fff;
     padding: 5px 20px;
     text-align: center;
-    position: relative; /* Change to relative */
     width: 100%;
-    bottom: 0;
-    left: 0;
-    margin-top: 5px; /* Ensure there's space between content and footer */
-    clear: both; /* Clear floats if any */
+    margin-top: auto; /* Ensure there's space between content and footer */
 }
 
 .footer .copyright {

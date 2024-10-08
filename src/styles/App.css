@@ -7,18 +7,14 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Full viewport height */
-
-  justify-content: space-between; /* Ensure content takes up space */
 }
 
 .content {
+  flex-grow: 1 0 auto;
   padding: 1rem;
   margin: 1rem auto; /* Center the content and reduce the margin */
   max-width: 1000px; /* Add a max-width to control the width of the content */
   box-sizing: border-box; /* Ensure padding is included in the element's total width */
-  
-  
-  flex-grow: 1;
 }
 
 @media (max-width: 768px) {
