@@ -5,6 +5,7 @@ import { db } from '../firebaseConfig';
 import rembrandPardoImage from '../assets/rembrand_pardo_removebg.png'; // Correct import syntax
 import { FlipWords } from '../components/FlipWords';
 import { TypewriterEffectSmooth } from '../components/TypeWritterEffect';
+import { HoverBorderGradient } from "../components/HoverBorderGradient";
 
 import '../styles/GradientBackground.css'; 
 
@@ -55,10 +56,17 @@ function HomePage( {translations }) {
           {translations.introText}<FlipWords words={translations.changingWords} />
         </div>
 
-        {/* Learn more button with click event tracking */}
-        <button className="learn-more-button" onClick={handleButtonClick}>
-          {translations.learnMore}
-        </button>
+        <div className="learn-more-button bg-transparent flex justify-start text-left">
+          <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="button"
+            className="bg-transparent text-white flex items-center space-x-2"
+            onClick={handleButtonClick}
+          >
+            <span>{translations.learnMore}</span>
+          </HoverBorderGradient>
+        </div>
+
       </div>
     </div>
   );

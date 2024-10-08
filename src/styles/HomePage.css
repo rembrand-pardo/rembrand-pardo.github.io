@@ -52,21 +52,7 @@
   padding-left: 3px;
 }
 
-/* Button styling */
-.learn-more-button {
-  padding: 10px 20px;
-  font-size: 3vw;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.learn-more-button:hover {
-  background-color: #0056b3;
-}
   
 /* Responsive adjustments */
 @media (min-width: 768px) {
