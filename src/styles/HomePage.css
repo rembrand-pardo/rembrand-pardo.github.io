@@ -17,6 +17,7 @@
   width: 70%;
   max-width: 1200px;
   padding: 0 20px;
+  margin-top: 15vh; /*vh units are relative to the height of the viewport (the browser window). This makes the margin scale with the window height.*/
 }
   
 /* Typewriter text */
