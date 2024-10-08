@@ -22,13 +22,14 @@
 /* Typewriter text */
 .typewriter-container {
   font-size: 8vw; /* Big responsive text */
+  padding-left: 1px;
 }
   
 /* Small text "I am" */
 .small-text {
-  font-size: 4vw; /* Smaller responsive text */
+  font-size: 5vw; /* Smaller responsive text */
   margin-bottom: 10px;
-  font-weight: bold;
+  padding-left: 4px;
 }
 
 /* Image styling */
@@ -38,7 +39,7 @@
 
 .rembrand-image {
   width: 100%; /* Responsive image */
-  max-width: 700px; /* Limit max size */
+  max-width: 900px; /* Limit max size */
   height: auto;
   object-fit: contain;
 }
@@ -47,7 +48,7 @@
 .flip-words-container {
   font-size: 6vw; /* Big words for the sentence */
   margin-bottom: 20px;
-  /* font-weight: bold; */
+  padding-left: 3px;
 }
 
 /* Button styling */

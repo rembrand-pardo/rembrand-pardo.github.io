@@ -8,11 +8,7 @@ import { TypewriterEffectSmooth } from '../components/TypeWritterEffect';
 
 import '../styles/GradientBackground.css'; 
 
-function HomePage() {
-  const words = ["excel.", "thrive.", "work together.", "innovate.", "unite.", "transform.", "lead.", "optimize.", "evolve.", "achieve.", "streamline.", "succeed.", "develop strategies.", "empower.", "deliver.", "focus.", "change.", "improve."];
-  const typeWords = [
-    { text: "Hello world!" },
-  ];
+function HomePage( {translations }) {
 
   const handleButtonClick = async () => {
     console.log("Learn More button clicked");
@@ -36,16 +32,17 @@ function HomePage() {
     <div className="homepage">
 
       <div className="background-gradient" /> {/* Apply the gradient background */}
+      
       {/* Center the content but left-align it */}
       <div className="content-wrapper">
         {/* Typewriter effect for 'Hello world!' */}
         <div className="typewriter-container">
-          <TypewriterEffectSmooth words={typeWords} />
+          <TypewriterEffectSmooth words={[{text: translations.helloWorld}]} />
         </div>
 
         {/* Small text "I am" */}
         <div className="small-text">
-           I am
+           {translations.iAm}
         </div>
 
         {/* Image fades in after typewriter */}
@@ -55,12 +52,12 @@ function HomePage() {
 
         {/* Flip words effect */}
         <div className="flip-words-container">
-        I am dedicated to helping teams, organizations, and businesses<FlipWords words={words} />
+          {translations.introText}<FlipWords words={translations.changingWords} />
         </div>
 
         {/* Learn more button with click event tracking */}
         <button className="learn-more-button" onClick={handleButtonClick}>
-          Learn More
+          {translations.learnMore}
         </button>
       </div>
     </div>
