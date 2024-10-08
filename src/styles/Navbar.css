@@ -23,7 +23,7 @@ body, .main-content {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .navbar-section {
@@ -43,7 +43,7 @@ body, .main-content {
 }
 
 .navbar-logo img {
-  height: 40px;
+  height: 45px;
   width: auto;
 }
 
@@ -60,6 +60,7 @@ body, .main-content {
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
+  font-size: 1.25rem; /*size of font for middle section of nav*/
 }
 
 .nav-links-section a:hover,
@@ -104,8 +105,8 @@ body, .main-content {
   transition: background-color 0.3s ease;
   border: none;
   cursor: pointer;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
 
 .resume-button:hover {
@@ -146,6 +147,7 @@ body, .main-content {
   cursor: pointer;
   padding: 5px 10px;
   text-align: left;
+  height: 36px;
 }
 
 .language-options button:hover,

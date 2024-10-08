@@ -25,6 +25,12 @@ body {
   flex-direction: column; /* Flex container to align content */
 }
 
+/*tailwind text effect e.g. resume*/
+.text-sm {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
 #root {
   display: flex;
   flex-direction: column;
