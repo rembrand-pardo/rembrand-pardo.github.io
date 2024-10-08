@@ -31,6 +31,15 @@ body {
   line-height: 1.25rem;
 }
 
+/*tailwind text effect e.g. hello world*/
+.text-xs {
+  font-size: 1.5rem;
+}
+
+.h-4 {
+  height: 1.2rem;
+}
+
 #root {
   display: flex;
   flex-direction: column;
