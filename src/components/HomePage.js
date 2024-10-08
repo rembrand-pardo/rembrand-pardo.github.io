@@ -6,6 +6,8 @@ import rembrandPardoImage from '../assets/rembrand_pardo_removebg.png'; // Corre
 import { FlipWords } from '../components/FlipWords';
 import { TypewriterEffectSmooth } from '../components/TypeWritterEffect';
 
+import '../styles/GradientBackground.css'; 
+
 function HomePage() {
   const words = ["excel.", "thrive.", "work together.", "innovate.", "unite.", "transform.", "lead.", "optimize.", "evolve.", "achieve.", "streamline.", "succeed.", "develop strategies.", "empower.", "deliver.", "focus.", "change.", "improve."];
   const typeWords = [
@@ -32,6 +34,8 @@ function HomePage() {
 
   return (
     <div className="homepage">
+
+      <div className="background-gradient" /> {/* Apply the gradient background */}
       {/* Center the content but left-align it */}
       <div className="content-wrapper">
         {/* Typewriter effect for 'Hello world!' */}
