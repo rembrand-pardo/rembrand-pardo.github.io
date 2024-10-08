@@ -54,11 +54,11 @@
     }
 
     .footer .social-icons {
-        gap: 2rem; /* Increase the gap for tablet-size screens */
+        gap: 1.7rem; /* Increase the gap for tablet-size screens */
     }
 
     .footer .social-icons a {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -68,10 +68,10 @@
     }
 
     .footer .social-icons {
-        gap: 2rem; /* Increase the gap for mobile screens */
+        gap: 1.5rem; /* Increase the gap for mobile screens */
     }
 
     .footer .social-icons a {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
     }
 }

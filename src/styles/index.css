@@ -79,7 +79,7 @@ footer {
 
 @media (max-width: 480px) {
   .container {
-    width: 95%; /* Further increase the width on very small screens */
+    width: 100%; /* Further increase the width on very small screens */
     padding: 5px; /* Further reduce padding */
   }
 }

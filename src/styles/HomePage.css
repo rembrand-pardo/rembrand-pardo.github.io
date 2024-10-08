@@ -72,4 +72,14 @@
     font-size: 1.5rem;
   }
 }
+
+/* Override for small devices */
+@media (max-width: 767px) {
+  .content-wrapper {
+    padding: 0; /* Remove padding for small devices */
+    width: 85%;
+    margin-top: 9vh;
+  }
+
+}
   
