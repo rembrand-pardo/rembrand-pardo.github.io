@@ -7,7 +7,10 @@ import { FlipWords } from '../components/FlipWords';
 import { TypewriterEffectSmooth } from '../components/TypeWritterEffect';
 import { HoverBorderGradient } from "../components/HoverBorderGradient";
 
-import '../styles/GradientBackground.css'; 
+import '../styles/GradientBackground.css';
+
+
+import { motion } from 'framer-motion'; 
 
 function HomePage( {translations }) {
 
@@ -42,21 +45,42 @@ function HomePage( {translations }) {
         </div>
 
         {/* Small text "I am" */}
-        <div className="small-text">
-           {translations.iAm}
-        </div>
+        <motion.div
+          className="small-text"
+          initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }} // Start with blur and small scale
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} // Smoothly fade in, remove blur, and scale up
+          transition={{ duration: 1.5, ease: "easeOut", delay: 2.9 }} // Adjust timing for smooth effect, 3-second delay
+        >
+          {translations.iAm}
+        </motion.div>
 
-        {/* Image fades in after typewriter */}
-        <div className="image-container">
+        {/* Image fades in after typewriter with tech-like effect */}
+        <motion.div 
+          className="image-container"
+          initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }} // Start with blur and small scale
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} // Smoothly fade in, remove blur, and scale up
+          transition={{ duration: 1.5, ease: "easeOut", delay: 3.5 }} // Adjust timing for smooth effect, 3-second delay
+        >
           <img src={rembrandPardoImage} alt="Rembrand Pardo" className="rembrand-image" />
-        </div>
+        </motion.div>
 
         {/* Flip words effect */}
-        <div className="flip-words-container">
+        <motion.div 
+          className="flip-words-container"
+          initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }} // Start with blur and small scale
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} // Smoothly fade in, remove blur, and scale up
+          transition={{ duration: 1.5, ease: "easeOut", delay: 5.5 }} // Adjust timing for smooth effect, 3-second delay
+        >
           {translations.introText}<FlipWords words={translations.changingWords} />
-        </div>
+        </motion.div>
 
-        <div className="learn-more-button bg-transparent flex justify-start text-left">
+
+        <motion.div 
+          className="learn-more-button bg-transparent flex justify-start text-left"
+          initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }} // Start with blur and small scale
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} // Smoothly fade in, remove blur, and scale up
+          transition={{ duration: 1.5, ease: "easeOut", delay: 6 }} // Adjust timing for smooth effect, 3-second delay
+        >
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
@@ -65,7 +89,7 @@ function HomePage( {translations }) {
           >
             <span>{translations.learnMore}</span>
           </HoverBorderGradient>
-        </div>
+        </motion.div>
 
       </div>
     </div>
