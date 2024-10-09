@@ -3,6 +3,12 @@ nebula-tech-hub.github.io/
 ├── build
 ├── node_modules/
 ├── public/
+│   ├── certificates/
+│   │   ├── Analytics/
+│   │   ├── Management/
+│   │   ├── Other/
+│   │   ├── Recruitment/
+│   ├── institutions_logos/
 │   ├── 404.html
 │   ├── index.html
 │   ├── intro.mp4
