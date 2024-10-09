@@ -1,48 +1,50 @@
+//../components/Policy.js
+
 import React from 'react';
 import '../styles/PolicyPage.css';
 import '../styles/GradientBackground.css';
-import ParallaxScroll from '../components/ParallaxScroll';
-import { InfiniteMovingCards } from "../components/Infinite-moving-cards";
 
-const PolicyPage = () => {
-  const testimonials = [
+
+import { FocusCards } from '../components/FocusCards';
+import InfiniteMovingCards from '../components/InfiniteMovingCards';
+
+
+
+const PolicyPage = ({ translations })  => {
+
+  const cards = [
     {
-      image: "/path/to/image1.jpg",
-      name: "Charles Dickens",
-      title: "A Tale of Two Cities",
+      title: "Forest Adventure",
+      src: "/certificates/Other/certificate_other0.jpg",
     },
     {
-      image: "/path/to/image1.jpg",
-      name: "William Shakespeare",
-      title: "Hamlet",
+      title: "Valley of life",
+      src: "/certificates/Other/certificate_other1.jpg",
     },
     {
-      image: "/path/to/image1.jpg",
-      name: "Edgar Allan Poe",
-      title: "A Dream Within a Dream",
+      title: "Sala behta hi jayega",
+      src: "/certificates/Other/certificate_other2.jpg",
     },
     {
-      image: "/path/to/image1.jpg",
-      name: "Jane Austen",
-      title: "Pride and Prejudice",
+      title: "Camping is for pros",
+      src: "/certificates/Other/certificate_other3.jpg",
     },
     {
-      image: "/path/to/image1.jpg",
-      name: "Herman Melville",
-      title: "Moby-Dick",
+      title: "The road not taken",
+      src: "/certificates/Recruitment/certificate_recruitment0.jpg",
+    },
+    {
+      title: "The First Rule",
+      src: "/certificates/Recruitment/certificate_recruitment1.jpg",
     },
   ];
 
-  const images = [
-    "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-    "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",
-    "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
-    // Add more images as needed
-  ];
 
   return (
     <div className="page-container">
       <div className="background-gradient" /> {/* Apply the gradient background */}
+      
+      
       <div className="page-content">
         <h1>Nebula Terms of Service & Privacy Policy</h1>
         
@@ -61,15 +63,19 @@ const PolicyPage = () => {
           </p>
         </section>
 
-        <div className="testimonial-container h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-          <InfiniteMovingCards
-            items={testimonials}
-            direction="right"
-            speed="slow"
-          />
-        </div>
 
-        <ParallaxScroll images={images} />
+        {/*Here implement the infinite carousel in react */}
+        <section>
+          <h2>Trusted Institutions</h2>
+          <InfiniteMovingCards />
+        </section>
+
+        <section>
+          <h2>Our Projects</h2>
+          <FocusCards cards={cards} />
+        </section>
+
+
       </div>
     </div>
   );
