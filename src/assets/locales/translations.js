@@ -12,7 +12,7 @@ const translations = {
       rejectButton: "Reject",
       resume: "Resume",
 
-      helloWorld: "Hello world!",
+      helloWorld: "Hello, World!",
       iAm: "I am",
       introText: "I am dedicated to helping teams, organizations, and businesses",
       changingWords: [
@@ -50,7 +50,7 @@ const translations = {
       rejectButton: "Rechazar",
       resume: "CV",
 
-      helloWorld: "¡Hola mundo!",
+      helloWorld: "¡Hola, Mundo!",
       iAm: "Soy",
       introText: "Me dedico a ayudar a equipos, organizaciones y negocios",
       changingWords: [
@@ -88,7 +88,7 @@ const translations = {
       rejectButton: "Rebutjar",
       resume: "CV",
 
-      helloWorld: "Hola món!",
+      helloWorld: "Hola, Món!",
       iAm: "Sóc",
       introText: "Em dedico a ajudar equips, organitzacions i negocis",
       changingWords: [
