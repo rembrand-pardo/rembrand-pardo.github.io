@@ -1,6 +1,5 @@
 //../components/Policy.js
-
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/PolicyPage.css';
 import '../styles/GradientBackground.css';
 
@@ -9,8 +8,53 @@ import { FocusCards } from '../components/FocusCards';
 import InfiniteMovingCards from '../components/InfiniteMovingCards';
 
 
+const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, buttonLink, isExpanded, onClick }) => {
+  return (
+    <div className={`card ${isExpanded ? 'expanded' : ''}`} onClick={onClick}>
+      <img src={imageSrc} alt={title} className={`card-image ${isExpanded ? 'expanded-image' : ''}`} />
+      {!isExpanded && (
+        <h3 className={`card-title`}>
+          {title}
+        </h3>
+      )}
+      <div className={`card-content ${isExpanded ? 'expanded-content' : ''}`}>
+        {isExpanded && (
+          <>
+            <p className="card-description">{description}</p>
+            <p>{moreText}</p>
+            <a href={buttonLink} className="card-button">
+              {buttonText}
+            </a>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+
 
 const PolicyPage = ({ translations })  => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const cardsData = [
+    {
+      imageSrc: '/institutions_logos/BYU.png',
+      title: translations.card1Title,
+      description: translations.card1Description,
+      moreText: translations.card1MoreText,
+      buttonText: translations.card1ButtonText,
+      buttonLink: translations.card1ButtonLink,
+    },
+    {
+      imageSrc: '/institutions_logos/SLCC.png',
+      title: translations.card2Title,
+      description: translations.card2Description,
+      moreText: translations.card2MoreText,
+      buttonText: translations.card2ButtonText,
+      buttonLink: translations.card2ButtonLink,
+    },
+  ];
 
   const cards = [
     {
@@ -70,36 +114,51 @@ const PolicyPage = ({ translations })  => {
 
   return (
     <div className="page-container">
-      <div className="background-gradient" /> {/* Apply the gradient background */}
+      <div className="background-gradient" /> {/* gradient background is for the whole page */}
       
       
       <div className="page-content">
-        <h1>Nebula Terms of Service & Privacy Policy</h1>
+        <section className='quote_section'>
+          <h1>{translations.quoteText}</h1>
+          <p>{translations.quoteAuthor}</p>
+        </section>
+
+        <section className='body_section'>
+          <p>
+            {translations.introductionText1}
+          </p>
+
+          <p>
+            {translations.introductionText2}
+          </p>
+        </section>
+
+        <section className='expandableCards_section'>
+          <h2>{translations.qualificationsH2}</h2>
+          
+          <div className="expandable-cards">
+            {cardsData.map((card, index) => (
+              <ExpandableCard
+                key={index}
+                imageSrc={card.imageSrc}
+                title={card.title}
+                description={card.description}
+                moreText={card.moreText}
+                buttonText={card.buttonText}
+                buttonLink={card.buttonLink}
+                isExpanded={expandedIndex === index}
+                onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+              />
+            ))}
+          </div>
+        </section>
+
         
-        <section>
-          <h2>Introduction</h2>
-          <p>
-            Thank you for choosing Nebula (“we,” “our,” or “us”). This document outlines the Terms of Service and Privacy Policy governing your use of our Progressive Web App (PWA) and associated services. By accessing or using Nebula and Nebula PWA, you agree to be bound by these terms. If you do not agree to these terms, please do not use our services.
-            By using Nebula and Nebula PWA, you acknowledge and agree to these Terms of Service. Your continued use of our services signifies your acceptance of any changes or updates to these terms. If you do not agree with any part of these terms, you must discontinue use of our services immediately.
-          </p>
-        </section>
-
-        <section>
-          <h2>Certified by Multiple Trustworthy Organizations</h2>
-          <p>
-            Organizations such as Microsoft, PMP, and others have certified our practices.
-          </p>
-        </section>
-
-
-        {/*Here implement the infinite carousel in react */}
-        <section>
-          <h2>Trusted Institutions</h2>
+        <section className='infiniteMovingCards_container'>
           <InfiniteMovingCards />
         </section>
 
-        <section>
-          <h2>Our Projects</h2>
+        <section className='focusCards_container'>
           <FocusCards cards={cards} />
         </section>
 

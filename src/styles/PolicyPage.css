@@ -1,0 +1,186 @@
+h1, h2, p {
+    text-align: center;
+}
+  
+section {
+    margin-bottom: 2rem;
+}
+
+/*expandable cards*/
+.expandable-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.4); /* More transparent glass effect */
+    color: white; /* Adjust text color for visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, height 0.3s ease;
+    cursor: pointer;
+    width: 100%; /* Full width for the card */
+    max-width: 400px; /* Max width for larger screens */
+    position: relative; /* Needed for absolute positioning of title */
+}
+
+.card.expanded {
+    height: auto; /* Adjust height when expanded */
+}
+
+.card-image {
+    width: 100%;
+    height: 300px; /* Increased height for the image */
+    object-fit: cover; /* Ensure the image covers the area without being cut off */
+    transition: height 0.3s ease; /* Smooth transition for height changes */
+}
+
+.card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align content when expanded */
+}
+
+.card-title {
+    position: absolute; /* Position the title over the image */
+    bottom: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 10; /* Ensure title is above other content */
+    font-size: 1.5rem; /* Adjust title size */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    color: white; /* Title color */
+}
+
+.card-title:hover {
+    color: #007bff; /* Change title color to blue on hover */
+}
+
+.card-description {
+    margin: 1rem 0;
+    text-align: justify;
+    color: white; /* Set description color to white */
+}
+
+/* Formatting the list within the description */
+.card-description ul {
+    margin: 0; /* Remove margin to avoid clumping */
+    padding-left: 20px; /* Indent list */
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+    .card {
+        width: 100%; /* Full width for larger screens */
+        max-width: 400px; /* Maintain max width */
+    }
+}
+
+.card-content .card-button {
+    align-self: center;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.card-content .card-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .expandable-cards {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center align cards on small screens */
+    }
+}
+
+
+
+/* Quote Section */
+.quote_section {
+    text-align: center;
+    margin: 40px auto; /* Center with margin */
+    width: 70%; /* Make this section take up 80% of the page width */
+    margin-top: 70px;
+}
+  
+.quote_section h1 {
+    font-size: 2.5rem; /* Default font size for larger screens */
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: white; /* Text color set to white */
+}
+  
+.quote_section p {
+    font-size: 1.5rem; /* Default font size for larger screens */
+    text-align: right; /* Align the author to the right */
+    margin-right: 23px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.64); /* Text color set to white */
+}
+  
+/* Body Section */
+.body_section {
+    margin: 40px auto; /* Center with margin */
+    width: 80%; /* Make this section take up 80% of the page width */
+}
+  
+.body_section p {
+    font-size: 1.6rem; /* Default font size for larger screens */
+    line-height: 1.6; /* Improved readability with spacing */
+    color: white; /* Text color set to white */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.expandableCards_section {
+    margin: 40px auto; /* Center with margin */
+    width: 80%; /* Make this section take up 80% of the page width */
+    margin-bottom: 10px;
+}
+
+.expandableCards_section h2 {
+    font-size: 2rem;
+    text-align: left;
+    font-weight: bold;
+}
+  
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .quote_section h1 {
+      font-size: 2rem; /* Smaller for tablets */
+}
+  
+.quote_section p {
+    font-size: 1.25rem; /* Adjust font size for tablets */
+    margin-right: 10px;
+}
+  
+    .body_section p {
+      font-size: 1rem; /* Adjust font size for tablets */
+    }
+}
+  
+@media (max-width: 768px) {
+    .quote_section h1 {
+      font-size: 1.5rem; /* Smaller for mobile */
+    }
+  
+    .quote_section p {
+      font-size: 1rem; /* Adjust font size on smaller screens */
+      margin-right: 5px; /* Reduce margin for mobile */
+    }
+  
+    .body_section p {
+      font-size: 0.9rem; /* Adjust font size for mobile */
+    }
+}
+  
+  
