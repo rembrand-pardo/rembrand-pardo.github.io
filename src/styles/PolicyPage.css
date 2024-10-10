@@ -10,7 +10,7 @@ section {
 .expandable-cards {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 7rem;
     margin-bottom: 2rem;
 }
 
@@ -43,7 +43,11 @@ section {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center align content when expanded */
+    justify-content: center; 
+}
+
+.card-content p {
+    text-align: left;
 }
 
 .card-title {
@@ -57,12 +61,11 @@ section {
 }
 
 .card-title:hover {
-    color: #007bff; /* Change title color to blue on hover */
+    color: #023871; /* Change title color to blue on hover */
 }
 
 .card-description {
     margin: 1rem 0;
-    text-align: justify;
     color: white; /* Set description color to white */
     text-align: left;
 }
@@ -78,7 +81,7 @@ section {
 @media (min-width: 768px) {
     .card {
         width: 100%; /* Full width for larger screens */
-        max-width: 400px; /* Maintain max width */
+        max-width: 750px; /* Maintain max width */
     }
 }
 
