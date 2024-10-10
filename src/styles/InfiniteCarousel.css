@@ -5,12 +5,17 @@
     position: relative;
     padding: 1rem 0;
     background-color: rgba(255, 255, 255, 0.43); /* Light white, almost transparent */
+
+    /* Gradient mask to make the edges fade out */
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+
 }
 
 .carousel-track {
     display: flex;
     width: max-content;
-    animation: scroll 40s linear infinite; /* Adjust the duration for speed */
+    animation: scroll 45s linear infinite; /* Adjust the duration for speed */
 }
 
 .carousel-track img {
@@ -19,14 +24,6 @@
     margin-right: 30px; /* Space between images */
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0); /* Start at the first image */
-    }
-    100% {
-        transform: translateX(-50%); /* Shift the entire carousel by 50% (half of the images) */
-    }
-}
 
 /* Make the carousel responsive */
 @media (max-width: 768px) {
@@ -38,5 +35,14 @@
 @media (max-width: 480px) {
     .carousel-track img {
         height: 50px;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Start at the first image */
+    }
+    100% {
+        transform: translateX(-50%); /* Shift the entire carousel by 50% (half of the images) */
     }
 }
