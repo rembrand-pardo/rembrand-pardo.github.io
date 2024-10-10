@@ -14,28 +14,56 @@ const PolicyPage = ({ translations })  => {
 
   const cards = [
     {
-      title: "Forest Adventure",
+      title: "Zendesk: Customer Service",
       src: "/certificates/Other/certificate_other0.jpg",
     },
     {
-      title: "Valley of life",
+      title: "DevOps: CI/CD",
       src: "/certificates/Other/certificate_other1.jpg",
     },
     {
-      title: "Sala behta hi jayega",
+      title: "Cisco Networking",
       src: "/certificates/Other/certificate_other2.jpg",
     },
     {
-      title: "Camping is for pros",
+      title: "Cisco Foundations",
       src: "/certificates/Other/certificate_other3.jpg",
     },
     {
-      title: "The road not taken",
+      title: "Human Resources",
       src: "/certificates/Recruitment/certificate_recruitment0.jpg",
     },
     {
-      title: "The First Rule",
+      title: "American Staffing Association",
       src: "/certificates/Recruitment/certificate_recruitment1.jpg",
+    },
+    {
+      title: "Human Resources",
+      src: "/certificates/Recruitment/certificate_recruitment2.jpg",
+    },
+    {
+      title: "American Staffing Association",
+      src: "/certificates/Recruitment/certificate_recruitment3.jpg",
+    },
+    {
+      title: "Human Resources: Payroll",
+      src: "/certificates/Recruitment/certificate_recruitment4.jpg",
+    },
+    {
+      title: "Human Resources Strategy",
+      src: "/certificates/Recruitment/certificate_recruitment5.jpg",
+    },
+    {
+      title: "Interviewing Candidates",
+      src: "/certificates/Recruitment/certificate_recruitment6.jpg",
+    },
+    {
+      title: "Interviewing Techniques",
+      src: "/certificates/Recruitment/certificate_recruitment7.jpg",
+    },
+    {
+      title: "HR Certification Institute",
+      src: "/certificates/Recruitment/certificate_recruitment8.jpg",
     },
   ];
 
