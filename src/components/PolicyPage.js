@@ -143,7 +143,6 @@ const PolicyPage = ({ translations })  => {
                 imageSrc={card.imageSrc}
                 title={card.title}
                 description={card.description}
-                moreText={card.moreText}
                 buttonText={card.buttonText}
                 buttonLink={card.buttonLink}
                 isExpanded={expandedIndex === index}
