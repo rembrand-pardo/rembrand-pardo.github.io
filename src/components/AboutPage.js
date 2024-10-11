@@ -145,7 +145,7 @@ const DummyContent = () => {
   return (
     <img
       src="Rembrand-logo.png"
-      alt="dummy image"
+      alt="dummy img"
       width="800"
       height="800"
       className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"

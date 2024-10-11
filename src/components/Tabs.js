@@ -30,6 +30,9 @@ export const Tabs = ({
           "flex flex-wrap items-center justify-start [perspective:1000px] relative overflow-x-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
           containerClassName
         )}
+        style={{
+            maxHeight: "120px", // Increase the max height to fit more buttons
+        }}
       >
         {propTabs.map((tab, idx) => (
           <button
@@ -47,7 +50,7 @@ export const Tabs = ({
               transformStyle: "preserve-3d",
               backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent black for tabs
               minWidth: "80px", // Ensure tabs are not too small
-              margin: "0 4px", // Add some margin between tabs
+              margin: "0 4px 4px", // Add some margin between tabs
             }}
           >
             {active.value === tab.value && (
