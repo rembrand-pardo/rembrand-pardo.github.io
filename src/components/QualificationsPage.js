@@ -1,11 +1,11 @@
-//../components/Policy.js
+//../components/Qualifications.js
 import React, { useState, useEffect } from 'react';
-import '../styles/PolicyPage.css';
+import '../styles/QualificationsPage.css';
 import '../styles/GradientBackground.css';
 import DOMPurify from 'dompurify';
 
-import { FocusCards } from '../components/FocusCards';
-import InfiniteMovingCards from '../components/InfiniteMovingCards';
+import { FocusCards } from './FocusCards';
+import InfiniteMovingCards from './InfiniteMovingCards';
 
 
 const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, buttonLink, isExpanded, onClick }) => {

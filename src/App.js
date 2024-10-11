@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomeToInstallPage from './components/HowToInstallPage';
-import PolicyPage from './components/PolicyPage';
+import QualificationsPage from './components/QualificationsPage';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
@@ -64,7 +64,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage translations={translations[language]} />} /> {/* Pass translations */}
               <Route path="/install" element={<HomeToInstallPage translations={translations[language]} />} />
-              <Route path="/terms" element={<PolicyPage translations={translations[language]} />} />
+              <Route path="/qualifications" element={<QualificationsPage translations={translations[language]} />} />
               <Route path="/about" element={<AboutPage translations={translations[language]} />} />
               <Route path="/contact" element={<ContactPage translations={translations[language]} />} />
               <Route path="*" element={<NotFound translations={translations[language]} />} />

@@ -100,8 +100,8 @@ const Navbar = ({ translations, setLanguage }) => {
           <Link to="/install" className={isActive('/install') ? 'active' : ''} onClick={() => handleNavClick('How to Install')}>
             {translations.install}
           </Link>
-          <Link to="/terms" className={isActive('/terms') ? 'active' : ''} onClick={() => handleNavClick('Terms & Privacy Policy')}>
-            {translations.terms}
+          <Link to="/qualifications" className={isActive('/qualifications') ? 'active' : ''} onClick={() => handleNavClick('Qualificationes Page')}>
+            {translations.qualifications}
           </Link>
           <Link to="/about" className={isActive('/about') ? 'active' : ''} onClick={() => handleNavClick('About')}>
             {translations.about}
