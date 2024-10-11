@@ -6,6 +6,7 @@ section {
     margin-bottom: 2rem;
 }
 
+
 /*expandable cards*/
 .expandable-cards {
     display: flex;
@@ -70,19 +71,10 @@ section {
     text-align: left;
 }
 
-/* Formatting the list within the description */
 .card-description ul {
     margin: 0; /* Remove margin to avoid clumping */
     padding-left: 15px; /* Indent list */
     text-align: left;
-}
-
-/* Responsive adjustments for larger screens */
-@media (min-width: 768px) {
-    .card {
-        width: 100%; /* Full width for larger screens */
-        max-width: 750px; /* Maintain max width */
-    }
 }
 
 .card-content .card-button {
@@ -98,6 +90,14 @@ section {
 
 .card-content .card-button:hover {
     background-color: #0056b3;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+    .card {
+        width: 100%; /* Full width for larger screens */
+        max-width: 750px; /* Maintain max width */
+    }
 }
 
 @media (max-width: 768px) {
