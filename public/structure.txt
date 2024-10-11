@@ -12,7 +12,9 @@ nebula-tech-hub.github.io/
 │   ├── 404.html
 │   ├── index.html
 │   ├── intro.mp4
+│   ├── intro.webm
 │   ├── manifest.json
+│   ├── rembrand_pardo_removebg.png
 │   ├── Rembrand-logo.ico
 │   ├── Rembrand-logo.png
 │   ├── robots.txt
@@ -21,31 +23,28 @@ nebula-tech-hub.github.io/
 │   ├── assets/
 │   │   ├── locales/
 │   │   │   ├── translations.js
-│   │   ├── infographic.jpg
-│   │   ├── iphone_step1.jpg
-│   │   ├── iphone_step2.jpg
-│   │   ├── iphone_step3.jpg
-│   │   ├── iphone_step4.jpg
-│   │   ├── iphone_steps.jpg
-│   │   ├── like_infographic.png
-│   │   ├── list_infographic.png
-│   │   ├── message_infographic.png
-│   │   ├── nebula-galaxy.png
 │   │   ├── r-logo.png
 │   │   ├── r-logo2.png
+│   │   ├── rembrand_pardo_removebg.png
 │   │   ├── Rembrand-logo.ico
 │   ├── components/
 │   │   ├── AboutPage.js
+│   │   ├── CertificatesData.js
 │   │   ├── ContactPage.js
 │   │   ├── CookieConsent.js
+│   │   ├── FlipWords.js
+│   │   ├── FocusCards.js
 │   │   ├── Footer.js
 │   │   ├── HeroHighlight.js
 │   │   ├── HomePage.js
 │   │   ├── HowToInstallPage.js
+│   │   ├── InfiniteMovingCards.js
 │   │   ├── Navbar.js
-│   │   ├── NebulaBackground.js
 │   │   ├── NotFound.js
-│   │   ├── PolicyPage.js
+│   │   ├── QualificationsPage.js
+│   │   ├── TypeWritterEffect.js
+│   ├── icons/
+│   │   ├── Iconbuddy.js
 │   ├── lib/
 │   │   ├── utils.js
 │   ├── styles/
@@ -58,8 +57,9 @@ nebula-tech-hub.github.io/
 │   │   ├── HomePage.css
 │   │   ├── HowToInstallPage.css
 │   │   ├── index.css
+│   │   ├── InfiniteCarousel.css
 │   │   ├── Navbar.css
-│   │   ├── PolicyPage.css
+│   │   ├── QualificationsPage.css
 │   ├── utils/
 │   │   ├── formValidations.css
 │   ├── App.test.js
