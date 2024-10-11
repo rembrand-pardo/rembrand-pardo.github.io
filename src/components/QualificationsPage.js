@@ -21,7 +21,12 @@ const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, bu
           <>
             <p className="card-description">{description}</p>
             <p>{moreText}</p>
-            <a href={buttonLink} className="card-button">
+            <a 
+              href={buttonLink} 
+              className="card-button"
+              target="_blank" 
+              rel="noopener noreferrer" // Ensure security  
+            >
               {buttonText}
             </a>
           </>
