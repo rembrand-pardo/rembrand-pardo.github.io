@@ -88,10 +88,13 @@ const AboutPage = ({ translations })  => {
         </section>
 
         <section className='secondHeading_section'>
-          <div className="h-[10rem] flex items-center justify-center">
+          {/* Make the height and flexbox properties responsive */}
+          <div className="h-[10rem] sm:h-[8rem] xs:h-[6rem] flex items-center justify-center">
             <TextHoverEffect text={translations.myPassions} />
           </div>
         </section>
+
+
 
         <section className='tracingBeam_section'>
           

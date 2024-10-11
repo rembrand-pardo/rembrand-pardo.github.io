@@ -1,10 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export const TextHoverEffect = ({
-  text,
-  duration
-}) => {
+export const TextHoverEffect = ({ text, duration }) => {
   const svgRef = useRef(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
@@ -23,7 +20,7 @@ export const TextHoverEffect = ({
   }, [cursor]);
 
   return (
-    (<svg
+    <svg
       ref={svgRef}
       width="100%"
       height="100%"
@@ -32,21 +29,22 @@ export const TextHoverEffect = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onMouseMove={(e) => setCursor({ x: e.clientX, y: e.clientY })}
-      className="select-none">
+      className="select-none"
+    >
       <defs>
         <linearGradient
           id="textGradient"
           gradientUnits="userSpaceOnUse"
           cx="50%"
           cy="50%"
-          r="25%">
+          r="25%"
+        >
           {hovered && (
             <>
-              <stop offset="0%" stopColor={"var(--yellow-500)"} />
-              <stop offset="25%" stopColor={"var(--red-500)"} />
-              <stop offset="50%" stopColor={"var(--blue-500)"} />
-              <stop offset="75%" stopColor={"var(--cyan-500)"} />
-              <stop offset="100%" stopColor={"var(--violet-500)"} />
+              {/* Updated hover colors to a bluish gradient */}
+              <stop offset="0%" stopColor={"#00BFFF"} /> {/* Light blue */}
+              <stop offset="50%" stopColor={"#1E90FF"} /> {/* Dodger blue */}
+              <stop offset="100%" stopColor={"#4169E1"} /> {/* Royal blue */}
             </>
           )}
         </linearGradient>
@@ -56,37 +54,37 @@ export const TextHoverEffect = ({
           gradientUnits="userSpaceOnUse"
           r="20%"
           animate={maskPosition}
-          // example for a smoother animation below
-          //   transition={{
-          //     type: "spring",
-          //     stiffness: 300,
-          //     damping: 50,
-          //   }}
-          transition={{ duration: duration ?? 0, ease: "easeOut" }}>
+          transition={{ duration: duration ?? 0, ease: "easeOut" }}
+        >
           <stop offset="0%" stopColor="white" />
           <stop offset="100%" stopColor="black" />
         </motion.radialGradient>
+
         <mask id="textMask">
           <rect x="0" y="0" width="100%" height="100%" fill="url(#revealMask)" />
         </mask>
       </defs>
+
+      {/* Adjust text size for different screen sizes */}
       <text
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl  "
-        style={{ opacity: hovered ? 0.7 : 0 }}>
+        className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl sm:text-6xl xs:text-5xl"
+        style={{ opacity: hovered ? 0.7 : 0 }}
+      >
         {text}
       </text>
+
       <motion.text
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="font-[helvetica] font-bold fill-transparent text-7xl   stroke-neutral-200 dark:stroke-neutral-800"
+        className="font-[helvetica] font-bold fill-transparent text-7xl sm:text-6xl xs:text-5xl stroke-neutral-200 dark:stroke-neutral-800"
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{
           strokeDashoffset: 0,
@@ -95,9 +93,11 @@ export const TextHoverEffect = ({
         transition={{
           duration: 4,
           ease: "easeInOut",
-        }}>
+        }}
+      >
         {text}
       </motion.text>
+
       <text
         x="50%"
         y="50%"
@@ -106,9 +106,10 @@ export const TextHoverEffect = ({
         stroke="url(#textGradient)"
         strokeWidth="0.3"
         mask="url(#textMask)"
-        className="font-[helvetica] font-bold fill-transparent text-7xl  ">
+        className="font-[helvetica] font-bold fill-transparent text-7xl sm:text-6xl xs:text-5xl"
+      >
         {text}
       </text>
-    </svg>)
+    </svg>
   );
 };
