@@ -6,6 +6,7 @@ import DOMPurify from 'dompurify';
 
 import { FocusCards } from './FocusCards';
 import InfiniteMovingCards from './InfiniteMovingCards';
+import { cards } from '../components/CertificatesData';
 
 
 const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, buttonLink, isExpanded, onClick }) => {
@@ -63,62 +64,6 @@ const PolicyPage = ({ translations })  => {
       moreText: translations.card2MoreText,
       buttonText: translations.card2ButtonText,
       buttonLink: translations.card2ButtonLink,
-    },
-  ];
-
-
-  const cards = [
-    {
-      title: "Zendesk: Customer Service",
-      src: "/certificates/Other/certificate_other0.jpg",
-    },
-    {
-      title: "DevOps: CI/CD",
-      src: "/certificates/Other/certificate_other1.jpg",
-    },
-    {
-      title: "Cisco Networking",
-      src: "/certificates/Other/certificate_other2.jpg",
-    },
-    {
-      title: "Cisco Foundations",
-      src: "/certificates/Other/certificate_other3.jpg",
-    },
-    {
-      title: "Human Resources",
-      src: "/certificates/Recruitment/certificate_recruitment0.jpg",
-    },
-    {
-      title: "American Staffing Association",
-      src: "/certificates/Recruitment/certificate_recruitment1.jpg",
-    },
-    {
-      title: "Human Resources",
-      src: "/certificates/Recruitment/certificate_recruitment2.jpg",
-    },
-    {
-      title: "American Staffing Association",
-      src: "/certificates/Recruitment/certificate_recruitment3.jpg",
-    },
-    {
-      title: "Human Resources: Payroll",
-      src: "/certificates/Recruitment/certificate_recruitment4.jpg",
-    },
-    {
-      title: "Human Resources Strategy",
-      src: "/certificates/Recruitment/certificate_recruitment5.jpg",
-    },
-    {
-      title: "Interviewing Candidates",
-      src: "/certificates/Recruitment/certificate_recruitment6.jpg",
-    },
-    {
-      title: "Interviewing Techniques",
-      src: "/certificates/Recruitment/certificate_recruitment7.jpg",
-    },
-    {
-      title: "HR Certification Institute",
-      src: "/certificates/Recruitment/certificate_recruitment8.jpg",
     },
   ];
 
