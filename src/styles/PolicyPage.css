@@ -7,74 +7,75 @@ section {
 }
 
 
-/*expandable cards*/
+/* Expandable cards */
 .expandable-cards {
     display: flex;
-    justify-content: center;
-    gap: 7rem;
+    justify-content: space-between;
+    gap: 3rem;  /* Gap between cards */
     margin-bottom: 2rem;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    margin-left: 7rem;
+    margin-right: 7rem;
 }
 
+/* Individual card styling */
 .card {
-    background-color: rgba(255, 255, 255, 0.408); /* More transparent glass effect */
-    color: white; /* Adjust text color for visibility */
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.408); 
+    color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, height 0.3s ease;
     cursor: pointer;
-    width: 160%; /* Full width for the card */
-    max-width: 700px; /* Max width for larger screens */
-    position: relative; /* Needed for absolute positioning of title */
+    width: 50%; /* Each card takes about half the width on larger screens */
+    max-width: 720px;
+    position: relative;
+    height: 300px;
 }
 
 .card.expanded {
-    height: auto; /* Adjust height when expanded */
-    background-color: rgba(0, 0, 0, 0.4); /* More transparent glass effect */
+    background-color: rgba(0, 0, 0, 0.4);
+    height: auto; /* Allow the card to expand as needed */
 }
 
+/* Card image */
 .card-image {
     width: 100%;
-    height: 300px; /* Increased height for the image */
-    object-fit: cover; /* Ensure the image covers the area without being cut off */
-    transition: height 0.3s ease; /* Smooth transition for height changes */
+    height: 300px;  /* Fixed height for the image */
+    object-fit: contain; /* Ensure image scales properly */
+    transition: height 0.3s ease;
 }
 
+.card.expanded .card-image {
+    height: 300px; /* Keep the image size the same when expanded */
+}
+
+/* Card content - hidden by default and shown when expanded */
 .card-content {
     padding: 1rem;
-    display: flex;
+    display: none; /* Hidden when the card is collapsed */
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.card-content p {
-    text-align: left;
+.card.expanded .card-content {
+    display: flex; /* Show content when the card is expanded */
 }
 
+/* Card title */
 .card-title {
-    position: absolute; /* Position the title over the image */
-    bottom: 10px; /* Adjust as needed */
-    left: 10px; /* Adjust as needed */
-    z-index: 10; /* Ensure title is above other content */
-    font-size: 1.5rem; /* Adjust title size */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-    color: white; /* Title color */
-}
-
-.card-title:hover {
-    color: #023871; /* Change title color to blue on hover */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 10;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .card-description {
     margin: 1rem 0;
-    color: white; /* Set description color to white */
-    text-align: left;
-}
-
-.card-description ul {
-    margin: 0; /* Remove margin to avoid clumping */
-    padding-left: 15px; /* Indent list */
-    text-align: left;
+    color: white;
 }
 
 .card-content .card-button {
@@ -92,20 +93,25 @@ section {
     background-color: #0056b3;
 }
 
-/* Responsive adjustments for larger screens */
-@media (min-width: 768px) {
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .expandable-cards {
+        flex-direction: column; /* Stack cards on top of each other on smaller screens */
+        gap: 2rem; /* Reduce gap for smaller screens */
+    }
+
     .card {
-        width: 100%; /* Full width for larger screens */
-        max-width: 750px; /* Maintain max width */
+        width: 100%; /* Full width for mobile */
+        max-width: none; /* Remove max-width constraint */
+    }
+
+    .card-image {
+        height: 200px; /* Smaller height for images on mobile */
     }
 }
 
-@media (max-width: 768px) {
-    .expandable-cards {
-        flex-direction: column; /* Stack cards vertically on smaller screens */
-        align-items: center; /* Center align cards on small screens */
-    }
-}
+  
+  
 
 
 

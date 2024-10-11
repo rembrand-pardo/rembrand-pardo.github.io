@@ -13,9 +13,7 @@ const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, bu
     <div className={`card ${isExpanded ? 'expanded' : ''}`} onClick={onClick}>
       <img src={imageSrc} alt={title} className={`card-image ${isExpanded ? 'expanded-image' : ''}`} />
       {!isExpanded && (
-        <h3 className={`card-title`}>
-          {title}
-        </h3>
+        <h3 className="card-title">{title}</h3>
       )}
       <div className={`card-content ${isExpanded ? 'expanded-content' : ''}`}>
         {isExpanded && (
@@ -37,7 +35,7 @@ const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, bu
 const PolicyPage = ({ translations })  => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
-  const cardsData = [
+  const BYUData = [
     {
       imageSrc: '/institutions_logos/BYU.png',
       title: translations.card1Title,
@@ -46,6 +44,9 @@ const PolicyPage = ({ translations })  => {
       buttonText: translations.card1ButtonText,
       buttonLink: translations.card1ButtonLink,
     },
+  ];
+
+  const SLCCData = [
     {
       imageSrc: '/institutions_logos/SLCC.png',
       title: translations.card2Title,
@@ -55,6 +56,7 @@ const PolicyPage = ({ translations })  => {
       buttonLink: translations.card2ButtonLink,
     },
   ];
+
 
   const cards = [
     {
@@ -135,9 +137,9 @@ const PolicyPage = ({ translations })  => {
 
         <section className='expandableCards_section'>
           <h2>{translations.qualificationsH2}</h2>
-          
+
           <div className="expandable-cards">
-            {cardsData.map((card, index) => (
+            {BYUData.map((card, index) => (
               <ExpandableCard
                 key={index}
                 imageSrc={card.imageSrc}
@@ -145,12 +147,26 @@ const PolicyPage = ({ translations })  => {
                 description={card.description}
                 buttonText={card.buttonText}
                 buttonLink={card.buttonLink}
-                isExpanded={expandedIndex === index}
-                onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                isExpanded={expandedIndex === index} // Check for BYU index
+                onClick={() => setExpandedIndex(expandedIndex === index ? null : index)} 
+              />
+            ))}
+
+            {SLCCData.map((card, index) => (
+              <ExpandableCard
+                key={index + BYUData.length} // Unique key
+                imageSrc={card.imageSrc}
+                title={card.title}
+                description={card.description}
+                buttonText={card.buttonText}
+                buttonLink={card.buttonLink}
+                isExpanded={expandedIndex === index + BYUData.length} // Check for SLCC index
+                onClick={() => setExpandedIndex(expandedIndex === index + BYUData.length ? null : index + BYUData.length)} // Manage independent expansion
               />
             ))}
           </div>
         </section>
+
 
         
         <section className='infiniteMovingCards_container'>
