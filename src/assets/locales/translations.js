@@ -112,6 +112,8 @@ const translations = {
         "I have learned that with computer-programming it is not always about what I know, " +
         "but what and how I can figure out what I don't know. Explore my website to find out more about what I have learned and done with programming."
       ),
+
+      myPassions: "My Passions",
     },
     es: {
       welcome: "Bienvenido a Nebula Tech Hub",

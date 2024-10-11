@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/HowToInstallPage.css';
-import nebulaqrcode from '../assets/nebulaqrcode.png';
 
 
 const HowToInstallPage = () => {
@@ -15,21 +14,7 @@ const HowToInstallPage = () => {
           The key features of PWAs are their reliability, speed, and ability to work offline. 
           Nebula’s PWA gives you all the benefits of a native app without the need to download it from an app store.
         </p>
-        <p>
-          To fully enjoy the power of Nebula PWA and access all its features, it’s essential to install the PWA on your device. 
-          Installing Nebula PWA on your device ensures you get the best experience, with quick access, smoother performance, and the ability to use it even when you’re offline.
-        </p>
-        <h2>How to Install Nebula PWA on Your Device?</h2>
-        <p>
-        Installing <a href="https://nebula-topaz-seven.vercel.app/home" target="_blank" rel="noopener noreferrer">Nebula PWA</a> on your device is a simple process that varies slightly depending on your device and operating system.
-        </p>
         
-        <p>
-          To get started, you can either visit the <a href="https://nebula-topaz-seven.vercel.app/home" target="_blank" rel="noopener noreferrer">Nebula PWA site</a> directly on your mobile device or scan the QR code below with your smartphone.
-        </p>
-        <figure className="image-container">
-          <img src={nebulaqrcode} alt="nebulaqrcode" className="image" />
-        </figure>
 
         {/* Add the disclaimer */}
         <p className="disclaimer">
