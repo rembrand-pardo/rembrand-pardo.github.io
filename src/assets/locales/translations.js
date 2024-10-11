@@ -55,7 +55,7 @@ const translations = {
         "I have continuously sought opportunities to expand my knowledge and skills by earning several certificates, recognized and endorsed by leading institutions such as the Project Management Institute (PMI), " +
         "the HR Certification Institute (HRCI), Continuing Professional Education (CPE), the Corporate Finance Institute (CFI), Atlassian, and many others. " +
         "These certifications involved hundreds of hours of rigorous learning, hands-on practice, and professional development, allowing me to deepen my expertise in areas closely aligned with my education and passions: " +
-        "management (project, program, program, team, and organizational leadership), business (administration, HR, recruitment, and office management), and technology (quality assurance, IT, web development, and software development)."
+        "management (project, product, program, team, and organizational leadership), business (administration, HR, recruitment, and office management), and technology (quality assurance, IT, web development, and software development)."
       ),
 
       qualificationsH2: "Education and Certificates",
@@ -151,7 +151,7 @@ const translations = {
         "He buscado continuamente oportunidades para ampliar mis conocimientos y habilidades obteniendo varios certificados, reconocidos y respaldados por instituciones líderes como el Project Management Institute (PMI), " +
         "el HR Certification Institute (HRCI), la Educación Profesional Continua (CPE), el Corporate Finance Institute (CFI), Atlassian y muchos otros. " +
         "Estas certificaciones involucraron cientos de horas de aprendizaje riguroso, práctica práctica y desarrollo profesional, lo que me permitió profundizar en mi experiencia en áreas estrechamente alineadas con mi educación y pasiones: " +
-        "gestión (proyecto, programa, liderazgo de equipo y organizacional), negocios (administración, recursos humanos, reclutamiento y gestión de oficinas), y tecnología (aseguramiento de calidad, TI, desarrollo web y desarrollo de software)."
+        "gestión (proyecto, producto, programa, liderazgo de equipo y organizacional), negocios (administración, recursos humanos, reclutamiento y gestión de oficinas), y tecnología (aseguramiento de calidad, TI, desarrollo web y desarrollo de software)."
       ),
 
       qualificationsH2: "Educación y Certificados",
