@@ -7,9 +7,11 @@ import DOMPurify from 'dompurify';
 import { FocusCards } from './FocusCards';
 import InfiniteMovingCards from './InfiniteMovingCards';
 import { cards } from '../components/CertificatesData';
+import { logEvent } from 'firebase/analytics';
+import { analytics } from '../firebaseConfig';
 
 
-const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, buttonLink, isExpanded, onClick }) => {
+const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, buttonLink, isExpanded, onClick, onButtonClick }) => {
   return (
     <div className={`card ${isExpanded ? 'expanded' : ''}`} onClick={onClick}>
       <img src={imageSrc} alt={title} className={`card-image ${isExpanded ? 'expanded-image' : ''}`} />
@@ -26,6 +28,7 @@ const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, bu
               className="card-button"
               target="_blank" 
               rel="noopener noreferrer" // Ensure security  
+              onClick={onButtonClick}
             >
               {buttonText}
             </a>
@@ -45,7 +48,7 @@ const PolicyPage = ({ translations })  => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true); // Set visible to true after delay
-    }, 100); // Adjust delay as needed
+    }, 130); // Adjust delay as needed
 
     return () => clearTimeout(timer); // Cleanup on unmount
   }, []);
@@ -60,7 +63,6 @@ const PolicyPage = ({ translations })  => {
       buttonLink: translations.card1ButtonLink,
     },
   ];
-
   const SLCCData = [
     {
       imageSrc: '/institutions_logos/SLCC.png',
@@ -71,6 +73,16 @@ const PolicyPage = ({ translations })  => {
       buttonLink: translations.card2ButtonLink,
     },
   ];
+
+  const handleCardClick = (index) => {
+    const eventAction = expandedIndex === index ? 'card_collapsed' : 'card_expanded';
+    logEvent(analytics, eventAction, { cardTitle: BYUData[index]?.title || SLCCData[index - BYUData.length]?.title });
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+  const handleButtonClick = (title) => {
+    logEvent(analytics, 'button_click', { buttonTitle: title });
+    console.log(`Button clicked: ${title}`);
+  };
 
 
   return (
@@ -96,32 +108,43 @@ const PolicyPage = ({ translations })  => {
           <h2>{translations.qualificationsH2}</h2>
 
           <div className="expandable-cards">
-            {BYUData.map((card, index) => (
-              <ExpandableCard
-                key={index}
-                imageSrc={card.imageSrc}
-                title={card.title}
-                description={card.description}
-                buttonText={card.buttonText}
-                buttonLink={card.buttonLink}
-                isExpanded={expandedIndex === index} // Check for BYU index
-                onClick={() => setExpandedIndex(expandedIndex === index ? null : index)} 
-              />
-            ))}
+  {BYUData.map((card, index) => (
+    <ExpandableCard
+      key={index}
+      imageSrc={card.imageSrc}
+      title={card.title}
+      description={card.description}
+      buttonText={card.buttonText}
+      buttonLink={card.buttonLink}
+      isExpanded={expandedIndex === index} // Check for BYU index
+      onClick={() => {
+        const newIndex = expandedIndex === index ? null : index; // Manage expansion
+        setExpandedIndex(newIndex); // Update state
+        handleCardClick(index); // Handle card click
+      }}
+      onButtonClick={() => handleButtonClick(card.buttonText)} // Track button click
+    />
+  ))}
 
-            {SLCCData.map((card, index) => (
-              <ExpandableCard
-                key={index + BYUData.length} // Unique key
-                imageSrc={card.imageSrc}
-                title={card.title}
-                description={card.description}
-                buttonText={card.buttonText}
-                buttonLink={card.buttonLink}
-                isExpanded={expandedIndex === index + BYUData.length} // Check for SLCC index
-                onClick={() => setExpandedIndex(expandedIndex === index + BYUData.length ? null : index + BYUData.length)} // Manage independent expansion
-              />
-            ))}
-          </div>
+  {SLCCData.map((card, index) => (
+    <ExpandableCard
+      key={index + BYUData.length} // Unique key
+      imageSrc={card.imageSrc}
+      title={card.title}
+      description={card.description}
+      buttonText={card.buttonText}
+      buttonLink={card.buttonLink}
+      isExpanded={expandedIndex === index + BYUData.length} // Check for SLCC index
+      onClick={() => {
+        const newIndex = expandedIndex === index + BYUData.length ? null : index + BYUData.length; // Manage independent expansion
+        setExpandedIndex(newIndex); // Update state
+        handleCardClick(index + BYUData.length); // Handle card click correctly
+      }}
+      onButtonClick={() => handleButtonClick(card.buttonText)} // Track button click
+    />
+  ))}
+</div>
+
         </section>
 
 
