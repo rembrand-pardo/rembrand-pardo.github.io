@@ -1,9 +1,74 @@
 // ../components/CertificatesData.js
 export const cards = [
     {
+        title: "Agile with Microsoft",
+        src: "/certificates/Management/certificate_management0.jpg",
+    },
+    {
+        title: "Atlassian Agile",
+        src: "/certificates/Management/certificate_management1.jpg",
+    },
+    {
+        title: "CFI Corporate Finance",
+        src: "/certificates/Analytics/certificate_business9.jpg",
+    },
+    {
+        title: "Microsoft and LinkedIn",
+        src: "/certificates/Management/certificate_management17.jpg",
+    },
+    {
       title: "Zendesk: Customer Service",
       src: "/certificates/Other/certificate_other0.jpg",
     },
+    {
+      title: "HR Certification Institute",
+      src: "/certificates/Recruitment/certificate_recruitment8.jpg",
+    },
+    {
+        title: "CPE Corporate Finance",
+        src: "/certificates/Analytics/certificate_business10.jpg",
+    },
+    {
+        title: "Business Banking",
+        src: "/certificates/Analytics/certificate_business12.jpg",
+    },
+    {
+        title: "Negotiation",
+        src: "/certificates/Management/certificate_management5.jpg",
+    },
+    {
+        title: "Human Resources Admin.",
+        src: "/certificates/Recruitment/certificate_recruitment0.jpg",
+    },
+    {
+        title: "Managing Hiring",
+        src: "/certificates/Management/certificate_management2.jpg",
+    },
+    {
+        title: "Managing Stakeholders",
+        src: "/certificates/Management/certificate_management3.jpg",
+    },
+    {
+        title: "PM Microsoft",
+        src: "/certificates/Management/certificate_management4.jpg",
+    },
+    {
+        title: "PM Budget",
+        src: "/certificates/Management/certificate_management6.jpg",
+    },
+    {
+        title: "PM Integration",
+        src: "/certificates/Management/certificate_management7.jpg",
+    },
+    {
+        title: "Project Management",
+        src: "/certificates/Management/certificate_management8.jpg",
+    },
+    {
+        title: "PM: Government Projects",
+        src: "/certificates/Management/certificate_management9.jpg",
+    },
+    
     {
       title: "DevOps: CI/CD",
       src: "/certificates/Other/certificate_other1.jpg",
@@ -15,10 +80,6 @@ export const cards = [
     {
       title: "Cisco Foundations",
       src: "/certificates/Other/certificate_other3.jpg",
-    },
-    {
-      title: "Human Resources Admin.",
-      src: "/certificates/Recruitment/certificate_recruitment0.jpg",
     },
     {
       title: "Corporate Recruting",
@@ -49,51 +110,6 @@ export const cards = [
       src: "/certificates/Recruitment/certificate_recruitment7.jpg",
     },
     {
-      title: "HR Certification Institute",
-      src: "/certificates/Recruitment/certificate_recruitment8.jpg",
-    },
-
-    {
-        title: "Agile with Microsoft",
-        src: "/certificates/Management/certificate_management0.jpg",
-    },
-    {
-        title: "Atlassian Agile",
-        src: "/certificates/Management/certificate_management1.jpg",
-    },
-    {
-        title: "Managing Hiring",
-        src: "/certificates/Management/certificate_management2.jpg",
-    },
-    {
-        title: "Managing Stakeholders",
-        src: "/certificates/Management/certificate_management3.jpg",
-    },
-    {
-        title: "PM Microsoft",
-        src: "/certificates/Management/certificate_management4.jpg",
-    },
-    {
-        title: "Negotiation",
-        src: "/certificates/Management/certificate_management5.jpg",
-    },
-    {
-        title: "PM Budget",
-        src: "/certificates/Management/certificate_management6.jpg",
-    },
-    {
-        title: "PM Integration",
-        src: "/certificates/Management/certificate_management7.jpg",
-    },
-    {
-        title: "Project Management",
-        src: "/certificates/Management/certificate_management8.jpg",
-    },
-    {
-        title: "PM: Government Projects",
-        src: "/certificates/Management/certificate_management9.jpg",
-    },
-    {
         title: "PM Leader Skills",
         src: "/certificates/Management/certificate_management10.jpg",
     },
@@ -121,10 +137,7 @@ export const cards = [
         title: "PM and Business Analysis",
         src: "/certificates/Management/certificate_management16.jpg",
     },
-    {
-        title: "Microsoft and LinkedIn",
-        src: "/certificates/Management/certificate_management17.jpg",
-    },
+
     {
         title: "Product Manager Communication",
         src: "/certificates/Management/certificate_management18.jpg",
@@ -178,22 +191,13 @@ export const cards = [
         title: "Strategic Planning",
         src: "/certificates/Analytics/certificate_business8.jpg",
     },
-    {
-        title: "CFI Corporate Finance",
-        src: "/certificates/Analytics/certificate_business9.jpg",
-    },
-    {
-        title: "CPE Corporate Finance",
-        src: "/certificates/Analytics/certificate_business10.jpg",
-    },
+    
+    
     {
         title: "Financial Forecasting Analysis",
         src: "/certificates/Analytics/certificate_business11.jpg",
     },
-    {
-        title: "Business Banking",
-        src: "/certificates/Analytics/certificate_business12.jpg",
-    },
+    
 
 ];
 
@@ -350,10 +354,7 @@ export const managementcards = [
         title: "Project Management",
         src: "/certificates/Management/certificate_management8.jpg",
     },
-    {
-        title: "PM: Government Projects",
-        src: "/certificates/Management/certificate_management9.jpg",
-    },
+    
     {
         title: "PM Leader Skills",
         src: "/certificates/Management/certificate_management10.jpg",
