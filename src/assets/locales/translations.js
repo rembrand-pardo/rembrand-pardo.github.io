@@ -100,7 +100,7 @@ const translations = {
 
       //About Page transaltions
       aboutMeText1: (
-        "Hello! My name is Rembrand Paul Pardo and I am from Barcelona, Spain." +
+        "Hello! My name is Rembrand Paul Pardo and I am from Barcelona, Spain. " +
          "I enjoy learning new things and finding new ways of doing things. Currently, I am studying Software Engineering at BYU. " +
          "Prior to this, I studied at Salt Lake Community College (SLCC) where I finished an Associate's degree in Business. " +
          "The world of business has always been a passion of mine because I like people and numbers."
