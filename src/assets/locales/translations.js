@@ -96,6 +96,22 @@ const translations = {
       ),
       card2ButtonText: "SLCC",
       card2ButtonLink: "https://www.slcc.edu/",
+
+
+      //About Page transaltions
+      aboutMeText1: (
+        "Hello! My name is Rembrand Paul Pardo and I am from Barcelona, Spain." +
+         "I enjoy learning new things and finding new ways of doing things. Currently, I am studying Software Engineering at BYU. " +
+         "Prior to this, I studied at Salt Lake Community College (SLCC) where I finished an Associate's degree in Business. " +
+         "The world of business has always been a passion of mine because I like people and numbers."
+      ),
+
+      aboutMeText2: (
+        "Software Engineering has become another passion of mine. " +
+        "I love how I can create new things with just lines of code. There are not limits to what programming can create. " +
+        "I have learned that with computer-programming it is not always about what I know, " +
+        "but what and how I can figure out what I don't know. Explore my website to find out more about what I have learned and done with programming."
+      ),
     },
     es: {
       welcome: "Bienvenido a Nebula Tech Hub",
