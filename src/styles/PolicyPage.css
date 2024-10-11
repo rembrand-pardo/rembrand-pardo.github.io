@@ -6,6 +6,15 @@ section {
     margin-bottom: 2rem;
 }
 
+.page-container {
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease-in; /* Transition effect */
+}
+  
+.page-container.visible {
+    opacity: 1; /* Become visible */
+}
+
 /* Expandable cards */
 .expandable-cards {
     display: flex;
@@ -134,10 +143,6 @@ section {
     }
 }
 
-  
-  
-
-
 
 /* Quote Section */
 .quote_section {
@@ -175,6 +180,10 @@ section {
     color: white; /* Text color set to white */
     text-align: left;
     margin-bottom: 20px;
+}
+
+.highlight {
+    color: #4784ff; /* Change this to the color you want */
 }
 
 .expandableCards_section {

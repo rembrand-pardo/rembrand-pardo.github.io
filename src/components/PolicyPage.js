@@ -1,8 +1,8 @@
 //../components/Policy.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/PolicyPage.css';
 import '../styles/GradientBackground.css';
-
+import DOMPurify from 'dompurify';
 
 import { FocusCards } from '../components/FocusCards';
 import InfiniteMovingCards from '../components/InfiniteMovingCards';
@@ -34,6 +34,15 @@ const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, bu
 
 const PolicyPage = ({ translations })  => {
   const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const [isVisible, setIsVisible] = useState(false); // New state variable
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true); // Set visible to true after delay
+    }, 100); // Adjust delay as needed
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
 
   const BYUData = [
     {
@@ -115,7 +124,7 @@ const PolicyPage = ({ translations })  => {
 
 
   return (
-    <div className="page-container">
+    <div className={`page-container ${isVisible ? 'visible' : ''}`}>
       <div className="background-gradient" /> {/* gradient background is for the whole page */}
       
       
@@ -130,9 +139,7 @@ const PolicyPage = ({ translations })  => {
             {translations.introductionText1}
           </p>
 
-          <p>
-            {translations.introductionText2}
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(translations.introductionText2) }} />
         </section>
 
         <section className='expandableCards_section'>

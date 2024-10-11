@@ -50,8 +50,8 @@ const translations = {
       ),
       
       introductionText2: (
-        "This philosophy has been the foundation of my educational and professional journey. In addition to earning an Associate’s degree in Business Management and a Bachelor’s degree in Computer Science with an emphasis on software development and management, " +
-        "I have also pursued a minor in Mathematics. Yet, my commitment to lifelong learning extends far beyond formal education. " +
+        "This philosophy has been the foundation of my educational and professional journey. In addition to earning an <span class='highlight'>Associate’s degree in Business Management</span> and a <span class='highlight'>Bachelor’s degree in Computer Science with an emphasis on software development and management</span>, " +
+        "I have also pursued a <span class='highlight'>minor in Mathematics</span>. Yet, my commitment to lifelong learning extends far beyond formal education. " +
         "I have continuously sought opportunities to expand my knowledge and skills by earning several certificates, recognized and endorsed by leading institutions such as the Project Management Institute (PMI), " +
         "the HR Certification Institute (HRCI), Continuing Professional Education (CPE), the Corporate Finance Institute (CFI), Atlassian, and many others. " +
         "These certifications involved hundreds of hours of rigorous learning, hands-on practice, and professional development, allowing me to deepen my expertise in areas closely aligned with my education and passions: " +
