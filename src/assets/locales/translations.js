@@ -5,7 +5,6 @@ const translations = {
       about: "About",
       qualifications: "Qualifications",
       install: "Install",
-      notFound: "Page Not Found",
       intro: "Welcome to my intro video!",
       cookieMessage: "This website uses cookies and other tracking technologies to enhance your browsing experience and optimize the services provided.",
       acceptButton: "Accept",
@@ -114,6 +113,12 @@ const translations = {
       ),
 
       myPassions: "My Passions",
+
+      //404 page
+      notFound: "Page Not Found",
+      notFoundMobile: "404\nPage Not Found",
+      notFoundMessage: "The page you are looking for does not exist.",
+      notFoundLink: "Let's go back!"
     },
     es: {
       welcome: "Bienvenido a Nebula Tech Hub",
@@ -121,7 +126,6 @@ const translations = {
       about: "Sobre Nosotros",
       qualifications: "Cualificaciones",
       install: "Instalar",
-      notFound: "Página No Encontrada",
       intro: "¡Bienvenido a mi video de introducción!",
       cookieMessage: "Esta web utiliza cookies y otras tecnologías de seguimiento para mejorar su experiencia de navegación y optimizar los servicios proporcionados.",
       acceptButton: "Aceptar",
@@ -210,6 +214,12 @@ const translations = {
       ),
       card2ButtonText: "SLCC",
       card2ButtonLink: "https://www.slcc.edu/",
+
+      //404 page
+      notFound: "Página No Encontrada",
+      notFoundMobile: "404\nPágina no encontrada",
+      notFoundMessage: "La página que estás buscando no existe.",
+      notFoundLink: "¡Volvamos atrás!"
     },
     ca: {
       welcome: "Benvingut a Nebula Tech Hub",
@@ -217,7 +227,6 @@ const translations = {
       about: "Sobre Nosaltres",
       qualifications: "Qualificacions",
       install: "Instal·lar",
-      notFound: "Pàgina No Trobada",
       intro: "Benvingut al meu vídeo introductori!",
       cookieMessage: "Aquest web utilitza cookies i altres tecnologies de seguiment per millorar la teva experiència de navegació i optimitzar els serveis proporcionats.",
       acceptButton: "Acceptar",
@@ -307,6 +316,13 @@ const translations = {
       ),
       card2ButtonText: "SLCC",
       card2ButtonLink: "https://www.slcc.edu/",
+
+      //404 page
+      notFound: "Pàgina No Trobada",
+      notFoundMobile: "404\nPàgina no trobada",
+      notFoundMessage: "La pàgina que estàs buscant no existeix.",
+      notFoundLink: "Tornem enrere!"
+
     }
 };
   
