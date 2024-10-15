@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/ContactPage.css';
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { BsTwitterX } from "react-icons/bs";
 import { validateEmail, validateRequired } from '../utils/formValidations';
 
+import { TypewriterEffect } from '../components/TypeWritterEffectSmall';
+import { TextHoverEffect } from "../components/TextHoverEffect";
+
 
 const ContactPage = ( { translations }) => {
+  const [showSecondEffect, setShowSecondEffect] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSecondEffect(true); // Show the second effect after a delay
+    }, 4500); // Change the delay time as needed (3000 ms = 3 seconds)
+
+    return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []);
+
   const [formValues, setFormValues] = useState({
     firstName: '',
     lastName: '',
@@ -36,16 +48,16 @@ const ContactPage = ( { translations }) => {
     let errors = {};
 
     if (!validateRequired(values.firstName)) {
-      errors.firstName = 'First Name is required';
+      errors.firstName = translations.contactRequiredName;
     }
     if (!validateRequired(values.lastName)) {
-      errors.lastName = 'Last Name is required';
+      errors.lastName = translations.contactRequiredLastName;
     }
     if (!validateEmail(values.email)) {
-      errors.email = 'Valid Email is required';
+      errors.email = translations.contactRequiredEmail;
     }
     if (!validateRequired(values.message)) {
-      errors.message = 'Message is required';
+      errors.message = translations.contactRequiredMessage;
     }
 
     return errors;
@@ -67,12 +79,12 @@ const ContactPage = ( { translations }) => {
       emailjs.send('service_2mq5ytk', 'template_hakpqus', templateParams, 'Aic1W4EbgDmAs8frO')
         .then((response) => {
           setFormState({
-            successMessage: 'Thank you for your message. I will be in touch as soon as possible.',
+            successMessage: translations.contactSuccessMessage,
             showForm: false,
             errors: {},
           });
         }, (error) => {
-          alert('Failed to send the message, please try again.');
+          alert(translations.contactErrorMessage);
         });
     } else {
       setFormState({ ...formState, errors });
@@ -83,15 +95,32 @@ return (
   <div className="contact_container">
       
     <div className="contact-page">
-      <h1>Let's Connect</h1>
-      <p>Have any questions or are you interested in learning more?</p>
-      <p>I'm here to help—whether you want to collaborate, explore services, or just reach out, feel free to get in touch.</p>
+
+      <div className="letsconnect_section h-[10rem] sm:h-[8rem] xs:h-[6rem] flex items-center justify-center">
+        <TextHoverEffect text={translations.letsconnect} />
+      </div>
+
+      <>
+        <div className="inqueries_section">
+          <TypewriterEffect
+            words={[{ text: translations.contactInqueries }]} 
+          />
+        </div>
+
+        {showSecondEffect && ( // Only show the second effect if showSecondEffect is true
+        <div className="iamHereToHelp_section">
+          <TypewriterEffect
+            words={[{ text: translations.contactIamHere }]} 
+          />
+        </div>
+        )}
+      </>
 
       {formState.successMessage && (
         <>
           <p className="success-message">{formState.successMessage}</p>
           <button className="send-another-button" onClick={() => setFormState({ showForm: true, successMessage: '', errors: {} })}>
-            Send another message
+            { translations.sendAnotherMessage }
           </button>
         </>
       )}
@@ -102,7 +131,7 @@ return (
             <input
               type="text"
               name="firstName"
-              placeholder="First Name"
+              placeholder= { translations.contactNamePlaceholder }
               value={formValues.firstName}
               onChange={handleInputChange}
               onFocus={() => handleInputFocus('firstName')}
@@ -115,7 +144,7 @@ return (
             <input
               type="text"
               name="lastName"
-              placeholder="Last Name"
+              placeholder= { translations.contactLastNamePlaceholder }
               value={formValues.lastName}
               onChange={handleInputChange}
               onFocus={() => handleInputFocus('lastName')}
@@ -128,7 +157,7 @@ return (
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder= { translations.contactEmailPlaceholder }
               value={formValues.email}
               onChange={handleInputChange}
               onFocus={() => handleInputFocus('email')}
@@ -140,7 +169,7 @@ return (
           <div className="input-container">
             <textarea
               name="message"
-              placeholder="Your Message"
+              placeholder= { translations.contactMessagePlaceholder }
               value={formValues.message}
               onChange={handleInputChange}
               onFocus={() => handleInputFocus('message')}
@@ -149,11 +178,11 @@ return (
             {formState.errors.message && <span className="error-text">{formState.errors.message}</span>}
           </div>
           
-          <button type="submit" className="send-button">Send</button>
+          <button type="submit" className="send-button">{ translations.contactSendButton }</button>
         </form>
       )}
 
-      <p style={{ marginTop: '1.5rem' }}>You can also connect through these channels:</p>
+      <p style={{ marginTop: '1.5rem' }}> { translations.contactOtherChannels } </p>
       <div className="social-icons">
         <a href="https://www.linkedin.com/in/rembrandpardo/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
@@ -168,9 +197,13 @@ return (
           <BsTwitterX />
         </a>
       </div>
-      </div>
+
+
+      
 
     </div>
+
+  </div>
   );
 };
 

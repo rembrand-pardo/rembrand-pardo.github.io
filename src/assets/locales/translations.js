@@ -118,7 +118,28 @@ const translations = {
       notFound: "Page Not Found",
       notFoundMobile: "404\nPage Not Found",
       notFoundMessage: "The page you are looking for does not exist.",
-      notFoundLink: "Let's go back!"
+      notFoundLink: "Let's go back!",
+
+
+      //Contact
+      letsconnect: "Let's Connect",
+      contactInqueries: "Have any questions or are you interested in learning more?",
+      contactIamHere: "I'm here to help—whether you want to collaborate, explore services, or just reach out, feel free to get in touch.",
+      sendAnotherMesssage: "Send another message",
+      contactSendButton: "Send",
+      contactOtherChannels: "You can also connect through these channels:",
+      contactNamePlaceholder: "First Name",
+      contactLastNamePlaceholder: "Last Name",
+      contactEmailPlaceholder: "Email",
+      contactMessagePlaceholder: "Your Message",
+      contactSuccessMessage: "Thank you for your message. I will be in touch as soon as possible.",
+      contactErrorMessage: "Failed to send the message, please try again.",
+      contactRequiredName: "First Name is required",
+      contactRequiredLastName: "Last Name is required",
+      contactRequiredEmail: "Valid Emial is required",
+      contactRequiredMessage: "Message is required",
+
+    
     },
     es: {
       welcome: "Bienvenido a Nebula Tech Hub",
@@ -219,7 +240,29 @@ const translations = {
       notFound: "Página No Encontrada",
       notFoundMobile: "404\nPágina no encontrada",
       notFoundMessage: "La página que estás buscando no existe.",
-      notFoundLink: "¡Volvamos atrás!"
+      notFoundLink: "¡Volvamos atrás!",
+
+
+      // Contact
+      letsconnect: "Conectemos",
+      contactInqueries: "¿Tienes alguna pregunta o estás interesado en saber más?",
+      contactIamHere: "Estoy aquí para ayudar: ya sea que desees colaborar, explorar servicios o simplemente ponerte en contacto, no dudes en hacerlo.",
+      sendAnotherMesssage: "Enviar otro mensaje",
+      contactSendButton: "Enviar",
+      contactOtherChannels: "También puedes conectarte a través de estos canales:",
+      contactNamePlaceholder: "Nombre",
+      contactLastNamePlaceholder: "Apellidos",
+      contactEmailPlaceholder: "Correo electrónico",
+      contactMessagePlaceholder: "Tu mensaje",
+      contactSuccessMessage: "Gracias por tu mensaje. Estaré en contacto lo antes posible.",
+      contactErrorMessage: "Error al enviar el mensaje, por favor intenta de nuevo.",
+      contactRequiredName: "El nombre es obligatorio.",
+      contactRequiredLastName: "Los apellidos son obligatorios.",
+      contactRequiredEmail: "Se requiere un correo electrónico válido.",
+      contactRequiredMessage: "El mensaje es obligatorio.",
+
+
+
     },
     ca: {
       welcome: "Benvingut a Nebula Tech Hub",
@@ -321,7 +364,28 @@ const translations = {
       notFound: "Pàgina No Trobada",
       notFoundMobile: "404\nPàgina no trobada",
       notFoundMessage: "La pàgina que estàs buscant no existeix.",
-      notFoundLink: "Tornem enrere!"
+      notFoundLink: "Tornem enrere!",
+
+
+      // Contact
+      letsconnect: "Connectem",
+      contactInqueries: "Tens alguna pregunta o estàs interessat en saber-ne més?",
+      contactIamHere: "Sóc aquí per ajudar-te: ja sigui que vulguis col·laborar, explorar serveis o simplement posar-te en contacte, no dubtis a fer-ho.",
+      sendAnotherMesssage: "Envia un altre missatge",
+      contactSendButton: "Enviar",
+      contactOtherChannels: "També pots connectar-te a través d'aquests canals:",
+      contactNamePlaceholder: "Nom",
+      contactLastNamePlaceholder: "Cognoms",
+      contactEmailPlaceholder: "Correu electrònic",
+      contactMessagePlaceholder: "El teu missatge",
+      contactSuccessMessage: "Gràcies pel teu missatge. Estaré en contacte tan aviat com sigui possible.",
+      contactErrorMessage: "No s'ha pogut enviar el missatge, si us plau, torna-ho a intentar.",
+      contactRequiredName: "El nom és obligatori.",
+      contactRequiredLastName: "Els cognoms són obligatoris.",
+      contactRequiredEmail: "Es requereix un correu electrònic vàlid.",
+      contactRequiredMessage: "El missatge és obligatori.",
+
+
 
     }
 };
