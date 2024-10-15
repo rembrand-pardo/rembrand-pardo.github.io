@@ -2,8 +2,8 @@ import React from 'react';
 import '../styles/AboutPage.css';
 import '../styles/GradientBackground.css';
 
-import { logEvent } from 'firebase/analytics';
-import { analytics } from '../firebaseConfig';
+// import { logEvent } from 'firebase/analytics';
+// import { analytics } from '../firebaseConfig';
 
 import rembrandPardoImage from '../assets/rembrand_pardo_removebg.png';
 import { TextHoverEffect } from "../components/TextHoverEffect";
