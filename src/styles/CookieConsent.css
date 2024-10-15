@@ -23,9 +23,11 @@
 
 .cookie-consent-buttons {
   display: flex;
-  justify-content: flex-end;
+  align-self: center;
   gap: 10px;
 }
+
+
 
 @media (max-width: 768px) {
   .cookie-consent {
