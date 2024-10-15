@@ -5,10 +5,9 @@ import { validateEmail, validateRequired } from '../utils/formValidations';
 
 import { TypewriterEffect } from '../components/TypeWritterEffectSmall';
 import { TextHoverEffect } from "../components/TextHoverEffect";
-
-
 import { Linkedin, X, GithubThick, Instagram } from '../icons/Iconbuddy'; 
 
+import '../styles/GradientBackground.css';
 
 const ContactPage = ( { translations }) => {
   const [showSecondEffect, setShowSecondEffect] = useState(false);
@@ -94,7 +93,8 @@ const ContactPage = ( { translations }) => {
 
 return (
   <div className="contact_container">
-      
+    
+    <div className="background-gradient" /> {/* Apply the gradient background */}
     <div className="contact-page">
 
       <div className="letsconnect_section h-[10rem] sm:h-[8rem] xs:h-[6rem] flex items-center justify-center">
