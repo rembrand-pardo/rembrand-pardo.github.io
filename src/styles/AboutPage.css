@@ -1,4 +1,11 @@
+.about_page {
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.5s ease-in; /* Transition effect */
+}
 
+.about_page.visible {
+  opacity: 1; /* Become visible */
+}
 
 .no-visible-scrollbar {
   scrollbar-width: none;

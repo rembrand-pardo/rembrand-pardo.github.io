@@ -1,4 +1,5 @@
-import React from 'react';
+//../components/AboutPage.js
+import React, { useState, useEffect } from 'react';
 import '../styles/AboutPage.css';
 import '../styles/GradientBackground.css';
 
@@ -14,9 +15,16 @@ import { TracingBeam } from "../components/TracingBeam";
 import { Tabs } from "../components/Tabs";
 
 
-
 const AboutPage = ({ translations })  => {
 
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true); // Set visible to true after delay
+    }, 140); // Adjust delay as needed
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
 
   const tabs = [
     {
@@ -73,9 +81,9 @@ const AboutPage = ({ translations })  => {
 
 
   return (
-    <div className="about_page">
+    <div className={`about_page ${isVisible ? 'visible' : ''}`}>
 
-    <div className="background-gradient" /> {/* gradient background is for the whole page */}
+      <div className="background-gradient" /> {/* gradient background is for the whole page */}
     
       <div className="about_page_content">
         <section className='image_section'>

@@ -5,6 +5,7 @@ import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { BsTwitterX } from "react-icons/bs";
 import { validateEmail, validateRequired } from '../utils/formValidations';
 
+
 const ContactPage = ( { translations }) => {
   const [formValues, setFormValues] = useState({
     firstName: '',
@@ -83,8 +84,8 @@ return (
       
     <div className="contact-page">
       <h1>Let's Connect</h1>
-      <p>Have questions or inquiries?</p>
-      <p>Send me a message. I am here to help!</p>
+      <p>Have any questions or are you interested in learning more?</p>
+      <p>I'm here to help—whether you want to collaborate, explore services, or just reach out, feel free to get in touch.</p>
 
       {formState.successMessage && (
         <>
@@ -152,7 +153,7 @@ return (
         </form>
       )}
 
-      <p style={{ marginTop: '1.5rem' }}>Discover more and get in touch though the following channels:</p>
+      <p style={{ marginTop: '1.5rem' }}>You can also connect through these channels:</p>
       <div className="social-icons">
         <a href="https://www.linkedin.com/in/rembrandpardo/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
@@ -168,6 +169,7 @@ return (
         </a>
       </div>
       </div>
+
     </div>
   );
 };
