@@ -5,15 +5,6 @@ import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { BsTwitterX } from "react-icons/bs";
 import { validateEmail, validateRequired } from '../utils/formValidations';
 
-
-import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
-
-const World = dynamic(() => import("../lib/utils").then((m) => m.World), {
-  ssr: false,
-});
-
-
 const ContactPage = ( { translations }) => {
   const [formValues, setFormValues] = useState({
     firstName: '',
