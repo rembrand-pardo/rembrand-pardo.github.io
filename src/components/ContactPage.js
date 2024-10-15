@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/ContactPage.css';
-import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
-import { BsTwitterX } from "react-icons/bs";
 import { validateEmail, validateRequired } from '../utils/formValidations';
 
 import { TypewriterEffect } from '../components/TypeWritterEffectSmall';
 import { TextHoverEffect } from "../components/TextHoverEffect";
+
+
+import { Linkedin, X, GithubThick, Instagram } from '../icons/Iconbuddy'; 
 
 
 const ContactPage = ( { translations }) => {
@@ -183,18 +184,18 @@ return (
       )}
 
       <p style={{ marginTop: '1.5rem' }}> { translations.contactOtherChannels } </p>
-      <div className="social-icons">
+      <div className="contact-social-icons">
         <a href="https://www.linkedin.com/in/rembrandpardo/" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin />
+          <Linkedin className="contact_linkedin" />
         </a>
         <a href="https://github.com/Thebatman7" target="_blank" rel="noopener noreferrer">
-          <FaGithub />
+          <GithubThick className="contact_github" />
         </a>
         <a href="https://www.instagram.com/rembrand.paul/" target="_blank" rel="noopener noreferrer">
-          <FaInstagram />
+          <Instagram className="contact_instagram" />
         </a>
         <a href="https://x.com/rembrandpardo" target="_blank" rel="noopener noreferrer">
-          <BsTwitterX />
+        <X className="contact_x" />
         </a>
       </div>
 

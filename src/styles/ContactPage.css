@@ -107,23 +107,59 @@
 .send-button:hover {
   background: linear-gradient(1deg,#810cd5 5%, #400fe1 90%); 
 }
-  
-.social-icons {
+
+
+
+
+.contact-social-icons {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.social-icons a {
-  color: #6a00f4;
+.contact-social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border: 2px solid rgba(255, 255, 255, 0.871); /* Circle border color */
+  border-radius: 50%; /* Make it circular */
+  background-color: transparent; /* Transparent background */
+  transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+  color: rgb(255, 255, 255, 0.871); /* Default icon color */
   font-size: 2rem;
-  transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: #a90fcf;
+/* Glow effect on hover and border color change */
+.contact-social-icons a:hover {
+  box-shadow: 0 0 10px; /* Glow effect on hover */
 }
+
+/* Change circle color on hover */
+.contact-social-icons a:hover {
+  border-color: currentColor; /* Use current color to match the icon color */
+}
+
+/* Specific hover effects for each icon */
+.contact-social-icons a:hover .contact_linkedin {
+  color: #091be1; /* Light blue for LinkedIn */
+}
+
+.contact-social-icons a:hover .contact_github {
+  color: #FFD700; /* Yellow for GitHub */
+}
+
+.contact-social-icons a:hover .contact_instagram {
+  color: #E1306C; /* Pinkish color for Instagram */
+}
+
+.contact-social-icons a:hover .contact_x {
+  color: #fffefe; /* White for X */
+}
+
+
 
 .success-message {
   color: rgb(7, 102, 236);
