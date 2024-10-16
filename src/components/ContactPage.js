@@ -183,7 +183,8 @@ return (
         </form>
       )}
 
-      <p style={{ marginTop: '1.5rem' }}> { translations.contactOtherChannels } </p>
+      <p className="otherChannels_container" style={{ marginTop: '3rem' }}> { translations.contactOtherChannels } </p>
+      
       <div className="contact-social-icons">
         <a href="https://www.linkedin.com/in/rembrandpardo/" target="_blank" rel="noopener noreferrer">
           <Linkedin className="contact_linkedin" />
@@ -198,9 +199,6 @@ return (
         <X className="contact_x" />
         </a>
       </div>
-
-
-      
 
     </div>
 
