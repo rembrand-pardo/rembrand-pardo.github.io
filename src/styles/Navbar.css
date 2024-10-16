@@ -36,10 +36,11 @@ body, .main-content {
 .logo-section {
   padding: 5px;
   transition: background-color 0.3s ease;
+  margin-right: 70px;
 }
 
 .logo-section:hover {
-  background-color: #001fcc4a;
+  background-color: #001fcc25;
 }
 
 .navbar-logo img {
