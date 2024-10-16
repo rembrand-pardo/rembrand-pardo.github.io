@@ -125,7 +125,7 @@ const translations = {
       letsconnect: "Let's Connect",
       contactInqueries: "Have any questions or are you interested in learning more?",
       contactIamHere: "I'm here to help—whether you want to collaborate, explore services, or just reach out, feel free to get in touch.",
-      sendAnotherMesssage: "Send another message",
+      sendAnotherMessage: "Send another message",
       contactSendButton: "Send",
       contactOtherChannels: "You can also connect through these channels:",
       contactNamePlaceholder: "First Name",

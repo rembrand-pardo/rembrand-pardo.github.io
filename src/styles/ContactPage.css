@@ -197,21 +197,26 @@
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
-  
+
 .send-another-button {
-  background-color: #00f4f4;
-  border: none;
-  padding: 0.75rem 1rem;
-  color: #fff;
-  font-size: 1.1rem;
-  border-radius: 5px;
+  background: transparent;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff; /* Text color */
+  font-size: 1.2rem;
+  border-radius: 30px; /* Rounded corners */
+  border: 2px solid transparent;
+  border: 2px solid rgba(255, 255, 255, 0.871);
+  background-color: transparent; /* Transparent background */
+  transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-family: 'Righteous', sans-serif;
+  transition: all 0.4s ease;
 }
   
 .send-another-button:hover {
-  background-color: #5f0fcf;
+  background: linear-gradient(45deg, rgba(17, 53, 116, 0.8), rgba(8, 146, 221, 0.342)); /* Blue gradient with transparency */
+  color: white; /* Change text color to white on hover */
+  border: 1px solid; /* Remove gradient outline on hover */
+  box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect */
 }
 
 
