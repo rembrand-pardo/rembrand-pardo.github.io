@@ -34,13 +34,12 @@ body, .main-content {
 }
 
 .logo-section {
-  padding: 5px;
-  transition: background-color 0.3s ease;
-  margin-right: 70px;
+  padding: 0.5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for box-shadow */
+  margin-right: 73px; /* makes the nav-link-section more centered in the whole page*/
 }
-
 .logo-section:hover {
-  background-color: #001fcc25;
+  box-shadow: 0 0 15px rgba(43, 72, 233, 0.597); /* Light blue glow effect */
 }
 
 .navbar-logo img {
