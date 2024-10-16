@@ -1,3 +1,4 @@
+//../components/ContactPage.js
 import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/ContactPage.css';
@@ -17,6 +18,16 @@ const ContactPage = ( { translations }) => {
     }, 4500); // Change the delay time as needed (3000 ms = 3 seconds)
 
     return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []);
+
+
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true); // Set visible to true after delay
+    }, 140); // Adjust delay as needed
+
+    return () => clearTimeout(timer); // Cleanup on unmount
   }, []);
 
   const [formValues, setFormValues] = useState({
@@ -92,7 +103,7 @@ const ContactPage = ( { translations }) => {
   };
 
 return (
-  <div className="contact_container">
+  <div className={`contact_container ${isVisible ? 'visible' : ''}`}>
     
     <div className="background-gradient" /> {/* Apply the gradient background */}
     <div className="contact-page">

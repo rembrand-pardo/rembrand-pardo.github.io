@@ -1,5 +1,14 @@
+.contact_container {
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.5s ease-in; /* Transition effect */
+}
+
+.contact_container.visible {
+  opacity: 1;
+}
+
 .contact-page {
-  max-width: 60%;
+  max-width: 55%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -18,12 +27,18 @@
 .letsconnect_section {
   margin-top: 5rem;
 }
+
+.iamHereToHelp_section {
+  padding-left: 30px;
+  padding-right: 30px;
+}
   
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
   
 .input-container {
@@ -33,13 +48,15 @@
   
 .input-container input,
 .input-container textarea {
-  width: 80%;
+  width: 77%;
   padding: 0.75rem;
   font-size: 1.2rem;
   border-radius: 5px;
   border: 1px solid #092083;
   transition: all 0.2s ease;
   color: #00008B; /* Dark blue */
+  box-sizing: border-box; /* Include padding in width */
+  margin: 0 auto; /* Center the input fields */
 }
   
 .input-container input:focus,
@@ -61,7 +78,7 @@
 .input-container textarea:not(:placeholder-shown)::placeholder {
   position: absolute;
   top: 0.25rem;
-  left: 0.75rem;
+  left: 0.5rem;
   font-size: 0.8rem;
   color: #0044ffd7;
   background-color: white;
@@ -78,7 +95,8 @@
   bottom: 0.5rem;
   left: 0.75rem;
   color: red;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  margin-left: 5rem;
 }
   
 /* Hide placeholder when error is shown */
@@ -123,7 +141,7 @@
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 12rem;
 }
 
 .contact-social-icons a {
@@ -196,16 +214,54 @@
   background-color: #5f0fcf;
 }
 
-/* Center and limit width for input fields and textarea on large screens */
-@media (min-width: 1000px) {
+
+/* Monitors and large */
+@media (min-width: 2050px) and (max-width: 3000px) {
+  .contact-form {
+    margin-top: 2rem;
+  }
+
+  .contact-social-icons {
+    margin-bottom: 16rem;
+  }
+
   .send-button {
     width: 30%; /* Reduce button width to 30% */
     max-width: 200px; /* Ensure the button doesn't stretch too much */
     margin: 0 auto; /* Center the button */
   }
+
+  .input-container .error-text {
+    margin-left: 9.5rem;
+  }
+}
+
+/* Most laptops */
+@media (min-width: 2000px) and (max-width: 2050px) {
+  .send-button {
+    width: 30%; /* Reduce button width to 30% */
+    max-width: 200px; /* Ensure the button doesn't stretch too much */
+    margin: 0 auto; /* Center the button */
+  }
+
+  .input-container .error-text {
+    margin-left: 7.5rem;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1980px) {
+  .send-button {
+    width: 30%; /* Reduce button width to 30% */
+    max-width: 200px; /* Ensure the button doesn't stretch too much */
+    margin: 0 auto; /* Center the button */
+  }
+
+  .input-container .error-text {
+    margin-left: 6rem;
+  }
 }
   
-/* Responsive styles */
+/* Responsive styles for small devices */
 @media (max-width: 768px) {
   .container {
     padding: 0.5rem; /* Reduce padding for small devices */
@@ -230,6 +286,10 @@
     font-size: 1rem;
     padding: 0.8rem; /* Adjusted padding for better touch input on mobile devices */
     width: 100%;
+  }
+
+  .input-container .error-text {
+    margin-left: 0rem;
   }
 
   .social-icons a {
@@ -276,6 +336,10 @@
 
   .input-container .error-text {
     font-size: 0.7rem;
+  }
+
+  .input-container .error-text {
+    margin-left: 0rem;
   }
 
   .social-icons a {
