@@ -6,3 +6,8 @@
 .resume_page.visible {
     opacity: 1; /* Become visible */
 }
+
+/* this overrides the default color of input. !important */
+input {
+    color: #030d65 !important;
+}
