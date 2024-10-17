@@ -143,7 +143,7 @@ const ResumePage = ({ translations }) => {
       <div className="resume_page_content">
         <div className="h-[40rem] flex flex-col justify-center items-center px-4">
           <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-white">
-            Ask Aceternity UI Anything
+            Ask Anything
           </h2>
           <PlaceholdersAndVanishInput
             placeholders={placeholders}
@@ -160,7 +160,7 @@ const ResumePage = ({ translations }) => {
             </div>
           )}
           {/* Add the required link back to LanguageTool: https://dev.languagetool.org/public-http-api.html */}
-          <div style={{ fontSize: '7.5px', marginTop: '15px' }}>
+          <div style={{ fontSize: '8px', marginTop: '14px' }}>
             <a class="languageTool" href="https://languagetool.org" target="_blank" rel="noopener noreferrer">
               Powered by LanguageTool
             </a>
@@ -168,9 +168,12 @@ const ResumePage = ({ translations }) => {
 
         </div>
 
-        {/* */}
+        {/*Here is where we should have the five centered tabs. When one of them is clicked the card below show be visbile based on 
+        the tab selected. if after a tab is selected a users starts typing in the search bar above then the card is not visible and the selected tab is unslected
+        until a tab is selected again. */}
 
-        {/* Based on the search result and if spelling is correct a card with */}
+        {/* Based on the search result and if spelling is correct this card will be visible with right image and the right text.
+        all depends on which file the searched word was found in. This card will changed if one of the tabs above is selected. */}
         <div className='resume_cards h-[20rem] flex flex-col justify-center items-center px-4'>
             <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-black bg-opacity-60 dark:bg-black dark:bg-opacity-20">
                 <img
