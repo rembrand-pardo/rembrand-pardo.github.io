@@ -3,6 +3,6 @@
     transition: opacity 0.5s ease-in; /* Transition effect */
 }
   
-.about_page.visible {
+.resume_page.visible {
     opacity: 1; /* Become visible */
 }
