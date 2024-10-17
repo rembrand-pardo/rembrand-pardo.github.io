@@ -6,6 +6,7 @@ import QualificationsPage from './components/QualificationsPage';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
+import ResumePage from './components/ResumePage';
 import NotFound from './components/NotFound';
 import './styles/App.css';
 import CookieConsent from './components/CookieConsent'; 
@@ -67,6 +68,7 @@ function App() {
               <Route path="/qualifications" element={<QualificationsPage translations={translations[language]} />} />
               <Route path="/about" element={<AboutPage translations={translations[language]} />} />
               <Route path="/contact" element={<ContactPage translations={translations[language]} />} />
+              <Route path="/resume" element={<ResumePage translations={translations[language]} />} />
               <Route path="*" element={<NotFound translations={translations[language]} />} />
             </Routes>
           {/* Conditionally render Footer */}
