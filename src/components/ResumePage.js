@@ -7,6 +7,9 @@ import '../styles/GradientBackground.css';
 
 import { PlaceholdersAndVanishInput } from "../components/PlaceholderAndVanish";
 
+
+import { BackgroundGradient } from "../components/CardGradient";
+
 const ResumePage = ({ translations }) => {
   const [inputText, setInputText] = useState('');
   const [suggestedText, setSuggestedText] = useState('');
@@ -158,11 +161,40 @@ const ResumePage = ({ translations }) => {
           )}
           {/* Add the required link back to LanguageTool: https://dev.languagetool.org/public-http-api.html */}
           <div style={{ fontSize: '7.5px', marginTop: '15px' }}>
-            <a href="https://languagetool.org" target="_blank" rel="noopener noreferrer">
+            <a class="languageTool" href="https://languagetool.org" target="_blank" rel="noopener noreferrer">
               Powered by LanguageTool
             </a>
           </div>
+
         </div>
+
+        {/* */}
+
+        {/* Based on the search result and if spelling is correct a card with */}
+        <div className='resume_cards h-[20rem] flex flex-col justify-center items-center px-4'>
+            <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-black bg-opacity-60 dark:bg-black dark:bg-opacity-20">
+                <img
+                    src={`Rembrand-logo.png`}
+                    alt="dummy"
+                    height="400"
+                    width="400"
+                    className="object-contain"
+                />
+                <p className="text-base sm:text-xl text-white mt-4 mb-2 dark:text-neutral-200">
+                 Card 1 out of 5
+                </p>
+        
+                <p className="text-sm text-white">
+                    The Air Jordan 4 Retro Reimagined Bred will release on Saturday,
+                    February 17, 2024. Your best opportunity to get these right now is by
+                    entering raffles and waiting for the official releases.
+                </p>
+                <button className="rounded-full pl-4 pr-4 py-2 text-white flex text-center bg-blue-600 mt-4 text-xs mx-auto block">
+                    View Resume
+                </button>
+            </BackgroundGradient>
+        </div>
+
       </div>
     </div>
   );

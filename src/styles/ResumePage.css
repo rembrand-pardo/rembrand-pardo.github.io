@@ -11,3 +11,7 @@
 input {
     color: #030d65 !important;
 }
+
+.languageTool {
+    opacity: 0.6;
+}

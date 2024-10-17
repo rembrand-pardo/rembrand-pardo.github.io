@@ -202,8 +202,8 @@ export function PlaceholdersAndVanishInput({
       <button
         disabled={!value}
         type="submit"
-        //  bg-[#263bf2] changed the color or button
-        className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full disabled:bg-gray-100 bg-[#263bf2] dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center">
+        //  bg-[#2054ef] changed the color or button
+        className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full disabled:bg-gray-100 bg-[#2054ef] dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center">
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
