@@ -7,7 +7,6 @@ import '../styles/GradientBackground.css';
 
 import { PlaceholdersAndVanishInput } from "../components/PlaceholderAndVanish";
 
-
 import { BackgroundGradient } from "../components/CardGradient";
 
 const ResumePage = ({ translations }) => {
@@ -16,16 +15,18 @@ const ResumePage = ({ translations }) => {
   const [isCorrect, setIsCorrect] = useState(true);
   const [loading, setLoading] = useState(false);
 
+  const [selectedTab, setSelectedTab] = useState(null); // State to manage selected tab
+  const [currentCardData, setCurrentCardData] = useState({}); // State to manage current card data
+
   const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis hiding?",
-    "Write a JavaScript method to reverse a string",
-    "How to assemble your own PC?",
+    "Business analytics",
+    "Project management",
+    "Product management",
+    "Supervisor",
+    "Office manager",
   ];
 
-  // Cache to store previous grammar checks
-  const grammarCache = {};
+  const grammarCache = {};// Cache to store previous grammar checks
 
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -36,7 +37,7 @@ const ResumePage = ({ translations }) => {
   }, []);
 
 
-  //preload dictionaries in memory
+  // Preload dictionaries in memory
   const [dictionaries, setDictionaries] = useState({});
   useEffect(() => {
     const loadDictionaries = async () => {
@@ -59,7 +60,7 @@ const ResumePage = ({ translations }) => {
   }, []);
 
 
-  //throttled grammar check to respect rate limits
+  // Throttled grammar check to respect rate limits
   const throttledCheckGrammar = throttle(async (text) => {
     if (grammarCache[text]) {
       return grammarCache[text];
@@ -85,9 +86,10 @@ const ResumePage = ({ translations }) => {
 
   const handleChange = (e) => {
     setInputText(e.target.value);
+    setSelectedTab(null); // Deselect tab when user types
+    setCurrentCardData({}); // Hide card when user types
   };
 
-  //submit function
   const onSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -96,10 +98,8 @@ const ResumePage = ({ translations }) => {
   
     let formattedInputText = inputText.trim();
   
-    // Check if there is more than one word
-    if (formattedInputText.split(' ').length > 1) {
-      // Capitalize the first letter of the first word if it's not already
-      formattedInputText = formattedInputText.charAt(0).toUpperCase() + formattedInputText.slice(1);
+    if (formattedInputText.split(' ').length > 1) { // Check if there is more than one word
+      formattedInputText = formattedInputText.charAt(0).toUpperCase() + formattedInputText.slice(1); // Capitalize the first letter of the first word if it's not already
     }
   
     try {
@@ -128,25 +128,32 @@ const ResumePage = ({ translations }) => {
   };
   
 
-  
-  //search function
   const searchWord = (word) => {
     const lowerCasedWord = word.toLowerCase();
-    let foundPdf = null;
-  
+    let foundData = null;
+
     for (const dict in dictionaries) {
       if (dictionaries[dict][lowerCasedWord]) {
-        foundPdf = dictionaries[dict][lowerCasedWord];
+        foundData = dictionaries[dict][lowerCasedWord];
         break;
       }
     }
-  
-    if (foundPdf) {
-      window.open(foundPdf, '_blank');
+
+    if (foundData) {
+      setCurrentCardData({
+        title: `Card for ${lowerCasedWord}`,
+        content: foundData.description, // Assuming each entry has a description
+        image: foundData.image || 'rembrand.JPEG', // Fallback if no image is provided
+      });
     } else {
-      window.open('pdfs/management.pdf', '_blank');
+      setCurrentCardData({
+        title: 'Generic Card',
+        content: 'Here is a general description since nothing matched your search.',
+        image: 'Rembrand-logo.png', // Default image for generic card
+      });
     }
   };
+
 
   const confirmSuggestion = () => {
     setIsCorrect(true);
@@ -155,6 +162,11 @@ const ResumePage = ({ translations }) => {
 
   const rejectSuggestion = () => {
     setSuggestedText('');
+  };
+
+  const handleTabClick = (tabIndex) => {
+    setSelectedTab(tabIndex);
+    setCurrentCardData({}); // Hide the card when a tab is clicked
   };
 
   return (
@@ -175,15 +187,16 @@ const ResumePage = ({ translations }) => {
 
           {loading && <p>Checking grammar...</p>}
           
-          {/* Add the required link back to LanguageTool: https://dev.languagetool.org/public-http-api.html */}
+
           <div style={{ fontSize: '8px', marginTop: '14px' }}>
             <a class="languageTool" href="https://languagetool.org" target="_blank" rel="noopener noreferrer">
               Powered by LanguageTool
             </a>
           </div>
           
+
           {!isCorrect && suggestedText && (
-            <div>
+            <div className='inputVerification_section'>
               <p>Did you mean: <strong>{suggestedText}</strong>?</p>
               <button onClick={confirmSuggestion}>Yes</button>
               <button onClick={rejectSuggestion}>No</button>
@@ -192,34 +205,42 @@ const ResumePage = ({ translations }) => {
 
         </div>
 
-        {/*Here is where we should have the five centered tabs. When one of them is clicked the card below show be visbile based on 
-        the tab selected. if after a tab is selected a users starts typing in the search bar above then the card is not visible and the selected tab is unslected
-        until a tab is selected again. */}
+        {/* Tabs for card selection */}
+        <div className='field_tabs tabs flex justify-center mt-4'>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <button
+              key={index}
+              className={`tab-button ${selectedTab === index ? 'active' : ''}`}
+              onClick={() => handleTabClick(index)}
+            >
+              Tab {index + 1}
+            </button>
+          ))}
+        </div>
 
-        {/* Based on the search result and if spelling is correct this card will be visible with right image and the right text.
-        all depends on which file the searched word was found in. This card will changed if one of the tabs above is selected. */}
+
         <div className='resume_cards h-[20rem] flex flex-col justify-center items-center px-4'>
+          {selectedTab !== null && currentCardData.title && (  
             <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-black bg-opacity-60 dark:bg-black dark:bg-opacity-20">
-                <img
-                    src={`Rembrand-logo.png`}
-                    alt="dummy"
-                    height="400"
-                    width="400"
-                    className="object-contain"
-                />
-                <p className="text-base sm:text-xl text-white mt-4 mb-2 dark:text-neutral-200">
-                 Card 1 out of 5
-                </p>
-        
-                <p className="text-sm text-white">
-                    The Air Jordan 4 Retro Reimagined Bred will release on Saturday,
-                    February 17, 2024. Your best opportunity to get these right now is by
-                    entering raffles and waiting for the official releases.
-                </p>
-                <button className="rounded-full pl-4 pr-4 py-2 text-white flex text-center bg-blue-600 mt-4 text-xs mx-auto block">
-                    View Resume
-                </button>
+              <img
+                src={currentCardData.image}
+                alt={currentCardData.title}
+                height="400"
+                width="400"
+                className="object-contain"
+              />
+              <p className="text-base sm:text-xl text-white mt-4 mb-2 dark:text-neutral-200">
+                {currentCardData.title}
+              </p>
+      
+              <p className="text-sm text-white">
+                {currentCardData.content}
+              </p>
+              <button className="rounded-full pl-4 pr-4 py-2 text-white flex text-center bg-blue-600 mt-4 text-xs mx-auto block">
+                View Resume {/* a link to the right foundPdf should be in the button and open the pdf in a different browser tab */}
+              </button>
             </BackgroundGradient>
+          )}
         </div>
 
       </div>
