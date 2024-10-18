@@ -151,7 +151,16 @@ const ResumePage = ({ translations }) => {
             onSubmit={onSubmit}
             disabled={loading}
           />
+
           {loading && <p>Checking grammar...</p>}
+          
+          {/* Add the required link back to LanguageTool: https://dev.languagetool.org/public-http-api.html */}
+          <div style={{ fontSize: '8px', marginTop: '14px' }}>
+            <a class="languageTool" href="https://languagetool.org" target="_blank" rel="noopener noreferrer">
+              Powered by LanguageTool
+            </a>
+          </div>
+          
           {!isCorrect && suggestedText && (
             <div>
               <p>Did you mean: <strong>{suggestedText}</strong>?</p>
@@ -159,12 +168,6 @@ const ResumePage = ({ translations }) => {
               <button onClick={rejectSuggestion}>No</button>
             </div>
           )}
-          {/* Add the required link back to LanguageTool: https://dev.languagetool.org/public-http-api.html */}
-          <div style={{ fontSize: '8px', marginTop: '14px' }}>
-            <a class="languageTool" href="https://languagetool.org" target="_blank" rel="noopener noreferrer">
-              Powered by LanguageTool
-            </a>
-          </div>
 
         </div>
 
