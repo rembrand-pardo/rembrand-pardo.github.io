@@ -16,6 +16,14 @@ const ResumePage = ({ translations }) => {
   const [isCorrect, setIsCorrect] = useState(true);
   const [loading, setLoading] = useState(false);
 
+  const placeholders = [
+    "What's the first rule of Fight Club?",
+    "Who is Tyler Durden?",
+    "Where is Andrew Laeddis hiding?",
+    "Write a JavaScript method to reverse a string",
+    "How to assemble your own PC?",
+  ];
+
   // Cache to store previous grammar checks
   const grammarCache = {};
 
@@ -48,17 +56,10 @@ const ResumePage = ({ translations }) => {
     };
 
     loadDictionaries();
-   }, []);
+  }, []);
 
-  const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis hiding?",
-    "Write a JavaScript method to reverse a string",
-    "How to assemble your own PC?",
-  ];
 
-  // Throttled grammar check to respect rate limits
+  //throttled grammar check to respect rate limits
   const throttledCheckGrammar = throttle(async (text) => {
     if (grammarCache[text]) {
       return grammarCache[text];
@@ -86,21 +87,38 @@ const ResumePage = ({ translations }) => {
     setInputText(e.target.value);
   };
 
+  //submit function
   const onSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setSuggestedText('');
     setIsCorrect(true);
-
+  
+    let formattedInputText = inputText.trim();
+  
+    // Check if there is more than one word
+    if (formattedInputText.split(' ').length > 1) {
+      // Capitalize the first letter of the first word if it's not already
+      formattedInputText = formattedInputText.charAt(0).toUpperCase() + formattedInputText.slice(1);
+    }
+  
     try {
-      const result = await throttledCheckGrammar(inputText);
+      const result = await throttledCheckGrammar(formattedInputText);
       if (result.matches.length > 0) {
-        const suggestion = result.matches[0].replacements[0].value;
-        setSuggestedText(suggestion);
+        let correctedText = formattedInputText;
+  
+        result.matches.forEach((match) => {
+          const suggestion = match.replacements[0].value;
+          correctedText = correctedText.substring(0, match.offset) +
+                          suggestion +
+                          correctedText.substring(match.offset + match.length);
+        });
+  
+        setSuggestedText(correctedText);
         setIsCorrect(false);
       } else {
         setIsCorrect(true);
-        searchWord(inputText);
+        searchWord(formattedInputText);
       }
     } catch (error) {
       alert('Grammar check service is currently unavailable. Please try again later.');
@@ -108,7 +126,10 @@ const ResumePage = ({ translations }) => {
       setLoading(false);
     }
   };
+  
 
+  
+  //search function
   const searchWord = (word) => {
     const lowerCasedWord = word.toLowerCase();
     let foundPdf = null;
