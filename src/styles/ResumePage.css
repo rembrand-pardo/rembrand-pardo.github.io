@@ -76,6 +76,9 @@ input {
     margin-top: 1rem; /* Top margin for spacing */
     margin-left: 1rem;
     margin-right: 1rem;
+
+    z-index: 10; /* Make sure tabs are on top of other content */
+    position: relative; /* Ensure the z-index works */
 }
 
 .tab-button {
@@ -133,4 +136,13 @@ input {
     color: white; /* Change text color to white when active */
     border: 1px solid; /* Remove gradient outline on active */
     box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect for active tab */
+}
+
+
+/* Resume cards */
+.resume_cards {
+    margin-top: 7rem; /* Add enough margin to push the cards below the tabs */
+    margin-bottom: 7rem; /* Add enough margin to push the cards below the tabs */
+    z-index: 5; /* Set a lower z-index than the tabs */
+    position: relative;
 }
