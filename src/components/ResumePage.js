@@ -18,10 +18,6 @@ const ResumePage = ({ translations, language }) => {
   const [selectedTab, setSelectedTab] = useState(null); // State to manage selected tab
   const [currentCardData, setCurrentCardData] = useState({}); // State to manage current card data
 
-
-  // Log the language to test
-  console.log("language selected:", language);
-
   const placeholders = [
     "Business analytics",
     "Project management",
