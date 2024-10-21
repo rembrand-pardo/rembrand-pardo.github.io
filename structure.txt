@@ -16,6 +16,12 @@ nebula-tech-hub.github.io/
 │   │   ├── recruitment_dictionary.json
 │   ├── institutions_logos (folder)/
 │   ├── pdfs/
+│   │   ├── pdf_images/
+│   │   │   ├── business.png
+│   │   │   ├── hr_recruiter.png
+│   │   │   ├── management.png
+│   │   │   ├── public_relations.png
+│   │   │   ├── sdet.png
 │   │   ├── business.pdf
 │   │   ├── hr_recruiter.pdf
 │   │   ├── management.pdf
