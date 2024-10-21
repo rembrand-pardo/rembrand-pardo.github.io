@@ -1,12 +1,13 @@
 {
-    "pdfs/management.pdf": [
-      "strategy",
-      "leadership",
-      "financial planning",
-      "risk management",
-      "data analytics",
-      "project manager",
-      "product manager"
-    ]
+  "pdfs/management.pdf": [
+    "manager",
+    "strategy",
+    "leadership",
+    "financial planning",
+    "risk management",
+    "data analytics",
+    "project manager",
+    "product manager"
+  ]
 }
   

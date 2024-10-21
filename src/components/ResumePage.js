@@ -220,9 +220,11 @@ const ResumePage = ({ translations }) => {
     setSuggestedText('');
   };
 
-  const handleTabClick = (tabIndex) => {
-    setSelectedTab(tabIndex);
+  const handleTabClick = (tabName, tabIndex) => {
     setCurrentCardData({}); // Hide the card when a tab is clicked
+    setSelectedTab(tabIndex);
+    searchWord(tabName);
+    
   };
 
   return (
@@ -245,7 +247,7 @@ const ResumePage = ({ translations }) => {
           
 
           <div style={{ fontSize: '8px', marginTop: '14px' }}>
-            <a class="languageTool" href="https://languagetool.org" target="_blank" rel="noopener noreferrer">
+            <a className="languageTool" href="https://languagetool.org" target="_blank" rel="noopener noreferrer">
               Powered by LanguageTool
             </a>
           </div>
@@ -267,7 +269,7 @@ const ResumePage = ({ translations }) => {
             <button
               key={index}
               className={`tab-button ${selectedTab === index ? 'active' : ''}`}
-              onClick={() => handleTabClick(index)}
+              onClick={() => handleTabClick(tabName, index)}
             >
               {tabName}
             </button>
