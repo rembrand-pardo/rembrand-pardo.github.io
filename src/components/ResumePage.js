@@ -292,9 +292,14 @@ const ResumePage = ({ translations, language }) => {
               <p className="text-sm text-white">
                 {currentCardData.content}
               </p>
-              <button className="rounded-full pl-4 pr-4 py-2 text-white flex text-center bg-blue-600 mt-4 text-xs mx-auto block">
-                View Resume {/* a link to the right foundPdf should be in the button and open the pdf in a different browser tab */}
-              </button>
+              <a
+                href={currentCardData.pdfLink} // Use pdfLink here
+                target="_blank" // Opens in a new tab
+                rel="noopener noreferrer" // Security best practice
+                className="viewResume_container rounded-full pl-4 pr-4 py-2 text-white flex text-center bg-blue-600 mt-4 text-xs mx-auto block"
+              >
+                View Resume
+              </a>
             </BackgroundGradient>
           )}
         </div>
