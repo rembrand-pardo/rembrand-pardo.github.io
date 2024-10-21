@@ -177,12 +177,8 @@ const ResumePage = ({ translations }) => {
   const searchWord = (word) => {
     const lowerCasedWord = word.toLowerCase();
     const foundPdf = dictionaries[lowerCasedWord];
-
-    console.log("This is the pdf path for the word searched:", foundPdf);  // Check the value of foundPdf
   
     if (foundPdf) {
-      // Check if the found PDF has a corresponding entry in the pdfDetailsMap
-      const pdfDetails = pdfDetailsMap[foundPdf];
 
       console.log("pdfDetails:", pdfDetails);  // Check what pdfDetails returns
       
