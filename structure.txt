@@ -4,19 +4,36 @@ nebula-tech-hub.github.io/
 ├── node_modules/
 ├── public/
 │   ├── certificates/
-│   │   ├── Analytics/
-│   │   ├── Management/
-│   │   ├── Other/
-│   │   ├── Recruitment/
-│   ├── institutions_logos/
+│   │   ├── Analytics (folder)/
+│   │   ├── Management (folder)/
+│   │   ├── Other (folder)/
+│   │   ├── Recruitment (folder)/
+│   ├── dictionary/
+│   │   ├── business_dictionary.json
+│   │   ├── management_dictionary.json
+│   │   ├── other_dictionary.json
+│   │   ├── qa_dictionary.json
+│   │   ├── recruitment_dictionary.json
+│   ├── institutions_logos (folder)/
+│   ├── pdfs/
+│   │   ├── business.pdf
+│   │   ├── hr_recruiter.pdf
+│   │   ├── management.pdf
+│   │   ├── public_relations.pdf
+│   │   ├── sdet.pdf
 │   ├── 404.html
 │   ├── index.html
 │   ├── intro.mp4
 │   ├── intro.webm
 │   ├── manifest.json
+│   ├── pardo_removebg.png
+│   ├── pardo.JPEG
+│   ├── r_p.JPEG
 │   ├── rembrand_pardo_removebg.png
+│   ├── rembrand_removebg.png
 │   ├── Rembrand-logo.ico
 │   ├── Rembrand-logo.png
+│   ├── rembrand.JPEG
 │   ├── robots.txt
 │   ├── structure.txt
 ├── src/
@@ -29,6 +46,7 @@ nebula-tech-hub.github.io/
 │   │   ├── Rembrand-logo.ico
 │   ├── components/
 │   │   ├── AboutPage.js
+│   │   ├── CardGradient.js
 │   │   ├── CertificatesData.js
 │   │   ├── ContactPage.js
 │   │   ├── CookieConsent.js
@@ -37,12 +55,19 @@ nebula-tech-hub.github.io/
 │   │   ├── Footer.js
 │   │   ├── HeroHighlight.js
 │   │   ├── HomePage.js
+│   │   ├── HoverBorderGradient.js
 │   │   ├── HowToInstallPage.js
 │   │   ├── InfiniteMovingCards.js
 │   │   ├── Navbar.js
 │   │   ├── NotFound.js
+│   │   ├── PlaceholderAndVanish.js
 │   │   ├── QualificationsPage.js
+│   │   ├── Resume.js
+│   │   ├── Tabs.js
+│   │   ├── TextHoverEffect.js
+│   │   ├── TracingBeam.js
 │   │   ├── TypeWritterEffect.js
+│   │   ├── TypeWritterEffectSmall.js
 │   ├── icons/
 │   │   ├── Iconbuddy.js
 │   ├── lib/
@@ -59,7 +84,9 @@ nebula-tech-hub.github.io/
 │   │   ├── index.css
 │   │   ├── InfiniteCarousel.css
 │   │   ├── Navbar.css
+│   │   ├── NotFound.css
 │   │   ├── QualificationsPage.css
+│   │   ├── Resume.css
 │   ├── utils/
 │   │   ├── formValidations.css
 │   ├── App.test.js

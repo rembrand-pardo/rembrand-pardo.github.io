@@ -1,14 +1,13 @@
 {
-    "strategy": "pdfs/management.pdf",
-    "leadership": "pdfs/management.pdf",
-    "marketing": "pdfs/management.pdf",
-    "business model": "pdfs/management.pdf",
-    "financial planning": "pdfs/management.pdf",
-    "supply chain": "pdfs/management.pdf",
-    "human resources": "pdfs/management.pdf",
-    "risk management": "pdfs/management.pdf",
-    "data analytics": "pdfs/management.pdf",
-    "project manager": "pdfs/management.pdf",
-    "product manager": "pdfs/management.pdf"
+  "pdfs/management.pdf": [
+    "manager",
+    "strategy",
+    "leadership",
+    "financial planning",
+    "risk management",
+    "data analytics",
+    "project manager",
+    "product manager"
+  ]
 }
-    
+  

@@ -1,12 +1,7 @@
 {
-    "strategy": "pdfs/hr_recruiter.pdf",
-    "leadership": "pdfs/hr_recruiter.pdf",
-    "marketing": "pdfs/hr_recruiter.pdf",
-    "business model": "pdfs/hr_recruiter.pdf",
-    "financial planning": "pdfs/hr_recruiter.pdf",
-    "supply chain": "pdfs/hr_recruiter.pdf",
-    "human resources": "pdfs/hr_recruiter.pdf",
-    "risk management": "pdfs/hr_recruiter.pdf",
-    "data analytics": "pdfs/hr_recruiter.pdf"
+    "pdfs/hr_recuitment.pdf": [
+      "hr recruiter",
+      "human resources"
+    ]
 }
-    
+  
