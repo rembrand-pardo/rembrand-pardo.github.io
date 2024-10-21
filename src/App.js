@@ -68,7 +68,7 @@ function App() {
               <Route path="/qualifications" element={<QualificationsPage translations={translations[language]} />} />
               <Route path="/about" element={<AboutPage translations={translations[language]} />} />
               <Route path="/contact" element={<ContactPage translations={translations[language]} />} />
-              <Route path="/resume" element={<ResumePage translations={translations[language]} />} />
+              <Route path="/resume" element={<ResumePage translations={translations[language]} language={language}/>} />
               <Route path="*" element={<NotFound translations={translations[language]} />} />
             </Routes>
           {/* Conditionally render Footer */}

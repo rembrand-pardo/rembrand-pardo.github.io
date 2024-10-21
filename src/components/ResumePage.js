@@ -9,7 +9,7 @@ import { PlaceholdersAndVanishInput } from "../components/PlaceholderAndVanish";
 
 import { BackgroundGradient } from "../components/CardGradient";
 
-const ResumePage = ({ translations }) => {
+const ResumePage = ({ translations, language }) => {
   const [inputText, setInputText] = useState('');
   const [suggestedText, setSuggestedText] = useState('');
   const [isCorrect, setIsCorrect] = useState(true);
@@ -17,6 +17,10 @@ const ResumePage = ({ translations }) => {
 
   const [selectedTab, setSelectedTab] = useState(null); // State to manage selected tab
   const [currentCardData, setCurrentCardData] = useState({}); // State to manage current card data
+
+
+  // Log the language to test
+  console.log("language selected:", language);
 
   const placeholders = [
     "Business analytics",
@@ -86,7 +90,7 @@ const ResumePage = ({ translations }) => {
     try {
       const response = await axios.post('https://api.languagetool.org/v2/check', new URLSearchParams({
         text: text,
-        language: 'auto',
+        language: language === 'en' ? 'en-US' : language,
       }), {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -179,8 +183,8 @@ const ResumePage = ({ translations }) => {
     const foundPdf = dictionaries[lowerCasedWord];
   
     if (foundPdf) {
-
-      console.log("pdfDetails:", pdfDetails);  // Check what pdfDetails returns
+      const normalizedPdf = foundPdf.toLowerCase();  // Ensure PDF names are in lowercase
+      const pdfDetails = pdfDetailsMap[normalizedPdf];  // Use normalizedPdf in the lookup
       
       if (pdfDetails) {
         setCurrentCardData({
