@@ -233,7 +233,7 @@ const ResumePage = ({ translations, language }) => {
       
       <div className="background-gradient" />
       <div className="resume_page_content">
-        <div className="h-[27rem] flex flex-col justify-end items-center px-4">
+        <div className="h-[23rem] flex flex-col justify-end items-center px-4">
           <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-white">
             Ask Anything
           </h2>
