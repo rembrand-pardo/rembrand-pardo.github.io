@@ -1,13 +1,9 @@
 {
-  "strategy": "pdfs/business.pdf",
-  "leadership": "pdfs/business.pdf",
-  "marketing": "pdfs/business.pdf",
-  "business model": "pdfs/business.pdf",
-  "financial planning": "pdfs/business.pdf",
-  "supply chain": "pdfs/business.pdf",
-  "human resources": "pdfs/business.pdf",
-  "risk management": "pdfs/business.pdf",
-  "data analytics": "pdfs/business.pdf",
-  "analytics": "pdfs/business.pdf"
+  "pdfs/business.pdf": [
+    "strategy",
+    "marketing",
+    "business model",
+    "financial planning",
+    "supply chain"
+  ]
 }
-  

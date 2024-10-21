@@ -41,23 +41,40 @@ const ResumePage = ({ translations }) => {
   const [dictionaries, setDictionaries] = useState({});
   useEffect(() => {
     const loadDictionaries = async () => {
-        const files = ['business_dictionary.json', 'management_dictionary.json', 'other_dictionary.json', 'qa_dictionary.json', 'recruitment_dictionary.json'];
-        const dicts = {};
+      const files = [
+        { file: 'business_dictionary.json' },
+        { file: 'management_dictionary.json' },
+        { file: 'other_dictionary.json' },
+        { file: 'qa_dictionary.json' },
+        { file: 'recruitment_dictionary.json' }
+      ];
+      
+      const dict = {};
 
-        for (let file of files) {
-            try {
-                const response = await fetch(`/dictionary/${file}`);
-                const data = await response.json();
-                dicts[file] = data;
-            } catch (error) {
-                console.error(`Error loading dictionary ${file}:`, error);
-            }
+      for (let { file } of files) {
+        try {
+          const response = await fetch(`/dictionary/${file}`);
+          const data = await response.json();
+          
+          // 'data' is an object where the key is the PDF file and the value is an array of words
+          for (let pdfFile in data) {
+            const words = data[pdfFile];
+            words.forEach(word => {
+              dict[word] = pdfFile; // Associate each word with its respective PDF
+            });
+          }
+        } catch (error) {
+          console.error(`Error loading dictionary ${file}:`, error);
         }
-        setDictionaries(dicts);
+      }
+
+      setDictionaries(dict); // Save the word-to-PDF mappings to state
     };
 
     loadDictionaries();
   }, []);
+
+  
 
 
   // Throttled grammar check to respect rate limits
@@ -128,31 +145,70 @@ const ResumePage = ({ translations }) => {
   };
   
 
+  const pdfDetailsMap = {
+    "business.pdf": {
+      image: "pdfs/pdf_images/business.png",
+      title: "This is a title for the business card",
+      content: "This card contains info about business and what my business resume contains",
+    },
+    "hr_recruiter.pdf": {
+      image: "pdfs/pdf_images/hr_recruiter.png",
+      title: "This is a title for the hr card",
+      content: "This card contains info about hr and what my hr resume contains",
+    },
+    "management.pdf": {
+      image: "pdfs/pdf_images/management.png",
+      title: "This is a title for the management card",
+      content: "This card contains info about management and what my management resume contains",
+    },
+    "public_relations.pdf": {
+      image: "pdfs/pdf_images/public_relations.png",
+      title: "This is a title for the public relations card",
+      content: "This card contains info about PR and what my PR resume contains",
+    },
+    "sdet.pdf": {
+      image: "pdfs/pdf_images/sdet.png",
+      title: "This is a title for the sdet card",
+      content: "This card contains info about sdet and what my sdet resume contains",
+    },
+  };
+  
+
   const searchWord = (word) => {
     const lowerCasedWord = word.toLowerCase();
-    let foundData = null;
-
-    for (const dict in dictionaries) {
-      if (dictionaries[dict][lowerCasedWord]) {
-        foundData = dictionaries[dict][lowerCasedWord];
-        break;
+    const foundPdf = dictionaries[lowerCasedWord];
+  
+    if (foundPdf) {
+      // Check if the found PDF has a corresponding entry in the pdfDetailsMap
+      const pdfDetails = pdfDetailsMap[foundPdf];
+      
+      if (pdfDetails) {
+        setCurrentCardData({
+          title: pdfDetails.title,
+          content: pdfDetails.content,
+          image: pdfDetails.image,
+          pdfLink: foundPdf, // Set the PDF link
+        });
+      } else {
+        // If no specific PDF details are found, fall back to generic card info
+        setCurrentCardData({
+          title: `Card for ${lowerCasedWord}`,
+          content: `The content is related to ${lowerCasedWord}.`,
+          image: 'rembrand.JPEG', // Fallback image
+          pdfLink: foundPdf, // Set the PDF link
+        });
       }
-    }
-
-    if (foundData) {
-      setCurrentCardData({
-        title: `Card for ${lowerCasedWord}`,
-        content: foundData.description, // Assuming each entry has a description
-        image: foundData.image || 'rembrand.JPEG', // Fallback if no image is provided
-      });
     } else {
+      // If no PDF is found, use generic card information
       setCurrentCardData({
         title: 'Generic Card',
         content: 'Here is a general description since nothing matched your search.',
         image: 'Rembrand-logo.png', // Default image for generic card
+        pdfLink: 'pdfs/management.pdf', // Set the PDF link
       });
     }
   };
+  
 
 
   const confirmSuggestion = () => {
@@ -207,16 +263,17 @@ const ResumePage = ({ translations }) => {
 
         {/* Tabs for card selection */}
         <div className='field_tabs tabs flex justify-center mt-4'>
-          {Array.from({ length: 5 }).map((_, index) => (
+          {["Business", "Hr Recruiter", "Manager", "Public Relations", "SDET"].map((tabName, index) => (
             <button
               key={index}
               className={`tab-button ${selectedTab === index ? 'active' : ''}`}
               onClick={() => handleTabClick(index)}
             >
-              Tab {index + 1}
+              {tabName}
             </button>
           ))}
         </div>
+
 
 
         <div className='resume_cards h-[20rem] flex flex-col justify-center items-center px-4'>
