@@ -146,27 +146,27 @@ const ResumePage = ({ translations }) => {
   
 
   const pdfDetailsMap = {
-    "business.pdf": {
-      image: "pdfs/pdf_images/business.png",
+    "pdfs/business.pdf": {
+      image: "/pdfs/pdf_images/business.png",
       title: "This is a title for the business card",
       content: "This card contains info about business and what my business resume contains",
     },
-    "hr_recruiter.pdf": {
+    "pdfs/hr_recruiter.pdf": {
       image: "pdfs/pdf_images/hr_recruiter.png",
       title: "This is a title for the hr card",
       content: "This card contains info about hr and what my hr resume contains",
     },
-    "management.pdf": {
+    "pdfs/management.pdf": {
       image: "pdfs/pdf_images/management.png",
       title: "This is a title for the management card",
       content: "This card contains info about management and what my management resume contains",
     },
-    "public_relations.pdf": {
+    "pdfs/public_relations.pdf": {
       image: "pdfs/pdf_images/public_relations.png",
       title: "This is a title for the public relations card",
       content: "This card contains info about PR and what my PR resume contains",
     },
-    "sdet.pdf": {
+    "pdfs/sdet.pdf": {
       image: "pdfs/pdf_images/sdet.png",
       title: "This is a title for the sdet card",
       content: "This card contains info about sdet and what my sdet resume contains",
@@ -177,10 +177,14 @@ const ResumePage = ({ translations }) => {
   const searchWord = (word) => {
     const lowerCasedWord = word.toLowerCase();
     const foundPdf = dictionaries[lowerCasedWord];
+
+    console.log("This is the pdf path for the word searched:", foundPdf);  // Check the value of foundPdf
   
     if (foundPdf) {
       // Check if the found PDF has a corresponding entry in the pdfDetailsMap
       const pdfDetails = pdfDetailsMap[foundPdf];
+
+      console.log("pdfDetails:", pdfDetails);  // Check what pdfDetails returns
       
       if (pdfDetails) {
         setCurrentCardData({
@@ -224,7 +228,6 @@ const ResumePage = ({ translations }) => {
     setCurrentCardData({}); // Hide the card when a tab is clicked
     setSelectedTab(tabIndex);
     searchWord(tabName);
-    
   };
 
   return (
@@ -276,10 +279,8 @@ const ResumePage = ({ translations }) => {
           ))}
         </div>
 
-
-
         <div className='resume_cards h-[20rem] flex flex-col justify-center items-center px-4'>
-          {selectedTab !== null && currentCardData.title && (  
+          {(selectedTab !== null || currentCardData.title) && currentCardData.title && (
             <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-black bg-opacity-60 dark:bg-black dark:bg-opacity-20">
               <img
                 src={currentCardData.image}
