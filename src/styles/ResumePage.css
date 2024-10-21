@@ -17,6 +17,57 @@ input {
     color: #a8aee9cf;
 }
 
+/* yes and no buttons*/
+.inputVerification_section {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
+    flex-direction: column; /* Stack the text and buttons vertically */
+}
+
+.inputVerification_section p {
+    margin-bottom: 0.5rem; /* Space between the text and buttons */
+    text-align: center; /* Center the text */
+    font-size: 1.05rem; /* Font size */
+}
+
+.inputVerification_section button {
+    background: transparent;
+    padding: 0.2rem 0.6rem; /* Adjust padding if needed */
+    color: #ffffff; /* Text color */
+    font-size: 1rem; /* Font size */
+    border-radius: 30px; /* Rounded corners */
+    border: 2px solid transparent;
+    border: 2px solid rgba(255, 255, 255, 0.871);
+    background-color: transparent; /* Transparent background */
+    transition: box-shadow 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+    cursor: pointer;
+    margin: 0.5rem; /* Margin between the buttons */
+    display: inline-block; /* Ensure the buttons stay inline */
+}
+
+.inputVerification_section .button-group {
+    display: flex; /* Align buttons side by side */
+    justify-content: center; /* Center buttons horizontally */
+}
+
+.inputVerification_section button:hover {
+    background: linear-gradient(45deg, rgba(4, 28, 148, 0.8), rgba(8, 50, 221, 0.8)); /* Blue gradient with transparency */
+    color: white; /* Change text color to white on hover */
+    border: 1px solid; /* Remove gradient outline on hover */
+    box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect */
+}
+
+.inputVerification_section button.active {
+    background: linear-gradient(45deg, rgba(4, 28, 148, 0.8), rgba(8, 50, 221, 0.8)); /* Active state styling */
+    color: white; /* Change text color to white when active */
+    border: 1px solid; /* Remove gradient outline on active */
+    box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect for active button */
+}
+
+
+/* Tabs code*/
 .field_tabs {
     display: flex;
     flex-wrap: wrap; /* Allow the tabs to wrap */

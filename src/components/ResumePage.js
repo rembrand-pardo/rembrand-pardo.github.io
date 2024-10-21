@@ -257,8 +257,10 @@ const ResumePage = ({ translations, language }) => {
           {!isCorrect && suggestedText && (
             <div className='inputVerification_section'>
               <p>Did you mean: <strong>{suggestedText}</strong>?</p>
-              <button onClick={confirmSuggestion}>Yes</button>
-              <button onClick={rejectSuggestion}>No</button>
+              <div className="button-group">
+                <button onClick={confirmSuggestion}>Yes</button>
+                <button onClick={rejectSuggestion}>No</button>
+              </div>
             </div>
           )}
 
