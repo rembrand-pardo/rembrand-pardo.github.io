@@ -21,9 +21,12 @@ const ResumePage = ({ translations, language }) => {
   const placeholders = [
     "Business analytics",
     "Project management",
-    "Product management",
     "Supervisor",
     "Office manager",
+    "Product management",
+    "Office adminstration",
+    "Agile",
+    "PMP",
   ];
 
   const grammarCache = {};// Cache to store previous grammar checks
@@ -75,7 +78,6 @@ const ResumePage = ({ translations, language }) => {
   }, []);
 
   
-
 
   // Throttled grammar check to respect rate limits
   const throttledCheckGrammar = throttle(async (text) => {
@@ -231,7 +233,7 @@ const ResumePage = ({ translations, language }) => {
       
       <div className="background-gradient" />
       <div className="resume_page_content">
-        <div className="h-[40rem] flex flex-col justify-center items-center px-4">
+        <div className="h-[27rem] flex flex-col justify-end items-center px-4">
           <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-white">
             Ask Anything
           </h2>
@@ -263,7 +265,7 @@ const ResumePage = ({ translations, language }) => {
         </div>
 
         {/* Tabs for card selection */}
-        <div className='field_tabs tabs flex justify-center mt-4'>
+        <div className='field_tabs tabs flex justify-center mt-10'>
           {["Business", "Hr Recruiter", "Manager", "Public Relations", "SDET"].map((tabName, index) => (
             <button
               key={index}
