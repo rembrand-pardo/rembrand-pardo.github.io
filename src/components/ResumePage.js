@@ -9,7 +9,7 @@ import { PlaceholdersAndVanishInput } from "../components/PlaceholderAndVanish";
 
 import { BackgroundGradient } from "../components/CardGradient";
 
-//TODO: Content needs update, translations, get resume section
+//TODO: Content needs update, translations
 
 const ResumePage = ({ translations, language }) => {
   const [inputText, setInputText] = useState('');
