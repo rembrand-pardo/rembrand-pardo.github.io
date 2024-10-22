@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/InfiniteCarousel.css';
+import '../styles/InfiniteMovingCarousel.css';
 
 const InfiniteMovingCards = () => {
   return (

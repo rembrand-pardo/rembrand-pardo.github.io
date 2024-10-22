@@ -5,7 +5,7 @@ import '../styles/GradientBackground.css';
 import DOMPurify from 'dompurify';
 
 import { FocusCards } from './FocusCards';
-import InfiniteMovingCards from './InfiniteMovingCards';
+import InfiniteMovingCarousel from './InfiniteMovingCarousel';
 import { cards } from '../components/CertificatesData';
 import { logEvent } from 'firebase/analytics';
 import { analytics } from '../firebaseConfig';
@@ -41,7 +41,7 @@ const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, bu
 
 
 
-const PolicyPage = ({ translations })  => {
+const QualificationsPage = ({ translations })  => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const [isVisible, setIsVisible] = useState(false); // New state variable
@@ -146,11 +146,9 @@ const PolicyPage = ({ translations })  => {
           </div>
 
         </section>
-
-
         
         <section className='infiniteMovingCards_container'>
-          <InfiniteMovingCards />
+          <InfiniteMovingCarousel />
         </section>
 
         <section className='focusCards_container'>
@@ -163,4 +161,4 @@ const PolicyPage = ({ translations })  => {
   );
 };
 
-export default PolicyPage;
+export default QualificationsPage;
