@@ -1,34 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/InfiniteMovingCarousel.css';
 
+const imagePaths = [
+  "/institutions_logos/Microsoft.png",
+  "/institutions_logos/PMI.png",
+  "/institutions_logos/CFI.png",
+  "/institutions_logos/CPE.png",
+  "/institutions_logos/EEP.png",
+  "/institutions_logos/Hrci.png",
+  "/institutions_logos/LinkedInLearning.png",
+  "/institutions_logos/Zendesk.png",
+  "/institutions_logos/Atlassian.png",
+  "/institutions_logos/BYU.png",
+  "/institutions_logos/SLCC.png"
+];
+
 const InfiniteMovingCards = () => {
+  useEffect(() => {
+    // Preload all images
+    imagePaths.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   return (
     <div className="carousel-container">
       <div className="carousel-track">
-        {/* First set of logos */}
-        <img src="/institutions_logos/Microsoft.png" alt="Institution Logo 1" />
-        <img src="/institutions_logos/PMI.png" alt="Institution Logo 2" />
-        <img src="/institutions_logos/CFI.png" alt="Institution Logo 3" />
-        <img src="/institutions_logos/CPE.png" alt="Institution Logo 4" />
-        <img src="/institutions_logos/EEP.png" alt="Institution Logo 5" />
-        <img src="/institutions_logos/Hrci.png" alt="Institution Logo 6" />
-        <img src="/institutions_logos/LinkedInLearning.png" alt="Institution Logo 7" />
-        <img src="/institutions_logos/Zendesk.png" alt="Institution Logo 8" />
-        <img src="/institutions_logos/Atlassian.png" alt="Institution Logo 9" />
-        <img src="/institutions_logos/BYU.png" alt="Institution Logo 10" />
-        <img src="/institutions_logos/SLCC.png" alt="Institution Logo 11" />
+        {imagePaths.map((src, index) => (
+          <img key={index} src={src} alt={`Institution Logo ${index + 1}`} />
+        ))}
         {/* Duplicate logos for seamless effect */}
-        <img src="/institutions_logos/Microsoft.png" alt="Institution Logo 1" />
-        <img src="/institutions_logos/PMI.png" alt="Institution Logo 2" />
-        <img src="/institutions_logos/CFI.png" alt="Institution Logo 3" />
-        <img src="/institutions_logos/CPE.png" alt="Institution Logo 4" />
-        <img src="/institutions_logos/EEP.png" alt="Institution Logo 5" />
-        <img src="/institutions_logos/Hrci.png" alt="Institution Logo 6" />
-        <img src="/institutions_logos/LinkedInLearning.png" alt="Institution Logo 7" />
-        <img src="/institutions_logos/Zendesk.png" alt="Institution Logo 8" />
-        <img src="/institutions_logos/Atlassian.png" alt="Institution Logo 9" />
-        <img src="/institutions_logos/BYU.png" alt="Institution Logo 10" />
-        <img src="/institutions_logos/SLCC.png" alt="Institution Logo 11" />
+        {imagePaths.map((src, index) => (
+          <img key={index + imagePaths.length} src={src} alt={`Institution Logo ${index + 1}`} />
+        ))}
       </div>
     </div>
   );
