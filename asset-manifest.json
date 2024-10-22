@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.582d9cfd.css",
-    "main.js": "/static/js/main.2f8743f1.js",
+    "main.css": "/static/css/main.c02dd283.css",
+    "main.js": "/static/js/main.9549709c.js",
     "static/media/rembrand_pardo_removebg.png": "/static/media/rembrand_pardo_removebg.1a1ef57db6add93bd685.png",
     "static/media/r-logo.png": "/static/media/r-logo.d252c8711b273beca736.png",
     "index.html": "/index.html",
-    "main.582d9cfd.css.map": "/static/css/main.582d9cfd.css.map",
-    "main.2f8743f1.js.map": "/static/js/main.2f8743f1.js.map"
+    "main.c02dd283.css.map": "/static/css/main.c02dd283.css.map",
+    "main.9549709c.js.map": "/static/js/main.9549709c.js.map"
   },
   "entrypoints": [
-    "static/css/main.582d9cfd.css",
-    "static/js/main.2f8743f1.js"
+    "static/css/main.c02dd283.css",
+    "static/js/main.9549709c.js"
   ]
 }
