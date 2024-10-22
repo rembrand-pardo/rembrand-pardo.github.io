@@ -9,7 +9,7 @@ import { PlaceholdersAndVanishInput } from "../components/PlaceholderAndVanish";
 
 import { BackgroundGradient } from "../components/CardGradient";
 
-//TODO: Content needs update
+//TODO: Content needs update, translations, get resume section
 
 const ResumePage = ({ translations, language }) => {
   const [inputText, setInputText] = useState('');
@@ -19,6 +19,8 @@ const ResumePage = ({ translations, language }) => {
 
   const [selectedTab, setSelectedTab] = useState(null); // State to manage selected tab
   const [currentCardData, setCurrentCardData] = useState({}); // State to manage current card data
+
+  const [isSuggestionRejected, setIsSuggestionRejected] = useState(false); // New state to track suggestion rejection
 
   const placeholders = [
     "Business analytics",
@@ -109,6 +111,7 @@ const ResumePage = ({ translations, language }) => {
     setInputText(e.target.value);
     setSelectedTab(null); // Deselect tab when user types
     setCurrentCardData({}); // Hide card when user types
+    setIsSuggestionRejected(false); //hide rejection message
   };
 
   const onSubmit = async (e) => {
@@ -116,6 +119,7 @@ const ResumePage = ({ translations, language }) => {
     setLoading(true);
     setSuggestedText('');
     setIsCorrect(true);
+    setIsSuggestionRejected(false);
   
     let formattedInputText = inputText.trim();
   
@@ -218,14 +222,18 @@ const ResumePage = ({ translations, language }) => {
   const confirmSuggestion = () => {
     setIsCorrect(true);
     searchWord(suggestedText);
+    setIsSuggestionRejected(false); // Clear rejection status if user confirms the suggestion
   };
 
   const rejectSuggestion = () => {
     setSuggestedText('');
+    searchWord(inputText);
+    setIsSuggestionRejected(true); // Set rejection status
   };
 
   const handleTabClick = (tabName, tabIndex) => {
     setCurrentCardData({}); // Hide the card when a tab is clicked
+    setIsSuggestionRejected(false); //hide rejection message
     setSelectedTab(tabIndex);
     searchWord(tabName);
   };
@@ -263,6 +271,13 @@ const ResumePage = ({ translations, language }) => {
                 <button onClick={confirmSuggestion}>Yes</button>
                 <button onClick={rejectSuggestion}>No</button>
               </div>
+            </div>
+          )}
+
+          {/* Conditionally render this message only when the suggestion is rejected */}
+          {isSuggestionRejected && (
+            <div className='rejectSuggestion_message'>
+              <p>Please find the closest matching result below, or feel free to search again.</p>
             </div>
           )}
 

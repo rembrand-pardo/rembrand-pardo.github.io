@@ -66,6 +66,14 @@ input {
     box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect for active button */
 }
 
+/**/
+.rejectSuggestion_message p {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
 
 /* Tabs code*/
 .field_tabs {
