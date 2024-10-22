@@ -1,6 +1,5 @@
 const translations = {
     en: {
-      welcome: "Welcome to Nebula Tech Hub",
       contact: "Contact",
       about: "About",
       qualifications: "Qualifications",
@@ -142,9 +141,8 @@ const translations = {
     
     },
     es: {
-      welcome: "Bienvenido a Nebula Tech Hub",
-      contact: "Contáctanos",
-      about: "Sobre Nosotros",
+      contact: "Contáctame",
+      about: "Sobre mí",
       qualifications: "Cualificaciones",
       install: "Instalar",
       intro: "¡Bienvenido a mi video de introducción!",
@@ -265,9 +263,8 @@ const translations = {
 
     },
     ca: {
-      welcome: "Benvingut a Nebula Tech Hub",
-      contact: "Contacta",
-      about: "Sobre Nosaltres",
+      contact: "Contacta'm",
+      about: "Sobre mi",
       qualifications: "Qualificacions",
       install: "Instal·lar",
       intro: "Benvingut al meu vídeo introductori!",
