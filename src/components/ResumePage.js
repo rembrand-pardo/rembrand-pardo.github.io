@@ -23,14 +23,14 @@ const ResumePage = ({ translations, language }) => {
   const [isSuggestionRejected, setIsSuggestionRejected] = useState(false); // New state to track suggestion rejection
 
   const placeholders = [
-    "Business analytics",
-    "Project management",
-    "Supervisor",
-    "Office manager",
-    "Product management",
-    "Office adminstration",
-    "Agile",
-    "PMP",
+    translations.placeholders1,
+    translations.placeholders2,
+    translations.placeholders3,
+    translations.placeholders4,
+    translations.placeholders5,
+    translations.placeholders6,
+    translations.placeholders7,
+    translations.placeholders8,
   ];
 
   const grammarCache = {};// Cache to store previous grammar checks
@@ -146,7 +146,7 @@ const ResumePage = ({ translations, language }) => {
         searchWord(formattedInputText);
       }
     } catch (error) {
-      alert('Grammar check service is currently unavailable. Please try again later.');
+      alert( translations.resumeGrammarCheckService );
     } finally {
       setLoading(false);
     }
@@ -156,28 +156,28 @@ const ResumePage = ({ translations, language }) => {
   const pdfDetailsMap = {
     "pdfs/business.pdf": {
       image: "/pdfs/pdf_images/business.png",
-      title: "This is a title for the business card",
-      content: "This card contains info about business and what my business resume contains",
+      title: translations.resumeCardTitleBusiness,
+      content: translations.resumeCardContentBusiness,
     },
     "pdfs/hr_recruiter.pdf": {
       image: "pdfs/pdf_images/hr_recruiter.png",
-      title: "This is a title for the hr card",
-      content: "This card contains info about hr and what my hr resume contains",
+      title: translations.resumeCardTitleHR,
+      content: translations.resumeCardContentHR,
     },
     "pdfs/management.pdf": {
       image: "pdfs/pdf_images/management.png",
-      title: "This is a title for the management card",
-      content: "This card contains info about management and what my management resume contains",
+      title: translations.resumeCardTitleManagement,
+      content: translations.resumeCardContentManagement,
     },
     "pdfs/public_relations.pdf": {
       image: "pdfs/pdf_images/public_relations.png",
-      title: "This is a title for the public relations card",
-      content: "This card contains info about PR and what my PR resume contains",
+      title: translations.resumeCardTitlePR,
+      content: translations.resumeCardContentPR,
     },
     "pdfs/sdet.pdf": {
       image: "pdfs/pdf_images/sdet.png",
-      title: "This is a title for the sdet card",
-      content: "This card contains info about sdet and what my sdet resume contains",
+      title: translations.resumeCardTitleSDET,
+      content: translations.resumeCardContentSDET,
     },
   };
   
@@ -200,8 +200,8 @@ const ResumePage = ({ translations, language }) => {
       } else {
         // If no specific PDF details are found, fall back to generic card info
         setCurrentCardData({
-          title: `Card for ${lowerCasedWord}`,
-          content: `The content is related to ${lowerCasedWord}.`,
+          title: `${translations.resumeCardTitleGeneral} ${lowerCasedWord}`,
+          content: `${translations.resumeCardContentGeneral} ${lowerCasedWord}.`,
           image: 'rembrand.JPEG', // Fallback image
           pdfLink: foundPdf, // Set the PDF link
         });
@@ -209,8 +209,8 @@ const ResumePage = ({ translations, language }) => {
     } else {
       // If no PDF is found, use generic card information
       setCurrentCardData({
-        title: 'Generic Card',
-        content: 'Here is a general description since nothing matched your search.',
+        title: translations.resumeCardTitleGeneric,
+        content: translations.resumeCardContentGeneric,
         image: 'Rembrand-logo.png', // Default image for generic card
         pdfLink: 'pdfs/management.pdf', // Set the PDF link
       });
@@ -245,7 +245,7 @@ const ResumePage = ({ translations, language }) => {
       <div className="resume_page_content">
         <div className="h-[23rem] flex flex-col justify-end items-center px-4">
           <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-white">
-            Ask Anything
+            { translations.resumeCardSearchHeading }
           </h2>
           <PlaceholdersAndVanishInput
             placeholders={placeholders}
@@ -254,22 +254,22 @@ const ResumePage = ({ translations, language }) => {
             disabled={loading}
           />
 
-          {loading && <p>Checking grammar...</p>}
+          {loading && <p> {translations.resumeCheckingGrammar} </p>}
           
 
           <div style={{ fontSize: '8px', marginTop: '14px' }}>
             <a className="languageTool" href="https://languagetool.org" target="_blank" rel="noopener noreferrer">
-              Powered by LanguageTool
+              { translations.resumeLanguageTool }
             </a>
           </div>
           
 
           {!isCorrect && suggestedText && (
             <div className='inputVerification_section'>
-              <p>Did you mean: <strong>{suggestedText}</strong>?</p>
+              <p>{ translations.resumeDidYouMean } <strong>{suggestedText}</strong>?</p>
               <div className="button-group">
-                <button onClick={confirmSuggestion}>Yes</button>
-                <button onClick={rejectSuggestion}>No</button>
+                <button onClick={confirmSuggestion}> { translations.resumeCardSearchYes } </button>
+                <button onClick={rejectSuggestion}> { translations.resumeCardSearchNo } </button>
               </div>
             </div>
           )}
@@ -277,7 +277,7 @@ const ResumePage = ({ translations, language }) => {
           {/* Conditionally render this message only when the suggestion is rejected */}
           {isSuggestionRejected && (
             <div className='rejectSuggestion_message'>
-              <p>Please find the closest matching result below, or feel free to search again.</p>
+              <p>{ translations.resumeRejectSuggestionMessage }</p>
             </div>
           )}
 
@@ -319,7 +319,7 @@ const ResumePage = ({ translations, language }) => {
                 rel="noopener noreferrer" // Security best practice
                 className="viewResume_container rounded-full pl-4 pr-4 py-2 text-white flex text-center bg-blue-600 mt-4 text-xs mx-auto block"
               >
-                View Resume
+                { translations.resumeViewResumeCardButton }
               </a>
             </BackgroundGradient>
           )}
