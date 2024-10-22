@@ -9,6 +9,8 @@ import { PlaceholdersAndVanishInput } from "../components/PlaceholderAndVanish";
 
 import { BackgroundGradient } from "../components/CardGradient";
 
+//TODO: Content needs update
+
 const ResumePage = ({ translations, language }) => {
   const [inputText, setInputText] = useState('');
   const [suggestedText, setSuggestedText] = useState('');
@@ -281,13 +283,13 @@ const ResumePage = ({ translations, language }) => {
 
         <div className='resume_cards h-[20rem] flex flex-col justify-center items-center px-4'>
           {(selectedTab !== null || currentCardData.title) && currentCardData.title && (
-            <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-black bg-opacity-60 dark:bg-black dark:bg-opacity-20">
+            <BackgroundGradient className="rounded-[22px] max-w-sm p-3 sm:p-7 bg-black bg-opacity-60 dark:bg-black dark:bg-opacity-20">
               <img
                 src={currentCardData.image}
                 alt={currentCardData.title}
                 height="400"
                 width="400"
-                className="object-contain"
+                className="object-contain fade-bottom rounded-top"
               />
               <p className="text-base sm:text-xl text-white mt-4 mb-2 dark:text-neutral-200">
                 {currentCardData.title}

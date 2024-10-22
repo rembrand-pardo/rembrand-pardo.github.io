@@ -146,3 +146,19 @@ input {
     z-index: 5; /* Set a lower z-index than the tabs */
     position: relative;
 }
+
+.fade-bottom {
+    /* Add top corner rounding */
+    border-top-left-radius: 7px !important;
+    border-top-right-radius: 7px !important;
+  
+    /* Fade effect: mask the bottom with a gradient */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media (min-width: 640px) {
+    .sm\:p-7 {
+        padding: 1.3rem !important;
+    }
+}
