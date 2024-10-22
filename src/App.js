@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import HomeToInstallPage from './components/HowToInstallPage';
+import ServicePage from './components/Service';
 import QualificationsPage from './components/QualificationsPage';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
@@ -64,7 +64,7 @@ function App() {
           <Navbar translations={translations[language]} setLanguage={setLanguage} /> {/* Pass translations to Navbar */}
             <Routes>
               <Route path="/" element={<HomePage translations={translations[language]} />} /> {/* Pass translations */}
-              <Route path="/install" element={<HomeToInstallPage translations={translations[language]} />} />
+              <Route path="/service" element={<ServicePage translations={translations[language]} />} />
               <Route path="/qualifications" element={<QualificationsPage translations={translations[language]} />} />
               <Route path="/about" element={<AboutPage translations={translations[language]} />} />
               <Route path="/contact" element={<ContactPage translations={translations[language]} />} />

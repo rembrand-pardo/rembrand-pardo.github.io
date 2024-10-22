@@ -101,8 +101,8 @@ const Navbar = ({ translations, setLanguage }) => {
           </Link>
         </div>
         <div className={`navbar-section nav-links-section ${isMenuOpen ? 'open' : ''}`}>
-          <Link to="/install" className={isActive('/install') ? 'active' : ''} onClick={() => { handleNavClick('How to Install'); closeMenu(); }}>
-            {translations.install}
+          <Link to="/service" className={isActive('/service') ? 'active' : ''} onClick={() => { handleNavClick('Service Page'); closeMenu(); }}>
+            {translations.service}
           </Link>
           <Link to="/qualifications" className={isActive('/qualifications') ? 'active' : ''} onClick={() => { handleNavClick('Qualificationes Page'); closeMenu(); }}>
             {translations.qualifications}
