@@ -7,7 +7,7 @@ import { db } from '../firebaseConfig';
 import '../styles/GradientBackground.css';
 import { HeroParallax } from "../components/HeroParallax";
 
-const ServicePage = () => {
+const ServicePage = ({ translations }) => {
   return (
     <div className="servicepage">
 
@@ -17,6 +17,12 @@ const ServicePage = () => {
         <HeroParallax products={products} />;
 
       </div>
+
+      <div className='serviceDetail_section'>
+        <p>{translations.aboutMeText1}</p>
+        <p>{translations.aboutMeText2}</p>
+      </div>
+      
       
     </div>
   );
@@ -86,37 +92,37 @@ export const products = [
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
   },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
+  // {
+  //   title: "Renderwork Studio",
+  //   link: "https://renderwork.studio",
+  //   thumbnail:
+  //     "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+  // },
 
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-  },
-  {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  },
-  {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-  },
+  // {
+  //   title: "Creme Digital",
+  //   link: "https://cremedigital.com",
+  //   thumbnail:
+  //     "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+  // },
+  // {
+  //   title: "Golden Bells Academy",
+  //   link: "https://goldenbellsacademy.com",
+  //   thumbnail:
+  //     "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+  // },
+  // {
+  //   title: "Invoker Labs",
+  //   link: "https://invoker.lol",
+  //   thumbnail:
+  //     "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+  // },
+  // {
+  //   title: "E Free Invoice",
+  //   link: "https://efreeinvoice.com",
+  //   thumbnail:
+  //     "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+  // },
 ];
 
 
