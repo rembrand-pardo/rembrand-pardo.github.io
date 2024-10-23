@@ -9,7 +9,10 @@ import { PlaceholdersAndVanishInput } from "../components/PlaceholderAndVanish";
 
 import { BackgroundGradient } from "../components/CardGradient";
 
-//TODO: Content needs update, translations
+//TODO: Content needs update
+
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../firebaseConfig';
 
 const ResumePage = ({ translations, language }) => {
   const [inputText, setInputText] = useState('');
@@ -21,6 +24,22 @@ const ResumePage = ({ translations, language }) => {
   const [currentCardData, setCurrentCardData] = useState({}); // State to manage current card data
 
   const [isSuggestionRejected, setIsSuggestionRejected] = useState(false); // New state to track suggestion rejection
+
+
+  // Function to log analytics
+  const logAnalytics = async (event, data = {}) => {
+    try {
+      await addDoc(collection(db, 'analytics'), {
+        event,
+        data,
+        timestamp: new Date().toISOString(),
+      });
+      console.log(`Logged ${event} event`, data);
+    } catch (error) {
+      console.error("Error logging analytics:", error);
+    }
+  };
+
 
   const placeholders = [
     translations.placeholders1,
@@ -114,6 +133,7 @@ const ResumePage = ({ translations, language }) => {
     setIsSuggestionRejected(false); //hide rejection message
   };
 
+
   const onSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -122,6 +142,9 @@ const ResumePage = ({ translations, language }) => {
     setIsSuggestionRejected(false);
   
     let formattedInputText = inputText.trim();
+
+    // Log the search query
+    logAnalytics('search', { query: formattedInputText });
   
     if (formattedInputText.split(' ').length > 1) { // Check if there is more than one word
       formattedInputText = formattedInputText.charAt(0).toUpperCase() + formattedInputText.slice(1); // Capitalize the first letter of the first word if it's not already
@@ -223,18 +246,28 @@ const ResumePage = ({ translations, language }) => {
     setIsCorrect(true);
     searchWord(suggestedText);
     setIsSuggestionRejected(false); // Clear rejection status if user confirms the suggestion
+  
+    // Log the 'Yes' button click
+    logAnalytics('confirm_suggestion', { suggestion: suggestedText });
   };
 
   const rejectSuggestion = () => {
     setSuggestedText('');
     searchWord(inputText);
     setIsSuggestionRejected(true); // Set rejection status
+
+    // Log the 'No' button click
+    logAnalytics('reject_suggestion', { originalText: inputText });
   };
 
   const handleTabClick = (tabName, tabIndex) => {
     setCurrentCardData({}); // Hide the card when a tab is clicked
     setIsSuggestionRejected(false); //hide rejection message
     setSelectedTab(tabIndex);
+
+    // Log the tab click
+    logAnalytics('tab_click', { tabName, tabIndex });
+
     searchWord(tabName);
   };
 
@@ -318,6 +351,7 @@ const ResumePage = ({ translations, language }) => {
                 target="_blank" // Opens in a new tab
                 rel="noopener noreferrer" // Security best practice
                 className="viewResume_container rounded-full pl-4 pr-4 py-2 text-white flex text-center bg-blue-600 mt-4 text-xs mx-auto block"
+                onClick={() => logAnalytics('view_resume', { pdfLink: currentCardData.pdfLink })}
               >
                 { translations.resumeViewResumeCardButton }
               </a>

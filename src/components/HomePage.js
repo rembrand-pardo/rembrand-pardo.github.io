@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/HomePage.css';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
-import rembrandPardoImage from '../assets/rembrand_pardo_removebg.png'; // Correct import syntax
+import rembrandPardoImage from '../assets/rembrand_pardo_removebg.png';
 import { FlipWords } from '../components/FlipWords';
 import { TypewriterEffectSmooth } from '../components/TypeWritterEffect';
 import { HoverBorderGradient } from "../components/HoverBorderGradient";
