@@ -305,7 +305,7 @@ body, .main-content {
 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .navbar {
     padding: 10px 0;
   }
