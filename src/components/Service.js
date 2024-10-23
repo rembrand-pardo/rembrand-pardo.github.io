@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/Service.css';
 
-import { addDoc, collection } from 'firebase/firestore';
-import { db } from '../firebaseConfig';
+// import { addDoc, collection } from 'firebase/firestore';
+// import { db } from '../firebaseConfig';
 
 import '../styles/GradientBackground.css';
 import { HeroParallax } from "../components/HeroParallax";
@@ -92,12 +92,12 @@ export const products = [
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
   },
-  // {
-  //   title: "Renderwork Studio",
-  //   link: "https://renderwork.studio",
-  //   thumbnail:
-  //     "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  // },
+  {
+    title: "Renderwork Studio",
+    link: "https://renderwork.studio",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+  },
 
   // {
   //   title: "Creme Digital",
