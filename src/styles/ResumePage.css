@@ -170,3 +170,10 @@ input {
         padding: 1.3rem !important;
     }
 }
+
+@media (min-width: 768px) {
+    /* not 100% sure about this, as it affects to all pages */
+    .md\:grid-cols-5 {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+}

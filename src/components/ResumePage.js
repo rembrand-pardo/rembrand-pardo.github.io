@@ -397,7 +397,14 @@ const ResumePage = ({ translations, language }) => {
         </div>
 
         {showFocusCards && (
-          <div className='certificatesCards_container'>
+          <div className='certificatesCards_container'
+          style={{
+            display: 'flex',
+            justifyContent: 'center', // Centers horizontally
+            alignItems: 'center', // Centers vertically
+            flexDirection: 'column', // Adjusts direction if needed
+            marginTop: '20px' // Optional: adds space above
+          }}>
             <FocusCards cards={currentCards} /> 
           </div>
         )}
