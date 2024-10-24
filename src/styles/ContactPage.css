@@ -254,16 +254,26 @@
   }
 }
 
-@media (min-width: 1500px) and (max-width: 1980px) {
+@media (min-width: 1500px) and (max-width: 1990px) {
+  .send-button {
+    width: 30%; /* Reduce button width to 30% */
+    max-width: 200px; /* Ensure the button doesn't stretch too much */
+    margin: 0 auto; /* Center the button */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1980px) {
   .send-button {
     width: 30%; /* Reduce button width to 30% */
     max-width: 200px; /* Ensure the button doesn't stretch too much */
     margin: 0 auto; /* Center the button */
   }
 
-  .input-container .error-text {
-    margin-left: 6rem;
+  .contact-page {
+    max-width: 95%;
   }
+
+  
 }
   
 /* Responsive styles for small devices */
@@ -305,7 +315,8 @@
   .send-another-button {
     padding: 0.7rem 1.2rem;
     font-size: 1.1rem;
-    width: 100%; /* Ensure buttons take up full width on smaller screens */
+    width: 70%; /* Ensure buttons take up full width on smaller screens */
+    align-self: center;
   }
 }
 
