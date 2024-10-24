@@ -1,4 +1,5 @@
 // ../components/CertificatesData.js
+//1. General
 export const cards = [
     {
         title: "Agile with Microsoft",
@@ -201,6 +202,7 @@ export const cards = [
 
 ];
 
+//2. other or sdet
 export const othercards = [
     {
         title: "Zendesk: Customer Service",
@@ -221,6 +223,7 @@ export const othercards = [
 
 ];
 
+//3. Hr_recruitment
 export const recruitmentcards = [
     {
         title: "Human Resources Admin.",
@@ -260,6 +263,8 @@ export const recruitmentcards = [
     }
 ];
 
+
+//4. business
 export const analysiscards = [
     {
         title: "Business Analysis",
@@ -316,7 +321,7 @@ export const analysiscards = [
 
 ];
 
-
+//5. Management
 export const managementcards = [
     {
         title: "Agile with Microsoft",

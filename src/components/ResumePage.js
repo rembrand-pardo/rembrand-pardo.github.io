@@ -5,14 +5,24 @@ import throttle from 'lodash/throttle';
 import '../styles/ResumePage.css';
 import '../styles/GradientBackground.css';
 
+import { FocusCards } from './FocusCards';
+
 import { PlaceholdersAndVanishInput } from "../components/PlaceholderAndVanish";
 
 import { BackgroundGradient } from "../components/CardGradient";
 
-//TODO: Content needs update
-
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
+
+import { 
+  cards, 
+  othercards, 
+  recruitmentcards, 
+  analysiscards, 
+  managementcards 
+} from '../components/CertificatesData';
+
+//TODO: Content needs update
 
 const ResumePage = ({ translations, language }) => {
   const [inputText, setInputText] = useState('');
@@ -25,6 +35,8 @@ const ResumePage = ({ translations, language }) => {
 
   const [isSuggestionRejected, setIsSuggestionRejected] = useState(false); // New state to track suggestion rejection
 
+  const [currentCards, setCurrentCards] = useState(cards); // Sets the focus cards
+  const [showFocusCards, setShowFocusCards] = useState(false); // State to manage visibility of FocusCards
 
   // Function to log analytics
   const logAnalytics = async (event, data = {}) => {
@@ -53,6 +65,7 @@ const ResumePage = ({ translations, language }) => {
   ];
 
   const grammarCache = {};// Cache to store previous grammar checks
+
 
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -126,11 +139,13 @@ const ResumePage = ({ translations, language }) => {
     }
   }, 3000, { leading: true, trailing: false }); // 20 requests per minute
 
+
   const handleChange = (e) => {
     setInputText(e.target.value);
     setSelectedTab(null); // Deselect tab when user types
     setCurrentCardData({}); // Hide card when user types
     setIsSuggestionRejected(false); //hide rejection message
+    setShowFocusCards(false);
   };
 
 
@@ -203,7 +218,24 @@ const ResumePage = ({ translations, language }) => {
       content: translations.resumeCardContentSDET,
     },
   };
-  
+
+  const pdfToFocusCardsMap = {
+    "pdfs/business.pdf": {
+        newCardSet: analysiscards,
+    },
+    "pdfs/hr_recruiter.pdf": {
+        newCardSet: recruitmentcards,
+    },
+    "pdfs/management.pdf": {
+        newCardSet: managementcards,
+    },
+    "pdfs/public_relations.pdf": {
+        newCardSet: cards,
+    },
+    "pdfs/sdet.pdf": {
+        newCardSet: othercards,
+    },
+  };
 
   const searchWord = (word) => {
     const lowerCasedWord = word.toLowerCase();
@@ -214,6 +246,8 @@ const ResumePage = ({ translations, language }) => {
       const pdfDetails = pdfDetailsMap[normalizedPdf];  // Use normalizedPdf in the lookup
       
       if (pdfDetails) {
+        setCurrentCards(pdfToFocusCardsMap[foundPdf].newCardSet); // Update the current cards to the mapped card set
+
         setCurrentCardData({
           title: pdfDetails.title,
           content: pdfDetails.content,
@@ -221,6 +255,8 @@ const ResumePage = ({ translations, language }) => {
           pdfLink: foundPdf, // Set the PDF link
         });
       } else {
+        setCurrentCards(cards); // Fallback to a default set of cards
+
         // If no specific PDF details are found, fall back to generic card info
         setCurrentCardData({
           title: `${translations.resumeCardTitleGeneral} ${lowerCasedWord}`,
@@ -230,6 +266,7 @@ const ResumePage = ({ translations, language }) => {
         });
       }
     } else {
+      setCurrentCards(cards); // Show a default set of cards
       // If no PDF is found, use generic card information
       setCurrentCardData({
         title: translations.resumeCardTitleGeneric,
@@ -238,9 +275,9 @@ const ResumePage = ({ translations, language }) => {
         pdfLink: 'pdfs/management.pdf', // Set the PDF link
       });
     }
+    setShowFocusCards(true);
   };
   
-
 
   const confirmSuggestion = () => {
     setIsCorrect(true);
@@ -358,6 +395,14 @@ const ResumePage = ({ translations, language }) => {
             </BackgroundGradient>
           )}
         </div>
+
+        {showFocusCards && (
+          <div className='certificatesCards_container'>
+            <FocusCards cards={currentCards} /> 
+          </div>
+        )}
+
+        
 
       </div>
     </div>
