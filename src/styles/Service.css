@@ -1,0 +1,14 @@
+/* Show these only on desktop screens */
+@media (min-width: 768px) {
+    .mobile_tracingBeam {
+      display: none;
+    }
+}
+  
+/* Show these only on mobile screens */
+@media (max-width: 767px) {
+    .service_container,
+    .serviceDetail_section {
+        display: none;
+    }
+}
