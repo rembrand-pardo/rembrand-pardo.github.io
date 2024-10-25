@@ -11,8 +11,7 @@ import NotFound from './components/NotFound';
 import './styles/App.css';
 import CookieConsent from './components/CookieConsent'; 
 import Footer from './components/Footer.js';
-
-import translations from '../src/assets/locales/translations.js'; // Import translations
+import translations from '../src/assets/locales/translations.js';
 
 function App() {
   const [consentGiven, setConsentGiven] = useState(false);
