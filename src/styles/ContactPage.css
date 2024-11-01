@@ -220,8 +220,21 @@
 }
 
 
+/* Mcbook pro and large monitors */
+@media (min-width: 3024px) and (max-width: 8000px) { 
+  .input-container .error-text {
+    margin-left: 12%;
+  }
+
+  .send-button {
+    width: 50%; /* Reduce button width to 30% */
+    max-width: 600px; /* Ensure the button doesn't stretch too much */
+    margin: 0 auto; /* Center the button */
+  }
+}
+
 /* Monitors and large */
-@media (min-width: 2050px) and (max-width: 3000px) {
+@media (min-width: 2050px) and (max-width: 3023px) {
   .contact-form {
     margin-top: 2rem;
   }
@@ -232,12 +245,12 @@
 
   .send-button {
     width: 30%; /* Reduce button width to 30% */
-    max-width: 200px; /* Ensure the button doesn't stretch too much */
+    max-width: 300px; /* Ensure the button doesn't stretch too much */
     margin: 0 auto; /* Center the button */
   }
 
   .input-container .error-text {
-    margin-left: 9.5rem;
+    margin-left: 11.5%;
   }
 }
 
@@ -254,11 +267,15 @@
   }
 }
 
-@media (min-width: 1500px) and (max-width: 1990px) {
+@media (min-width: 1500px) and (max-width: 1999px) {
   .send-button {
     width: 30%; /* Reduce button width to 30% */
     max-width: 200px; /* Ensure the button doesn't stretch too much */
     margin: 0 auto; /* Center the button */
+  }
+
+  .input-container .error-text {
+    margin-left: 11.5%;
   }
 }
 
@@ -273,7 +290,6 @@
     max-width: 95%;
   }
 
-  
 }
   
 /* Responsive styles for small devices */
