@@ -250,7 +250,7 @@
   }
 
   .input-container .error-text {
-    margin-left: 11.5%;
+    margin-left: 12%;
   }
 }
 
@@ -288,6 +288,10 @@
 
   .contact-page {
     max-width: 95%;
+  }
+
+  .input-container .error-text {
+    margin-left: 11.5%;
   }
 
 }
