@@ -326,3 +326,15 @@ Here are some resources to help you with development:
 ## License
 
 This project is protected. You cannot use, modify, and distribute the code, images, designs or anythign on this site without written permission.
+
+### Notes to get code running
+Dependecies need to be installed. Some of the commands are:
+   ```powershell
+   npm install
+   npm install firebase
+   npm install axios
+   ```
+This is needed to update website and deploy
+```git push; npm run build; npm run deploy```
+
+Additionally, you need to make sure to add the .env with appropriate information in the root of the project
