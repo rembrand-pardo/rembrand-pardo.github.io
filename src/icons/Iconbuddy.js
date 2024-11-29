@@ -149,5 +149,3 @@ export const CataloniaFlag = (props) => (
   <path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 17h62v38H5z"></path>
  </svg>
 )
-
-

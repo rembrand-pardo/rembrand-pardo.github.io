@@ -1,0 +1,131 @@
+/* General styles for the container */
+.card-container {
+    display: flex; /* Ensures cards are laid out in a row */
+    flex-wrap: wrap; /* Allows wrapping to the next row when the row is full */
+    justify-content: center; /* Centers the cards horizontally */
+    padding-top: 3rem;
+    gap: 20px; /* Space between cards */
+    min-height: 85vh; /* Ensures full height */
+    max-width: 1400px; /* Limit container width on large screens */
+    margin: 0 auto; /* Center the container */
+    background-color: transparent; /* Transparent background */
+}
+
+/* Hide the card-container without affecting layout */
+.card-container.hidden {
+    visibility: hidden; /* Makes it invisible but still takes up space */
+    height: 0; /* Optional: collapses it completely */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+/* Individual card styles */
+.card {
+    background-color: #4545450f;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.055);
+    outline: 3px solid transparent; /* Default outline */
+    transition: transform 0.3s, box-shadow 0.3s, outline 0.3s; /* Add transition for outline */
+    flex: 1 1 calc(25% - 20px); /* Ensures 4 cards per row (25% of container width minus gap) */
+    margin: 10px; /* Margin to provide breathing room */
+    max-width: 450px; /* Increase max width to make cards larger */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Ensures content stays vertically aligned */
+    align-items: center; /* Centers folder icon */
+    cursor: default;
+    outline: 1px solid #0856cc96; /* Outline color on hover */
+    /* min-height: 200px; Ensure card has a minimum height */
+    height: auto; /*Allows the card to grow based on content */
+    overflow: hidden; /* Prevents text overflow */
+}
+
+/* Hover effect for the card */
+.card:hover {
+    transform: translateY(-5px); /* Raise slightly */
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2); /* Add a subtle glow effect */
+    outline: 2px solid #0856cc; /* Outline color on hover */
+}
+
+/* Title styles */
+.card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem; /* Increase font size for the title */
+    transition: color 0.3s; /* Smooth color transition */
+    word-wrap: break-word; /* Ensures text wraps within the card */
+}
+
+/* Title hover effect */
+.card:hover h3 {
+    color: #0856cc; /* Change title color to blue on hover */
+}
+
+/* Description styles */
+.card p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 20px; /* Add spacing below the description */
+    word-wrap: break-word; /* Ensures long text doesn't overflow */
+}
+
+/* Folder icon styles */
+.folder-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto; /* Pushes the icon to the bottom of the card */
+    font-size: 60px; /* Set folder icon size */
+    color: #c2c6f9;
+    transition: transform 0.3s, color 0.3s; /* Smooth hover effects */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+/* Folder icon hover effect */
+.folder-icon:hover {
+    color: #0856cc; /* Highlight color on hover */
+}
+
+/* Folder image styles */
+.folder-img {
+    width: auto; /* Ensure icon maintains aspect ratio */
+    height: auto; /* Ensure icon scales responsively */
+}
+
+@media (min-width: 820px) and (max-width: 1025px) { 
+    .card-container {
+        min-height: 85vh; /* Ensures full height */
+        margin-left: 3rem;
+        margin-right: 1.4rem;   
+    }
+    .card {
+        flex: 1 1 100%; /* Full-width cards for mobile devices */
+        height: 300px !important;/*Allows the card to grow based on content */
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .card-container {
+        min-height: 85vh; /* Ensures full height */
+        margin-left: 1.4rem;
+        margin-right: 1.4rem;
+    }
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Ensures 2 cards per row for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        min-height: 85vh; /* Ensures full height */
+        margin-left: 1.4rem;
+        margin-right: 1.4rem;   
+    }
+    .card {
+        flex: 1 1 100%; /* Full-width cards for mobile devices */
+    }
+}
+
+

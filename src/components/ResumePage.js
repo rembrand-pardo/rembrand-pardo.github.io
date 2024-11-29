@@ -14,6 +14,8 @@ import { BackgroundGradient } from "../components/CardGradient";
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 
+
+import CardFolder from "../components/CardFolder"
 import { 
   cards, 
   othercards, 
@@ -308,6 +310,58 @@ const ResumePage = ({ translations, language }) => {
     searchWord(tabName);
   };
 
+  const cardFolders = [
+    {
+      title: "Gene Sequence",
+      description:
+        "I implemented two versions of a dynamic programming algorithm for computing the minimal cost of aligning gene sequences and extracting an optimal alignment.",
+      link: "#",
+    },
+    {
+      title: "Your bucketlist",
+      description:
+        "A single page web app for storing pictures of your travel experiences and places on your bucket list, built with Node.js, MongoDB, CSS, and JavaScript.",
+      link: "#",
+    },
+    {
+      title: "Traveling Salesman",
+      description:
+        "Implements a branch-and-bound algorithm to solve the Traveling Salesman Problem (TSP).",
+      link: "#",
+    },
+    {
+      title: "US Weather Forecast",
+      description:
+        "Weather forecast for any city in the US using global/local models and weather stations.",
+      link: "#",
+    },
+    {
+      title: "Gene Sequence",
+      description:
+        "I implemented two versions of a dynamic programming algorithm for computing the minimal cost of aligning gene sequences and extracting an optimal alignment.",
+      link: "#",
+    },
+    {
+      title: "Your bucketlist",
+      description:
+        "A single page web app for storing pictures of your travel experiences and places on your bucket list, built with Node.js, MongoDB, CSS, and JavaScript.",
+      link: "#",
+    },
+    {
+      title: "Traveling Salesman",
+      description:
+        "Implements a branch-and-bound algorithm to solve the Traveling Salesman Problem (TSP).",
+      link: "#",
+    },
+    {
+      title: "US Weather Forecast",
+      description:
+        "Weather forecast for any city in the US using global/local models and weather stations.",
+      link: "#",
+    },
+    // Add more card details as needed
+  ];
+
   return (
     <div className={`resume_page ${isVisible ? 'visible' : ''}`}>
       
@@ -410,6 +464,22 @@ const ResumePage = ({ translations, language }) => {
         )}
 
         
+        <div
+          className={`card-container ${selectedTab !== 4 && currentCardData.title !== translations.resumeCardTitleSDET ? 'hidden' : ''}`}
+        >
+          {(selectedTab === 4 || currentCardData.title === translations.resumeCardTitleSDET) && (
+            cardFolders.map((cardFolders, index) => (
+              <CardFolder
+                key={index}
+                title={cardFolders.title}
+                description={cardFolders.description}
+                link={cardFolders.link}
+              />
+            ))
+          )}
+        </div>
+
+
 
       </div>
     </div>
