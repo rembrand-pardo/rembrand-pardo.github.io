@@ -109,3 +109,8 @@ nebula-tech-hub.github.io/
 ├── postcss.config.js
 ├── README.md
 ├── tailwind.config.js
+
+
+
+
+We need to change the .env info it is using nebula's
