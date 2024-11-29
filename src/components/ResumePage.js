@@ -315,13 +315,7 @@ const ResumePage = ({ translations, language }) => {
       title: "Gene Sequence",
       description:
         "I implemented two versions of a dynamic programming algorithm for computing the minimal cost of aligning gene sequences and extracting an optimal alignment.",
-      link: "#",
-    },
-    {
-      title: "Your bucketlist",
-      description:
-        "A single page web app for storing pictures of your travel experiences and places on your bucket list, built with Node.js, MongoDB, CSS, and JavaScript.",
-      link: "#",
+      link: "github.com/Thebatman7/gene_sequencing",
     },
     {
       title: "Traveling Salesman",
