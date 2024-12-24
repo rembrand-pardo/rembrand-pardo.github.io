@@ -110,15 +110,20 @@ export const FadeInDiv = ({
           }}
           className={cn("w-full h-full absolute top-0 left-0", className)}
         >
-          <img
-            src={tab.image}
-            alt={tab.title}
-            className="w-full h-full object-contain"
-            style={{
-              position: "absolute",
-              inset: 0,
-            }}
-          />
+          {/* Wrapper for both image and text */}
+          <div className="relative w-full h-full">
+            {/* Text Above Image */}
+            <div className="absolute top-4 left-4 z-10 text-white font-bold text-xl md:text-4xl">
+              {tab.text} {/* Custom text for each tab */}
+            </div>
+
+            {/* Image with 'contain' to ensure it fits without zoom */}
+            <img
+              src={tab.image} // Image for each tab
+              alt={tab.title}
+              className="w-full h-full object-contain" // Make sure the image fits within the tab without zooming
+            />
+          </div>
         </motion.div>
       ))}
     </div>
