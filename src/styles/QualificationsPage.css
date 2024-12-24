@@ -27,12 +27,20 @@ section {
 }
 
 /* Individual card styles */
+.card-byu .card {
+    background-color: #fffdfd55;
+}
+
 .card-slcc .card {
     background-color: #f4f5f657;
 }
 
-.card-byu .card {
-    background-color: #fffdfd55;
+.card-byu .card:hover {
+    background-color: #f4f5f6a0;
+}
+
+.card-slcc .card:hover {
+    background-color: #f4f5f6a0;
 }
 
 .card:hover {
