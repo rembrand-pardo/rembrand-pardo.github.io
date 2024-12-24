@@ -110,7 +110,15 @@ export const FadeInDiv = ({
           }}
           className={cn("w-full h-full absolute top-0 left-0", className)}
         >
-          {tab.content}
+          <img
+            src={tab.image}
+            alt={tab.title}
+            className="w-full h-full object-contain"
+            style={{
+              position: "absolute",
+              inset: 0,
+            }}
+          />
         </motion.div>
       ))}
     </div>
