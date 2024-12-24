@@ -47,6 +47,7 @@ export const Tabs = ({
               tabClassName
             )}
             style={{
+              border: "2px solid rgba(255, 255, 255, 0.871)",
               transformStyle: "preserve-3d",
               backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent black for tabs
               minWidth: "80px", // Ensure tabs are not too small
@@ -61,6 +62,9 @@ export const Tabs = ({
                   "absolute inset-0 bg-blue-500 dark:bg-blue-600 rounded-full", // Bluish color for active tab
                   activeTabClassName
                 )}
+                style ={{
+                  backgroundColor: "rgba(4, 28, 148, 0.8)", // Transparent white for active tab
+                }}
               />
             )}
 
