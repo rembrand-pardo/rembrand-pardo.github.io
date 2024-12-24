@@ -16,29 +16,23 @@ section {
 }
 
 /* Expandable cards */
-.expandable-cards {
+.cards-container {
     display: flex;
-    justify-content: space-between;
-    gap: 3rem;  /* Gap between cards */
+    justify-content: center;
+    gap: 2rem;  /* Gap between cards */
     margin-bottom: 2rem;
-    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    flex-wrap: wrap; /*Ensure wrapping on smaller screens*/
     margin-left: 7rem;
     margin-right: 7rem;
 }
 
-.card {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.489); 
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, height 0.3s ease;
-    cursor: pointer;
-    width: 50%; /* Each card takes about half the width on larger screens */
-    max-width: 720px;
-    position: relative;
-    height: 300px;
+/* Individual card styles */
+.card-slcc .card {
+    background-color: #f4f5f657;
+}
+
+.card-byu .card {
+    background-color: #fffdfd55;
 }
 
 .card:hover {
@@ -127,16 +121,12 @@ section {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    .expandable-cards {
+    .cards-container {
         flex-direction: column; /* Stack cards on top of each other on smaller screens */
-        gap: 2rem; /* Reduce gap for smaller screens */
-        margin-left: 0.1rem;
-        margin-right: 0.1rem;
-    }
-
-    .card {
-        width: 100%; /* Full width for mobile */
-        max-width: none; /* Remove max-width constraint */
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
     }
 
     .card-image {
