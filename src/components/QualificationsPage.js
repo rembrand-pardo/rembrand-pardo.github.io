@@ -29,8 +29,8 @@ const ExpandableCard = ({ imageSrc, title, description, moreText, buttonText, bu
       <div className={`card-content ${isExpanded ? 'expanded-content' : ''}`}>
         {isExpanded && (
           <>
-            <p className="card-description">{description}</p>
-            <p>{moreText}</p>
+            <div className="card-description">{description}</div>
+            <div>{moreText}</div>
             <a 
               href={buttonLink} 
               className="card-button"

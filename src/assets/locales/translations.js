@@ -63,7 +63,7 @@ const translations = {
     card1Title: "Brigham Young University",
     card1Description: (
       <>
-        <p>
+        <p className="expandable-card-p">
           Brigham Young University (BYU) is considered one of the top universities in the nation, with many rankings placing it among the best in the country:
         </p>
         <ul>
@@ -82,7 +82,7 @@ const translations = {
     card2Title: "Salt Lake Community College",
     card2Description: (
       <>
-        <p>
+        <p className="expandable-card-p">
           Salt Lake Community College (SLCC) is considered one of the best community colleges in Utah and the nation, and has been recognized for a number of achievements: 
         </p>
         <ul>
@@ -241,7 +241,7 @@ const translations = {
     card1Title: "Universidad Brigham Young",
     card1Description: (
       <>
-        <p>
+        <p className="expandable-card-p">
           La Universidad Brigham Young (BYU) es considerada una de las mejores universidades del país, con muchos rankings que la colocan entre las mejores:
         </p>
         <ul>
@@ -260,7 +260,7 @@ const translations = {
     card2Title: "Salt Lake Community College",
     card2Description: (
       <>
-        <p>
+        <p className="expandable-card-p">
           El Salt Lake Community College (SLCC) es considerado uno de los mejores colegios comunitarios en Utah y en el país, y ha sido reconocido por una serie de logros:
         </p>
         <ul>
@@ -403,7 +403,7 @@ const translations = {
     card1Title: "Universitat Brigham Young",
     card1Description: (
       <>
-        <p>
+        <p className="expandable-card-p">
           La Universitat Brigham Young (BYU) és considerada una de les millors universitats del país, amb molts rànquings que la situen entre les millors:
         </p>
         <ul>
@@ -422,7 +422,7 @@ const translations = {
     card2Title: "Salt Lake Community College",
     card2Description: (
       <>
-        <p>
+        <p className="expandable-card-p">
           El Salt Lake Community College (SLCC) és considerat un dels millors col·legis comunitaris d'Utah i del país, i ha estat reconegut per una sèrie d'assoliments:
         </p>
         <ul>

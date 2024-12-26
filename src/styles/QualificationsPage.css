@@ -45,6 +45,7 @@ section {
 
 .card:hover {
     box-shadow: 0 0 7px 3px rgba(0, 132, 255, 0.353); /* Blue glow effect */
+    cursor: pointer;
 }
 
 .card.expanded {
@@ -55,6 +56,7 @@ section {
         rgba(0, 0, 0, 0.622) 78%           /* Transition to black at 780% of the height */
     );
     height: auto; /* Allow the card to expand as needed */
+    cursor: default; /* Remove pointer cursor */
 }
 
 .card-image {
@@ -89,9 +91,9 @@ section {
     color: white;
 }
 
-.card-description p {
+.expandable-card-p {
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
 }
 
 .card-description {
@@ -109,18 +111,19 @@ section {
 
 .card-description li {
     margin-bottom: 0.5rem; /* Space between list items */
+    font-size: 1.4rem;
 }
 
 .card-content .card-button {
     align-self: center;
-    padding: 0.9rem 1.5rem;
+    padding: 0.5rem 1.3rem;
     background-color: #0044ffd7;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
     margin-top: 1rem;
-    font-size: 1.25rem;  
+    font-size: 1.2rem;  
 }
 
 .card-content .card-button:hover {
