@@ -31,7 +31,7 @@ const AboutPage = ({ translations })  => {
       title: "Product",
       value: "product",
       image: "pardo.JPEG",
-      text: "This is the prodct text for the Product tab. It will appear over the image>",
+      text: "This is the prodct text for the Product tab. It will appear over the image.",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Product Tab</p>
@@ -65,6 +65,7 @@ const AboutPage = ({ translations })  => {
       title: "Content",
       value: "content",
       image: "Rembrand-logo.png",
+      text: "This is the prodct text for the Product tab. It will appear over the image.",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Content tab</p>
