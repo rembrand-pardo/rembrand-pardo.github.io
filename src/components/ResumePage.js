@@ -473,8 +473,6 @@ const ResumePage = ({ translations, language }) => {
           )}
         </div>
 
-
-
       </div>
     </div>
   );
