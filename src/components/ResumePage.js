@@ -9,7 +9,7 @@ import { FocusCards } from './FocusCards';
 
 import { PlaceholdersAndVanishInput } from "../components/PlaceholderAndVanish";
 
-import { BackgroundGradient } from "../components/CardGradient";
+import { CardBackgroundGradient } from "../components/CardGradient";
 
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
@@ -416,7 +416,7 @@ const ResumePage = ({ translations, language }) => {
 
         <div className='resume_cards h-[20rem] flex flex-col justify-center items-center px-4'>
           {(selectedTab !== null || currentCardData.title) && currentCardData.title && (
-            <BackgroundGradient className="rounded-[22px] max-w-sm p-3 sm:p-7 bg-black bg-opacity-60 dark:bg-black dark:bg-opacity-20">
+            <CardBackgroundGradient className="rounded-[22px] max-w-sm p-3 sm:p-7 bg-black bg-opacity-60 dark:bg-black dark:bg-opacity-20">
               <img
                 src={currentCardData.image}
                 alt={currentCardData.title}
@@ -440,7 +440,7 @@ const ResumePage = ({ translations, language }) => {
               >
                 { translations.resumeViewResumeCardButton }
               </a>
-            </BackgroundGradient>
+            </CardBackgroundGradient>
           )}
         </div>
 
