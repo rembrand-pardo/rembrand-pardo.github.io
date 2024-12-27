@@ -2,16 +2,17 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export const TextHoverEffect = ({ text, duration = 4 }) => {
-  const svgRef = useRef(null);
+  const textRef = useRef(null); // Ref for the text element
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
 
   useEffect(() => {
-    if (svgRef.current) {
-      const svgRect = svgRef.current.getBoundingClientRect();
-      const cxPercentage = ((cursor.x - svgRect.left) / svgRect.width) * 100;
-      const cyPercentage = ((cursor.y - svgRect.top) / svgRect.height) * 100;
+    if (textRef.current) {
+      const textRect = textRef.current.getBoundingClientRect();
+      const cxPercentage = ((cursor.x - textRect.left) / textRect.width) * 100;
+      const cyPercentage = ((cursor.y - textRect.top) / textRect.height) * 100;
+
       setMaskPosition({
         cx: `${cxPercentage}%`,
         cy: `${cyPercentage}%`,
@@ -21,7 +22,6 @@ export const TextHoverEffect = ({ text, duration = 4 }) => {
 
   return (
     <svg
-      ref={svgRef}
       width="100%"
       height="100%"
       viewBox="0 0 300 100"
@@ -32,12 +32,29 @@ export const TextHoverEffect = ({ text, duration = 4 }) => {
       className="select-none"
     >
       <defs>
-        {/* Linear Gradient */}
+        {/* Bright Light Blue Gradient */}
         <linearGradient id="textGradient" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor={hovered ? "#00BFFF" : "#CCC"} />
+          <stop offset="0%" stopColor={hovered ? "#00FFFF" : "#888"} />
           <stop offset="50%" stopColor={hovered ? "#1E90FF" : "#AAA"} />
-          <stop offset="100%" stopColor={hovered ? "#4169E1" : "#888"} />
+          <stop offset="100%" stopColor={hovered ? "#87CEFA" : "#CCC"} />
         </linearGradient>
+
+        {/* Strong Glow Effect */}
+        <filter id="glow">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+          <feColorMatrix
+            in="blur"
+            type="matrix"
+            values="0 0 0 0  0.2
+                    0 0 0 0  0.8
+                    0 0 0 0  1
+                    0 0 0 1  0"
+          />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
 
         {/* Radial Gradient for Mask */}
         <radialGradient
@@ -59,6 +76,7 @@ export const TextHoverEffect = ({ text, duration = 4 }) => {
 
       {/* Background Text */}
       <motion.text
+        ref={textRef}
         x="50%"
         y="50%"
         textAnchor="middle"
@@ -78,16 +96,18 @@ export const TextHoverEffect = ({ text, duration = 4 }) => {
         {text}
       </motion.text>
 
-      {/* Gradient Stroked Text */}
+      {/* Gradient Stroked Text with Strong Glow */}
       <text
+        ref={textRef}
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
         stroke="url(#textGradient)"
-        strokeWidth="0.3"
+        strokeWidth="0.5"
         mask="url(#textMask)"
         className="font-[helvetica] font-bold fill-transparent text-7xl sm:text-6xl xs:text-5xl"
+        style={{ filter: hovered ? "url(#glow)" : "none" }}
       >
         {text}
       </text>
