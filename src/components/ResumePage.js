@@ -431,15 +431,18 @@ const ResumePage = ({ translations, language }) => {
               <p className="text-sm text-white">
                 {currentCardData.content}
               </p>
-              <a
-                href={currentCardData.pdfLink} // Use pdfLink here
-                target="_blank" // Opens in a new tab
-                rel="noopener noreferrer" // Security best practice
-                className="viewResume_container rounded-full pl-4 pr-4 py-2 text-white flex text-center bg-blue-600 mt-4 text-xs mx-auto block"
-                onClick={() => logAnalytics('view_resume', { pdfLink: currentCardData.pdfLink })}
-              >
-                { translations.resumeViewResumeCardButton }
-              </a>
+              
+              <div className="w-full flex justify-center">
+                <a 
+                  href={currentCardData.pdfLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="viewResumeButton_container rounded-full px-6 py-2 text-white inline-flex items-center justify-center mt-4 text-xs" 
+                  onClick={() => logAnalytics('view_resume', { pdfLink: currentCardData.pdfLink })}
+                >
+                  {translations.resumeViewResumeCardButton}
+                </a>
+              </div>
             </CardBackgroundGradient>
           )}
         </div>

@@ -74,7 +74,6 @@ input {
     font-size: 1.15rem;
 }
 
-
 /* Tabs code*/
 .field_tabs {
     display: flex;
@@ -102,6 +101,26 @@ input {
     cursor: pointer;
     margin: 0.5rem; /* Margin between the tabs */
 }
+
+.viewResumeButton_container {
+    border: 2px solid rgba(255, 255, 255, 0.871);
+    background: linear-gradient(45deg, rgba(4, 28, 148, 0.534), rgba(8, 51, 221, 0.499));
+    /* background: linear-gradient(-45deg, #020742c4, #01051D, #02073c); */
+    display: inline-flex !important;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1.1rem !important;
+    width: fit-content;
+}
+
+.viewResumeButton_container:hover {
+    background: linear-gradient(45deg, rgba(4, 28, 148, 0.912), rgba(8, 51, 221, 0.863)); /* Blue gradient with transparency */
+    border: 1px solid; /* Remove gradient outline on hover */
+}
+
+  
 
 /* Media query for small screens */
 @media (max-width: 640px) {

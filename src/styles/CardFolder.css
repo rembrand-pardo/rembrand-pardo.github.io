@@ -47,6 +47,7 @@
     transform: translateY(-5px); /* Raise slightly */
     box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2); /* Add a subtle glow effect */
     outline: 2px solid #0856cc; /* Outline color on hover */
+    cursor: default;
 }
 
 /* Title styles */
