@@ -1,14 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export const TextHoverEffect = ({ text, duration }) => {
+export const TextHoverEffect = ({ text, duration = 4 }) => {
   const svgRef = useRef(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
 
   useEffect(() => {
-    if (svgRef.current && cursor.x !== null && cursor.y !== null) {
+    if (svgRef.current) {
       const svgRect = svgRef.current.getBoundingClientRect();
       const cxPercentage = ((cursor.x - svgRect.left) / svgRect.width) * 100;
       const cyPercentage = ((cursor.y - svgRect.top) / svgRect.height) * 100;
@@ -32,52 +32,32 @@ export const TextHoverEffect = ({ text, duration }) => {
       className="select-none"
     >
       <defs>
-        <linearGradient
-          id="textGradient"
-          gradientUnits="userSpaceOnUse"
-          cx="50%"
-          cy="50%"
-          r="25%"
-        >
-          {hovered && (
-            <>
-              {/* Updated hover colors to a bluish gradient */}
-              <stop offset="0%" stopColor={"#00BFFF"} /> {/* Light blue */}
-              <stop offset="50%" stopColor={"#1E90FF"} /> {/* Dodger blue */}
-              <stop offset="100%" stopColor={"#4169E1"} /> {/* Royal blue */}
-            </>
-          )}
+        {/* Linear Gradient */}
+        <linearGradient id="textGradient" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor={hovered ? "#00BFFF" : "#CCC"} />
+          <stop offset="50%" stopColor={hovered ? "#1E90FF" : "#AAA"} />
+          <stop offset="100%" stopColor={hovered ? "#4169E1" : "#888"} />
         </linearGradient>
 
-        <motion.radialGradient
+        {/* Radial Gradient for Mask */}
+        <radialGradient
           id="revealMask"
           gradientUnits="userSpaceOnUse"
+          cx={maskPosition.cx}
+          cy={maskPosition.cy}
           r="20%"
-          animate={maskPosition}
-          transition={{ duration: duration ?? 0, ease: "easeOut" }}
         >
           <stop offset="0%" stopColor="white" />
           <stop offset="100%" stopColor="black" />
-        </motion.radialGradient>
+        </radialGradient>
 
+        {/* Mask */}
         <mask id="textMask">
           <rect x="0" y="0" width="100%" height="100%" fill="url(#revealMask)" />
         </mask>
       </defs>
 
-      {/* Adjust text size for different screen sizes */}
-      <text
-        x="50%"
-        y="50%"
-        textAnchor="middle"
-        dominantBaseline="middle"
-        strokeWidth="0.3"
-        className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl sm:text-6xl xs:text-5xl"
-        style={{ opacity: hovered ? 0.7 : 0 }}
-      >
-        {text}
-      </text>
-
+      {/* Background Text */}
       <motion.text
         x="50%"
         y="50%"
@@ -91,13 +71,14 @@ export const TextHoverEffect = ({ text, duration }) => {
           strokeDasharray: 1000,
         }}
         transition={{
-          duration: 4,
+          duration,
           ease: "easeInOut",
         }}
       >
         {text}
       </motion.text>
 
+      {/* Gradient Stroked Text */}
       <text
         x="50%"
         y="50%"
