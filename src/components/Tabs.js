@@ -27,7 +27,7 @@ export const Tabs = ({
       <div
         className={cn(
           // Adjust flex layout to be more responsive
-          "flex flex-wrap items-center justify-start [perspective:1000px] relative overflow-x-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+          "flex flex-wrap items-center justify-start [perspective:1000px] relative sm:overflow-visible no-visible-scrollbar max-w-full w-full",
           containerClassName
         )}
         style={{
