@@ -1,3 +1,19 @@
+/* styles/Service.css */
+body.servicepage-no-padding {
+    padding-top: 0;
+} 
+
+.service_container {
+    /* position: relative; */
+    z-index: 1;
+    margin-bottom: 20vh;
+}
+  
+.content-spacing {
+    position: relative;
+    z-index: 10;
+}
+
 /* Show these only on desktop screens */
 @media (min-width: 768px) {
     .mobile_tracingBeam {
@@ -12,23 +28,6 @@
     .serviceDetail_section {
         display: none;
     }
-}
-
-/* styles/Service.css */
-body.servicepage-no-padding {
-    padding-top: 0;
-}
-  
-
-.service_container {
-    /* position: relative; */
-    z-index: 1;
-    margin-bottom: 20vh;
-}
-  
-.content-spacing {
-    position: relative;
-    z-index: 10;
 }
   
 @media (min-width: 1024px) and (min-height: 600px) and (max-height: 899px) {
