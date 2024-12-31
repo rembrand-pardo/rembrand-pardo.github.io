@@ -1,7 +1,7 @@
+// HeroParallax.jsx
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Link } from 'react-router-dom';
-
 
 export const HeroParallax = ({
   products
@@ -22,11 +22,13 @@ export const HeroParallax = ({
   const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), springConfig);
   const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.2, 1]), springConfig);
   const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
-  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
+  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, -100]), springConfig);
+
   return (
-    (<div
+    <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="h-[200vh] py-20 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+    >
       <Header />
       <motion.div
         style={{
@@ -35,13 +37,14 @@ export const HeroParallax = ({
           translateY,
           opacity,
         }}
-        className="">
+        className="relative"
+      >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((product) => (
             <ProductCard product={product} translate={translateX} key={product.title} />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+        <motion.div className="flex flex-row mb-20 space-x-20">
           {secondRow.map((product) => (
             <ProductCard product={product} translate={translateXReverse} key={product.title} />
           ))}
@@ -52,9 +55,11 @@ export const HeroParallax = ({
           ))}
         </motion.div>
       </motion.div>
-    </div>)
+    </div>
   );
 };
+
+
 
 export const Header = () => {
   return (

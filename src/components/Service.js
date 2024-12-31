@@ -67,14 +67,11 @@ const ServicePage = ({ translations }) => {
       <div className="background-gradient" /> {/* Apply the gradient background */}
 
       <div className="service_container">
-
-        <HeroParallax products={products} />;
-
+        <HeroParallax products={products} />
       </div>
 
-
-      <div className='serviceTabs_section'>     
-        <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
+      <div className="serviceTabs_section content-spacing">     
+        <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full items-start justify-start">
           <Tabs tabs={tabs} />
         </div>
       </div>
@@ -187,12 +184,12 @@ export const products = [
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
   },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
+  // {
+  //   title: "Renderwork Studio",
+  //   link: "https://renderwork.studio",
+  //   thumbnail:
+  //     "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+  // },
 
   // {
   //   title: "Creme Digital",
