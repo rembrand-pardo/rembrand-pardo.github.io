@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Service.css';
 
 // import { addDoc, collection } from 'firebase/firestore';
@@ -15,6 +15,14 @@ import { Tabs } from "../components/Tabs";
 
 
 const ServicePage = ({ translations }) => {
+
+  // Apply the body class when the component mounts. Used to modify this page only
+  useEffect(() => {
+    document.body.classList.add('servicepage-no-padding');
+    return () => {
+      document.body.classList.remove('servicepage-no-padding');
+    };
+  }, []);
 
   const tabs = [
     {
