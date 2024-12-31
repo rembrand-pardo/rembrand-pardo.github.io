@@ -14,6 +14,14 @@ body.servicepage-no-padding {
     z-index: 10;
 }
 
+.serviceDetail_section {
+    position: relative;
+    margin-top: 10rem; /* Add spacing above the section */
+    z-index: 5; /* Ensure it stacks correctly relative to the Tabs */
+    padding: 2rem; /* Optional: Add some padding for better aesthetics */
+}
+
+
 /* Show these only on desktop screens */
 @media (min-width: 768px) {
     .mobile_tracingBeam {
