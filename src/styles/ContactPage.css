@@ -57,6 +57,10 @@
   color: #00008B; /* Dark blue */
   box-sizing: border-box; /* Include padding in width */
   margin: 0 auto; /* Center the input fields */
+
+
+  -webkit-appearance: none; /* Added for Safari*/
+  appearance: none; /* Added for Safari*/
 }
   
 .input-container input:focus,
@@ -219,6 +223,43 @@
   box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect */
 }
 
+/*------------------ Updates to handle Safari ---------------------*/
+
+/* Remove Safari autofill button */
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+/* Safari-specific styles */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .input-container {
+      position: relative;
+    }
+    .input-container input:focus::placeholder,
+    .input-container textarea:focus::placeholder,
+    .input-container input:not(:placeholder-shown)::placeholder,
+    .input-container textarea:not(:placeholder-shown)::placeholder {
+      position: absolute;
+      top: -0.5rem;
+      left: 12%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      color: #0044ffd7;
+      background-color: white;
+      padding: 0 0.25rem;
+      opacity: 1;
+      width: auto;
+      text-align: left;
+    }
+  }
+}
+
+/*----------------------------------------------------------*/
 
 /* Mcbook pro and large monitors */
 @media (min-width: 3024px) and (max-width: 8000px) { 
