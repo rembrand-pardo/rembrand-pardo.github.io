@@ -235,28 +235,65 @@ input::-webkit-credentials-auto-fill-button {
   right: 0;
 }
 /* Safari-specific styles */
-@media not all and (min-resolution:.001dpcm) {
-  @supports (-webkit-appearance:none) {
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  /* Safari-only styles */
+  _::-webkit-full-page-media, _:future, :root {
     .input-container {
       position: relative;
+      /* ADDED: Create stacking context */
+      z-index: 0;
     }
+
+    .input-container input,
+    .input-container textarea {
+      /* ADDED: Ensure input stays within bounds */
+      position: relative;
+      z-index: 1;
+    }
+
+    /* CHANGED: New approach for placeholder positioning */
+    .input-container input::placeholder,
+    .input-container textarea::placeholder {
+      position: static !important;
+      opacity: 1 !important;
+      color: #adccf7 !important;
+    }
+
+    /* CHANGED: Handle focused and filled states */
     .input-container input:focus::placeholder,
     .input-container textarea:focus::placeholder,
     .input-container input:not(:placeholder-shown)::placeholder,
     .input-container textarea:not(:placeholder-shown)::placeholder {
+      opacity: 0 !important;
+    }
+
+    /* ADDED: New label for focused/filled state */
+    .input-container input:focus + .floating-label,
+    .input-container textarea:focus + .floating-label,
+    .input-container input:not(:placeholder-shown) + .floating-label,
+    .input-container textarea:not(:placeholder-shown) + .floating-label {
       position: absolute;
       top: -0.5rem;
       left: 12%;
-      transform: translateY(-50%);
       font-size: 0.8rem;
       color: #0044ffd7;
       background-color: white;
       padding: 0 0.25rem;
-      opacity: 1;
-      width: auto;
-      text-align: left;
+      z-index: 2;
     }
   }
+}
+
+/* ADDED: Disable webkit autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #00008B !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 /*----------------------------------------------------------*/
