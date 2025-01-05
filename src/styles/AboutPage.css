@@ -26,5 +26,6 @@
 /* Ensure only TracingBeam p tags are affected */
 .tracingBeam_section p {
   font-size: 1.5rem;
-  
+  line-height: 1.3;
+
 }
