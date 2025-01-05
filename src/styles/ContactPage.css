@@ -254,7 +254,7 @@ input::-webkit-credentials-auto-fill-button {
     .input-container textarea::placeholder {
       position: static !important;
       opacity: 1 !important;
-      color: #adccf7 !important;
+      color: #70a8f5 !important;
     }
 
     /* Handle focused and filled states */
