@@ -285,7 +285,7 @@ input::-webkit-credentials-auto-fill-button {
       left: 50%;
       transform: translateX(-50%);
       color: red;
-      font-size: 0.9rem;
+      font-size: 1rem;
       white-space: nowrap;
       z-index: 10;
       background-color: transparent;
@@ -293,6 +293,19 @@ input::-webkit-credentials-auto-fill-button {
       width: auto;
       text-align: center;
       pointer-events: none;
+    }
+
+    /* Hide placeholder when error text is present */
+    .input-container:has(.error-text) input::placeholder,
+    .input-container:has(.error-text) textarea::placeholder {
+      opacity: 0 !important;
+      color: transparent !important;
+    }
+
+    /* Fallback for browsers that don't support :has */
+    .input-container .input-error::placeholder {
+      opacity: 0 !important;
+      color: transparent !important;
     }
 
   }
