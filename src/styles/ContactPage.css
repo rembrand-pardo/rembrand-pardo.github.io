@@ -240,18 +240,16 @@ input::-webkit-credentials-auto-fill-button {
   _::-webkit-full-page-media, _:future, :root {
     .input-container {
       position: relative;
-      /* ADDED: Create stacking context */
-      z-index: 0;
+      z-index: 0; /*Create stacking context */
     }
 
     .input-container input,
     .input-container textarea {
-      /* ADDED: Ensure input stays within bounds */
-      position: relative;
+      position: relative; /* Ensure input stays within bounds */
       z-index: 1;
     }
 
-    /* CHANGED: New approach for placeholder positioning */
+    /* Approach for placeholder positioning */
     .input-container input::placeholder,
     .input-container textarea::placeholder {
       position: static !important;
@@ -259,7 +257,7 @@ input::-webkit-credentials-auto-fill-button {
       color: #adccf7 !important;
     }
 
-    /* CHANGED: Handle focused and filled states */
+    /* Handle focused and filled states */
     .input-container input:focus::placeholder,
     .input-container textarea:focus::placeholder,
     .input-container input:not(:placeholder-shown)::placeholder,
@@ -267,7 +265,7 @@ input::-webkit-credentials-auto-fill-button {
       opacity: 0 !important;
     }
 
-    /* ADDED: New label for focused/filled state */
+    /* New label for focused/filled state */
     .input-container input:focus + .floating-label,
     .input-container textarea:focus + .floating-label,
     .input-container input:not(:placeholder-shown) + .floating-label,
@@ -284,7 +282,6 @@ input::-webkit-credentials-auto-fill-button {
 
     .input-container .error-text {
       position: absolute;
-      /* bottom: -1.5rem; Move error below input */
       left: 50%;
       transform: translateX(-50%);
       color: red;
