@@ -134,26 +134,26 @@ export const products = [
     title: "Moonbeam",
     link: "https://gomoonbeam.com",
     thumbnail:
-      "/services/speaking_ser.jpg",
+      "/services/blue_speaking_ser.jpg",
   },
   {
     title: "Cursor",
     link: "https://cursor.so",
     thumbnail:
-      "/services/speaking_ser.jpg",
+      "/services/blue_speaking_ser.jpg",
   },
   {
     title: "Rogue",
     link: "https://userogue.com",
     thumbnail:
-      "/services/speaking_ser.jpg",
+      "/services/blue_speaking_ser.jpg",
   },
 
   {
     title: "Editorially",
     link: "https://editorially.org",
     thumbnail:
-      "/services/speaking_ser.jpg",
+      "/services/blue_speaking_ser.jpg",
   },
   {
     title: "Editrix AI",
@@ -258,7 +258,7 @@ const dummyContent = [
     ),
     badge: "React",
     image:
-    "/services/speaking_ser.jpg",
+    "/services/blue_speaking_ser.jpg",
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
