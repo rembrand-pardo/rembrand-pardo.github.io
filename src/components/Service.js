@@ -39,7 +39,7 @@ const ServicePage = ({ translations }) => {
     {
       title: "Services",
       value: "services",
-      image: "rembrand_pardo_removebg.png",
+      image: "/services/business_con.jpg",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Services tab</p>
@@ -140,7 +140,7 @@ export const products = [
     title: "Cursor",
     link: "https://cursor.so",
     thumbnail:
-      "/services/blue_speaking_ser.jpg",
+      "/services/business_con.jpg",
   },
   {
     title: "Rogue",
