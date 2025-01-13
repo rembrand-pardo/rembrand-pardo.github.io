@@ -131,66 +131,66 @@ const ServicePage = ({ translations }) => {
 
 export const products = [
   {
-    title: "Moonbeam",
+    title: "Team Building Leadership",
     link: "https://gomoonbeam.com",
     thumbnail:
-      "/services/blue_speaking_ser.jpg",
+      "/services/leadership_card2.png",
   },
   {
-    title: "Cursor",
+    title: "Management Services",
     link: "https://cursor.so",
     thumbnail:
-      "/services/business_con.jpg",
+      "/services/technology_card2.png",
   },
   {
-    title: "Rogue",
+    title: "Business Cunsulting Services",
     link: "https://userogue.com",
     thumbnail:
-      "/services/blue_speaking_ser.jpg",
+      "/services/business_card.png",
   },
 
   {
-    title: "Editorially",
+    title: "Public Speaking Services",
     link: "https://editorially.org",
     thumbnail:
-      "/services/blue_speaking_ser.jpg",
+      "/services/speaking_card2.png",
   },
   {
-    title: "Editrix AI",
+    title: "Public Speaking Services",
     link: "https://editrix.ai",
     thumbnail:
-      "/services/speaking_ser.jpg",
+      "/services/business_card3.png",
   },
   {
-    title: "Pixel Perfect",
+    title: "Management Services",
     link: "https://app.pixelperfect.quest",
     thumbnail:
-      "/services/speaking_ser.jpg",
+      "/services/technology_card.png",
   },
 
   {
-    title: "Algochurn",
+    title: "Team Building",
     link: "https://algochurn.com",
     thumbnail:
-      "/services/speaking_ser.jpg",
+      "/services/leadership_card.png",
   },
   {
-    title: "Aceternity UI",
+    title: "Management Services",
     link: "https://ui.aceternity.com",
     thumbnail:
-      "/services/speaking_ser.jpg",
+      "/services/technology_card3.png",
   },
   {
-    title: "Tailwind Master Kit",
+    title: "Business Cunsulting Services",
     link: "https://tailwindmasterkit.com",
     thumbnail:
-      "/services/speaking_ser.jpg",
+      "/services/business_card2.png",
   },
   {
-    title: "SmartBridge",
+    title: "Public Speaking Services",
     link: "https://smartbridgetech.com",
     thumbnail:
-      "/services/speaking_ser.jpg",
+      "/services/speaking_card3.png",
   },
   // {
   //   title: "Renderwork Studio",
