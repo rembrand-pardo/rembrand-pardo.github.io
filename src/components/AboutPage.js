@@ -33,6 +33,8 @@ const AboutPage = ({ translations })  => {
       image: "pardo.JPEG",
       text: "This is the prodct text for the Product tab. It will appear over the image.",
       backgroundColor: "rgba(255, 0, 0, 0.7)",
+      textColor: "rgba(255, 0, 0, 0.7)",
+      imageClassName: "w-[70%] h-auto object-contain",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Product Tab</p>
@@ -64,7 +66,7 @@ const AboutPage = ({ translations })  => {
       value: "content",
       image: "pardo_crest_rm.png",
       text: "This is the prodct text for the Product tab. It will appear over the image.",
-      backgroundColor: "rgb(255, 255, 255)",
+      backgroundColor: "rgba(255, 255, 255, 1)",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Content tab</p>

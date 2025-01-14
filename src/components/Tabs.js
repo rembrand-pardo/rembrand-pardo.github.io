@@ -115,7 +115,12 @@ export const FadeInDiv = ({
           {/* Wrapper for both image and text */}
           <div className="relative w-full h-full flex flex-col items-center justify-center" style={{ borderRadius: "12px" }}> {/* Rounded corners */}
             {/* Text Container */}
-            <div className="z-10 text-white font-bold text-xl md:text-4xl mb-2"> {/* Added margin-bottom for spacing */}
+            <div
+              className="z-10 font-bold text-xl md:text-4xl mb-2"
+              style={{
+                color: tab.textColor || "white", // Use dynamic text color
+              }}
+            >
               {tab.text} {/* Custom text for each tab */}
             </div>
 
@@ -123,7 +128,7 @@ export const FadeInDiv = ({
             <img
               src={tab.image} // Image for each tab
               alt={tab.title}
-              className="w-[40%] h-auto object-contain" // Set width to 85% and maintain aspect ratio
+              className={tab.imageClassName || "w-[40%] h-auto object-contain"} // Dynamic image className
             />
           </div>
 
