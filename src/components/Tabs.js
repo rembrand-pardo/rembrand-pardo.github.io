@@ -113,23 +113,43 @@ export const FadeInDiv = ({
         >
 
           {/* Wrapper for both image and text */}
-          <div className="relative w-full h-full flex flex-col items-center justify-center" style={{ borderRadius: "12px" }}> {/* Rounded corners */}
-            {/* Text Container */}
-            <div
-              className="z-10 font-bold text-xl md:text-4xl mb-2"
-              style={{
-                color: tab.textColor || "white", // Use dynamic text color
-              }}
-            >
-              {tab.text} {/* Custom text for each tab */}
-            </div>
-
-            {/* Image with 'contain' to ensure it fits without zoom */}
-            <img
-              src={tab.image} // Image for each tab
-              alt={tab.title}
-              className={tab.imageClassName || "w-[40%] h-auto object-contain"} // Dynamic image className
-            />
+          <div
+            className={`relative w-full h-full flex ${
+              tab.textPosition === "over" ? "items-center justify-center" : "flex-col items-center"
+            }`}
+            style={{ borderRadius: "12px" }}
+          >
+            {tab.textPosition === "over" ? (
+              <>
+                {/* Text Over Image */}
+                <div
+                  className={`absolute inset-0 flex items-center justify-center z-10 ${tab.textAlign} ${tab.textSize}`}
+                  style={{ color: tab.textColor || "white" }}
+                >
+                  {tab.text}
+                </div>
+                <img
+                  src={tab.image}
+                  alt={tab.title}
+                  className={tab.imageClassName || "w-[40%] h-auto object-contain"}
+                />
+              </>
+            ) : (
+              <>
+                {/* Text Above Image */}
+                <div
+                  className={`z-10 font-bold mb-4 ${tab.textAlign} ${tab.textSize}`}
+                  style={{ color: tab.textColor || "white" }}
+                >
+                  {tab.text}
+                </div>
+                <img
+                  src={tab.image}
+                  alt={tab.title}
+                  className={tab.imageClassName || "w-[40%] h-auto object-contain"}
+                />
+              </>
+            )}
           </div>
 
         </motion.div>

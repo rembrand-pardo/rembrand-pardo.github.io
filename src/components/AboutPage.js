@@ -6,7 +6,6 @@ import '../styles/GradientBackground.css';
 // import { logEvent } from 'firebase/analytics';
 // import { analytics } from '../firebaseConfig';
 
-import rembrandPardoImage from '../assets/rembrand_pardo_removebg.png';
 import { TextHoverEffect } from "../components/TextHoverEffect";
 
 
@@ -35,6 +34,9 @@ const AboutPage = ({ translations })  => {
       backgroundColor: "rgba(255, 0, 0, 0.7)",
       textColor: "rgba(255, 0, 0, 0.7)",
       imageClassName: "w-[70%] h-auto object-contain",
+      textPosition: "over", // "over" or "above"
+      textSize: "text-lg md:text-xl", // Control text size
+      textAlign: "text-center", // Control text alignment
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Product Tab</p>
@@ -64,9 +66,14 @@ const AboutPage = ({ translations })  => {
     {
       title: "Content",
       value: "content",
-      image: "pardo_crest_rm.png",
+      image: "pardo_crest_only_rm.png",
       text: "This is the prodct text for the Product tab. It will appear over the image.",
       backgroundColor: "rgba(255, 255, 255, 1)",
+      textColor: "rgba(255, 0, 0, 0.7)",
+      imageClassName: "w-[60%] h-auto object-contain",
+      textPosition: "above", // "over" or "above"
+      textSize: "text-lg md:text-xl", // Control text size
+      textAlign: "text-center", // Control text alignment
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Content tab</p>
@@ -82,8 +89,9 @@ const AboutPage = ({ translations })  => {
       <div className="background-gradient" /> {/* gradient background is for the whole page */}
     
       <div className="about_page_content">
-        <section className='image_section'>
-          <img src={rembrandPardoImage} alt="Rembrand Pardo" />
+
+        <section className='about_heading_section'>
+          <h1>{translations.about_heading}</h1>
         </section>
 
         <section className='body_section'>

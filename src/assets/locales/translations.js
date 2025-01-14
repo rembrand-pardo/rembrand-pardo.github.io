@@ -95,20 +95,19 @@ const translations = {
     card2ButtonText: "SLCC",
     card2ButtonLink: "https://www.slcc.edu/",
 
+    //About Page translations
+    about_heading: "Where Passion Meets Purpose",
 
-    //About Page transaltions
     aboutMeText1: (
-      "Hello! My name is Rembrand Paul Pardo and I am from Barcelona, Spain. " +
-        "I enjoy learning new things and finding new ways of doing things. Currently, I am studying Software Engineering at BYU. " +
-        "Prior to this, I studied at Salt Lake Community College (SLCC) where I finished an Associate's degree in Business. " +
-        "The world of business has always been a passion of mine because I like people and numbers."
-    ),
+      "I thrive at the intersection of people, business, and technology—three pillars that drive everything I do. " +
+      "My journey is fueled by relentless curiosity, a commitment to excellence, and a dedication to empowering others " + 
+      "through innovative strategies and meaningful collaboration. Fluent in English, Spanish, and Catalan, I bring a global perspective to every challenge and project."
+      ),
 
     aboutMeText2: (
-      "Software Engineering has become another passion of mine. " +
-      "I love how I can create new things with just lines of code. There are not limits to what programming can create. " +
-      "I have learned that with computer-programming it is not always about what I know, " +
-      "but what and how I can figure out what I don't know. Explore my website to find out more about what I have learned and done with programming."
+      "Beyond my professional pursuits, I’m an avid learner and a lover of sports, music, movies, and acting. " +
+      "These passions keep me grounded while inspiring the creativity and focus I bring to my work. Dive deeper into " + 
+      "this page to uncover the passions, values, and aspirations that define me and guide my mission to create impactful solutions."
     ),
 
     myPassions: "My Passions",
@@ -273,6 +272,24 @@ const translations = {
     card2ButtonText: "SLCC",
     card2ButtonLink: "https://www.slcc.edu/",
 
+    //About Page transaltions
+    about_heading: "Donde la Pasión se Encuentra con el Propósito",
+
+    aboutMeText1: (
+      "Me desenvuelvo en la intersección de las personas, los negocios y la tecnología: tres pilares que impulsan todo lo que hago. " +
+      "Mi camino está alimentado por una curiosidad incansable, un compromiso con la excelencia y una dedicación a empoderar a otros " +
+      "a través de estrategias innovadoras y una colaboración significativa. Con fluidez en inglés, español y catalán, aporto una perspectiva " +
+      " global a cada desafío y proyecto."
+      ),
+
+    aboutMeText2: (
+      "Más allá de mis actividades profesionales, soy un aprendiz apasionado y amante de los deportes, la música, el cine y la actuación. " +
+      "Estas pasiones me mantienen con los pies en la tierra mientras inspiran la creatividad y el enfoque que aporto a mi trabajo. Profundiza " + 
+      "en esta página para descubrir las pasiones, valores y aspiraciones que me definen y guían mi misión de crear soluciones impactantes."
+    ),
+
+    myPassions: "Mis Pasiones",
+
     //404 page
     notFound: "Página No Encontrada",
     notFoundMobile: "404\nPágina no encontrada",
@@ -434,6 +451,24 @@ const translations = {
     ),
     card2ButtonText: "SLCC",
     card2ButtonLink: "https://www.slcc.edu/",
+
+    //About Page transaltions
+    about_heading: "On la Passió Es Troba amb el Propòsit",
+
+    aboutMeText1: (
+      "Em moc a la intersecció entre les persones, els negocis i la tecnologia: tres pilars que impulsen tot el que faig. " +
+      "El meu camí està impulsat per una curiositat inesgotable, un compromís amb l’excel·lència i una dedicació a apoderar " +
+      "els altres a través d’estratègies innovadores i una col·laboració significativa. " +
+      "Amb fluïdesa en anglès, espanyol i català, aporto una perspectiva global a cada repte i projecte."
+    ),
+
+    aboutMeText2: (
+      "Més enllà de les meves activitats professionals, sóc un apassionat de l’aprenentatge i un amant dels esports, la música, el cinema i la interpretació. " +
+      "Aquestes passions em mantenen arrelat mentre inspiren la creativitat i l’atenció que aporto a la meva feina. Explora aquesta pàgina per descobrir les passions, " +
+      "els valors i les aspiracions que em defineixen i guien la meva missió de crear solucions impactants."
+    ),
+
+    myPassions: "Les Meves Passions",
 
     //404 page
     notFound: "Pàgina No Trobada",
