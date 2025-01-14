@@ -32,6 +32,7 @@ const AboutPage = ({ translations })  => {
       value: "product",
       image: "pardo.JPEG",
       text: "This is the prodct text for the Product tab. It will appear over the image.",
+      backgroundColor: "rgba(255, 0, 0, 0.7)",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Product Tab</p>
@@ -61,8 +62,9 @@ const AboutPage = ({ translations })  => {
     {
       title: "Content",
       value: "content",
-      image: "Rembrand-logo.png",
+      image: "pardo_crest_rm.png",
       text: "This is the prodct text for the Product tab. It will appear over the image.",
+      backgroundColor: "rgb(255, 255, 255)",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Content tab</p>
@@ -162,7 +164,7 @@ const dummyContent = [
     ),
     badge: "React",
     image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/services/blue_speaking_ser.jpg",
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",

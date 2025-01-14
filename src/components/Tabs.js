@@ -104,6 +104,7 @@ export const FadeInDiv = ({
             top: hovering ? idx * -50 : 0,
             zIndex: -idx,
             opacity: idx < 3 ? 1 - idx * 0.1 : 0,
+            backgroundColor: tab.backgroundColor || "rgba(0, 0, 0, 0.7)", // Dynamic background color
           }}
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
@@ -112,7 +113,7 @@ export const FadeInDiv = ({
         >
 
           {/* Wrapper for both image and text */}
-          <div className="relative w-full h-full flex flex-col items-center justify-center" style={{ backgroundColor: "rgba(0, 0, 0, 0.7)", borderRadius: "12px" }}> {/* Rounded corners */}
+          <div className="relative w-full h-full flex flex-col items-center justify-center" style={{ borderRadius: "12px" }}> {/* Rounded corners */}
             {/* Text Container */}
             <div className="z-10 text-white font-bold text-xl md:text-4xl mb-2"> {/* Added margin-bottom for spacing */}
               {tab.text} {/* Custom text for each tab */}
