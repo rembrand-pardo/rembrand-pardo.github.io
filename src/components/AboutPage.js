@@ -27,13 +27,13 @@ const AboutPage = ({ translations })  => {
 
   const tabs = [
     {
-      title: "Product",
+      title: "Business",
       value: "product",
-      image: "pardo.JPEG",
-      text: "This is the prodct text for the Product tab. It will appear over the image.",
-      backgroundColor: "rgba(255, 0, 0, 0.7)",
+      image: "business_tab.png",
+      text: "",
+      backgroundColor: "rgba(0, 0, 0, 0.1)",
       textColor: "rgba(255, 0, 0, 0.7)",
-      imageClassName: "w-[70%] h-auto object-contain",
+      imageClassName: "w-[100%] h-auto object-contain",
       textPosition: "over", // "over" or "above"
       textSize: "text-lg md:text-xl", // Control text size
       textAlign: "text-center", // Control text alignment

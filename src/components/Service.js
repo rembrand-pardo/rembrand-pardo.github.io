@@ -26,10 +26,16 @@ const ServicePage = ({ translations }) => {
 
   const tabs = [
     {
-      title: "Product",
+      title: "Business",
       value: "product",
-      image: "/services/business_card.png",
-      text: "This is the prodct text for the Product tab. It will appear over the image.",
+      image: "business_tab.png",
+      text: "",
+      backgroundColor: "rgba(0, 0, 0, 0.1)",
+      textColor: "rgba(255, 0, 0, 0.7)",
+      imageClassName: "w-[100%] h-auto object-contain",
+      textPosition: "over", // "over" or "above"
+      textSize: "text-lg md:text-xl", // Control text size
+      textAlign: "text-center", // Control text alignment
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Product Tab</p>
@@ -37,9 +43,15 @@ const ServicePage = ({ translations }) => {
       ),
     },
     {
-      title: "Services",
+      title: "Technology",
       value: "services",
-      image: "pardo_crest.jpg",
+      image: "technology_tab.png",
+      backgroundColor: "rgba(0, 0, 0, 0.1)",
+      textColor: "rgba(255, 0, 0, 0.7)",
+      imageClassName: "w-[100%] h-auto object-contain",
+      textPosition: "over", // "over" or "above"
+      textSize: "text-lg md:text-xl", // Control text size
+      textAlign: "text-center", // Control text alignment
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Services tab</p>
@@ -47,9 +59,15 @@ const ServicePage = ({ translations }) => {
       ),
     },
     {
-      title: "Playground",
+      title: "Leadership",
       value: "playground",
-      image: "/institutions_logos/BYU_medallion-rvbg.png",
+      image: "leadership_tab.png",
+      backgroundColor: "rgba(0, 0, 0, 0.1)",
+      textColor: "rgba(255, 0, 0, 0.7)",
+      imageClassName: "w-[100%] h-auto object-contain",
+      textPosition: "over", // "over" or "above"
+      textSize: "text-lg md:text-xl", // Control text size
+      textAlign: "text-center", // Control text alignment
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Playground tab</p>
@@ -57,10 +75,15 @@ const ServicePage = ({ translations }) => {
       ),
     },
     {
-      title: "Content",
+      title: "Speaking",
       value: "content",
-      image: "/institutions_logos/BYU-blue-rvbg.png",
-      text: "This is the prodct text for the Product tab. It will appear over the image.",
+      image: "speaking_tab.png",
+      backgroundColor: "rgba(0, 0, 0, 0.1)",
+      textColor: "rgba(255, 0, 0, 0.7)",
+      imageClassName: "w-[100%] h-auto object-contain",
+      textPosition: "over", // "over" or "above"
+      textSize: "text-lg md:text-xl", // Control text size
+      textAlign: "text-center", // Control text alignment
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <p>Content tab</p>
