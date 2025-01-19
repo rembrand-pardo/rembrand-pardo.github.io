@@ -99,7 +99,7 @@ const translations = {
     about_heading: "Where Passion Meets Purpose",
 
     aboutMeText1: (
-      "I thrive at the intersection of people, business, and technology—three pillars that drive everything I do. " +
+      "I am driven by the synergy of people, business, and technology—three essential pillars that inspire my purpose and pursuit of impactful solutions. " +
       "My journey is fueled by relentless curiosity, a commitment to excellence, and a dedication to empowering others " + 
       "through innovative strategies and meaningful collaboration. Fluent in English, Spanish, and Catalan, I bring a global perspective to every challenge and project."
       ),
@@ -276,7 +276,7 @@ const translations = {
     about_heading: "Donde la Pasión se Encuentra con el Propósito",
 
     aboutMeText1: (
-      "Me desenvuelvo en la intersección de las personas, los negocios y la tecnología: tres pilares que impulsan todo lo que hago. " +
+      "Estoy impulsado por la sinergia entre las personas, los negocios y la tecnología, tres pilares esenciales que inspiran mi propósito y mi búsqueda de soluciones impactantes. " +
       "Mi camino está alimentado por una curiosidad incansable, un compromiso con la excelencia y una dedicación a empoderar a otros " +
       "a través de estrategias innovadoras y una colaboración significativa. Con fluidez en inglés, español y catalán, aporto una perspectiva " +
       " global a cada desafío y proyecto."
@@ -456,7 +456,7 @@ const translations = {
     about_heading: "On la Passió Es Troba amb el Propòsit",
 
     aboutMeText1: (
-      "Em moc a la intersecció entre les persones, els negocis i la tecnologia: tres pilars que impulsen tot el que faig. " +
+      "Em mou la sinergia entre les persones, els negocis i la tecnologia, tres pilars essencials que inspiren el meu propòsit i la meva recerca de solucions impactants. " +
       "El meu camí està impulsat per una curiositat inesgotable, un compromís amb l’excel·lència i una dedicació a apoderar " +
       "els altres a través d’estratègies innovadores i una col·laboració significativa. " +
       "Amb fluïdesa en anglès, espanyol i català, aporto una perspectiva global a cada repte i projecte."
