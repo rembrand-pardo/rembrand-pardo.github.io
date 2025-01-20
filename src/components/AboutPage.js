@@ -82,6 +82,53 @@ const AboutPage = ({ translations })  => {
     },
   ];
 
+  const aboutContent = [
+    {
+      title: translations.pardoFamilyTitle,
+      description: (
+        <>
+          <p>{translations.pardoFamilyDescription}</p>
+        </>
+      ),
+      badge: translations.pardoFamilyMottoBadge, 
+      image:
+        "pardo_crest_no_motto.jpg",
+    },
+    {
+      title: translations.calculatedRisksTitle,
+      description: (
+        <>
+          <p>{translations.calculatedRisksDescription}</p>
+        </>
+      ),
+      badge: translations.calculatedRisksBadge,
+      image:
+        "adventures.jpg",
+    },
+    {
+      title: translations.steppingIntoRolesTitle,
+      description: (
+        <>
+          <p>{translations.steppingIntoRolesDescription}</p>
+        </>
+      ),
+      badge: translations.steppingIntoRolesBadge,
+      image:
+        "acting.jpg",
+    },
+    {
+      title: translations.endlessLearningTitle,
+      description: (
+        <>
+          <p>{translations.endlessLearningDescription}</p>
+        </>
+      ),
+      badge: translations.endlessLearningBadge, 
+      image:
+        "books.png",
+    },
+  ];
+
 
   return (
     <div className={`about_page ${isVisible ? 'visible' : ''}`}>
@@ -112,7 +159,7 @@ const AboutPage = ({ translations })  => {
           
           <TracingBeam className="px-6">
             <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-              {dummyContent.map((item, index) => (
+              {aboutContent.map((item, index) => (
                 <div key={`content-${index}`} className="mb-10">
                   <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
                     {item.badge}
@@ -152,65 +199,5 @@ const AboutPage = ({ translations })  => {
     </div>
   );
 };
-
-const dummyContent = [
-  {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: (
-      <>
-        <p>
-          Hello! My name is Rembrand Paul Pardo and I am from Barcelona, Spain.
-          I enjoy learning new things and finding new ways of doing things. Currently, I am studying Software Engineering at BYU.
-          Prior to this, I studied at Salt Lake Community College (SLCC) where I finished an Associate's degree in Business.
-          The world of business has always been a passion of mine because I like people and numbers.
-        </p>
-        <p>
-          Software Engineering has become another passion of mine. 
-          I love how I can create new things with just lines of code. There are not limits to what programming can create.
-          I have learned that with computer-programming it is not always about what I know,
-          but what and how I can figure out what I don't know. Explore my website to find out more about what I have learned and done with programming.
-        </p>
-      </>
-    ),
-    badge: "React",
-    image:
-      "pardo_crest_no_motto.jpg",
-  },
-  {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: (
-      <>
-        <p>
-          
-        </p>
-        <p>
-          This is a test. We are adding more text to the description but this timer
-          it is in engilsh. We are not sure what to say here at the moment. We need improvement.
-        </p>
-      </>
-    ),
-    badge: "Changelog",
-    image:
-      "adventures.jpg",
-  },
-  {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: (
-      <>
-        <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-        </p>
-      </>
-    ),
-    badge: "Launch Week",
-    image:
-      "acting.jpg",
-  },
-];
 
 export default AboutPage;
