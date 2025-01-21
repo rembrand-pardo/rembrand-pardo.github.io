@@ -68,7 +68,10 @@ export const Header = () => {
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
         Empowering Success: <br /> Unleashing Potential, Building Leaders, Streamlining Technology, and Inspiring Change.
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200 text-center mx-auto">
+      <p
+        className="max-w-2xl mt-8 dark:text-neutral-200 text-center mx-auto"
+        style={{ fontSize: '1.6rem' }}
+      >
       I am dedicated to unlocking the full potential of your business, empowering your teams, 
       streamlining your operations, and inspiring your audiences. 
       My comprehensive services are designed to transform challenges into opportunities, 
