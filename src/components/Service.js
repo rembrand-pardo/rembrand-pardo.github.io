@@ -115,10 +115,23 @@ const ServicePage = ({ translations }) => {
 
       { /* This should only show up for mobile only */ }
       <div className='mobile_tracingBeam'>
+
+        <section className='service_mobile_heading_section'>
+          <h1>Empowering Success: <br /> Unleashing Potential, Building Leaders, Streamlining Technology, and Inspiring Change.</h1>
+        </section>
+
+        <section className='service_body_section'>
+          <p>
+            I am dedicated to unlocking the full potential of your business, empowering your teams, 
+            streamlining your operations, and inspiring your audiences. 
+            My comprehensive services are designed to transform challenges into opportunities, 
+            fostering growth and success in every endeavor.
+          </p>
+        </section>
         
         <TracingBeam className="px-6">
           <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-            {dummyContent.map((item, index) => (
+            {serviceContent.map((item, index) => (
               <div key={`content-${index}`} className="mb-10">
                 <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
                   {item.badge}
@@ -249,7 +262,7 @@ export const products = [
 ];
 
 //tracing beam
-const dummyContent = [
+const serviceContent = [
   {
     title: "Lorem Ipsum Dolor Sit Amet",
     description: (
