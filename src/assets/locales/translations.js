@@ -378,51 +378,82 @@ const translations = {
     myPassions: "Mis Pasiones",
 
     pardoFamilyTitle: "El Escudo de la Familia Pardo",
-    pardoFamilyDescription: `
-    Un legado de equilibrio y crecimiento continuo, el lema de la familia Pardo—'Buscamos el equilibrio perfecto y la mejora constante del cuerpo, 
-    la mente y el espíritu'—es más que un principio guía; es una filosofía que aplico en todo lo que hago. 
-    Esta sabiduría atemporal inspira mi enfoque en los negocios, la tecnología y el liderazgo, impulsándome a ofrecer resultados significativos y soluciones impactantes. 
-
-    En cada proyecto que emprendo, me esfuerzo por alinear la visión con la ejecución y la innovación con la practicidad. Al adoptar una mentalidad de mejora constante, 
-    enfrento los desafíos con enfoque, creatividad y determinación, siempre buscando el camino más efectivo hacia adelante. 
-
-    Este compromiso con el equilibrio y el crecimiento me motiva a empoderar equipos, refinar estrategias y crear sistemas que impulsen el éxito. 
-    Es esta dedicación a la excelencia y el progreso continuo lo que da forma a mi enfoque en cada oportunidad para entregar valor.
-    `,
+    pardoFamilyDescription: (
+      <>
+        <div className="custom-description">
+          <p>
+          Un legado de equilibrio y crecimiento continuo, el lema de la familia Pardo—'Buscamos el equilibrio perfecto y la mejora constante del cuerpo, 
+          la mente y el espíritu'—es más que un principio guía; es una filosofía que aplico en todo lo que hago. 
+          Esta sabiduría atemporal inspira mi enfoque en los negocios, la tecnología y el liderazgo, impulsándome a ofrecer resultados significativos y soluciones impactantes. 
+          </p>
+          <p>
+          En cada proyecto que emprendo, me esfuerzo por alinear la visión con la ejecución y la innovación con la practicidad. Al adoptar una mentalidad de mejora constante, 
+          enfrento los desafíos con enfoque, creatividad y determinación, siempre buscando el camino más efectivo hacia adelante. 
+          </p>
+          <p>
+          Este compromiso con el equilibrio y el crecimiento me motiva a empoderar equipos, refinar estrategias y crear sistemas que impulsen el éxito. 
+          Es esta dedicación a la excelencia y el progreso continuo lo que da forma a mi enfoque en cada oportunidad para entregar valor.
+          </p>
+        </div>
+      </>
+    ),
     pardoFamilyMottoBadge: "Lema",
     calculatedRisksTitle: "Riesgos Calculados, Aventuras Sin Límites",
-    calculatedRisksDescription: `
-    La aventura y los deportes extremos son más que pasiones; son un recordatorio del valor de abrazar los riesgos calculados. 
-    Desde el puenting hasta el paracaidismo, me esfuerzo por asumir desafíos que requieren planificación cuidadosa y fortaleza mental. 
-    A pesar del miedo que conllevan estas experiencias, he aprendido a enfrentarlo de frente, confiando en la preparación y la perseverancia para guiarme a través de ellos. 
-
-    Esta mentalidad refleja cómo enfrento cada proyecto y oportunidad de liderazgo. Creo en asumir riesgos pensados y medidos para impulsar la innovación y lograr resultados. 
-    Se trata de avanzar con confianza, sabiendo que los riesgos calculados—cuando se abordan de manera estratégica—pueden llevar a grandes recompensas.
-    `,
+    calculatedRisksDescription: (
+      <>
+        <div className="custom-description">
+          <p>
+          La aventura y los deportes extremos son más que pasiones; son un recordatorio del valor de abrazar los riesgos calculados. 
+          Desde el puenting hasta el paracaidismo, me esfuerzo por asumir desafíos que requieren planificación cuidadosa y fortaleza mental. 
+          A pesar del miedo que conllevan estas experiencias, he aprendido a enfrentarlo de frente, confiando en la preparación y la perseverancia para guiarme a través de ellos. 
+          </p>
+          <p>
+          Esta mentalidad refleja cómo enfrento cada proyecto y oportunidad de liderazgo. Creo en asumir riesgos pensados y medidos para impulsar la innovación y lograr resultados. 
+          Se trata de avanzar con confianza, sabiendo que los riesgos calculados—cuando se abordan de manera estratégica—pueden llevar a grandes recompensas.
+          </p>
+        </div>
+      </>
+    ),
     calculatedRisksBadge: "Superando el Miedo, Buscando la Excelencia",
     steppingIntoRolesTitle: "Adentrándome en Nuevos Roles",
-    steppingIntoRolesDescription: `
-    Salir de mi zona de confort me ha llevado a descubrir una pasión que nunca esperé: la actuación. Los desafíos de subir a un escenario, abrazar nuevos personajes, 
-    y sumergirme en diversos guiones me han dado una comprensión más profunda del poder de la expresión, la creatividad y la narración. 
-
-    He tenido el privilegio de participar en varios proyectos, desde producciones más pequeñas hasta otras más grandes y complejas, cada una ofreciendo experiencias y lecciones únicas. 
-    Estas oportunidades no solo han potenciado mi crecimiento personal, sino que también han moldeado mi mentalidad profesional. Me han enseñado la importancia de la adaptabilidad, 
-    la colaboración y el compromiso—cualidades que aporto a todos los aspectos de mi trabajo. 
-
-    La actuación me recuerda que, a veces, las mejores oportunidades de crecimiento surgen cuando tomamos riesgos y nos aventuramos más allá de lo familiar.
-    `,
+    steppingIntoRolesDescription:(
+      <>
+        <div className="custom-description">
+          <p>
+          Salir de mi zona de confort me ha llevado a descubrir una pasión que nunca esperé: <a href="https://www.imdb.com/name/nm11523185/" target="_blank" rel="noopener noreferrer">la actuación</a>. Los desafíos de subir a un escenario, abrazar nuevos personajes, 
+          y sumergirme en diversos guiones me han dado una comprensión más profunda del poder de la expresión, la creatividad y la narración. 
+          </p>
+          <p>
+          He tenido el privilegio de participar en varios proyectos, desde producciones más pequeñas hasta otras más grandes y complejas, cada una ofreciendo experiencias y lecciones únicas. 
+          Estas oportunidades no solo han potenciado mi crecimiento personal, sino que también han moldeado mi mentalidad profesional. Me han enseñado la importancia de la adaptabilidad, 
+          la colaboración y el compromiso—cualidades que aporto a todos los aspectos de mi trabajo. 
+          </p>
+          <p>
+          La actuación me recuerda que, a veces, las mejores oportunidades de crecimiento surgen cuando tomamos riesgos y nos aventuramos más allá de lo familiar.
+          </p>
+        </div>
+      </> 
+    ),
     steppingIntoRolesBadge: "Más Allá de la Comodidad, Hacia la Pasión",
     endlessLearningTitle: "Aprendizaje Continuo, Sabiduría Atemporal",
-    endlessLearningDescription: `
-    Más allá de la educación formal, creo en el poder del aprendizaje continuo, y los libros han sido una fuente clave de inspiración y crecimiento. 
-    Hay varias obras que considero invaluable en la formación de mi enfoque sobre liderazgo, negocios y desarrollo personal. 
-    Estos libros me han proporcionado profundas ideas sobre el comportamiento humano, la estrategia y la comunicación efectiva, todas las cuales aplico diariamente en mi trabajo. 
-
-    Me han enseñado la importancia de adaptarse al cambio, construir relaciones sólidas y tomar decisiones informadas en los ámbitos personal y profesional. 
-    Este compromiso con la autoeducación, combinado con mi formación académica, me permite ofrecer soluciones innovadoras y bien fundamentadas a los desafíos con los que me enfrento. 
-
-    Cada página vuelta es una nueva lección aprendida, y llevo esas lecciones conmigo mientras me esfuerzo por crear un impacto duradero en cada empresa.
-    `,
+    endlessLearningDescription:(
+      <>
+        <div className="custom-description">
+          <p>
+          Más allá de la educación formal, creo en el poder del aprendizaje continuo, y los libros han sido una fuente clave de inspiración y crecimiento. 
+          Hay varias obras que considero invaluable en la formación de mi enfoque sobre liderazgo, negocios y desarrollo personal. 
+          Estos libros me han proporcionado profundas ideas sobre el comportamiento humano, la estrategia y la comunicación efectiva, todas las cuales aplico diariamente en mi trabajo. 
+          </p>
+          <p>
+          Me han enseñado la importancia de adaptarse al cambio, construir relaciones sólidas y tomar decisiones informadas en los ámbitos personal y profesional. 
+          Este compromiso con la autoeducación, combinado con mi formación académica, me permite ofrecer soluciones innovadoras y bien fundamentadas a los desafíos con los que me enfrento. 
+          </p>
+          <p>
+          Cada página vuelta es una nueva lección aprendida, y llevo esas lecciones conmigo mientras me esfuerzo por crear un impacto duradero en cada empresa.
+          </p>
+        </div>
+      </>
+    ),
     endlessLearningBadge: "Aprendiendo de Cada Página",
 
     aboutEndPage: (
@@ -615,51 +646,82 @@ const translations = {
     myPassions: "Les Meves Passions",
 
     pardoFamilyTitle: "L'Escut de la Família Pardo",
-    pardoFamilyDescription: `
-    Un llegat d'equilibri i creixement continu, el lema de la família Pardo—'Busquem l'equilibri perfecte i la millora constant del cos, 
-    de la ment i de l'esperit'—és més que un principi guait; és una filosofia que aplico a tot el que faig. 
-    Aquesta saviesa atemporal inspira el meu enfocament en els negocis, la tecnologia i el lideratge, impulsant-me a oferir resultats significatius i solucions impactants. 
-
-    En cada projecte que emprenc, em faig l'esforç d'alinear la visió amb l'execució i la innovació amb la practicitat. En adoptar una mentalitat de millora constant, 
-    afronto els reptes amb enfocament, creativitat i determinació, sempre buscant el camí més efectiu cap endavant. 
-
-    Aquest compromís amb l'equilibri i el creixement em motiva a apoderar equips, refinar estratègies i crear sistemes que impulsin l'èxit. 
-    És aquesta dedicació a l'excel·lència i el progrés continu el que dóna forma al meu enfocament en cada oportunitat per lliurar valor.
-    `,
+    pardoFamilyDescription: (
+      <>
+        <div className="custom-description">
+          <p>
+          Un llegat d'equilibri i creixement continu, el lema de la família Pardo—'Busquem l'equilibri perfecte i la millora constant del cos, 
+          de la ment i de l'esperit'—és més que un principi guait; és una filosofia que aplico a tot el que faig. 
+          Aquesta saviesa atemporal inspira el meu enfocament en els negocis, la tecnologia i el lideratge, impulsant-me a oferir resultats significatius i solucions impactants. 
+          </p>
+          <p>
+          En cada projecte que emprenc, em faig l'esforç d'alinear la visió amb l'execució i la innovació amb la practicitat. En adoptar una mentalitat de millora constant, 
+          afronto els reptes amb enfocament, creativitat i determinació, sempre buscant el camí més efectiu cap endavant. 
+          </p>
+          <p>
+          Aquest compromís amb l'equilibri i el creixement em motiva a apoderar equips, refinar estratègies i crear sistemes que impulsin l'èxit. 
+          És aquesta dedicació a l'excel·lència i el progrés continu el que dóna forma al meu enfocament en cada oportunitat per lliurar valor.
+          </p>
+        </div>
+      </>
+    ),
     pardoFamilyMottoBadge: "Lema",
     calculatedRisksTitle: "Riscos Calculats, Aventures Sense Límits",
-    calculatedRisksDescription: `
-    L'aventura i els esports extrems són més que passions; són un recordatori del valor d'abraçar els riscos calculats. 
-    Des del salt en corda fins al paracaigudisme, m'esforço a afrontar reptes que requereixen planificació acurada i fortalesa mental. 
-    Malgrat la por que comporten aquestes experiències, he après a afrontar-la directament, confiant en la preparació i la perseverança per guiar-me a través d'elles. 
-
-    Aquesta mentalitat reflecteix com afront cada projecte i oportunitat de lideratge. Crec en assumir riscos pensats i mesurats per impulsar la innovació i aconseguir resultats. 
-    Es tracta d'avançar amb confiança, sabent que els riscos calculats—quan es poden abordar estratègicament—poden portar a grans recompenses.
-    `,
+    calculatedRisksDescription: (
+      <>
+        <div className="custom-description">
+          <p>
+          L'aventura i els esports extrems són més que passions; són un recordatori del valor d'abraçar els riscos calculats. 
+          Des del salt en corda fins al paracaigudisme, m'esforço a afrontar reptes que requereixen planificació acurada i fortalesa mental. 
+          Malgrat la por que comporten aquestes experiències, he après a afrontar-la directament, confiant en la preparació i la perseverança per guiar-me a través d'elles. 
+          </p>
+          <p>
+          Aquesta mentalitat reflecteix com afront cada projecte i oportunitat de lideratge. Crec en assumir riscos pensats i mesurats per impulsar la innovació i aconseguir resultats. 
+          Es tracta d'avançar amb confiança, sabent que els riscos calculats—quan es poden abordar estratègicament—poden portar a grans recompenses.
+          </p>
+        </div>
+      </>
+    ),
     calculatedRisksBadge: "Superant la Por, Cercant l'Excel·lència",
     steppingIntoRolesTitle: "Endinsant-se en Nous Rols",
-    steppingIntoRolesDescription: `
-    Sortir de la meva zona de confort m'ha portat a descobrir una passió que mai hauria esperat: l'actuació. Els reptes de pujar a un escenari, abraçar nous personatges, 
-    i submergir-me en diversos guions m'han donat una comprensió més profunda del poder de l'expressió, la creativitat i la narració. 
-
-    He tingut el privilegi de participar en diversos projectes, des de produccions més petites fins a altres més grans i complexes, cada una oferint experiències i lliçons úniques. 
-    Aquestes oportunitats no només han potenciat el meu creixement personal, sinó que també han modelat la meva mentalitat professional. M'han ensenyat la importància de l'adaptabilitat, 
-    la col·laboració i el compromís—qualitats que aporto a tots els aspectes del meu treball. 
-
-    L'actuació em recorda que, de vegades, les millors oportunitats de creixement sorgeixen quan assumim riscos i ens aventurem més enllà del familiar.
-    `,
+    steppingIntoRolesDescription:(
+      <>
+        <div className="custom-description">
+          <p>
+          Sortir de la meva zona de confort m'ha portat a descobrir una passió que mai hauria esperat: <a href="https://www.imdb.com/name/nm11523185/" target="_blank" rel="noopener noreferrer">l'actuació</a>. Els reptes de pujar a un escenari, abraçar nous personatges, 
+          i submergir-me en diversos guions m'han donat una comprensió més profunda del poder de l'expressió, la creativitat i la narració. 
+          </p>
+          <p>
+          He tingut el privilegi de participar en diversos projectes, des de produccions més petites fins a altres més grans i complexes, cada una oferint experiències i lliçons úniques. 
+          Aquestes oportunitats no només han potenciat el meu creixement personal, sinó que també han modelat la meva mentalitat professional. M'han ensenyat la importància de l'adaptabilitat, 
+          la col·laboració i el compromís—qualitats que aporto a tots els aspectes del meu treball. 
+          </p>
+          <p>
+          L'actuació em recorda que, de vegades, les millors oportunitats de creixement sorgeixen quan assumim riscos i ens aventurem més enllà del familiar.
+          </p>
+        </div>
+      </> 
+    ),
     steppingIntoRolesBadge: "Més Enllà de la Comoditat, Cap a la Passió",
     endlessLearningTitle: "Aprenentatge Continu, Saviesa Atemporal",
-    endlessLearningDescription: `
-    Més enllà de l'educació formal, crec en el poder de l'aprenentatge continu, i els llibres han estat una font clau d'inspiració i creixement. 
-    Hi ha diverses obres que considero invaluables en la formació del meu enfocament sobre lideratge, negocis i desenvolupament personal. 
-    Aquests llibres m'han proporcionat profundes idees sobre el comportament humà, l'estratègia i la comunicació efectiva, totes les quals aplico diàriament en el meu treball. 
-
-    M'han ensenyat la importància d'adaptar-se al canvi, construir relacions sòlides i prendre decisions informades tant en l'àmbit personal com professional. 
-    Aquest compromís amb l'autoeducació, combinat amb la meva formació acadèmica, em permet oferir solucions innovadores i ben fonamentades als reptes amb els quals em trobo. 
-
-    Cada pàgina passada és una nova lliçó apresa, i porto aquestes lliçons amb mi mentre em faig l'esforç de crear un impacte durador en cada projecte.
-    `,
+    endlessLearningDescription:(
+      <>
+        <div className="custom-description">
+          <p>
+          Més enllà de l'educació formal, crec en el poder de l'aprenentatge continu, i els llibres han estat una font clau d'inspiració i creixement. 
+          Hi ha diverses obres que considero invaluables en la formació del meu enfocament sobre lideratge, negocis i desenvolupament personal. 
+          Aquests llibres m'han proporcionat profundes idees sobre el comportament humà, l'estratègia i la comunicació efectiva, totes les quals aplico diàriament en el meu treball. 
+          </p>
+          <p>
+          M'han ensenyat la importància d'adaptar-se al canvi, construir relacions sòlides i prendre decisions informades tant en l'àmbit personal com professional. 
+          Aquest compromís amb l'autoeducació, combinat amb la meva formació acadèmica, em permet oferir solucions innovadores i ben fonamentades als reptes amb els quals em trobo. 
+          </p>
+          <p>
+          Cada pàgina passada és una nova lliçó apresa, i porto aquestes lliçons amb mi mentre em faig l'esforç de crear un impacte durador en cada projecte.
+          </p>
+        </div>
+      </>
+    ),
     endlessLearningBadge: "Aprenent de Cada Pàgina",
 
     aboutEndPage: (
