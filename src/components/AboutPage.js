@@ -85,43 +85,27 @@ const AboutPage = ({ translations })  => {
   const aboutContent = [
     {
       title: translations.pardoFamilyTitle,
-      description: (
-        <>
-          <p>{translations.pardoFamilyDescription}</p>
-        </>
-      ),
+      description: translations.pardoFamilyDescription,
       badge: translations.pardoFamilyMottoBadge, 
-      image:
-        "pardo_crest_no_motto.jpg",
+      image: "pardo_crest_no_motto.jpg",
     },
     {
       title: translations.calculatedRisksTitle,
-      description: (
-        <>
-          <p>{translations.calculatedRisksDescription}</p>
-        </>
-      ),
+      description: translations.calculatedRisksDescription,
       badge: translations.calculatedRisksBadge,
-      image:
-        "adventures.jpg",
+      image: "adventures.jpg",
     },
     {
       title: translations.steppingIntoRolesTitle,
       description: translations.steppingIntoRolesDescription,
       badge: translations.steppingIntoRolesBadge,
-      image:
-        "acting.jpg",
+      image: "acting.jpg",
     },
     {
       title: translations.endlessLearningTitle,
-      description: (
-        <>
-          <p>{translations.endlessLearningDescription}</p>
-        </>
-      ),
+      description: translations.endlessLearningDescription,
       badge: translations.endlessLearningBadge, 
-      image:
-        "books.png",
+      image: "books.png",
     },
   ];
 

@@ -113,27 +113,42 @@ const translations = {
     myPassions: "My Passions",
 
     pardoFamilyTitle: "The Pardo Family's Coat of Arms",
-    pardoFamilyDescription: `
-    A legacy of balance and continuous growth, the Pardo family motto—'We seek the perfect balance and constant improvement of body, 
-    mind, and spirit'—is more than a guiding principle; it is a philosophy I apply to everything I do. 
-    This timeless wisdom inspires my approach to business, technology, and leadership, driving me to deliver meaningful results and impactful solutions. 
-    \n
-    In every project I undertake, I strive to align vision with execution and innovation with practicality. By embracing a mindset of constant improvement, 
-    I approach challenges with focus, creativity, and determination, always seeking the most effective path forward. 
-    \n
-    This commitment to balance and growth motivates me to empower teams, refine strategies, and create systems that drive success. 
-    It’s this dedication to excellence and continuous progress that shapes how I approach every opportunity to deliver value.
-    `,
+    pardoFamilyDescription: (
+      <>
+        <div className="custom-description">
+          <p>
+          A legacy of balance and continuous growth, the Pardo family motto—'We seek the perfect balance and constant improvement of body, 
+          mind, and spirit'—is more than a guiding principle; it is a philosophy I apply to everything I do. 
+          This timeless wisdom inspires my approach to business, technology, and leadership, driving me to deliver meaningful results and impactful solutions. 
+          </p>
+          <p>
+          In every project I undertake, I strive to align vision with execution and innovation with practicality. By embracing a mindset of constant improvement, 
+          I approach challenges with focus, creativity, and determination, always seeking the most effective path forward. 
+          </p>
+          <p>
+          This commitment to balance and growth motivates me to empower teams, refine strategies, and create systems that drive success. 
+          It’s this dedication to excellence and continuous progress that shapes how I approach every opportunity to deliver value.
+          </p>
+        </div>
+      </>
+    ),
     pardoFamilyMottoBadge: "Motto",
     calculatedRisksTitle: "Calculated Risks, Boundless Adventures",
-    calculatedRisksDescription: `
-    Adventure and extreme sports are more than just passions—they are a reminder of the value in embracing calculated risks. 
-    From bungee jumping to skydiving, I push myself to take on challenges that require careful planning and mental fortitude. 
-    Despite the fear that comes with these experiences, I’ve learned to face it head-on, trusting in preparation and perseverance to guide me through. 
-    
-    This mindset mirrors how I approach every project and leadership opportunity. I believe in taking thoughtful, measured risks to drive innovation and achieve results. 
-    It's about moving forward with confidence, knowing that calculated risks—when approached strategically—can lead to great rewards.
-    `,
+    calculatedRisksDescription: (
+      <>
+        <div className="custom-description">
+          <p>
+          Adventure and extreme sports are more than just passions—they are a reminder of the value in embracing calculated risks. 
+          From bungee jumping to skydiving, I push myself to take on challenges that require careful planning and mental fortitude. 
+          Despite the fear that comes with these experiences, I’ve learned to face it head-on, trusting in preparation and perseverance to guide me through. 
+          </p>
+          <p>
+          This mindset mirrors how I approach every project and leadership opportunity. I believe in taking thoughtful, measured risks to drive innovation and achieve results. 
+          It's about moving forward with confidence, knowing that calculated risks—when approached strategically—can lead to great rewards.
+          </p>
+        </div>
+      </>
+    ),
     calculatedRisksBadge: "Embracing Fear, Pursuing Excellence",
     steppingIntoRolesTitle: "Stepping Into New Roles",
     steppingIntoRolesDescription:(
@@ -156,16 +171,24 @@ const translations = {
     ),
     steppingIntoRolesBadge: "Beyond Comfort, Into Passion",
     endlessLearningTitle: "Endless Learning, Timeless Wisdom",
-    endlessLearningDescription: `
-    Beyond formal education, I believe in the power of continuous learning, and books have been a key source of inspiration and growth. 
-    There are several works I consider invaluable in shaping my approach to leadership, business, and personal development. 
-    These books have provided me with profound insights into human behavior, strategy, and effective communication, all of which I apply daily in my work. 
-    
-    They have taught me the importance of adapting to change, building strong relationships, and making informed decisions in both personal and professional settings. 
-    This commitment to self-education, combined with my academic background, enables me to offer innovative, well-rounded solutions to the challenges faced by those I work with. 
-    
-    Each page turned is a new lesson learned, and I carry these lessons with me as I strive to create lasting impact in every endeavor.
-    `,
+    endlessLearningDescription:(
+      <>
+        <div className="custom-description">
+          <p>
+          Beyond formal education, I believe in the power of continuous learning, and books have been a key source of inspiration and growth. 
+          There are several works I consider invaluable in shaping my approach to leadership, business, and personal development. 
+          These books have provided me with profound insights into human behavior, strategy, and effective communication, all of which I apply daily in my work. 
+          </p>
+          <p>
+          They have taught me the importance of adapting to change, building strong relationships, and making informed decisions in both personal and professional settings. 
+          This commitment to self-education, combined with my academic background, enables me to offer innovative, well-rounded solutions to the challenges faced by those I work with. 
+          </p>
+          <p>
+          Each page turned is a new lesson learned, and I carry these lessons with me as I strive to create lasting impact in every endeavor.
+          </p>
+        </div>
+      </>
+    ),
     endlessLearningBadge: "Learning from Every Page",
 
 
