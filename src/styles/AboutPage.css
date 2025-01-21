@@ -51,3 +51,16 @@
   color: #89CFF0; /* Baby blue color for links */
 }
 
+.about_end_page p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: white;
+  text-align: center; /* Center the text inside the element */
+  margin: 90px auto 60px auto; /* Center the element horizontally with auto margins */
+  width: 57%; /* Set the width to % of the page */
+}
+
+.about_end_page a {
+  color: #89CFF0; /* Baby blue color for links */
+}
+

@@ -155,7 +155,7 @@ const translations = {
       <>
         <div className="custom-description">
           <p>
-          Getting out of my comfort zone has led me to discover a passion I never expected—<a href="https://www.imdb.com/name/nm11523185/" target="_blank">acting</a>. The challenges of stepping onto a stage, embracing new characters, 
+          Getting out of my comfort zone has led me to discover a passion I never expected—<a href="https://www.imdb.com/name/nm11523185/" target="_blank" rel="noopener noreferrer">acting</a>. The challenges of stepping onto a stage, embracing new characters, 
           and diving into diverse scripts have given me a deeper understanding of the power of expression, creativity, and storytelling. 
           </p>
           <p>
@@ -191,6 +191,13 @@ const translations = {
     ),
     endlessLearningBadge: "Learning from Every Page",
 
+    aboutEndPage: (
+      <>
+        <p>
+        Discover how I can help you or your organization achieve impactful results. Feel free to explore my <a href="#/service" target="_blank" rel="noopener noreferrer">services</a> or <a href="#/contact" target="_blank" rel="noopener noreferrer">contact</a> me directly to connect and learn more.
+        </p>
+      </>
+    ),
 
     //404 page
     notFound: "Page Not Found",
@@ -417,6 +424,14 @@ const translations = {
     Cada página vuelta es una nueva lección aprendida, y llevo esas lecciones conmigo mientras me esfuerzo por crear un impacto duradero en cada empresa.
     `,
     endlessLearningBadge: "Aprendiendo de Cada Página",
+
+    aboutEndPage: (
+      <>
+        <p>
+          Descubre cómo puedo ayudarte a ti o a tu organización a lograr resultados impactantes. No dudes en explorar mis <a href="#/service" target="_blank" rel="noopener noreferrer">servicios</a> o <a href="#/contact" target="_blank" rel="noopener noreferrer">contactarme</a> directamente para conectar y saber más.
+        </p>
+      </>
+    ),
 
 
     //404 page
@@ -646,6 +661,14 @@ const translations = {
     Cada pàgina passada és una nova lliçó apresa, i porto aquestes lliçons amb mi mentre em faig l'esforç de crear un impacte durador en cada projecte.
     `,
     endlessLearningBadge: "Aprenent de Cada Pàgina",
+
+    aboutEndPage: (
+      <>
+        <p>
+          Descobreix com puc ajudar-te a tu o a la teva organització a aconseguir resultats impactants. No dubtis a explorar els meus <a href="#/service" target="_blank" rel="noopener noreferrer">serveis</a> o a <a href="#/contact" target="_blank" rel="noopener noreferrer">contactar-me</a> directament per connectar i saber-ne més.
+        </p>
+      </>
+    ),
 
 
     //404 page
