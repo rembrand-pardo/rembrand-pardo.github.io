@@ -136,16 +136,24 @@ const translations = {
     `,
     calculatedRisksBadge: "Embracing Fear, Pursuing Excellence",
     steppingIntoRolesTitle: "Stepping Into New Roles",
-    steppingIntoRolesDescription: `
-    Getting out of my comfort zone has led me to discover a passion I never expected—<a href="https://www.imdb.com/name/nm11523185/" target="_blank">acting</a>. The challenges of stepping onto a stage, embracing new characters, 
-    and diving into diverse scripts have given me a deeper understanding of the power of expression, creativity, and storytelling. 
-    
-    I’ve had the privilege of being part of various projects, from smaller productions to larger, more complex ones, each offering unique experiences and lessons. 
-    These opportunities have not only enhanced my personal growth but also shaped my professional mindset. They’ve taught me the importance of adaptability, 
-    collaboration, and commitment—qualities I bring to every aspect of my work. 
-    
-    Acting reminds me that sometimes, the best opportunities for growth come when we take risks and venture beyond the familiar.
-    `,
+    steppingIntoRolesDescription:(
+      <>
+        <div className="custom-description">
+          <p>
+          Getting out of my comfort zone has led me to discover a passion I never expected—<a href="https://www.imdb.com/name/nm11523185/" target="_blank">acting</a>. The challenges of stepping onto a stage, embracing new characters, 
+          and diving into diverse scripts have given me a deeper understanding of the power of expression, creativity, and storytelling. 
+          </p>
+          <p>
+          I’ve had the privilege of being part of various projects, from smaller productions to larger, more complex ones, each offering unique experiences and lessons. 
+          These opportunities have not only enhanced my personal growth but also shaped my professional mindset. They’ve taught me the importance of adaptability, 
+          collaboration, and commitment—qualities I bring to every aspect of my work. 
+          </p>
+          <p>
+          Acting reminds me that sometimes, the best opportunities for growth come when we take risks and venture beyond the familiar.
+          </p>
+        </div>
+      </> 
+    ),
     steppingIntoRolesBadge: "Beyond Comfort, Into Passion",
     endlessLearningTitle: "Endless Learning, Timeless Wisdom",
     endlessLearningDescription: `
@@ -329,7 +337,7 @@ const translations = {
       "Mi camino está alimentado por una curiosidad incansable, un compromiso con la excelencia y una dedicación a empoderar a otros " +
       "a través de estrategias innovadoras y una colaboración significativa. Con fluidez en inglés, español y catalán, aporto una perspectiva " +
       " global a cada desafío y proyecto."
-      ),
+    ),
 
     aboutMeText2: (
       "Más allá de mis actividades profesionales, soy un aprendiz apasionado y amante de los deportes, la música, el cine y la actuación. " +

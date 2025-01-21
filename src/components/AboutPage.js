@@ -107,11 +107,7 @@ const AboutPage = ({ translations })  => {
     },
     {
       title: translations.steppingIntoRolesTitle,
-      description: (
-        <>
-          <p>{translations.steppingIntoRolesDescription}</p>
-        </>
-      ),
+      description: translations.steppingIntoRolesDescription,
       badge: translations.steppingIntoRolesBadge,
       image:
         "acting.jpg",
@@ -191,7 +187,7 @@ const AboutPage = ({ translations })  => {
         <section className='tabs_section'>
           
           <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
-            <Tabs tabs={tabs} />
+            {/* <Tabs tabs={tabs} /> */}
           </div>
         </section>
 
