@@ -56,8 +56,8 @@
   line-height: 1.6;
   color: white;
   text-align: center; /* Center the text inside the element */
-  margin: 90px auto 60px auto; /* Center the element horizontally with auto margins */
-  width: 57%; /* Set the width to % of the page */
+  margin: 180px auto 90px auto; /* Center the element horizontally with auto margins */
+  width: 70%; /* Set the width to % of the page */
 }
 
 .about_end_page a {
