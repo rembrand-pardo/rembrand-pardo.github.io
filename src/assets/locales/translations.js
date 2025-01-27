@@ -254,7 +254,7 @@ const translations = {
     resumeCardTitleGeneric: "Generic Card",
     resumeCardContentGeneric: "Here is a general description since nothing matched your search.",
 
-    resumeCardSearchHeading: "Aks Anything",
+    resumeCardSearchHeading: "Knowledge & Expertise at Your Service",
     resumeCardSearchYes: "Yes",
     resumeCardSearchNo: "No",
 
@@ -520,7 +520,7 @@ const translations = {
     resumeCardTitleGeneric: "Tarjeta genérica",
     resumeCardContentGeneric: "Aquí hay una descripción general ya que nada coincidió con tu búsqueda.",
     
-    resumeCardSearchHeading: "Pregunta cualquier cosa",
+    resumeCardSearchHeading: "Conocimiento y experiencia a su servicio",
     resumeCardSearchYes: "Sí",
     resumeCardSearchNo: "No",
 
@@ -790,7 +790,7 @@ const translations = {
     resumeCardTitleGeneric: "Targeta genèrica",
     resumeCardContentGeneric: "Aquí hi ha una descripció general perquè no ha coincidit res amb la teva cerca.",
     
-    resumeCardSearchHeading: "Pregunta qualsevol cosa",
+    resumeCardSearchHeading: "Coneixement i experiència al seu servei",
     resumeCardSearchYes: "Sí",
     resumeCardSearchNo: "No",    
 
