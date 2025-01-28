@@ -6,6 +6,12 @@
     margin-top: 90px;
 }
   
+.resume_page_content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
 .resume_page.visible {
     opacity: 1; /* Become visible */
 }
@@ -136,9 +142,9 @@ input {
     border: 1px solid; /* Remove gradient outline on hover */
 }
 
-.navbar.resume-page .navbar-container {
-    margin-left: 254px;/* Code for navbar for resume page only. This centers navbar. */
-}
+/* .navbar.resume-page .navbar-container {
+    margin-left: 15rem;/* Code for navbar for resume page only. This centers navbar. 
+} */
   
 
 /* Media query for small screens */
