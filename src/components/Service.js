@@ -101,6 +101,21 @@ const ServicePage = ({ translations }) => {
         <HeroParallax products={products} />
       </div>
 
+
+      {/* New Section */}
+      <div className="centered-image-text-section">
+        <img 
+          src="general_service_card.png" 
+          alt="Descriptive Alt Text" 
+          className="centered-image" 
+        />
+        <p className="centered-text">
+          Empowering Businesses, Inspiring Change.
+        </p>
+      </div>
+
+
+
       <div className="serviceTabs_section content-spacing">     
         <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full items-start justify-start">
           <Tabs tabs={tabs} />
@@ -157,6 +172,8 @@ const ServicePage = ({ translations }) => {
             ))}
           </div>
         </TracingBeam>
+
+
       </div>
       
       
