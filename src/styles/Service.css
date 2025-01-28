@@ -4,15 +4,46 @@ body.servicepage-no-padding {
 } 
 
 .service_container {
-    /* position: relative; */
-    z-index: 1;
-    margin-bottom: 20vh;
+  position: relative;
+  z-index: 2; /* Ensure it stacks above the background */
+}
+
+.centered-image-text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.centered-image {
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+}
+
+.centered-text {
+  text-align: center;
+  margin-top: 1rem; /* Adds some space between image and text */
 }
   
 .content-spacing {
-    position: relative;
-    z-index: 10;
+  position: relative;
+  z-index: 10;
 }
+
+.serviceDetail_section,
+.serviceTabs_section {
+  margin-top: 2rem; /* Add consistent spacing between sections */
+}
+
+.serviceTabs_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
 
 .serviceDetail_section {
     position: relative;
@@ -65,7 +96,7 @@ body.servicepage-no-padding {
     }
     
     .content-spacing {
-      margin-top: -15vh; 
+      /* margin-top: -15vh;  */
     }
 }
 
@@ -75,6 +106,6 @@ body.servicepage-no-padding {
     }
     
     .content-spacing {
-      margin-top: -70vh; 
+      /* margin-top: -70vh;  */
     }
 }
