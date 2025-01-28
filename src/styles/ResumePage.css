@@ -1,6 +1,9 @@
 .resume_page {
     opacity: 0; /* Start invisible */
     transition: opacity 0.5s ease-in; /* Transition effect */
+
+
+    margin-top: 90px;
 }
   
 .resume_page.visible {
@@ -10,6 +13,19 @@
 /* this overrides the default color of input. !important */
 input {
     color: #030d65 !important;
+}
+
+.resume_heading1 {
+    margin-bottom: 7px;
+}
+
+.resume_subheading2 {
+    margin-bottom: 100px;
+}
+
+.resume_textp {
+    margin-bottom: 3px;
+    font-size: 1rem;
 }
 
 .languageTool {
