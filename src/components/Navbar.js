@@ -93,7 +93,7 @@ const Navbar = ({ translations, setLanguage }) => {
   }, []);
 
   return (
-    <nav className={`navbar ${isVisible ? 'visible' : ''}`}>
+    <nav className={`navbar ${isVisible ? 'visible' : ''} ${location.pathname === '/resume' ? 'resume-page' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-section logo-section">
           <Link to="/" onClick={() => { handleNavClick('Home'); closeMenu(); }} className="navbar-logo">

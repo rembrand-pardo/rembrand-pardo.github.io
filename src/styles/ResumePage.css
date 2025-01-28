@@ -120,6 +120,9 @@ input {
     border: 1px solid; /* Remove gradient outline on hover */
 }
 
+.navbar.resume-page .navbar-container {
+    margin-left: 254px;/* Code for navbar for resume page only. This centers navbar. */
+}
   
 
 /* Media query for small screens */
