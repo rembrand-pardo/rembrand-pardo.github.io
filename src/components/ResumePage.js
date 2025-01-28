@@ -362,9 +362,21 @@ const ResumePage = ({ translations, language }) => {
       <div className="background-gradient" />
       <div className="resume_page_content">
         <div className="h-[23rem] flex flex-col justify-end items-center px-4">
-          <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-white">
+          <h1 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-white">
             { translations.resumeCardSearchHeading }
+          </h1>
+          <h2 className="text-lg sm:text-2xl text-center dark:text-white text-white font-light max-w-2xl mb-8">
+          Discover my strong educational foundation, strategic problem-solving abilities, and leadership capabilities across multiple industries. 
           </h2>
+
+          {/* <p className="text-center text-sm sm:text-lg text-white dark:text-white max-w-2xl mb-6">
+          Discover my strong educational foundation, strategic problem-solving abilities, and leadership capabilities across multiple industries. 
+          </p>   */}
+          <p className="text-center text-sm sm:text-lg text-white dark:text-white max-w-2xl mb-8">
+          Search skills or keywords to view my most relevant tailored resume.
+          </p>
+
+
           <PlaceholdersAndVanishInput
             placeholders={placeholders}
             onChange={handleChange}
