@@ -46,10 +46,10 @@ body.servicepage-no-padding {
 
 
 .serviceDetail_section {
-    position: relative;
-    margin-top: 10rem; /* Add spacing above the section */
-    z-index: 5; /* Ensure it stacks correctly relative to the Tabs */
-    padding: 2rem; /* Optional: Add some padding for better aesthetics */
+  position: relative;
+  margin-top: 10rem; /* Add spacing above the section */
+  z-index: 5; /* Ensure it stacks correctly relative to the Tabs */
+  padding: 2rem; /* Optional: Add some padding for better aesthetics */
 }
 
 .service_mobile_heading_section h1 {
@@ -74,24 +74,55 @@ body.servicepage-no-padding {
 }
 
 
-/*Show these only on desktop screens */
-@media (min-width: 768px) {
-  .mobile_tracingBeam {
-    display: none;
-  }
+/* Mobile First Approach */
+.mobile_tracingBeam {
+  display: block;
 }
-  
-/* Show these only on mobile screens */
-@media (max-width: 767px) {
+
+.serviceTabs_section,
+.service_container,
+.serviceDetail_section,
+.centered-image-text-section {
+  display: none;
+}
+
+/* Tablet and larger screens (1024px and below) */
+@media (max-width: 1024px) {
+  .mobile_tracingBeam {
+    display: block;
+  }
+
   .serviceTabs_section,
   .service_container,
   .serviceDetail_section {
     display: none;
   }
 }
-
-/* @media (min-width: 1024px) and (min-height: 900px) {
-  .service_container {
-    margin-bottom: 25vh;
+  
+/* Large screens (above 1024px) */
+@media (min-width: 1025px) {
+  .mobile_tracingBeam {
+    display: none;
   }
-} */
+
+  .serviceTabs_section,
+  .service_container,
+  .serviceDetail_section,
+  .centered-image-text-section {
+    display: block;
+  }
+}
+
+/* Mobile-specific ordering */
+@media (max-width: 1024px) {
+  .mobile_centered-image-text-section {
+    display: block;
+    margin: 2rem 0;
+  }
+
+  .mobile_centered_image {
+    width: 60%;
+    margin: 2rem 0;
+    align-content: center;
+  }
+}

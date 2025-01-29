@@ -128,6 +128,8 @@ const ServicePage = ({ translations }) => {
         <p>{translations.aboutMeText2}</p>
       </div>
 
+
+
       { /* This should only show up for mobile only */ }
       <div className='mobile_tracingBeam'>
 
@@ -143,6 +145,17 @@ const ServicePage = ({ translations }) => {
             fostering growth and success in every endeavor.
           </p>
         </section>
+
+        <div className="mobile_centered-image-text-section">
+          <img 
+            src="general_service_card.png" 
+            alt="Descriptive Alt Text" 
+            className="mobile_centered_image" 
+          />
+          <p className="mobile_centered_text">
+            Empowering Businesses, Inspiring Change.
+          </p>
+        </div>
         
         <TracingBeam className="px-6">
           <div className="max-w-2xl mx-auto antialiased pt-4 relative">
