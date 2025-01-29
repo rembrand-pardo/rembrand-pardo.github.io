@@ -74,14 +74,14 @@ body.servicepage-no-padding {
 }
 
 
-/* Show these only on desktop screens */
-/* @media (min-width: 768px) {
+/*Show these only on desktop screens */
+@media (min-width: 768px) {
   .mobile_tracingBeam {
     display: none;
   }
 }
   
-/* Show these only on mobile screens 
+/* Show these only on mobile screens */
 @media (max-width: 767px) {
   .serviceTabs_section,
   .service_container,
@@ -90,7 +90,7 @@ body.servicepage-no-padding {
   }
 }
 
-@media (min-width: 1024px) and (min-height: 900px) {
+/* @media (min-width: 1024px) and (min-height: 900px) {
   .service_container {
     margin-bottom: 25vh;
   }

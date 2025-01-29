@@ -31,7 +31,7 @@ export const Tabs = ({
           containerClassName
         )}
         style={{
-            maxHeight: "120px", // Increase the max height to fit more buttons
+          maxHeight: "120px", // Increase the max height to fit more buttons
         }}
       >
         {propTabs.map((tab, idx) => (
@@ -79,7 +79,7 @@ export const Tabs = ({
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-32", contentClassName)}
+        className={cn("mt-19", contentClassName)}
       />
     </>
   );
@@ -104,7 +104,7 @@ export const FadeInDiv = ({
             top: hovering ? idx * -50 : 0,
             zIndex: -idx,
             opacity: idx < 3 ? 1 - idx * 0.1 : 0,
-            backgroundColor: tab.backgroundColor || "rgba(0, 0, 0, 0.7)", // Dynamic background color
+            backgroundColor: "rgba(0, 0, 0, 0.0)", //Dynamic background color
           }}
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
@@ -117,7 +117,13 @@ export const FadeInDiv = ({
             className={`relative w-full h-full flex ${
               tab.textPosition === "over" ? "items-center justify-center" : "flex-col items-center"
             }`}
-            style={{ borderRadius: "12px" }}
+            style={{ 
+              borderRadius: "16px",  // Rounded corners
+              paddingLeft: "16px",   // Left padding
+              paddingRight: "16px",  // Right padding
+              marginTop: "47px",
+              backgroundColor: "rgba(0, 0, 0, 0.5)" // Ensure background is visible
+            }}
           >
             {tab.textPosition === "over" ? (
               <>
