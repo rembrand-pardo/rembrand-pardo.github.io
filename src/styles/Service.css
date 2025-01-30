@@ -115,14 +115,34 @@ body.servicepage-no-padding {
 
 /* Mobile-specific ordering */
 @media (max-width: 1024px) {
+
   .mobile_centered-image-text-section {
-    display: block;
-    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers children (image and text) horizontally */
+    text-align: center;
+    margin: 2rem auto;
+    width: 100%;
   }
 
+  .mobile_centered-image-text-section p {
+    font-size: 1.1rem;
+  }
+  
   .mobile_centered_image {
-    width: 60%;
-    margin: 2rem 0;
-    align-content: center;
+    width: 80%;
+    border-radius: 7%;
+    margin: 2rem auto; /* Adds spacing and centers */
+    display: block;
+  }
+
+  .mobile_tracingBeam_section p {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .mobile_tracingBeam_section,
+  .tracing_beam_subheading p {
+    font-size: 1.25rem;
   }
 }

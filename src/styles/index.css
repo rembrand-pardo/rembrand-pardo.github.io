@@ -76,6 +76,10 @@ footer {
   width: 100%;
 }
 
+.antialiased {
+  -webkit-font-smoothing: none; 
+}
+
 /* Add responsive design */
 @media (max-width: 768px) {
   .navbar {

@@ -7,7 +7,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      // Add custom themes if needed
+      fontFamily: {
+        rubik: ['Rubik', 'sans-serif'], // Add Rubik as a custom font
+      },
     },
   },
   plugins: [

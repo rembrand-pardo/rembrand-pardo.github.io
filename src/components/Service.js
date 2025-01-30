@@ -157,7 +157,7 @@ const ServicePage = ({ translations }) => {
           </p>
         </div>
         
-        <TracingBeam className="px-6">
+        <TracingBeam className="mobile_tracingBeam_section px-6">
           <div className="max-w-2xl mx-auto antialiased pt-4 relative">
             {serviceContent.map((item, index) => (
               <div key={`content-${index}`} className="mb-10">
@@ -165,11 +165,13 @@ const ServicePage = ({ translations }) => {
                   {item.badge}
                 </h2>
     
-                <p className={twMerge("text-xl mb-4")}>
-                  {item.title}
-                </p>
+                <>
+                  <p className={twMerge("tracing_beam_subheading", "mb-4")}>
+                    {item.title}
+                  </p>
+                </>
     
-                <div className="text-sm  prose prose-sm dark:prose-invert">
+                <div className="text-sm prose prose-sm dark:prose-invert">
                   {item?.image && (
                     <img
                       src={item.image}
@@ -216,13 +218,13 @@ export const products = [
   },
 
   {
-    title: "Public Speaking Services",
+    title: "Public Speaking Services 2",
     link: "https://editorially.org",
     thumbnail:
       "/services/speaking_card2.png",
   },
   {
-    title: "Public Speaking Services",
+    title: "Public Speaking Services 3",
     link: "https://editrix.ai",
     thumbnail:
       "/services/business_card3.png",
