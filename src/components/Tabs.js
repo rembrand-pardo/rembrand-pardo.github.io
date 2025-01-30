@@ -49,7 +49,7 @@ export const Tabs = ({
             style={{
               border: "2px solid rgba(255, 255, 255, 0.871)",
               transformStyle: "preserve-3d",
-              backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent black for tabs
+              backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent black for tabs 0b1024
               minWidth: "80px", // Ensure tabs are not too small
               margin: "0 4px 4px", // Add some margin between tabs
             }}

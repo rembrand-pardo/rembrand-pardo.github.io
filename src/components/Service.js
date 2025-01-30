@@ -28,7 +28,7 @@ const ServicePage = ({ translations }) => {
     {
       title: "Business",
       value: "product",
-      image: "business_tab.png",
+      image: "business_tab_blue.png",
       text: "",
       backgroundColor: "rgba(0, 0, 0, 0.1)",
       textColor: "rgba(255, 0, 0, 0.7)",
@@ -45,7 +45,7 @@ const ServicePage = ({ translations }) => {
     {
       title: "Technology",
       value: "services",
-      image: "technology_tab.png",
+      image: "management_tab_blue.png",
       backgroundColor: "rgba(0, 0, 0, 0.1)",
       textColor: "rgba(255, 0, 0, 0.7)",
       imageClassName: "w-[100%] h-auto object-contain",
@@ -61,7 +61,7 @@ const ServicePage = ({ translations }) => {
     {
       title: "Leadership",
       value: "playground",
-      image: "leadership_tab.png",
+      image: "leadership_tab_blue.png",
       backgroundColor: "rgba(0, 0, 0, 0.1)",
       textColor: "rgba(255, 0, 0, 0.7)",
       imageClassName: "w-[100%] h-auto object-contain",
@@ -77,7 +77,7 @@ const ServicePage = ({ translations }) => {
     {
       title: "Speaking",
       value: "content",
-      image: "speaking_tab.png",
+      image: "speaking_tab_blue.png",
       backgroundColor: "rgba(0, 0, 0, 0.1)",
       textColor: "rgba(255, 0, 0, 0.7)",
       imageClassName: "w-[100%] h-auto object-contain",
@@ -148,7 +148,7 @@ const ServicePage = ({ translations }) => {
 
         <div className="mobile_centered-image-text-section">
           <img 
-            src="general_service_card.png" 
+            src="general_blue.png" 
             alt="Descriptive Alt Text" 
             className="mobile_centered_image" 
           />
@@ -324,9 +324,9 @@ const serviceContent = [
         </p>
       </>
     ),
-    badge: "React",
+    badge: "Management",
     image:
-    "/services/blue_speaking_ser.jpg",
+    "management_tab_blue.png",
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
@@ -348,9 +348,9 @@ const serviceContent = [
         </p>
       </>
     ),
-    badge: "Changelog",
+    badge: "Business",
     image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "business_tab_blue.png",
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
@@ -366,9 +366,27 @@ const serviceContent = [
         </p>
       </>
     ),
-    badge: "Launch Week",
+    badge: "Leadership Training",
     image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=3506&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "leadership_tab_blue.png",
+  },
+  {
+    title: "Lorem Ipsum Dolor Sit Amet",
+    description: (
+      <>
+        <p>
+          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
+          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
+          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
+          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
+          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
+          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
+        </p>
+      </>
+    ),
+    badge: "Public Speaking",
+    image:
+      "speaking_tab_blue.png",
   },
 ];
 
