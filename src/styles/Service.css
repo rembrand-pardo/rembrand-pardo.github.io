@@ -1,6 +1,6 @@
 /* styles/Service.css */
 body.servicepage-no-padding {
-    padding-top: 0;
+  padding-top: 0;
 } 
 
 .service_container {
@@ -20,6 +20,7 @@ body.servicepage-no-padding {
   width: 40%;
   margin: 0 auto;
   display: block;
+  border-radius: 1%;
 }
 
 .centered-text {
