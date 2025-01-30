@@ -131,7 +131,7 @@ body.servicepage-no-padding {
   
   .mobile_centered_image {
     width: 80%;
-    border-radius: 7%;
+    border-radius: 3%;
     margin: 2rem auto; /* Adds spacing and centers */
     display: block;
   }
