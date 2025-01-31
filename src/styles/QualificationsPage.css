@@ -59,6 +59,22 @@ section {
     cursor: default; /* Remove pointer cursor */
 }
 
+.card-slcc .card:hover {
+    cursor: pointer;
+}
+
+.card-byu .card:hover {
+    cursor: pointer;
+}
+
+.card-slcc .card.expanded {
+    cursor: default;
+}
+
+.card-byu .card.expanded {
+    cursor: default;
+}
+
 .card-image {
     width: 100%;
     height: 300px;  /* Fixed height for the image */
