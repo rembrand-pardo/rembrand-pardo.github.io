@@ -157,37 +157,45 @@ const ServicePage = ({ translations }) => {
           </p>
         </div>
         
-        <TracingBeam className="mobile_tracingBeam_section px-6">
-          <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-            {serviceContent.map((item, index) => (
-              <div key={`content-${index}`} className="mb-10">
-                <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-                  {item.badge}
-                </h2>
-    
-                <>
-                  <p className={twMerge("tracing_beam_subheading", "mb-4")}>
-                    {item.title}
-                  </p>
-                </>
-    
-                <div className="text-sm prose prose-sm dark:prose-invert">
-                  {item?.image && (
-                    <img
-                      src={item.image}
-                      alt="blog thumbnail"
-                      height="1000"
-                      width="1000"
-                      className="rounded-lg mb-10 object-cover"
-                    />
-                  )}
-                  {item.description}
+        <section className='tracingBeam_section'>
+          <TracingBeam className="mobile_tracingBeam_section px-6">
+            <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+              {serviceContent.map((item, index) => (
+                <div key={`content-${index}`} className="mb-10">
+                  <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+                    {item.badge}
+                  </h2>
+      
+                  <>
+                    <p className={twMerge("tracing_beam_subheading", "mb-4")}>
+                      {item.title}
+                    </p>
+                  </>
+      
+                  <div className="text-sm prose prose-sm dark:prose-invert">
+                    {item?.image && (
+                      <img
+                        src={item.image}
+                        alt="blog thumbnail"
+                        height="1000"
+                        width="1000"
+                        className="rounded-lg mb-10 object-cover"
+                      />
+                    )}
+                    {item.description}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </TracingBeam>
+              ))}
+            </div>
+          </TracingBeam>
 
+        </section>
+        
+        <section className='about_end_page'>
+
+          {translations.aboutEndPage}
+
+        </section>
 
       </div>
       

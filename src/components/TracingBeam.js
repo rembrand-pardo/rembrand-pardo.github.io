@@ -68,7 +68,7 @@ export const TracingBeam = ({
           className=" ml-4 block"
           aria-hidden="true">
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={`M 1 0V -36 l 18 24 V ${(svgHeight - 50) * 0.8} l -18 24V ${svgHeight - 50}`} //(svgHeight - 47), 47 makes the beam shorter
             fill="none"
             stroke="#9091A0"
             strokeOpacity="0.16"
@@ -76,7 +76,7 @@ export const TracingBeam = ({
               duration: 10,
             }}></motion.path>
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={`M 1 0V -36 l 18 24 V ${(svgHeight - 50) * 0.8} l -18 24V ${svgHeight - 50}`} //(svgHeight - 47), 47 makes the beam shorter
             fill="none"
             stroke="url(#gradient)"
             strokeWidth="1.25"
