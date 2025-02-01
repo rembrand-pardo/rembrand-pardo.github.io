@@ -128,7 +128,7 @@ const ServicePage = ({ translations }) => {
 
       <div className='serviceDetail_section'>
         <img 
-          src="business_technology_people.jpg" 
+          src="b_t_p.jpg" 
           alt="Descriptive Alt Text" 
           className="image_end_page" 
         />
@@ -209,7 +209,7 @@ const ServicePage = ({ translations }) => {
         
         <section className='mobile_service_end_page'>
           <img 
-            src="business_technology_people.jpg" 
+            src="b_t_p.jpg" 
             alt="Descriptive Alt Text" 
             className="mobile_imagae_end_image" 
           />
