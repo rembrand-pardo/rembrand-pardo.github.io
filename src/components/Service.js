@@ -102,7 +102,6 @@ const ServicePage = ({ translations }) => {
       </div>
 
 
-      {/* New Section */}
       <div className="centered-image-text-section">
         <img 
           src="general_service_card.png" 
@@ -110,7 +109,11 @@ const ServicePage = ({ translations }) => {
           className="centered-image" 
         />
         <p className="centered-text">
-          Empowering Businesses, Inspiring Change.
+          Achieving business success requires the right strategies, strong leadership, and effective management. 
+          My services are designed to help businesses and professionals excel by providing expert guidance in business strategy, 
+          leadership development, and management solutions across various industries, including technology. 
+          Whether you need support in optimizing operations, strengthening leadership, or driving business initiatives, 
+          I offer tailored solutions to meet your unique needs. Explore the categories below to see how I can help you achieve your goals.
         </p>
       </div>
 
@@ -124,8 +127,17 @@ const ServicePage = ({ translations }) => {
 
 
       <div className='serviceDetail_section'>
-        <p>{translations.aboutMeText1}</p>
-        <p>{translations.aboutMeText2}</p>
+        <img 
+          src="business_technology_people.jpg" 
+          alt="Descriptive Alt Text" 
+          className="image_end_page" 
+        />
+        <p className="p_text_end_page">
+          My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. 
+          Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation 
+          of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, 
+          and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.
+        </p>
       </div>
 
 
@@ -153,7 +165,11 @@ const ServicePage = ({ translations }) => {
             className="mobile_centered_image" 
           />
           <p className="mobile_centered_text">
-            Empowering Businesses, Inspiring Change.
+            Achieving business success requires the right strategies, strong leadership, and effective management. 
+            My services are designed to help businesses and professionals excel by providing expert guidance in business strategy, 
+            leadership development, and management solutions across various industries, including technology. 
+            Whether you need support in optimizing operations, strengthening leadership, or driving business initiatives, 
+            I offer tailored solutions to meet your unique needs. Explore the categories below to see how I can help you achieve your goals.
           </p>
         </div>
         
@@ -191,10 +207,18 @@ const ServicePage = ({ translations }) => {
 
         </section>
         
-        <section className='about_end_page'>
-
-          {translations.aboutEndPage}
-
+        <section className='mobile_service_end_page'>
+          <img 
+            src="business_technology_people.jpg" 
+            alt="Descriptive Alt Text" 
+            className="mobile_imagae_end_image" 
+          />
+          <p className="mobile_p_text_end_page">
+            My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. 
+            Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation 
+            of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, 
+            and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.
+          </p>
         </section>
 
       </div>
