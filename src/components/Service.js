@@ -127,17 +127,17 @@ const ServicePage = ({ translations }) => {
 
 
       <div className='serviceDetail_section'>
-        <img 
-          src="b_t_p.jpg" 
-          alt="Descriptive Alt Text" 
-          className="image_end_page" 
-        />
         <p className="p_text_end_page">
           My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. 
           Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation 
           of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, 
           and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.
         </p>
+        <img 
+          src="b_t_p.jpg" 
+          alt="Descriptive Alt Text" 
+          className="image_end_page" 
+        />
       </div>
 
 
@@ -149,7 +149,7 @@ const ServicePage = ({ translations }) => {
           <h1>Empowering Success: <br /> Unleashing Potential, Building Leaders, Streamlining Technology, and Inspiring Change.</h1>
         </section>
 
-        <section className='service_body_section'>
+        <section className='mobile_service_body_section'>
           <p>
             I am dedicated to unlocking the full potential of your business, empowering your teams, 
             streamlining your operations, and inspiring your audiences. 
@@ -358,7 +358,7 @@ const serviceContent = [
     ),
     badge: "Management",
     image:
-    "management_tab_blue.png",
+    "management_tab_blue_c.png",
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
@@ -382,7 +382,7 @@ const serviceContent = [
     ),
     badge: "Business",
     image:
-      "business_tab_blue.png",
+      "business_tab_blue_c.png",
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
@@ -400,7 +400,7 @@ const serviceContent = [
     ),
     badge: "Leadership Training",
     image:
-      "leadership_tab_blue.png",
+      "leadership_tab_blue_c.png",
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
@@ -418,7 +418,7 @@ const serviceContent = [
     ),
     badge: "Public Speaking",
     image:
-      "speaking_tab_blue.png",
+      "speaking_tab_blue_c.png",
   },
 ];
 
