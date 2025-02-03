@@ -173,7 +173,7 @@ const ServicePage = ({ translations }) => {
           </p>
         </div>
         
-        <section className='tracingBeam_section'>
+        <section className='m_tracingBeam_section'>
           <TracingBeam className="mobile_tracingBeam_section px-6">
             <div className="max-w-2xl mx-auto antialiased pt-4 relative">
               {serviceContent.map((item, index) => (
@@ -208,17 +208,17 @@ const ServicePage = ({ translations }) => {
         </section>
         
         <section className='mobile_service_end_page'>
-          <img 
-            src="b_t_p.jpg" 
-            alt="Descriptive Alt Text" 
-            className="mobile_imagae_end_image" 
-          />
           <p className="mobile_p_text_end_page">
             My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. 
             Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation 
             of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, 
             and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.
           </p>
+          <img 
+            src="b_t_p.jpg" 
+            alt="Descriptive Alt Text" 
+            className="mobile_imagae_end_image" 
+          />
         </section>
 
       </div>
@@ -328,97 +328,68 @@ export const products = [
 //tracing beam
 const serviceContent = [
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "COMPREHENSIVE TECHNOLOG MANAGEMENT SERVICES",
     description: (
       <>
         <p>
-          Sit duis est minim proident non nisi velit non consectetur. Esse
-          adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
-          Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat incididunt
-          incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur
-          fugiat Lorem aute sit ullamco. Qui deserunt non reprehenderit dolore
-          nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
-          occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
-          officia sint labore. Tempor consectetur excepteur ut fugiat veniam
-          commodo et labore dolore commodo pariatur.
-        </p>
-        <p>
-          Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
-          veniam in commodo id reprehenderit adipisicing. Proident duis
-          exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
-        </p>
-        <p>
-          Tempor quis dolor veniam quis dolor. Sit reprehenderit eiusmod
-          reprehenderit deserunt amet laborum consequat adipisicing officia qui
-          irure id sint adipisicing. Adipisicing fugiat aliqua nulla nostrud.
-          Amet culpa officia aliquip deserunt veniam deserunt officia
-          adipisicing aliquip proident officia sunt.
+        Enhance your operations with customized technology management solutions. 
+        With a wealth of experience in software development, programming, software quality control, 
+        and data management, I provide comprehensive project, program, and product management services.
+        My expertise extends to IT management, software development leadership, data analytics, and engineering management. 
+        I am dedicated to helping organizations effectively manage technology, software, and operational projects of all sizes.
         </p>
       </>
     ),
     badge: "Management",
     image:
-    "management_tab_blue_c.png",
+    "services/technology_card4.png",
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "TRANSFORM YOUR BUSINESS WITH STRATEGIC CONSULTING",
     description: (
       <>
         <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-        </p>
-        <p>
-          In dolore veniam excepteur eu est et sunt velit. Ipsum sint esse
-          veniam fugiat esse qui sint ad sunt reprehenderit do qui proident
-          reprehenderit. Laborum exercitation aliqua reprehenderit ea sint
-          cillum ut mollit.
+        Elevate your business performance with comprehensive consulting services designed to drive success. 
+        With a wealth of knowledge in business development, business strategy, HR and recruitment, 
+        administrative operations, supervisory roles, and executive-level management consulting, 
+        I aim to provide valuable insights and strategies to enhance your business operations and team dynamics.
         </p>
       </>
     ),
     badge: "Business",
     image:
-      "business_tab_blue_c.png",
+      "services/business_card.png",
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "UNLOCK LEADERSHIP POTENTIAL AND BUILD STRONGER TEAMS",
     description: (
       <>
         <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
+        Empower your team with my leadership development and team building services. 
+        I provide strategies for leadership, team unity, workgroup alignment, and employee engagement.
+        My customized leadership programs and collaboration initiatives aim to nurture strong leaders and cohesive teams.
         </p>
       </>
     ),
     badge: "Leadership Training",
     image:
-      "leadership_tab_blue_c.png",
+      "services/leadership_card.png",
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "INSPIRE AND ENGAGE THROUGH POWERFUL SPEAKING",
     description: (
       <>
         <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
+        Inspire your audience with dynamic speaking engagements. 
+        I offer keynote, motivational, and event speaking services, 
+        each tailored to align with your unique needs or event themes. 
+        My goal is to captivate and empower your audience, leaving a lasting impact.
         </p>
       </>
     ),
     badge: "Public Speaking",
     image:
-      "speaking_tab_blue_c.png",
+      "services/speaking_card_m.png",
   },
 ];
 
