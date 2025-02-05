@@ -208,6 +208,7 @@ const ServicePage = ({ translations }) => {
         </section>
         
         <section className='mobile_service_end_page'>
+          <h2>Optimizing Business, Leveraging Technology, Empowering People</h2>
           <p className="mobile_p_text_end_page">
             My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. 
             Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation 
@@ -292,37 +293,6 @@ export const products = [
     thumbnail:
       "/services/speaking_card3.png",
   },
-  // {
-  //   title: "Renderwork Studio",
-  //   link: "https://renderwork.studio",
-  //   thumbnail:
-  //     "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  // },
-
-  // {
-  //   title: "Creme Digital",
-  //   link: "https://cremedigital.com",
-  //   thumbnail:
-  //     "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-  // },
-  // {
-  //   title: "Golden Bells Academy",
-  //   link: "https://goldenbellsacademy.com",
-  //   thumbnail:
-  //     "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  // },
-  // {
-  //   title: "Invoker Labs",
-  //   link: "https://invoker.lol",
-  //   thumbnail:
-  //     "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  // },
-  // {
-  //   title: "E Free Invoice",
-  //   link: "https://efreeinvoice.com",
-  //   thumbnail:
-  //     "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-  // },
 ];
 
 //tracing beam

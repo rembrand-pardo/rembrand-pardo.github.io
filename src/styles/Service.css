@@ -159,7 +159,7 @@ body.servicepage-no-padding {
 
   .m_tracingBeam_section,
   .mobile_tracingBeam_section p {
-    font-size: 1.12rem;
+    font-size: 1.1rem;
     line-height: 1.3;
   }
 
@@ -175,6 +175,15 @@ body.servicepage-no-padding {
     text-align: center;
     margin: 1px auto;
     width: 89%;
+  }
+
+  .mobile_service_end_page p {
+    font-size: 1.1rem;
+  }
+
+  .mobile_service_end_page h2 {
+    font-size: 1.5rem;
+    margin-bottom: 13px;
   }
 
   .mobile_p_text_end_page {
