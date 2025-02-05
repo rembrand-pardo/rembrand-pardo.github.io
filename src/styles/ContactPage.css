@@ -197,9 +197,14 @@
 }
 
 .success-message {
-  color: rgb(7, 102, 236);
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  color: rgb(25, 120, 252);
+  font-size: 1.7rem !important;
+  margin-bottom: 1.7rem !important;
+  margin-top: 1.7rem;
+}
+
+.success-message p {
+  font-size: 1.7rem;
 }
 
 .send-another-button {
@@ -217,7 +222,7 @@
 }
   
 .send-another-button:hover {
-  background: linear-gradient(45deg, rgba(17, 53, 116, 0.8), rgba(8, 146, 221, 0.342)); /* Blue gradient with transparency */
+  background: linear-gradient(45deg, rgba(4, 28, 148, 0.8), rgba(8, 50, 221, 0.8)); /* Blue gradient with transparency */
   color: white; /* Change text color to white on hover */
   border: 1px solid; /* Remove gradient outline on hover */
   box-shadow: 0 0 11px rgba(52, 97, 220, 0.864); /* Blue glow effect */
@@ -442,6 +447,13 @@ textarea:-webkit-autofill:focus {
     font-size: 1.1rem;
     width: 70%; /* Ensure buttons take up full width on smaller screens */
     align-self: center;
+  }
+
+  .success-message {
+    font-size: 1.4rem !important;
+    margin-top: 1rem !important;
+    padding-left: 17px;
+    padding-right: 17px;
   }
 }
 

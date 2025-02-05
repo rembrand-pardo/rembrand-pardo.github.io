@@ -197,16 +197,16 @@ return (
       <p className="otherChannels_container" style={{ marginTop: '3rem' }}> { translations.contactOtherChannels } </p>
       
       <div className="contact-social-icons">
-        <a href="https://www.linkedin.com/in/rembrandpardo/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/rembrandpardo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
           <Linkedin className="contact_linkedin" />
         </a>
-        <a href="https://github.com/Thebatman7" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Thebatman7" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
           <GithubThick className="contact_github" />
         </a>
-        <a href="https://www.instagram.com/rembrand.paul/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/rembrand.paul/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
           <Instagram className="contact_instagram" />
         </a>
-        <a href="https://x.com/rembrandpardo" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/rembrandpardo" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) Profile">
         <X className="contact_x" />
         </a>
       </div>
