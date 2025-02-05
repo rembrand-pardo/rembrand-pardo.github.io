@@ -79,4 +79,12 @@
   .about_end_page p {
     font-size: 1.1rem;
   }
+
+  .secondHeading_section {
+    margin-bottom: 0rem;
+  }
+
+  .about_end_page p {
+    width: 93%;
+  }
 }
