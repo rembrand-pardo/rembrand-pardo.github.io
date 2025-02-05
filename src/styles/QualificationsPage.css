@@ -248,7 +248,7 @@ section {
   
 @media (max-width: 768px) {
     .quote_section h1 {
-      font-size: 1.5rem; /* Smaller for mobile */
+      font-size: 2rem; /* Smaller for mobile */
     }
   
     .quote_section p {

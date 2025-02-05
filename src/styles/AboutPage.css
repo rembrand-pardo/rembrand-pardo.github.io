@@ -17,7 +17,6 @@
   display: none;
 }
 
-
 .text-7xl {
   font-size: 2.5rem;
   line-height: 1;
@@ -56,11 +55,28 @@
   line-height: 1.6;
   color: white;
   text-align: center; /* Center the text inside the element */
-  margin: 110px auto 90px auto; /* Center the element horizontally with auto margins */
-  width: 70%; /* Set the width to % of the page */
+  margin: 70px auto 70px auto; /* Center the element horizontally with auto margins */
+  width: 77%; /* Set the width to % of the page */
 }
 
 .about_end_page a {
   color: #89CFF0; /* Baby blue color for links */
 }
 
+@media (max-width: 768px) {
+  .body_section p{
+    text-align: center;
+  }
+
+  .custom-description p {
+    font-size: 1.1rem;
+    font-family: 'Rubik', sans-serif;
+  }
+  .about_heading_section h1 {
+    font-size: 2rem;
+  }
+
+  .about_end_page p {
+    font-size: 1.1rem;
+  }
+}
