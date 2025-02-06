@@ -13,6 +13,8 @@ import CookieConsent from './components/CookieConsent';
 import Footer from './components/Footer.js';
 import translations from '../src/assets/locales/translations.js';
 
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   const [consentGiven, setConsentGiven] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
@@ -61,6 +63,10 @@ function App() {
       ) : (
         <>
           <Navbar translations={translations[language]} setLanguage={setLanguage} /> {/* Pass translations to Navbar */}
+
+          {/* ScrollToTop ensures every new page starts at the top */}
+          <ScrollToTop /> 
+
             <Routes>
               <Route path="/" element={<HomePage translations={translations[language]} />} /> {/* Pass translations */}
               <Route path="/service" element={<ServicePage translations={translations[language]} />} />
