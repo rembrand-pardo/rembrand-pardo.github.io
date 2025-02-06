@@ -298,7 +298,7 @@ export const products = [
 //tracing beam
 const serviceContent = [
   {
-    title: "COMPREHENSIVE TECHNOLOG MANAGEMENT SERVICES",
+    title: "COMPREHENSIVE TECHNOLOGY MANAGEMENT SERVICES",
     description: (
       <>
         <p>

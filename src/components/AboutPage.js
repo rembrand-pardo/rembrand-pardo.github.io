@@ -144,10 +144,10 @@ const AboutPage = ({ translations })  => {
                     {item.badge}
                   </h2>
       
-                  <p className={twMerge("text-xl mb-4")}>
+                  <p className={twMerge("mb-4")}>
                     {item.title}
                   </p>
-      
+
                   <div className="text-sm  prose prose-sm dark:prose-invert">
                     {item?.image && (
                       <img
