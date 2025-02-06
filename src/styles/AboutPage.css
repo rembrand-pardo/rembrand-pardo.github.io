@@ -78,13 +78,11 @@
 
   .about_end_page p {
     font-size: 1.1rem;
+    width: 93%;
+    margin: 50px auto 70px auto; /* Center the element horizontally with auto margins */
   }
 
   .secondHeading_section {
     margin-bottom: 0rem;
-  }
-
-  .about_end_page p {
-    width: 93%;
   }
 }
