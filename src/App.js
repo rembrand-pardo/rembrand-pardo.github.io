@@ -71,7 +71,7 @@ function App() {
               <Route path="/" element={<HomePage translations={translations[language]} />} /> {/* Pass translations */}
               <Route path="/service" element={<ServicePage translations={translations[language]} />} />
               <Route path="/qualifications" element={<QualificationsPage translations={translations[language]} />} />
-              <Route path="/about" element={<AboutPage translations={translations[language]} />} />
+              <Route path="/about" element={<AboutPage translations={translations[language]} language={language}/>} />
               <Route path="/contact" element={<ContactPage translations={translations[language]} />} />
               <Route path="/resume" element={<ResumePage translations={translations[language]} language={language}/>} />
               <Route path="*" element={<NotFound translations={translations[language]} />} />
