@@ -141,10 +141,6 @@ input {
     background: linear-gradient(45deg, rgba(4, 28, 148, 0.912), rgba(8, 51, 221, 0.863)); /* Blue gradient with transparency */
     border: 1px solid; /* Remove gradient outline on hover */
 }
-
-/* .navbar.resume-page .navbar-container {
-    margin-left: 15rem;/* Code for navbar for resume page only. This centers navbar. 
-} */
   
 
 /* Media query for small screens */
@@ -157,6 +153,11 @@ input {
     .field_tabs {
         margin-left: 0.3rem;
         margin-right: 0.3rem;
+    }
+
+    .resume_heading1 h1,
+    .text-xl {
+        font-size: 2rem !important;
     }
 }
 
