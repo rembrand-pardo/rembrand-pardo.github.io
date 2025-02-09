@@ -297,7 +297,7 @@ const ServicePage = ({ translations, language }) => {
       <div className="background-gradient" /> {/* Apply the gradient background */}
 
       <div className="service_container">
-        <HeroParallax products={products} />
+        <HeroParallax products={products} translations={translations}/>
       </div>
 
 

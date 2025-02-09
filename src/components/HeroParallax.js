@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 export const HeroParallax = ({
-  products
+  products, translations
 }) => {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
@@ -29,7 +29,7 @@ export const HeroParallax = ({
       ref={ref}
       className="min-h-screen overflow-hidden relative flex flex-col"
     >
-      <Header />
+      <Header translations={translations}/>
       <motion.div
         style={{
           rotateX,
@@ -61,7 +61,7 @@ export const HeroParallax = ({
 
 
 
-export const Header = () => {
+export const Header = ({ translations }) => {
   return (
     (<div
       className="max-w-7xl relative z-10 mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
