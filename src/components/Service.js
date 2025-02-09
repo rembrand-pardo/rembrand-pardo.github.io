@@ -115,7 +115,6 @@ const ServicePage = ({ translations, language }) => {
   const products = [
     {
       title: "Team Building Leadership",
-      link: "https://gomoonbeam.com",
       thumbnail:
         language === "es"
         ? "services/leadership_beam_es.png"
@@ -125,7 +124,6 @@ const ServicePage = ({ translations, language }) => {
     },
     {
       title: "Management Services",
-      link: "https://cursor.so",
       thumbnail:
         language === "es"
         ? "services/technology_beam_es.png"
@@ -135,7 +133,6 @@ const ServicePage = ({ translations, language }) => {
     },
     {
       title: "Business Cunsulting Services",
-      link: "https://userogue.com",
       thumbnail:
         language === "es"
         ? "services/business_beam_es.png"
@@ -146,7 +143,6 @@ const ServicePage = ({ translations, language }) => {
   
     {
       title: "Public Speaking Services 2",
-      link: "https://editorially.org",
       thumbnail:
         language === "es"
         ? "services/speaking_beam_es.png"
@@ -156,7 +152,6 @@ const ServicePage = ({ translations, language }) => {
     },
     {
       title: "Public Speaking Services 3",
-      link: "https://editrix.ai",
       thumbnail:
         language === "es"
         ? "services/speaking_beam_es.png"
@@ -166,7 +161,6 @@ const ServicePage = ({ translations, language }) => {
     },
     {
       title: "Management Services",
-      link: "https://app.pixelperfect.quest",
       thumbnail:
         language === "es"
         ? "services/technology_beam_es.png"
@@ -177,7 +171,6 @@ const ServicePage = ({ translations, language }) => {
   
     {
       title: "Team Building",
-      link: "https://algochurn.com",
       thumbnail:
         language === "es"
         ? "services/leadership_beam_es.png"
@@ -187,7 +180,6 @@ const ServicePage = ({ translations, language }) => {
     },
     {
       title: "Management Services",
-      link: "https://ui.aceternity.com",
       thumbnail:
         language === "es"
         ? "services/technology_beam_es.png"
@@ -197,7 +189,6 @@ const ServicePage = ({ translations, language }) => {
     },
     {
       title: "Business Cunsulting Services",
-      link: "https://tailwindmasterkit.com",
       thumbnail:
         language === "es"
         ? "services/business_beam_es.png"
@@ -207,7 +198,6 @@ const ServicePage = ({ translations, language }) => {
     },
     {
       title: "Public Speaking Services",
-      link: "https://smartbridgetech.com",
       thumbnail:
         language === "es"
         ? "services/speaking_beam_es.png"
