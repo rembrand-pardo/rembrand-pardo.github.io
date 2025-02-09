@@ -124,7 +124,13 @@ const ServicePage = ({ translations, language }) => {
 
       <div className="centered-image-text-section">
         <img 
-          src="general_service_card.png" 
+          src={
+            language === "es"
+            ? "general_es.png"
+            : language === "ca"
+            ? "general_ca.png"
+            : "general_service_card.png" 
+          }
           alt="Descriptive Alt Text" 
           className="centered-image" 
         />
@@ -157,9 +163,9 @@ const ServicePage = ({ translations, language }) => {
           src= {
             language === "es"
             ? "trio_es.png"
-            : language == "ca"
+            : language === "ca"
             ? "trio_ca.png"
-            :"b_t_p.jpg"
+            : "b_t_p.jpg"
           } 
           alt="Descriptive Alt Text" 
           className="image_end_page" 
@@ -184,7 +190,13 @@ const ServicePage = ({ translations, language }) => {
 
         <div className="mobile_centered-image-text-section">
           <img 
-            src="general_blue.png" 
+            src={
+              language === "es"
+              ? "general_es.png"
+              : language === "ca"
+              ? "general_ca.png"
+              : "general_blue.png" 
+            }
             alt="Descriptive Alt Text" 
             className="mobile_centered_image" 
           />
@@ -239,8 +251,14 @@ const ServicePage = ({ translations, language }) => {
             of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, 
             and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.
           </p>
-          <img 
-            src="b_t_p.jpg" 
+          <img
+            src={
+              language === "es"
+              ? "trio_es.png"
+              : language === "ca"
+              ? "trio_ca.png"
+              : "b_t_p.jpg" 
+            }
             alt="Descriptive Alt Text" 
             className="mobile_imagae_end_image" 
           />
