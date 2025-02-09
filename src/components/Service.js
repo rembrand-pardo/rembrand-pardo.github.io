@@ -112,6 +112,110 @@ const ServicePage = ({ translations, language }) => {
     },
   ];
 
+  const products = [
+    {
+      title: "Team Building Leadership",
+      link: "https://gomoonbeam.com",
+      thumbnail:
+        language === "es"
+        ? "services/leadership_beam_es.png"
+        : language === "ca"
+        ? "services/leadership_beam_ca.png"
+        : "/services/leadership_card2.png", 
+    },
+    {
+      title: "Management Services",
+      link: "https://cursor.so",
+      thumbnail:
+        language === "es"
+        ? "services/technology_beam_es.png"
+        : language === "ca"
+        ? "services/technology_beam_ca.png"
+        : "/services/technology_card2.png",
+    },
+    {
+      title: "Business Cunsulting Services",
+      link: "https://userogue.com",
+      thumbnail:
+        language === "es"
+        ? "services/business_beam_es.png"
+        : language === "ca"
+        ? "services/business_beam_ca.png"
+        : "/services/business_card.png",
+    },
+  
+    {
+      title: "Public Speaking Services 2",
+      link: "https://editorially.org",
+      thumbnail:
+        language === "es"
+        ? "services/speaking_beam_es.png"
+        : language === "ca"
+        ? "services/speaking_beam_ca.png"
+        : "/services/speaking_card2.png",
+    },
+    {
+      title: "Public Speaking Services 3",
+      link: "https://editrix.ai",
+      thumbnail:
+        language === "es"
+        ? "services/speaking_beam_es.png"
+        : language === "ca"
+        ? "services/speaking_beam_ca.png"
+        : "/services/business_card3.png",
+    },
+    {
+      title: "Management Services",
+      link: "https://app.pixelperfect.quest",
+      thumbnail:
+        language === "es"
+        ? "services/technology_beam_es.png"
+        : language === "ca"
+        ? "services/technology_beam_ca.png"
+        : "/services/technology_card.png",
+    },
+  
+    {
+      title: "Team Building",
+      link: "https://algochurn.com",
+      thumbnail:
+        language === "es"
+        ? "services/leadership_beam_es.png"
+        : language === "ca"
+        ? "services/leadership_beam_ca.png"
+        : "/services/leadership_card.png",
+    },
+    {
+      title: "Management Services",
+      link: "https://ui.aceternity.com",
+      thumbnail:
+        language === "es"
+        ? "services/technology_beam_es.png"
+        : language === "ca"
+        ? "services/technology_beam_ca.png"
+        : "/services/technology_card3.png",
+    },
+    {
+      title: "Business Cunsulting Services",
+      link: "https://tailwindmasterkit.com",
+      thumbnail:
+        language === "es"
+        ? "services/business_beam_es.png"
+        : language === "ca"
+        ? "services/business_beam_ca.png"
+        : "/services/business_card2.png",
+    },
+    {
+      title: "Public Speaking Services",
+      link: "https://smartbridgetech.com",
+      thumbnail:
+        language === "es"
+        ? "services/speaking_beam_es.png"
+        : language === "ca"
+        ? "services/speaking_beam_ca.png"
+        : "/services/speaking_card3.png",
+    },
+  ];
 
   //tracing beam for mobile
   const serviceContent = [
@@ -355,70 +459,5 @@ const ServicePage = ({ translations, language }) => {
     </div>
   );
 };
-
-export const products = [
-  {
-    title: "Team Building Leadership",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "/services/leadership_card2.png",
-  },
-  {
-    title: "Management Services",
-    link: "https://cursor.so",
-    thumbnail:
-      "/services/technology_card2.png",
-  },
-  {
-    title: "Business Cunsulting Services",
-    link: "https://userogue.com",
-    thumbnail:
-      "/services/business_card.png",
-  },
-
-  {
-    title: "Public Speaking Services 2",
-    link: "https://editorially.org",
-    thumbnail:
-      "/services/speaking_card2.png",
-  },
-  {
-    title: "Public Speaking Services 3",
-    link: "https://editrix.ai",
-    thumbnail:
-      "/services/business_card3.png",
-  },
-  {
-    title: "Management Services",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "/services/technology_card.png",
-  },
-
-  {
-    title: "Team Building",
-    link: "https://algochurn.com",
-    thumbnail:
-      "/services/leadership_card.png",
-  },
-  {
-    title: "Management Services",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "/services/technology_card3.png",
-  },
-  {
-    title: "Business Cunsulting Services",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "/services/business_card2.png",
-  },
-  {
-    title: "Public Speaking Services",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "/services/speaking_card3.png",
-  },
-];
 
 export default ServicePage;
