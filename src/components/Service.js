@@ -112,6 +112,91 @@ const ServicePage = ({ translations, language }) => {
     },
   ];
 
+
+  //tracing beam for mobile
+  const serviceContent = [
+    {
+      title: "COMPREHENSIVE TECHNOLOGY MANAGEMENT SERVICES",
+      description: (
+        <>
+          <p>
+          Enhance your operations with customized technology management solutions. 
+          With a wealth of experience in software development, programming, software quality control, 
+          and data management, I provide comprehensive project, program, and product management services.
+          My expertise extends to IT management, software development leadership, data analytics, and engineering management. 
+          I am dedicated to helping organizations effectively manage technology, software, and operational projects of all sizes.
+          </p>
+        </>
+      ),
+      badge: "Management",
+      image:
+        language === "es"
+          ? "services/technology_beam_es.png"
+          : language === "ca"
+          ? "services/technology_beam_ca.png"
+          : "services/technology_card4.png",
+    },
+    {
+      title: "TRANSFORM YOUR BUSINESS WITH STRATEGIC CONSULTING",
+      description: (
+        <>
+          <p>
+          Elevate your business performance with comprehensive consulting services designed to drive success. 
+          With a wealth of knowledge in business development, business strategy, HR and recruitment, 
+          administrative operations, supervisory roles, and executive-level management consulting, 
+          I aim to provide valuable insights and strategies to enhance your business operations and team dynamics.
+          </p>
+        </>
+      ),
+      badge: "Business",
+      image:
+        language === "es"
+          ? "services/business_beam_es.png"
+          : language === "ca"
+          ? "services/business_beam_ca.png"
+          : "services/business_card.png",
+    },
+    {
+      title: "UNLOCK LEADERSHIP POTENTIAL AND BUILD STRONGER TEAMS",
+      description: (
+        <>
+          <p>
+          Empower your team with my leadership development and team building services. 
+          I provide strategies for leadership, team unity, workgroup alignment, and employee engagement.
+          My customized leadership programs and collaboration initiatives aim to nurture strong leaders and cohesive teams.
+          </p>
+        </>
+      ),
+      badge: "Leadership Training",
+      image:
+        language === "es"
+          ? "services/leadership_beam_es.png"
+          : language === "ca"
+          ? "services/leadership_beam_ca.png"
+          : "services/leadership_card.png",
+    },
+    {
+      title: "INSPIRE AND ENGAGE THROUGH POWERFUL SPEAKING",
+      description: (
+        <>
+          <p>
+          Inspire your audience with dynamic speaking engagements. 
+          I offer keynote, motivational, and event speaking services, 
+          each tailored to align with your unique needs or event themes. 
+          My goal is to captivate and empower your audience, leaving a lasting impact.
+          </p>
+        </>
+      ),
+      badge: "Public Speaking",
+      image:
+        language === "es"
+          ? "services/speaking_beam_es.png"
+          : language === "ca"
+          ? "services/speaking_beam_ca.png"
+          : "services/speaking_card_m.png",   
+    },
+  ];
+
   return (
     <div className="servicepage">
 
@@ -271,7 +356,6 @@ const ServicePage = ({ translations, language }) => {
   );
 };
 
-
 export const products = [
   {
     title: "Team Building Leadership",
@@ -336,74 +420,5 @@ export const products = [
       "/services/speaking_card3.png",
   },
 ];
-
-//tracing beam
-const serviceContent = [
-  {
-    title: "COMPREHENSIVE TECHNOLOGY MANAGEMENT SERVICES",
-    description: (
-      <>
-        <p>
-        Enhance your operations with customized technology management solutions. 
-        With a wealth of experience in software development, programming, software quality control, 
-        and data management, I provide comprehensive project, program, and product management services.
-        My expertise extends to IT management, software development leadership, data analytics, and engineering management. 
-        I am dedicated to helping organizations effectively manage technology, software, and operational projects of all sizes.
-        </p>
-      </>
-    ),
-    badge: "Management",
-    image:
-    "services/technology_card4.png",
-  },
-  {
-    title: "TRANSFORM YOUR BUSINESS WITH STRATEGIC CONSULTING",
-    description: (
-      <>
-        <p>
-        Elevate your business performance with comprehensive consulting services designed to drive success. 
-        With a wealth of knowledge in business development, business strategy, HR and recruitment, 
-        administrative operations, supervisory roles, and executive-level management consulting, 
-        I aim to provide valuable insights and strategies to enhance your business operations and team dynamics.
-        </p>
-      </>
-    ),
-    badge: "Business",
-    image:
-      "services/business_card.png",
-  },
-  {
-    title: "UNLOCK LEADERSHIP POTENTIAL AND BUILD STRONGER TEAMS",
-    description: (
-      <>
-        <p>
-        Empower your team with my leadership development and team building services. 
-        I provide strategies for leadership, team unity, workgroup alignment, and employee engagement.
-        My customized leadership programs and collaboration initiatives aim to nurture strong leaders and cohesive teams.
-        </p>
-      </>
-    ),
-    badge: "Leadership Training",
-    image:
-      "services/leadership_card.png",
-  },
-  {
-    title: "INSPIRE AND ENGAGE THROUGH POWERFUL SPEAKING",
-    description: (
-      <>
-        <p>
-        Inspire your audience with dynamic speaking engagements. 
-        I offer keynote, motivational, and event speaking services, 
-        each tailored to align with your unique needs or event themes. 
-        My goal is to captivate and empower your audience, leaving a lasting impact.
-        </p>
-      </>
-    ),
-    badge: "Public Speaking",
-    image:
-      "services/speaking_card_m.png",
-  },
-];
-
 
 export default ServicePage;
