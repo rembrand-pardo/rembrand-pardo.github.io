@@ -14,7 +14,7 @@ import { TracingBeam } from "../components/TracingBeam";
 import { Tabs } from "../components/Tabs";
 
 
-const ServicePage = ({ translations }) => {
+const ServicePage = ({ translations, language }) => {
 
   // Apply the body class when the component mounts. Used to modify this page only
   useEffect(() => {
@@ -28,7 +28,12 @@ const ServicePage = ({ translations }) => {
     {
       title: "Business",
       value: "product",
-      image: "business_tab_blue.png",
+      image:
+        language === "es"
+          ? "business_es.png"
+          : language === "ca"
+          ? "business_ca.png"
+          : "business_tab_blue.png",
       text: "",
       backgroundColor: "rgba(0, 0, 0, 0.1)",
       textColor: "rgba(255, 0, 0, 0.7)",
@@ -45,7 +50,12 @@ const ServicePage = ({ translations }) => {
     {
       title: "Technology",
       value: "services",
-      image: "management_tab_blue.png",
+      image:
+        language === "es"
+        ? "tech_es.png"
+        : language === "ca"
+        ? "tech_ca.png"
+        : "management_tab_blue.png",
       backgroundColor: "rgba(0, 0, 0, 0.1)",
       textColor: "rgba(255, 0, 0, 0.7)",
       imageClassName: "w-[100%] h-auto object-contain",
@@ -61,7 +71,12 @@ const ServicePage = ({ translations }) => {
     {
       title: "Leadership",
       value: "playground",
-      image: "leadership_tab_blue.png",
+      image: 
+        language === "es"
+        ? "leadership_es.png"
+        : language === "ca"
+        ? "leadership_ca.png"
+        : "leadership_tab_blue.png",
       backgroundColor: "rgba(0, 0, 0, 0.1)",
       textColor: "rgba(255, 0, 0, 0.7)",
       imageClassName: "w-[100%] h-auto object-contain",
@@ -77,7 +92,12 @@ const ServicePage = ({ translations }) => {
     {
       title: "Speaking",
       value: "content",
-      image: "speaking_tab_blue.png",
+      image: 
+        language === "es"
+        ? "speaking_es.png"
+        : language === "ca"
+        ? "speaking_ca.png"
+        : "speaking_tab_blue.png",
       backgroundColor: "rgba(0, 0, 0, 0.1)",
       textColor: "rgba(255, 0, 0, 0.7)",
       imageClassName: "w-[100%] h-auto object-contain",
@@ -134,13 +154,17 @@ const ServicePage = ({ translations }) => {
           and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.
         </p>
         <img 
-          src="b_t_p.jpg" 
+          src= {
+            language === "es"
+            ? "trio_es.png"
+            : language == "ca"
+            ? "trio_ca.png"
+            :"b_t_p.jpg"
+          } 
           alt="Descriptive Alt Text" 
           className="image_end_page" 
         />
       </div>
-
-
 
       { /* This should only show up for mobile only */ }
       <div className='mobile_tracingBeam'>
