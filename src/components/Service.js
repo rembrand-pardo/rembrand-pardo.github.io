@@ -348,15 +348,12 @@ const ServicePage = ({ translations, language }) => {
       <div className='mobile_tracingBeam'>
 
         <section className='service_mobile_heading_section'>
-          <h1>Empowering Success: <br /> Unleashing Potential, Building Leaders, Streamlining Technology, and Inspiring Change.</h1>
+          <h1> { translations.serviceMainHeading } </h1>
         </section>
 
         <section className='mobile_service_body_section'>
           <p>
-            I am dedicated to unlocking the full potential of your business, empowering your teams, 
-            streamlining your operations, and inspiring your audiences. 
-            My comprehensive services are designed to transform challenges into opportunities, 
-            fostering growth and success in every endeavor.
+          { translations.serviceSubheading }
           </p>
         </section>
 
@@ -373,11 +370,7 @@ const ServicePage = ({ translations, language }) => {
             className="mobile_centered_image" 
           />
           <p className="mobile_centered_text">
-            Achieving business success requires the right strategies, strong leadership, and effective management. 
-            My services are designed to help businesses and professionals excel by providing expert guidance in business strategy, 
-            leadership development, and management solutions across various industries, including technology. 
-            Whether you need support in optimizing operations, strengthening leadership, or driving business initiatives, 
-            I offer tailored solutions to meet your unique needs. Explore the categories below to see how I can help you achieve your goals.
+            { translations.serviceCenterText }
           </p>
         </div>
         
@@ -416,12 +409,9 @@ const ServicePage = ({ translations, language }) => {
         </section>
         
         <section className='mobile_service_end_page'>
-          <h2>Optimizing Business, Leveraging Technology, Empowering People</h2>
+          <h2> { translations.serviceTrioEndHeadingMobile } </h2>
           <p className="mobile_p_text_end_page">
-            My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. 
-            Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation 
-            of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, 
-            and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.
+            { translations.serviceTrioEndText }
           </p>
           <img
             src={

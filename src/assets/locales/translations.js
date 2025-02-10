@@ -282,10 +282,12 @@ const translations = {
       "Whether you need support in optimizing operations, strengthening leadership, or driving business initiatives, " +
       "I offer tailored solutions to meet your unique needs. Explore the categories below to see how I can help you achieve your goals.",
 
+    serviceTrioEndHeadingMobile: "Optimizing Business, Leveraging Technology, Empowering People",
+
     serviceTrioEndText: "My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. " +
-    "Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation " +
-    "of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, " +
-    "and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.",
+      "Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation " +
+      "of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, " +
+      "and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.",
 
 
   },
@@ -570,6 +572,8 @@ const translations = {
     "fortalecer el liderazgo o impulsar iniciativas empresariales, ofrezco soluciones personalizadas para adaptarme a tus necesidades. " +
     "Explora las categorías a continuación para descubrir cómo puedo ayudarte a alcanzar tus objetivos.",
   
+    serviceTrioEndHeadingMobile: "Optimizando negocios, aprovechando la tecnología, potenciando a las personas",
+
     serviceTrioEndText: "Mis servicios y estrategias se centran en tres pilares fundamentales que impulsan el éxito en las industrias en constante evolución: negocio, tecnología y personas. " +
     "Una gestión empresarial sólida garantiza eficiencia y crecimiento, la tecnología potencia la toma de decisiones y la innovación, y las personas son la base de toda organización próspera. " +
     "Al alinear estos elementos clave, ayudo a las empresas a superar desafíos, fortalecer el liderazgo y optimizar sus operaciones. " +
@@ -861,6 +865,8 @@ const translations = {
     "oferint assessorament expert en estratègia empresarial, desenvolupament de lideratge i solucions de gestió en diferents sectors, incloent-hi la tecnologia. " +
     "Tant si necessites suport per optimitzar operacions, enfortir el lideratge o impulsar iniciatives empresarials, ofereixo solucions a mida per adaptar-me a les teves necessitats. " +
     "Explora les categories següents per descobrir com puc ajudar-te a assolir els teus objectius.",
+
+    serviceTrioEndHeadingMobile: "Optimitzant negocis, aprofitant la tecnologia, potenciant les persones",
 
     serviceTrioEndText: "Els meus serveis i estratègies es basen en tres pilars essencials que impulsen l’èxit en les indústries en constant evolució: negoci, tecnologia i persones. " +
     "Una bona gestió empresarial garanteix eficiència i creixement, la tecnologia afavoreix la presa de decisions i la innovació, i les persones són el fonament de tota organització pròspera. " +
