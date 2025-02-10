@@ -272,23 +272,75 @@ const translations = {
       </>
     ),
     serviceSubheading: "I am dedicated to unlocking the full potential of your business, empowering your teams," + 
-      "streamlining your operations, and inspiring your audiences." +
-      "My comprehensive services are designed to transform challenges into opportunities, " +
-      "fostering growth and success in every endeavor.",
+    "streamlining your operations, and inspiring your audiences." +
+    "My comprehensive services are designed to transform challenges into opportunities, " +
+    "fostering growth and success in every endeavor.",
 
     serviceCenterText: "Achieving business success requires the right strategies, strong leadership, and effective management. " + 
-      "My services are designed to help businesses and professionals excel by providing expert guidance in business strategy, " +
-      "leadership development, and management solutions across various industries, including technology. " +
-      "Whether you need support in optimizing operations, strengthening leadership, or driving business initiatives, " +
-      "I offer tailored solutions to meet your unique needs. Explore the categories below to see how I can help you achieve your goals.",
+    "My services are designed to help businesses and professionals excel by providing expert guidance in business strategy, " +
+    "leadership development, and management solutions across various industries, including technology. " +
+    "Whether you need support in optimizing operations, strengthening leadership, or driving business initiatives, " +
+    "I offer tailored solutions to meet your unique needs. Explore the categories below to see how I can help you achieve your goals.",
+
+    serviceManagementBeamTitle: "COMPREHENSIVE TECHNOLOGY MANAGEMENT SERVICES",
+    serviceManagementBeamDescription: "Enhance your operations with customized technology management solutions. " +
+    "With a wealth of experience in software development, programming, software quality control, " +
+    "and data management, I provide comprehensive project, program, and product management services. " +
+    "My expertise extends to IT management, software development leadership, data analytics, and engineering management. " +
+    "I am dedicated to helping organizations effectively manage technology, software, and operational projects of all sizes.",
+    serviceManagementBeamBadge:  "Management",
+
+    serviceBusinessBeamTitle: "TRANSFORM YOUR BUSINESS WITH STRATEGIC CONSULTING",
+    serviceBusinessBeamDescription: "Elevate your business performance with comprehensive consulting services designed to drive success. " +
+    "With a wealth of knowledge in business development, business strategy, HR and recruitment, " +
+    "administrative operations, supervisory roles, and executive-level management consulting, " +
+    "I aim to provide valuable insights and strategies to enhance your business operations and team dynamics.",
+    serviceBusinessBeamBadge:  "Business",
+
+    serviceLeadershipBeamTitle: "UNLOCK LEADERSHIP POTENTIAL AND BUILD STRONGER TEAMS",
+    serviceLeadershipBeamDescription: "Empower your team with my leadership development and team building services. " +
+    "I provide strategies for leadership, team unity, workgroup alignment, and employee engagement. " +
+    "My customized leadership programs and collaboration initiatives aim to nurture strong leaders and cohesive teams.",
+    serviceLeadershipBeamBadge: "Leadership Training",
+
+    serviceSpeakingBeamTitle: "INSPIRE AND ENGAGE THROUGH POWERFUL SPEAKING",
+    serviceSpeakingBeamDescription: "Inspire your audience with dynamic speaking engagements. I offer keynote, motivational, and event speaking services, " +
+    "each tailored to align with your unique needs or event themes. My goal is to captivate and empower your audience, leaving a lasting impact.",
+    serviceSpeakingBeamBadge: "Public Speaking",
 
     serviceTrioEndHeadingMobile: "Optimizing Business, Leveraging Technology, Empowering People",
 
     serviceTrioEndText: "My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. " +
-      "Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation " +
-      "of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, " +
-      "and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.",
+    "Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation " +
+    "of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, " +
+    "and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.",
 
+    serviceTabBusinessTitle: "Business",
+    serviceTabBusinessValue: "Business product",
+    serviceTabBusinessContent: "Business Tab",
+
+    serviceTabTechnology: "Technology",
+    serviceTabTechnologyValue: "Technology product",
+    serviceTabTechnologyContent: "Technology Tab",
+
+    serviceTabLeadership: "Leadership",
+    serviceTabLeadershipValue: "Leadership product",
+    serviceTabLeadershipContent: "Leadership Tab",
+
+    serviceTabSpeaking: "Speaking",
+    serviceTabSpeakingValue: "Speaking product",
+    serviceTabSpeakingContent: "Speaking Tab",
+
+    serviceHeroLeadershipCard: "Team Building Leadership",
+    serviceHeroManagementCard: "Management Services",
+    serviceHeroBusinessCard: "Business Cunsulting Services",
+    serviceHeroSpeakingCard2: "Public Speaking Services 2",
+    serviceHeroSpeakingCard3: "Public Speaking Services 3",
+    serviceHeroManagementCard2: "Management Services 2",
+    serviceHeroLeadershipCard2:  "Team Building",
+    serviceHeroManagementCard3: "Management Services 3",
+    serviceHeroBusinessCard2: "Business Cunsulting Services 2",
+    serviceHeroSpeakingCard4: "Public Speaking Services 4",
 
   },
   es: {
@@ -572,12 +624,65 @@ const translations = {
     "fortalecer el liderazgo o impulsar iniciativas empresariales, ofrezco soluciones personalizadas para adaptarme a tus necesidades. " +
     "Explora las categorías a continuación para descubrir cómo puedo ayudarte a alcanzar tus objetivos.",
   
+    serviceManagementBeamTitle: "SERVICIOS INTEGRALES DE GESTIÓN TECNOLÓGICA",
+    serviceManagementBeamDescription: "Mejora tus operaciones con soluciones personalizadas de gestión tecnológica. " +
+    "Con una amplia experiencia en desarrollo de software, programación, control de calidad de software " +
+    "y gestión de datos, ofrezco servicios integrales de gestión de proyectos, programas y productos. " +
+    "Mi experiencia abarca la gestión de TI, el liderazgo en desarrollo de software, el análisis de datos y la gestión de ingeniería. " +
+    "Estoy comprometido a ayudar a las organizaciones a gestionar de manera eficaz la tecnología, el software y proyectos operativos de cualquier escala.",
+    serviceManagementBeamBadge: "Gestión",
+
+    serviceBusinessBeamTitle: "TRANSFORMA TU NEGOCIO CON CONSULTORÍA ESTRATÉGICA",
+    serviceBusinessBeamDescription: "Mejora el rendimiento de tu empresa con servicios de consultoría diseñados para impulsar el éxito. " +
+    "Con una gran experiencia en desarrollo empresarial, estrategia de negocio, recursos humanos y selección de personal, " +
+    "operaciones administrativas, supervisión y consultoría de gestión a nivel ejecutivo, " +
+    "mi objetivo es proporcionar conocimientos y estrategias valiosas para optimizar las operaciones de tu empresa y la dinámica de tu equipo.",
+    serviceBusinessBeamBadge: "Negocios",
+
+    serviceLeadershipBeamTitle: "LIBERA EL POTENCIAL DE LIDERAZGO Y CONSTRUYE EQUIPOS MÁS FUERTES",
+    serviceLeadershipBeamDescription: "Potencia a tu equipo con mis servicios de desarrollo de liderazgo y construcción de equipos. " +
+    "Proporciono estrategias para el liderazgo, la cohesión del equipo, la alineación de grupos de trabajo y el compromiso de los empleados. " +
+    "Mis programas personalizados de liderazgo y mis iniciativas de colaboración tienen como objetivo formar líderes sólidos y equipos cohesionados.",
+    serviceLeadershipBeamBadge: "Formación en Liderazgo",
+
+    serviceSpeakingBeamTitle: "INSPIRA Y CONECTA A TRAVÉS DE DISCURSOS IMPACTANTES",
+    serviceSpeakingBeamDescription: "Inspira a tu audiencia con presentaciones dinámicas. Ofrezco servicios de conferencias magistrales, discursos motivacionales y charlas para eventos, " +
+    "cada uno adaptado a tus necesidades específicas o al tema de tu evento. Mi objetivo es cautivar y empoderar a tu audiencia, dejando una impresión duradera.",
+    serviceSpeakingBeamBadge: "Oratoria",
+
     serviceTrioEndHeadingMobile: "Optimizando negocios, aprovechando la tecnología, potenciando a las personas",
 
     serviceTrioEndText: "Mis servicios y estrategias se centran en tres pilares fundamentales que impulsan el éxito en las industrias en constante evolución: negocio, tecnología y personas. " +
     "Una gestión empresarial sólida garantiza eficiencia y crecimiento, la tecnología potencia la toma de decisiones y la innovación, y las personas son la base de toda organización próspera. " +
     "Al alinear estos elementos clave, ayudo a las empresas a superar desafíos, fortalecer el liderazgo y optimizar sus operaciones. " +
     "Trabajemos juntos para construir un futuro más sólido para tu negocio. Contáctame hoy para explorar cómo podemos colaborar.",
+
+    serviceTabBusinessTitle: "Negocios",
+    serviceTabBusinessValue: "Producto de negocios",
+    serviceTabBusinessContent: "Pestaña de Negocios",
+
+    serviceTabTechnology: "Tecnología",
+    serviceTabTechnologyValue: "Producto de tecnología",
+    serviceTabTechnologyContent: "Pestaña de Tecnología",
+
+    serviceTabLeadership: "Liderazgo",
+    serviceTabLeadershipValue: "Producto de liderazgo",
+    serviceTabLeadershipContent: "Pestaña de Liderazgo",
+
+    serviceTabSpeaking: "Oratoria",
+    serviceTabSpeakingValue: "Producto de oratoria",
+    serviceTabSpeakingContent: "Pestaña de Oratoria",
+
+    serviceHeroLeadershipCard: "Liderazgo y Creación de Equipos",
+    serviceHeroManagementCard: "Servicios de Gestión",
+    serviceHeroBusinessCard: "Servicios de Consultoría Empresarial",
+    serviceHeroSpeakingCard2: "Servicios de Oratoria Pública 2",
+    serviceHeroSpeakingCard3: "Servicios de Oratoria Pública 3",
+    serviceHeroManagementCard2: "Servicios de Gestión 2",
+    serviceHeroLeadershipCard2: "Creación de Equipos",
+    serviceHeroManagementCard3: "Servicios de Gestión 3",
+    serviceHeroBusinessCard2: "Servicios de Consultoría Empresarial 2",
+    serviceHeroSpeakingCard4: "Servicios de Oratoria Pública 4",
 
   },
   ca: {
@@ -866,6 +971,32 @@ const translations = {
     "Tant si necessites suport per optimitzar operacions, enfortir el lideratge o impulsar iniciatives empresarials, ofereixo solucions a mida per adaptar-me a les teves necessitats. " +
     "Explora les categories següents per descobrir com puc ajudar-te a assolir els teus objectius.",
 
+    serviceManagementBeamTitle: "SERVEIS INTEGRALS DE GESTIÓ TECNOLÒGICA",
+    serviceManagementBeamDescription: "Millora les teves operacions amb solucions personalitzades de gestió tecnològica. " +
+    "Amb una àmplia experiència en desenvolupament de programari, programació, control de qualitat de programari " +
+    "i gestió de dades, ofereixo serveis integrals de gestió de projectes, programes i productes. " +
+    "La meva experiència abasta la gestió de TI, el lideratge en desenvolupament de programari, l’anàlisi de dades i la gestió d’enginyeria. " +
+    "Estic compromès a ajudar les organitzacions a gestionar de manera eficient la tecnologia, el programari i els projectes operatius de qualsevol escala.",
+    serviceManagementBeamBadge: "Gestió",
+
+    serviceBusinessBeamTitle: "TRANSFORMA EL TEU NEGOCI AMB CONSULTORIA ESTRATÈGICA",
+    serviceBusinessBeamDescription: "Millora el rendiment del teu negoci amb serveis de consultoria dissenyats per impulsar l’èxit. " +
+    "Amb un gran coneixement en desenvolupament empresarial, estratègia de negoci, recursos humans i selecció de personal, " +
+    "operacions administratives, supervisió i consultoria de gestió a nivell executiu, " +
+    "el meu objectiu és proporcionar coneixements i estratègies valuoses per optimitzar les operacions del teu negoci i la dinàmica del teu equip.",
+    serviceBusinessBeamBadge: "Negocis",
+
+    serviceLeadershipBeamTitle: "ALLIBERA EL POTENCIAL DE LIDERATGE I CONSTRUEIX EQUIPS MÉS FORTS",
+    serviceLeadershipBeamDescription: "Empodera el teu equip amb els meus serveis de desenvolupament de lideratge i creació d’equips. " +
+    "Proporciono estratègies per al lideratge, la cohesió de l’equip, l’alineació dels grups de treball i el compromís dels empleats. " +
+    "Els meus programes personalitzats de lideratge i iniciatives de col·laboració tenen com a objectiu formar líders sòlids i equips cohesionats.",
+    serviceLeadershipBeamBadge: "Formació en Lideratge",
+
+    serviceSpeakingBeamTitle: "INSPIRA I CONNECTA MITJANÇANT DISCURSOS IMPACTANTS",
+    serviceSpeakingBeamDescription: "Inspira la teva audiència amb presentacions dinàmiques. Ofereixo serveis de conferències magistrals, discursos motivacionals i xerrades per a esdeveniments, " +
+    "cadascun adaptat a les teves necessitats específiques o al tema del teu esdeveniment. El meu objectiu és captivar i empoderar la teva audiència, deixant una empremta duradora.",
+    serviceSpeakingBeamBadge: "Oratòria",
+
     serviceTrioEndHeadingMobile: "Optimitzant negocis, aprofitant la tecnologia, potenciant les persones",
 
     serviceTrioEndText: "Els meus serveis i estratègies es basen en tres pilars essencials que impulsen l’èxit en les indústries en constant evolució: negoci, tecnologia i persones. " +
@@ -873,6 +1004,33 @@ const translations = {
     "Alineant aquests elements clau, ajudo les empreses a superar reptes, enfortir el lideratge i optimitzar les operacions. " +
     "Treballem junts per construir un futur més sòlid per al teu negoci. Contacta’m avui per explorar com podem col·laborar.",
   
+
+    serviceTabBusinessTitle: "Negocis",
+    serviceTabBusinessValue: "Producte de negocis",
+    serviceTabBusinessContent: "Pestanya de Negocis",
+
+    serviceTabTechnology: "Tecnologia",
+    serviceTabTechnologyValue: "Producte de tecnologia",
+    serviceTabTechnologyContent: "Pestanya de Tecnologia",
+
+    serviceTabLeadership: "Lideratge",
+    serviceTabLeadershipValue: "Producte de lideratge",
+    serviceTabLeadershipContent: "Pestanya de Lideratge",
+
+    serviceTabSpeaking: "Oratòria",
+    serviceTabSpeakingValue: "Producte d’oratòria",
+    serviceTabSpeakingContent: "Pestanya d’Oratòria",
+
+    serviceHeroLeadershipCard: "Lideratge i Creació d’Equips",
+    serviceHeroManagementCard: "Serveis de Gestió",
+    serviceHeroBusinessCard: "Serveis de Consultoria Empresarial",
+    serviceHeroSpeakingCard2: "Serveis d’Oratòria Pública 2",
+    serviceHeroSpeakingCard3: "Serveis d’Oratòria Pública 3",
+    serviceHeroManagementCard2: "Serveis de Gestió 2",
+    serviceHeroLeadershipCard2: "Creació d’Equips",
+    serviceHeroManagementCard3: "Serveis de Gestió 3",
+    serviceHeroBusinessCard2: "Serveis de Consultoria Empresarial 2",
+    serviceHeroSpeakingCard4: "Serveis d’Oratòria Pública 4",
   }
 };
   

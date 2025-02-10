@@ -26,8 +26,8 @@ const ServicePage = ({ translations, language }) => {
 
   const tabs = [
     {
-      title: "Business",
-      value: "product",
+      title: translations.serviceTabBusinessTitle,
+      value: translations.serviceTabBusinessValue,
       image:
         language === "es"
           ? "business_es.png"
@@ -43,13 +43,13 @@ const ServicePage = ({ translations, language }) => {
       textAlign: "text-center", // Control text alignment
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Product Tab</p>
+          <p> { translations.serviceTabBusinessContent } </p>
         </div>
       ),
     },
     {
-      title: "Technology",
-      value: "services",
+      title: translations.serviceTabTechnology,
+      value: translations.serviceTabTechnologyValue,
       image:
         language === "es"
         ? "tech_es.png"
@@ -64,13 +64,13 @@ const ServicePage = ({ translations, language }) => {
       textAlign: "text-center", // Control text alignment
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Services tab</p>
+          <p> { translations.serviceTabTechnologyContent } </p>
         </div>
       ),
     },
     {
-      title: "Leadership",
-      value: "playground",
+      title: translations.serviceTabLeadership,
+      value: translations.serviceTabLeadershipValue,
       image: 
         language === "es"
         ? "leadership_es.png"
@@ -85,13 +85,13 @@ const ServicePage = ({ translations, language }) => {
       textAlign: "text-center", // Control text alignment
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Playground tab</p>
+          <p> { translations.serviceTabLeadershipContent } </p>
         </div>
       ),
     },
     {
-      title: "Speaking",
-      value: "content",
+      title: translations.serviceTabSpeaking,
+      value: translations.serviceTabSpeakingValue,
       image: 
         language === "es"
         ? "speaking_es.png"
@@ -106,7 +106,7 @@ const ServicePage = ({ translations, language }) => {
       textAlign: "text-center", // Control text alignment
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Content tab</p>
+          <p> { translations.serviceTabSpeakingContent } </p>
         </div>
       ),
     },
@@ -114,7 +114,7 @@ const ServicePage = ({ translations, language }) => {
 
   const products = [
     {
-      title: "Team Building Leadership",
+      title: translations.serviceHeroLeadershipCard,
       thumbnail:
         language === "es"
         ? "services/leadership_beam_es.png"
@@ -123,7 +123,7 @@ const ServicePage = ({ translations, language }) => {
         : "/services/leadership_card2.png", 
     },
     {
-      title: "Management Services",
+      title: translations.serviceHeroManagementCard,
       thumbnail:
         language === "es"
         ? "services/technology_beam_es.png"
@@ -132,7 +132,7 @@ const ServicePage = ({ translations, language }) => {
         : "/services/technology_card2.png",
     },
     {
-      title: "Business Cunsulting Services",
+      title: translations.serviceHeroBusinessCard,
       thumbnail:
         language === "es"
         ? "services/business_beam_es.png"
@@ -142,7 +142,7 @@ const ServicePage = ({ translations, language }) => {
     },
   
     {
-      title: "Public Speaking Services 2",
+      title: translations.serviceHeroSpeakingCard2,
       thumbnail:
         language === "es"
         ? "services/speaking_beam_es.png"
@@ -151,7 +151,7 @@ const ServicePage = ({ translations, language }) => {
         : "/services/speaking_card2.png",
     },
     {
-      title: "Public Speaking Services 3",
+      title: translations.serviceHeroSpeakingCard3,
       thumbnail:
         language === "es"
         ? "services/speaking_beam_es.png"
@@ -160,7 +160,7 @@ const ServicePage = ({ translations, language }) => {
         : "/services/business_card3.png",
     },
     {
-      title: "Management Services",
+      title: translations.serviceHeroManagementCard2,
       thumbnail:
         language === "es"
         ? "services/technology_beam_es.png"
@@ -170,7 +170,7 @@ const ServicePage = ({ translations, language }) => {
     },
   
     {
-      title: "Team Building",
+      title: translations.serviceHeroLeadershipCard2,
       thumbnail:
         language === "es"
         ? "services/leadership_beam_es.png"
@@ -179,7 +179,7 @@ const ServicePage = ({ translations, language }) => {
         : "/services/leadership_card.png",
     },
     {
-      title: "Management Services",
+      title: translations.serviceHeroManagementCard3,
       thumbnail:
         language === "es"
         ? "services/technology_beam_es.png"
@@ -188,7 +188,7 @@ const ServicePage = ({ translations, language }) => {
         : "/services/technology_card3.png",
     },
     {
-      title: "Business Cunsulting Services",
+      title: translations.serviceHeroBusinessCard2,
       thumbnail:
         language === "es"
         ? "services/business_beam_es.png"
@@ -197,7 +197,7 @@ const ServicePage = ({ translations, language }) => {
         : "/services/business_card2.png",
     },
     {
-      title: "Public Speaking Services",
+      title: translations.serviceHeroSpeakingCard4,
       thumbnail:
         language === "es"
         ? "services/speaking_beam_es.png"
@@ -210,19 +210,15 @@ const ServicePage = ({ translations, language }) => {
   //tracing beam for mobile
   const serviceContent = [
     {
-      title: "COMPREHENSIVE TECHNOLOGY MANAGEMENT SERVICES",
+      title: translations.serviceManagementBeamTitle,
       description: (
         <>
           <p>
-          Enhance your operations with customized technology management solutions. 
-          With a wealth of experience in software development, programming, software quality control, 
-          and data management, I provide comprehensive project, program, and product management services.
-          My expertise extends to IT management, software development leadership, data analytics, and engineering management. 
-          I am dedicated to helping organizations effectively manage technology, software, and operational projects of all sizes.
+          { translations.serviceManagementBeamDescription }
           </p>
         </>
       ),
-      badge: "Management",
+      badge: translations.serviceManagementBeamBadge,
       image:
         language === "es"
           ? "services/technology_beam_es.png"
@@ -231,18 +227,15 @@ const ServicePage = ({ translations, language }) => {
           : "services/technology_card4.png",
     },
     {
-      title: "TRANSFORM YOUR BUSINESS WITH STRATEGIC CONSULTING",
+      title: translations.serviceBusinessBeamTitle,
       description: (
         <>
           <p>
-          Elevate your business performance with comprehensive consulting services designed to drive success. 
-          With a wealth of knowledge in business development, business strategy, HR and recruitment, 
-          administrative operations, supervisory roles, and executive-level management consulting, 
-          I aim to provide valuable insights and strategies to enhance your business operations and team dynamics.
+          { translations.serviceBusinessBeamDescription }
           </p>
         </>
       ),
-      badge: "Business",
+      badge: translations.serviceBusinessBeamBadge,
       image:
         language === "es"
           ? "services/business_beam_es.png"
@@ -251,17 +244,15 @@ const ServicePage = ({ translations, language }) => {
           : "services/business_card.png",
     },
     {
-      title: "UNLOCK LEADERSHIP POTENTIAL AND BUILD STRONGER TEAMS",
+      title: translations.serviceLeadershipBeamTitle,
       description: (
         <>
           <p>
-          Empower your team with my leadership development and team building services. 
-          I provide strategies for leadership, team unity, workgroup alignment, and employee engagement.
-          My customized leadership programs and collaboration initiatives aim to nurture strong leaders and cohesive teams.
+          { translations.serviceLeadershipBeamDescription }
           </p>
         </>
       ),
-      badge: "Leadership Training",
+      badge: translations.serviceLeadershipBeamBadge,
       image:
         language === "es"
           ? "services/leadership_beam_es.png"
@@ -270,18 +261,15 @@ const ServicePage = ({ translations, language }) => {
           : "services/leadership_card.png",
     },
     {
-      title: "INSPIRE AND ENGAGE THROUGH POWERFUL SPEAKING",
+      title: translations.serviceSpeakingBeamTitle,
       description: (
         <>
           <p>
-          Inspire your audience with dynamic speaking engagements. 
-          I offer keynote, motivational, and event speaking services, 
-          each tailored to align with your unique needs or event themes. 
-          My goal is to captivate and empower your audience, leaving a lasting impact.
+          { translations.serviceSpeakingBeamDescription }
           </p>
         </>
       ),
-      badge: "Public Speaking",
+      badge: translations.serviceSpeakingBeamBadge,
       image:
         language === "es"
           ? "services/speaking_beam_es.png"
