@@ -66,16 +66,13 @@ export const Header = ({ translations }) => {
     (<div
       className="max-w-7xl relative z-10 mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        Empowering Success: <br /> Unleashing Potential, Building Leaders, Streamlining Technology, and Inspiring Change.
+        { translations.serviceMainHeading }
       </h1>
       <p
         className="max-w-3xl mt-8 dark:text-neutral-200 text-center mx-auto"
         style={{ fontSize: '1.6rem' }}
       >
-      I am dedicated to unlocking the full potential of your business, empowering your teams, 
-      streamlining your operations, and inspiring your audiences. 
-      My comprehensive services are designed to transform challenges into opportunities, 
-      fostering growth and success in every endeavor.
+      { translations.serviceSubheading }
       </p>
     </div>)
   );

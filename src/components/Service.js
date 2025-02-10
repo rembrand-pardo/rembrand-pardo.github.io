@@ -314,11 +314,7 @@ const ServicePage = ({ translations, language }) => {
           className="centered-image" 
         />
         <p className="centered-text">
-          Achieving business success requires the right strategies, strong leadership, and effective management. 
-          My services are designed to help businesses and professionals excel by providing expert guidance in business strategy, 
-          leadership development, and management solutions across various industries, including technology. 
-          Whether you need support in optimizing operations, strengthening leadership, or driving business initiatives, 
-          I offer tailored solutions to meet your unique needs. Explore the categories below to see how I can help you achieve your goals.
+          { translations.serviceCenterText }
         </p>
       </div>
 
@@ -333,10 +329,7 @@ const ServicePage = ({ translations, language }) => {
 
       <div className='serviceDetail_section'>
         <p className="p_text_end_page">
-          My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. 
-          Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation 
-          of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, 
-          and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.
+          { translations.serviceTrioEndText }
         </p>
         <img 
           src= {

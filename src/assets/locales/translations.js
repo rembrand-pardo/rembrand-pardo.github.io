@@ -10,7 +10,7 @@ const translations = {
     rejectButton: "Reject",
     resume: "Resume",
 
-    // HomePage translation
+    //HomePage translation
     helloWorld: "Hello, World!",
     iAm: "I am",
     introText: "I am dedicated to helping teams, organizations, and businesses",
@@ -37,7 +37,7 @@ const translations = {
     learnMore: "Learn More",
 
 
-    //Translation for body of qualifications
+    //Qualifications translations
     quoteText: "The future belongs to those who learn more skills and combine them in creative ways",
     quoteAuthor: "- Robert Greene",
 
@@ -59,7 +59,7 @@ const translations = {
     qualificationsH2: "Education and Certificates",
 
 
-    //Card institutions translations
+    // card institutions translations
     card1Title: "Brigham Young University",
     card1Description: (
       <>
@@ -95,7 +95,7 @@ const translations = {
     card2ButtonText: "SLCC",
     card2ButtonLink: "https://www.slcc.edu/",
 
-    //About Page translations
+    //About translations
     about_heading: "Where Passion Meets Purpose",
 
     aboutMeText1: (
@@ -206,7 +206,7 @@ const translations = {
     notFoundLink: "Let's go back!",
 
 
-    //Contact
+    //Contact translations
     letsconnect: "Let's Connect",
     contactInqueries: "Have any questions or are you interested in learning more?",
     contactIamHere: "I'm here to help—whether you want to collaborate, explore services, or just reach out, feel free to get in touch.",
@@ -225,7 +225,7 @@ const translations = {
     contactRequiredMessage: "Message is required",
 
 
-    //Resume 
+    //Resume translations
     placeholders1: "Business analytics",
     placeholders2: "Project management",
     placeholders3: "Supervisor",
@@ -264,6 +264,30 @@ const translations = {
     resumeRejectSuggestionMessage: "Please find the closest matching result below, or feel free to search again.",
     resumeViewResumeCardButton: "View Resume",
   
+
+    //Service translations
+    serviceMainHeading: (
+      <>
+        Empowering Success: <br /> Unleashing Potential, Building Leaders, Streamlining Technology, and Inspiring Change.
+      </>
+    ),
+    serviceSubheading: "I am dedicated to unlocking the full potential of your business, empowering your teams," + 
+      "streamlining your operations, and inspiring your audiences." +
+      "My comprehensive services are designed to transform challenges into opportunities, " +
+      "fostering growth and success in every endeavor.",
+
+    serviceCenterText: "Achieving business success requires the right strategies, strong leadership, and effective management. " + 
+      "My services are designed to help businesses and professionals excel by providing expert guidance in business strategy, " +
+      "leadership development, and management solutions across various industries, including technology. " +
+      "Whether you need support in optimizing operations, strengthening leadership, or driving business initiatives, " +
+      "I offer tailored solutions to meet your unique needs. Explore the categories below to see how I can help you achieve your goals.",
+
+    serviceTrioEndText: "My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. " +
+    "Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation " +
+    "of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, " +
+    "and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.",
+
+
   },
   es: {
     contact: "Contáctame",
@@ -530,6 +554,26 @@ const translations = {
     resumeRejectSuggestionMessage: "Por favor, encuentra el resultado más cercano a continuación, o si lo prefieres, busca de nuevo.",
     resumeViewResumeCardButton: "Ver currículum",
 
+    //Service translations
+    serviceMainHeading: (
+      <>
+        Empoderando el éxito: <br /> Desatando el potencial, formando líderes, optimizando la tecnología e inspirando el cambio.
+      </>
+    ),
+    serviceSubheading: "Estoy comprometido a desbloquear todo el potencial de tu negocio, empoderar a tus equipos, " +
+    "optimizar tus operaciones e inspirar a tu audiencia. Mis servicios integrales están diseñados para convertir desafíos en oportunidades, " +
+    "impulsando el crecimiento y el éxito en cada proyecto.",
+
+    serviceCenterText: "Lograr el éxito empresarial requiere las estrategias adecuadas, un liderazgo sólido y una gestión eficaz. " +
+    "Mis servicios están diseñados para ayudar a empresas y profesionales a sobresalir, ofreciendo asesoramiento experto en estrategia empresarial, " + 
+    "desarrollo de liderazgo y soluciones de gestión en diversas industrias, incluida la tecnología. Ya sea que necesites apoyo para optimizar operaciones, " +
+    "fortalecer el liderazgo o impulsar iniciativas empresariales, ofrezco soluciones personalizadas para adaptarme a tus necesidades. " +
+    "Explora las categorías a continuación para descubrir cómo puedo ayudarte a alcanzar tus objetivos.",
+  
+    serviceTrioEndText: "Mis servicios y estrategias se centran en tres pilares fundamentales que impulsan el éxito en las industrias en constante evolución: negocio, tecnología y personas. " +
+    "Una gestión empresarial sólida garantiza eficiencia y crecimiento, la tecnología potencia la toma de decisiones y la innovación, y las personas son la base de toda organización próspera. " +
+    "Al alinear estos elementos clave, ayudo a las empresas a superar desafíos, fortalecer el liderazgo y optimizar sus operaciones. " +
+    "Trabajemos juntos para construir un futuro más sólido para tu negocio. Contáctame hoy para explorar cómo podemos colaborar.",
 
   },
   ca: {
@@ -800,6 +844,29 @@ const translations = {
     resumeRejectSuggestionMessage: "Troba el resultat més proper a continuació, o si ho prefereixes, busca de nou.",
     resumeViewResumeCardButton: "Veure currículum",
 
+    
+
+    
+    //Service translations
+    serviceMainHeading: (
+      <>
+        Empoderant l’èxit: <br /> Alliberant el potencial, formant líders, optimitzant la tecnologia i inspirant el canvi.
+      </>
+    ),
+    serviceSubheading: "Estic compromès a desbloquejar tot el potencial del teu negoci, empoderar els teus equips, " +
+    "optimitzar les teves operacions i inspirar la teva audiència. Els meus serveis integrals estan dissenyats per convertir els reptes en oportunitats, " +
+    "impulsant el creixement i l’èxit en cada projecte.",
+
+    serviceCenterText: "Assolir l’èxit empresarial requereix les estratègies adequades, un lideratge sòlid i una gestió eficient. Els meus serveis estan pensats per ajudar empreses i professionals a destacar, " +
+    "oferint assessorament expert en estratègia empresarial, desenvolupament de lideratge i solucions de gestió en diferents sectors, incloent-hi la tecnologia. " +
+    "Tant si necessites suport per optimitzar operacions, enfortir el lideratge o impulsar iniciatives empresarials, ofereixo solucions a mida per adaptar-me a les teves necessitats. " +
+    "Explora les categories següents per descobrir com puc ajudar-te a assolir els teus objectius.",
+
+    serviceTrioEndText: "Els meus serveis i estratègies es basen en tres pilars essencials que impulsen l’èxit en les indústries en constant evolució: negoci, tecnologia i persones. " +
+    "Una bona gestió empresarial garanteix eficiència i creixement, la tecnologia afavoreix la presa de decisions i la innovació, i les persones són el fonament de tota organització pròspera. " +
+    "Alineant aquests elements clau, ajudo les empreses a superar reptes, enfortir el lideratge i optimitzar les operacions. " +
+    "Treballem junts per construir un futur més sòlid per al teu negoci. Contacta’m avui per explorar com podem col·laborar.",
+  
   }
 };
   
