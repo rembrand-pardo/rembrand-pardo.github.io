@@ -77,7 +77,7 @@ function App() {
               <Route path="*" element={<NotFound translations={translations[language]} />} />
             </Routes>
           {/* Conditionally render Footer */}
-          {location.pathname !== '/contact' && <Footer />} {/* Hide footer on /contact page */}
+          {location.pathname !== '/contact' && <Footer translations={translations[language]} />} {/* Hide footer on /contact page */}
         </>
       )}
     </div>

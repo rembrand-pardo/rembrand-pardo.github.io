@@ -6,12 +6,12 @@ import '../styles/Footer.css';
 
 
 
-const Footer = () => {
+const Footer = ({ translations }) => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer">
-      <p className="copyright">© {currentYear} All rights reserved.</p>
+      <p className="copyright">© {currentYear} Pardo. { translations.allRightsReserved }</p>
       <div className="social-icons">
         <a href="https://www.linkedin.com/in/rembrandpardo/" className="linkedin-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
           <Linkedin />

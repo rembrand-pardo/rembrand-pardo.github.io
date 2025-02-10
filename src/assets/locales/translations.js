@@ -205,6 +205,8 @@ const translations = {
     notFoundMessage: "The page you are looking for does not exist.",
     notFoundLink: "Let's go back!",
 
+    //Footer
+    allRightsReserved: "All rights reserved.",
 
     //Contact translations
     letsconnect: "Let's Connect",
@@ -549,6 +551,8 @@ const translations = {
     notFoundMessage: "La página que estás buscando no existe.",
     notFoundLink: "¡Volvamos atrás!",
 
+    //Footer
+    allRightsReserved: "Todos los derechos reservados.",
 
     // Contact
     letsconnect: "Conectemos",
@@ -892,6 +896,8 @@ const translations = {
     notFoundMessage: "La pàgina que estàs buscant no existeix.",
     notFoundLink: "Tornem enrere!",
 
+    //Footer
+    allRightsReserved: "Tous droits réservés.",
 
     // Contact
     letsconnect: "Connectem",
