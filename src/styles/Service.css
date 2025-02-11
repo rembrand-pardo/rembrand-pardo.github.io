@@ -72,7 +72,6 @@ body.servicepage-no-padding {
   line-height: 1.6;
 }
 
-
 .service_mobile_heading_section h1 {
   font-size: 2rem;
   text-align: center;
@@ -95,6 +94,9 @@ body.servicepage-no-padding {
   margin-bottom: 20px;
 }
 
+.serviceTrioContactLink {
+  color: #89CFF0;
+}
 
 /* Mobile First Approach */
 .mobile_tracingBeam {

@@ -273,8 +273,8 @@ const translations = {
         Empowering Success: <br /> Unleashing Potential, Building Leaders, Streamlining Technology, and Inspiring Change.
       </>
     ),
-    serviceSubheading: "I am dedicated to unlocking the full potential of your business, empowering your teams," + 
-    "streamlining your operations, and inspiring your audiences." +
+    serviceSubheading: "I am dedicated to unlocking the full potential of your business, empowering your teams, " + 
+    "streamlining your operations, and inspiring your audiences. " +
     "My comprehensive services are designed to transform challenges into opportunities, " +
     "fostering growth and success in every endeavor.",
 
@@ -312,10 +312,14 @@ const translations = {
 
     serviceTrioEndHeadingMobile: "Optimizing Business, Leveraging Technology, Empowering People",
 
-    serviceTrioEndText: "My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people. " +
-    "Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation " +
-    "of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership, " +
-    "and optimize operations. Let’s work together to build a stronger future for your business. Contact me today to explore how we can collaborate.",
+    serviceTrioEndText: (
+      <>
+        My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people.
+        Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation 
+        of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership,
+        and optimize operations. Let’s work together to build a stronger future for your business. <a href="#/contact" rel="noopener noreferrer" className="serviceTrioContactLink">Contact</a> me today to explore how we can collaborate.
+      </>
+    ),
 
     serviceTabBusinessTitle: "Business",
     serviceTabBusinessValue: "Business product",

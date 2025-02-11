@@ -327,7 +327,7 @@ const ServicePage = ({ translations, language }) => {
             ? "trio_ca.png"
             : "b_t_p.jpg"
           } 
-          alt="Descriptive Alt Text" 
+          alt="Management of People Technology and Business." 
           className="image_end_page" 
         />
       </div>

@@ -5,7 +5,11 @@
 
     margin-top: 90px;
 }
-  
+
+.navbar-section {
+    background-color: rgba(0, 6, 25, 0); 
+}
+
 .resume_page_content {
     display: flex;
     flex-direction: column;
