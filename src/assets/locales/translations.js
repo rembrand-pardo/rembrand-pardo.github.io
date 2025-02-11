@@ -52,7 +52,7 @@ const translations = {
       "I have also pursued a <span class='highlight'>minor in Mathematics</span>. Yet, my commitment to lifelong learning extends far beyond formal education. " +
       "I have continuously sought opportunities to expand my knowledge and skills by earning several certificates, recognized and endorsed by leading institutions such as the Project Management Institute (PMI), " +
       "the HR Certification Institute (HRCI), Continuing Professional Education (CPE), the Corporate Finance Institute (CFI), Atlassian, and many others. " +
-      "These certifications involved hundreds of hours of rigorous learning, hands-on practice, and professional development, allowing me to deepen my expertise in areas closely aligned with my education and passions: " +
+      "These certifications required hundreds of hours of rigorous learning, hands-on practice, and professional development, deepening my expertise in areas closely aligned with my education: " +
       "management (project, product, program, team, and organizational leadership), business (administration, HR, recruitment, and office management), and technology (quality assurance, IT, web development, and software development)."
     ),
 
@@ -381,7 +381,7 @@ const translations = {
     ],
     learnMore: "Descrubre más",
 
-    //Translation for body of qualifications
+    //translation for body of qualifications
     quoteText: "El futuro pertenece a aquellos que aprenden más habilidades y las combinan de manera creativa",
     quoteAuthor: "- Robert Greene",
 
@@ -403,7 +403,7 @@ const translations = {
     qualificationsH2: "Educación y Certificados",
 
 
-    // Card translations
+    //Card translations
     card1Title: "Universidad Brigham Young",
     card1Description: (
       <>
