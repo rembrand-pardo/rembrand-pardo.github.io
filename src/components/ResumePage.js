@@ -367,11 +367,11 @@ const ResumePage = ({ translations, language }) => {
           </h1>
 
           <h2 className="resume_subheading2 text-lg sm:text-2xl text-center dark:text-white text-white font-light max-w-2xl">
-          Discover my strong educational foundation, strategic problem-solving abilities, and leadership capabilities across multiple industries. 
+          { translations.resumeSubheading2 }
           </h2>
 
           <p className="resume_textp text-center text-white dark:text-white max-w-2xl">
-          Search skills or keywords to view my most relevant tailored resume.
+          { translations.resumeTopTextSearchBar }
           </p>
 
 
@@ -413,7 +413,13 @@ const ResumePage = ({ translations, language }) => {
 
         {/* Tabs for card selection */}
         <div className='field_tabs tabs flex justify-center mt-10'>
-          {["Business", "Hr Recruiter", "Manager", "Public Relations", "SDET"].map((tabName, index) => (
+        {[
+          translations.resumeTabBusiness, 
+          translations.resumeTabHRRecruiter, 
+          translations.resumeTabManager, 
+          translations.resumeTabAnalyst, 
+          translations.resumeTabSDET
+        ].map((tabName, index) => (
             <button
               key={index}
               className={`tab-button ${selectedTab === index ? 'active' : ''}`}

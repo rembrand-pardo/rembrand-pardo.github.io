@@ -265,7 +265,15 @@ const translations = {
     resumeDidYouMean: "Did you mean:",
     resumeRejectSuggestionMessage: "Please find the closest matching result below, or feel free to search again.",
     resumeViewResumeCardButton: "View Resume",
+
+    resumeSubheading2: "Discover my strong educational foundation, strategic problem-solving abilities, and leadership capabilities across multiple industries",
+    resumeTopTextSearchBar: "Search skills or keywords to view my most relevant tailored resume",
   
+    resumeTabBusiness: "Business",
+    resumeTabHRRecruiter: "HR Recruiter",
+    resumeTabManager: "Manager",
+    resumeTabAnalyst: "Analyst",
+    resumeTabSDET: "SDET",
 
     //Service translations
     serviceMainHeading: (
@@ -558,7 +566,7 @@ const translations = {
     //Footer
     allRightsReserved: "Todos los derechos reservados.",
 
-    // Contact
+    //Contact
     letsconnect: "Conectemos",
     contactInqueries: "¿Tienes alguna pregunta o estás interesado en saber más?",
     contactIamHere: "Estoy aquí para ayudar: ya sea que desees colaborar, explorar servicios o simplemente ponerte en contacto, no dudes en hacerlo.",
@@ -615,6 +623,15 @@ const translations = {
     resumeDidYouMean: "¿Quisiste decir:",
     resumeRejectSuggestionMessage: "Por favor, encuentra el resultado más cercano a continuación, o si lo prefieres, busca de nuevo.",
     resumeViewResumeCardButton: "Ver currículum",
+
+    resumeSubheading2: "Descubre mi sólida formación académica, mi capacidad estratégica para resolver problemas y mis habilidades de liderazgo en múltiples sectores",
+    resumeTopTextSearchBar: "Busca habilidades o palabras clave para ver el currículum más relevante",
+
+    resumeTabBusiness: "Negocios",
+    resumeTabHRRecruiter: "Reclutador",
+    resumeTabManager: "Gerente",
+    resumeTabAnalyst: "Analista",
+    resumeTabSDET: "Ingeniero",
 
     //Service translations
     serviceMainHeading: (
@@ -963,7 +980,14 @@ const translations = {
     resumeRejectSuggestionMessage: "Troba el resultat més proper a continuació, o si ho prefereixes, busca de nou.",
     resumeViewResumeCardButton: "Veure currículum",
 
-    
+    resumeSubheading2: "Descobreix la meva sòlida formació acadèmica, la meva capacitat estratègica per resoldre problemes i les meves habilitats de lideratge en diversos sectors",
+    resumeTopTextSearchBar: "Cerca habilitats o paraules clau per veure el currículum més rellevant",
+
+    resumeTabBusiness: "Negocis",
+    resumeTabHRRecruiter: "Reclutador",
+    resumeTabManager: "Gerent",
+    resumeTabAnalyst: "Analista",
+    resumeTabSDET: "Enginyer",
 
     
     //Service translations
