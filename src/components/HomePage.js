@@ -81,14 +81,16 @@ function HomePage( {translations }) {
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} // Smoothly fade in, remove blur, and scale up
           transition={{ duration: 1.5, ease: "easeOut", delay: 6 }} // Adjust timing for smooth effect, 3-second delay
         >
-          <HoverBorderGradient
-            containerClassName="rounded-full"
-            as="button"
-            className="bg-transparent text-white flex items-center space-x-2"
-            onClick={handleButtonClick}
-          >
-            <span>{translations.learnMore}</span>
-          </HoverBorderGradient>
+          <a href="#/service"> 
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="bg-transparent text-white flex items-center space-x-2"
+              onClick={handleButtonClick}
+            >
+              <span>{translations.learnMore}</span>
+            </HoverBorderGradient>
+          </a>
         </motion.div>
 
       </div>
