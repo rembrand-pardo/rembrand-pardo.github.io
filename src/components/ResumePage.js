@@ -321,39 +321,62 @@ const ResumePage = ({ translations, language }) => {
       title: "Traveling Salesman",
       description:
         "Implements a branch-and-bound algorithm to solve the Traveling Salesman Problem (TSP).",
-      link: "#",
+      link: "https://github.com/Thebatman7/traveling_salesperson",
     },
     {
-      title: "US Weather Forecast",
+      title: "Proxy Design",
       description:
-        "Weather forecast for any city in the US using global/local models and weather stations.",
-      link: "#",
+        "Implementation of the proxy structure design pattern. The proxy object hides the original object and controls access to it. We can use proxy when we may want to use a class that can perform as an interface to something else.",
+      link: "https://github.com/Thebatman7/proxy_design_pattern",
     },
     {
-      title: "Gene Sequence",
+      title: "Dyskstra",
       description:
-        "I implemented two versions of a dynamic programming algorithm for computing the minimal cost of aligning gene sequences and extracting an optimal alignment.",
-      link: "#",
+        "Implementation of Dyskstra’s algorithm which is used for finding the shortest paths or minimum cost between nodes in a graph, which may represent, for example, road networks.",
+      link: "https://github.com/Thebatman7/networking_routing",
     },
     {
-      title: "Your bucketlist",
+      title: "Convex Hull",
       description:
-        "A single page web app for storing pictures of your travel experiences and places on your bucket list, built with Node.js, MongoDB, CSS, and JavaScript.",
-      link: "#",
+        "Divide-and-conquer algorithm which recursively breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly.",
+      link: "https://github.com/Thebatman7/convex_hull",
     },
     {
-      title: "Traveling Salesman",
+      title: "Email Sender",
       description:
-        "Implements a branch-and-bound algorithm to solve the Traveling Salesman Problem (TSP).",
-      link: "#",
+        "An AWS Lambda function that sends email messages using the AWS Simple Email Service (SES). It also uses an AWS IAM role that provides the Lambda function the security permissions it requires.",
+      link: "https://github.com/Thebatman7/aws_lambda",
     },
     {
-      title: "US Weather Forecast",
+      title: "Factory Design",
       description:
-        "Weather forecast for any city in the US using global/local models and weather stations.",
-      link: "#",
+        "Implementation of Factory design pattern. This works around a super-factory object which creates other objects when need it.",
+      link: "https://github.com/Thebatman7/abstract_factory_design_pattern",
     },
-    // Add more card details as needed
+    {
+      title: "Social Networking App",
+      description:
+        "A simple android app project. This social media app allows users to follow each other, post comments, updates, and be able to see followees' posts. Built with Java, AWS Lambda, DynamoDB, and Android.",
+      link: "https://github.com/Thebatman7/app_project",
+    },
+    {
+      title: "Family Map",
+      description:
+        "App that provides a geographical view into a family history. This was built using Object-Oriented Design, User Interface (UI) Programming, Native Android Development, and external API services.",
+      link: "https://github.com/Thebatman7/family_map",
+    },
+    {
+      title: "Fermat and Miller-Rabin",
+      description:
+        "Implementation of algorithms for modular arithmetic (a system of arithmetic for integers, where numbers \"wrap around\" when reaching a certain value, called the modulus) and randomized algorithms.",
+      link: "https://github.com/Thebatman7/fermat_miller_rabin",
+    },
+    {
+      title: "Fermat and Miller-Rabin",
+      description:
+        "Authenticating with usernames and passwords. We'll do this by building a complete web application for submitting help tickets. The front end is built with the Vue CLI and the back end with Node, Express, and MongoDB. This will give you a solid foundation that you could then expand on later.",
+      link: "https://github.com/Thebatman7/authenticating-users",
+    },
   ];
 
   return (
