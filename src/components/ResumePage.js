@@ -312,69 +312,58 @@ const ResumePage = ({ translations, language }) => {
 
   const cardFolders = [
     {
-      title: "Gene Sequence",
-      description:
-        "I implemented two versions of a dynamic programming algorithm for computing the minimal cost of aligning gene sequences and extracting an optimal alignment.",
+      title: translations.resumeCardTitle1,
+      description: translations.resumeCardDescription1,
       link: "github.com/Thebatman7/gene_sequencing",
     },
     {
-      title: "Traveling Salesman",
-      description:
-        "Implements a branch-and-bound algorithm to solve the Traveling Salesman Problem (TSP).",
+      title: translations.resumeCardTitle2,
+      description: translations.resumeCardDescription2,
       link: "https://github.com/Thebatman7/traveling_salesperson",
     },
     {
-      title: "Proxy Design",
-      description:
-        "Implementation of the proxy structure design pattern. The proxy object hides the original object and controls access to it. We can use proxy when we may want to use a class that can perform as an interface to something else.",
+      title: translations.resumeCardTitle3,
+      description: translations.resumeCardDescription3,
       link: "https://github.com/Thebatman7/proxy_design_pattern",
     },
     {
-      title: "Dyskstra",
-      description:
-        "Implementation of Dyskstra’s algorithm which is used for finding the shortest paths or minimum cost between nodes in a graph, which may represent, for example, road networks.",
+      title: translations.resumeCardTitle4,
+      description: translations.resumeCardDescription4,
       link: "https://github.com/Thebatman7/networking_routing",
     },
     {
-      title: "Convex Hull",
-      description:
-        "Divide-and-conquer algorithm which recursively breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly.",
+      title: translations.resumeCardTitle5,
+      description: translations.resumeCardDescription5,
       link: "https://github.com/Thebatman7/convex_hull",
     },
     {
-      title: "Email Sender",
-      description:
-        "An AWS Lambda function that sends email messages using the AWS Simple Email Service (SES). It also uses an AWS IAM role that provides the Lambda function the security permissions it requires.",
+      title: translations.resumeCardTitle6,
+      description: translations.resumeCardDescription6,
       link: "https://github.com/Thebatman7/aws_lambda",
     },
     {
-      title: "Factory Design",
-      description:
-        "Implementation of Factory design pattern. This works around a super-factory object which creates other objects when need it.",
+      title: translations.resumeCardTitle7,
+      description: translations.resumeCardDescription7,
       link: "https://github.com/Thebatman7/abstract_factory_design_pattern",
     },
     {
-      title: "Social Networking App",
-      description:
-        "A simple android app project. This social media app allows users to follow each other, post comments, updates, and be able to see followees' posts. Built with Java, AWS Lambda, DynamoDB, and Android.",
+      title: translations.resumeCardTitle8,
+      description: translations.resumeCardDescription8,
       link: "https://github.com/Thebatman7/app_project",
     },
     {
-      title: "Family Map",
-      description:
-        "App that provides a geographical view into a family history. This was built using Object-Oriented Design, User Interface (UI) Programming, Native Android Development, and external API services.",
+      title: translations.resumeCardTitle9,
+      description: translations.resumeCardDescription9,
       link: "https://github.com/Thebatman7/family_map",
     },
     {
-      title: "Fermat and Miller-Rabin",
-      description:
-        "Implementation of algorithms for modular arithmetic (a system of arithmetic for integers, where numbers \"wrap around\" when reaching a certain value, called the modulus) and randomized algorithms.",
+      title: translations.resumeCardTitle10,
+      description: translations.resumeCardDescription10,
       link: "https://github.com/Thebatman7/fermat_miller_rabin",
     },
     {
-      title: "Fermat and Miller-Rabin",
-      description:
-        "Authenticating with usernames and passwords. We'll do this by building a complete web application for submitting help tickets. The front end is built with the Vue CLI and the back end with Node, Express, and MongoDB. This will give you a solid foundation that you could then expand on later.",
+      title: translations.resumeCardTitle11,
+      description: translations.resumeCardDescription11,
       link: "https://github.com/Thebatman7/authenticating-users",
     },
   ];

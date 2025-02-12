@@ -275,6 +275,41 @@ const translations = {
     resumeTabAnalyst: "Analyst",
     resumeTabSDET: "SDET",
 
+    resumeCardTitle1: "Gene Sequence",
+    resumeCardDescription1: "Developed two versions of a dynamic programming algorithm to determine the minimal cost of aligning gene sequences and extract an optimal alignment.",
+  
+    resumeCardTitle2: "Traveling Salesman",
+    resumeCardDescription2: "Implemented a branch-and-bound algorithm to efficiently solve the Traveling Salesman Problem (TSP).",
+  
+    resumeCardTitle3: "Proxy Design",
+    resumeCardDescription3: "Designed and implemented the proxy design pattern, which acts as an intermediary to control access to an original object.",
+  
+    resumeCardTitle4: "Dijkstra's Algorithm",
+    resumeCardDescription4: "Implemented Dijkstra’s algorithm to compute the shortest paths or minimal cost between nodes in a graph, applicable to road networks and routing.",
+  
+    resumeCardTitle5: "Convex Hull",
+    resumeCardDescription5: "Developed a divide-and-conquer algorithm that recursively decomposes a problem into subproblems until reaching a solvable state.",
+  
+    resumeCardTitle6: "Email Sender",
+    resumeCardDescription6: "Built an AWS Lambda function for sending emails via AWS Simple Email Service (SES), utilizing IAM roles for security permissions.",
+  
+    resumeCardTitle7: "Factory Design",
+    resumeCardDescription7: "Implemented the Factory design pattern, allowing the creation of objects dynamically through a centralized factory method.",
+  
+    resumeCardTitle8: "Social Networking App",
+    resumeCardDescription8: "Developed a social networking app enabling users to follow each other, post updates, and interact. Built using Java, AWS Lambda, DynamoDB, and Android.",
+  
+    resumeCardTitle9: "Family Map",
+    resumeCardDescription9: "Designed an app providing a geographical visualization of family history, utilizing Object-Oriented Design, UI Programming, and external API integration.",
+  
+    resumeCardTitle10: "Fermat and Miller-Rabin",
+    resumeCardDescription10: "Implemented modular arithmetic and randomized algorithms for primality testing, including the Fermat and Miller-Rabin tests.",
+  
+    resumeCardTitle11: "User Authentication System",
+    resumeCardDescription11: "Developed a web application for user authentication with usernames and passwords, built using Vue.js, Node.js, Express, and MongoDB.",
+  
+    
+
     //Service translations
     serviceMainHeading: (
       <>
@@ -633,6 +668,40 @@ const translations = {
     resumeTabAnalyst: "Analista",
     resumeTabSDET: "Ingeniero",
 
+    resumeCardTitle1: "Secuencia Genética",
+    resumeCardDescription1: "Desarrolladas dos versiones de un algoritmo de programación dinámica para determinar el coste mínimo de alineación de secuencias genéticas y extraer una alineación óptima.",
+  
+    resumeCardTitle2: "Viajante de Comercio",
+    resumeCardDescription2: "Implementado un algoritmo de ramificación y acotación para resolver de manera eficiente el Problema del Viajante de Comercio (TSP).",
+  
+    resumeCardTitle3: "Diseño Proxy",
+    resumeCardDescription3: "Diseñado e implementado el patrón de diseño proxy, que actúa como intermediario para controlar el acceso a un objeto original.",
+  
+    resumeCardTitle4: "Algoritmo de Dijkstra",
+    resumeCardDescription4: "Implementado el algoritmo de Dijkstra para calcular las rutas más cortas o de menor coste entre nodos en un grafo, aplicable a redes viales y de enrutamiento.",
+  
+    resumeCardTitle5: "Envolvente Convexa",
+    resumeCardDescription5: "Desarrollado un algoritmo de divide y vencerás que descompone un problema en subproblemas hasta alcanzar un estado resoluble.",
+  
+    resumeCardTitle6: "Envío de Emails",
+    resumeCardDescription6: "Creada una función AWS Lambda para el envío de correos electrónicos mediante AWS Simple Email Service (SES), utilizando roles IAM para permisos de seguridad.",
+  
+    resumeCardTitle7: "Diseño de Fábrica",
+    resumeCardDescription7: "Implementado el patrón de diseño Factory, que permite la creación dinámica de objetos a través de un método centralizado de fábrica.",
+  
+    resumeCardTitle8: "Aplicación de Redes Sociales",
+    resumeCardDescription8: "Desarrollada una aplicación de redes sociales que permite seguir usuarios, publicar actualizaciones e interactuar. Construida con Java, AWS Lambda, DynamoDB y Android.",
+  
+    resumeCardTitle9: "Mapa Familiar",
+    resumeCardDescription9: "Diseñada una aplicación que proporciona una visualización geográfica del historial familiar, utilizando Diseño Orientado a Objetos, Programación UI e integración de API externas.",
+  
+    resumeCardTitle10: "Fermat y Miller-Rabin",
+    resumeCardDescription10: "Implementados algoritmos de aritmética modular y algoritmos aleatorios para pruebas de primalidad, incluyendo los tests de Fermat y Miller-Rabin.",
+  
+    resumeCardTitle11: "Sistema de Autenticación de Usuarios",
+    resumeCardDescription11: "Desarrollada una aplicación web para la autenticación de usuarios con nombres de usuario y contraseñas, utilizando Vue.js, Node.js, Express y MongoDB.",
+  
+
     //Service translations
     serviceMainHeading: (
       <>
@@ -920,7 +989,7 @@ const translations = {
     //Footer
     allRightsReserved: "Tous droits réservés.",
 
-    // Contact
+    //Contact
     letsconnect: "Connectem",
     contactInqueries: "Tens alguna pregunta o estàs interessat en saber-ne més?",
     contactIamHere: "Sóc aquí per ajudar-te: ja sigui que vulguis col·laborar, explorar serveis o simplement posar-te en contacte, no dubtis a fer-ho.",
@@ -989,6 +1058,40 @@ const translations = {
     resumeTabAnalyst: "Analista",
     resumeTabSDET: "Enginyer",
 
+    resumeCardTitle1: "Seqüència Genètica",
+    resumeCardDescription1: "Desenvolupades dues versions d'un algorisme de programació dinàmica per determinar el cost mínim d'alineació de seqüències genètiques i extreure una alineació òptima.",
+  
+    resumeCardTitle2: "Problema del Viatjant",
+    resumeCardDescription2: "Implementat un algorisme de ramificació i acotació per resoldre de manera eficient el Problema del Viatjant de Comerç (TSP).",
+  
+    resumeCardTitle3: "Disseny Proxy",
+    resumeCardDescription3: "Dissenyat i implementat el patró de disseny proxy, que actua com a intermediari per controlar l'accés a un objecte original.",
+  
+    resumeCardTitle4: "Algorisme de Dijkstra",
+    resumeCardDescription4: "Implementat l'algorisme de Dijkstra per calcular els camins més curts o de menor cost entre nodes en un graf, aplicable a xarxes de carreteres i enrutament.",
+  
+    resumeCardTitle5: "Envolupant Convexa",
+    resumeCardDescription5: "Desenvolupat un algorisme de divideix i venceràs que descompon un problema en subproblemes fins a arribar a un estat resoluble.",
+  
+    resumeCardTitle6: "Enviament de Correu",
+    resumeCardDescription6: "Creada una funció AWS Lambda per a l'enviament de correus electrònics mitjançant AWS Simple Email Service (SES), utilitzant rols IAM per a permisos de seguretat.",
+  
+    resumeCardTitle7: "Disseny de Fàbrica",
+    resumeCardDescription7: "Implementat el patró de disseny Factory, que permet la creació dinàmica d'objectes a través d'un mètode centralitzat de fàbrica.",
+  
+    resumeCardTitle8: "Aplicació de Xarxa Social",
+    resumeCardDescription8: "Desenvolupada una aplicació de xarxes socials que permet seguir usuaris, publicar actualitzacions i interactuar. Construïda amb Java, AWS Lambda, DynamoDB i Android.",
+  
+    resumeCardTitle9: "Mapa Familiar",
+    resumeCardDescription9: "Dissenyada una aplicació que ofereix una visualització geogràfica de la història familiar, utilitzant Disseny Orientat a Objectes, Programació UI i integració d'API externes.",
+  
+    resumeCardTitle10: "Fermat i Miller-Rabin",
+    resumeCardDescription10: "Implementats algorismes d'aritmètica modular i algorismes aleatoris per a proves de primalitat, incloent-hi els tests de Fermat i Miller-Rabin.",
+  
+    resumeCardTitle11: "Sistema d'Autenticació d'Usuaris",
+    resumeCardDescription11: "Desenvolupada una aplicació web per a l'autenticació d'usuaris amb noms d'usuari i contrasenyes, utilitzant Vue.js, Node.js, Express i MongoDB.",
+  
+    
     
     //Service translations
     serviceMainHeading: (
