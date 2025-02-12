@@ -19,8 +19,14 @@ function App() {
   const [consentGiven, setConsentGiven] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
   const [fadeOut, setFadeOut] = useState(false); // State for fade-out transition
-  
-  const [language, setLanguage] = useState('en'); // Default language
+
+  const [language, setLanguage] = useState(() => {
+    return localStorage.getItem('selectedLanguage') || 'en'; // Retrieve stored language or default to 'en'
+  });
+  // Store selected language in localStorage on change
+  React.useEffect(() => {
+    localStorage.setItem('selectedLanguage', language);
+  }, [language]);
   
   const location = useLocation();
 
