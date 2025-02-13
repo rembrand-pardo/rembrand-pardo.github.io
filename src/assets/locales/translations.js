@@ -194,7 +194,7 @@ const translations = {
     aboutEndPage: (
       <>
         <p>
-        Discover how I can help you or your organization achieve impactful results. Feel free to explore my <a href="#/service" target="_blank" rel="noopener noreferrer">services</a> or <a href="#/contact" target="_blank" rel="noopener noreferrer">contact</a> me directly to connect and learn more.
+        Discover how I can help you or your organization achieve meaningful results. Explore my <a href="#/qualifications" rel="noopener noreferrer">qualifications</a> and <a href="#/service" rel="noopener noreferrer">services</a>, or <a href="#/contact" target="_blank" rel="noopener noreferrer">contact</a> me directly to connect and learn more.
         </p>
       </>
     ),
