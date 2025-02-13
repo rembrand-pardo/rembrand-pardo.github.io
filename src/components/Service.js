@@ -319,17 +319,23 @@ const ServicePage = ({ translations, language }) => {
         <p className="p_text_end_page">
           { translations.serviceTrioEndText }
         </p>
-        <img 
-          src= {
-            language === "es"
-            ? "trio_es.png"
-            : language === "ca"
-            ? "trio_ca.png"
-            : "b_t_p.jpg"
-          } 
-          alt="Management of People Technology and Business." 
-          className="image_end_page" 
-        />
+
+        <div className="serviceDetailImageContainer">
+          <a href="#/about">
+            <img 
+              src= {
+                language === "es"
+                ? "trio_es.png"
+                : language === "ca"
+                ? "trio_ca.png"
+                : "b_t_p.jpg"
+              } 
+              alt="Management of People, Technology and Business." 
+              className="image_end_page" 
+            />
+          </a>
+        </div>
+        
       </div>
 
       { /* This should only show up for mobile only */ }
@@ -401,17 +407,21 @@ const ServicePage = ({ translations, language }) => {
           <p className="mobile_p_text_end_page">
             { translations.serviceTrioEndText }
           </p>
-          <img
-            src={
-              language === "es"
-              ? "trio_es.png"
-              : language === "ca"
-              ? "trio_ca.png"
-              : "b_t_p.jpg" 
-            }
-            alt="Descriptive Alt Text" 
-            className="mobile_imagae_end_image" 
-          />
+          <div className="mobileImageEndContainer">
+            <a href="#/about">
+              <img
+                src={
+                  language === "es"
+                  ? "trio_es.png"
+                  : language === "ca"
+                  ? "trio_ca.png"
+                  : "b_t_p.jpg" 
+                }
+                alt="Learn more about me and my approach to managing people, technology, and business." 
+                className="mobile_image_end_image" 
+              />
+            </a>
+          </div>
         </section>
 
       </div>
