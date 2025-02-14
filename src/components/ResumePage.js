@@ -54,7 +54,7 @@ const ResumePage = ({ translations, language }) => {
     }
   };
 
-
+  //FIX ME: update placeholders based on language 
   const placeholders = [
     translations.placeholders1,
     translations.placeholders2,
@@ -66,7 +66,7 @@ const ResumePage = ({ translations, language }) => {
     translations.placeholders8,
   ];
 
-  const grammarCache = {};// Cache to store previous grammar checks
+  const grammarCache = {}; //Cache to store previous grammar checks
 
 
   const [isVisible, setIsVisible] = useState(false);
@@ -223,19 +223,19 @@ const ResumePage = ({ translations, language }) => {
 
   const pdfToFocusCardsMap = {
     "pdfs/business.pdf": {
-        newCardSet: analysiscards,
+      newCardSet: analysiscards,
     },
     "pdfs/hr_recruiter.pdf": {
-        newCardSet: recruitmentcards,
+      newCardSet: recruitmentcards,
     },
     "pdfs/management.pdf": {
-        newCardSet: managementcards,
+      newCardSet: managementcards,
     },
     "pdfs/public_relations.pdf": {
-        newCardSet: cards,
+      newCardSet: cards,
     },
     "pdfs/sdet.pdf": {
-        newCardSet: othercards,
+      newCardSet: othercards,
     },
   };
 
@@ -300,11 +300,11 @@ const ResumePage = ({ translations, language }) => {
   };
 
   const handleTabClick = (tabName, tabIndex) => {
-    setCurrentCardData({}); // Hide the card when a tab is clicked
-    setIsSuggestionRejected(false); //hide rejection message
+    setCurrentCardData({}); //Hide the card when a tab is clicked
+    setIsSuggestionRejected(false); //Hide rejection message
     setSelectedTab(tabIndex);
 
-    // Log the tab click
+    //Log the tab click
     logAnalytics('tab_click', { tabName, tabIndex });
 
     searchWord(tabName);
