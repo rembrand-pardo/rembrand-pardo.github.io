@@ -54,7 +54,6 @@ const ResumePage = ({ translations, language }) => {
     }
   };
 
-  //FIX ME: update placeholders based on language 
   const placeholders = [
     translations.placeholders1,
     translations.placeholders2,
