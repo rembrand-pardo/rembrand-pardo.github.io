@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2025 Rembrand Pardo
+ * Unauthorized copying, modification, or redistribution is strictly prohibited.
+ * Violators will face legal action.
+ */
+
 // HeroParallax.jsx
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";

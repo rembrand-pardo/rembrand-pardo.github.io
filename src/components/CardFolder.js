@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2025 Rembrand Pardo
+ * Unauthorized copying, modification, or redistribution is strictly prohibited.
+ * Violators will face legal action.
+ */
+
 import React, { useState } from "react";
 import { CiFolderOn } from "react-icons/ci"; // Closed folder icon
 import { PiFolderOpenThin } from "react-icons/pi"; // Open folder icon

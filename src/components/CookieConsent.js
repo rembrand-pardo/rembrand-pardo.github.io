@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2025 Rembrand Pardo
+ * Unauthorized copying, modification, or redistribution is strictly prohibited.
+ * Violators will face legal action.
+ */
+
 import React from 'react';
 import { db, analytics } from '../firebaseConfig';
 import { doc, setDoc } from 'firebase/firestore';

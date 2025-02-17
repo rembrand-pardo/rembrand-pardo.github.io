@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2025 Rembrand Pardo
+ * Unauthorized copying, modification, or redistribution is strictly prohibited.
+ * Violators will face legal action.
+ */
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";

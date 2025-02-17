@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2025 Rembrand Pardo
+ * Unauthorized copying, modification, or redistribution is strictly prohibited.
+ * Violators will face legal action.
+ */
+
 import { cn } from "../lib/utils";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect, useState } from "react";

@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2025 Rembrand Pardo
+ * Unauthorized copying, modification, or redistribution is strictly prohibited.
+ * Violators will face legal action.
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // Import the updated ReactDOM API
 import { HashRouter as Router } from 'react-router-dom';
