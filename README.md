@@ -338,3 +338,34 @@ This is needed to update website and deploy
 ```git push; npm run build; npm run deploy```
 
 Additionally, you need to make sure to add the .env with appropriate information in the root of the project
+
+# Handling Client-Side Routing on GitHub Pages  
+
+GitHub Pages serves static files and does not support client-side routing by default. In a React app using React Router, direct navigation to a subpage (e.g., `/service`) or refreshing a page results in a **404 Not Found** error because GitHub Pages expects an actual file at that path.  
+
+## Solution: Copy `index.html` to `404.html`  
+
+By copying `index.html` to `404.html`, GitHub Pages will serve `404.html` when a page is not found. Since `index.html` contains the React app, this effectively allows React Router to handle routing and display the correct page.  
+
+## How It Works  
+
+1. A user navigates to `/service` or refreshes the page.  
+2. GitHub Pages does not find `/service/index.html` and serves `404.html`.  
+3. Since `404.html` is a copy of `index.html`, React loads and React Router handles the routing.  
+
+## Automate This with a Script  
+
+To automate copying the `index.html` from the `build` folder to `404.html` after building, add this script to `package.json`:  
+
+```json
+"scripts": {
+  "postbuild": "cp build/index.html build/404.html"
+}
+
+Now, every time you run:
+
+```
+npm run build
+```
+
+the latest index.html will be copied to 404.html automatically.
