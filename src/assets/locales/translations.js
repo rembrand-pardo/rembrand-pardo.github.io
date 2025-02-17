@@ -276,10 +276,10 @@ const translations = {
     resumeTopTextSearchBar: "Search skills or keywords to view my most relevant tailored resume",
   
     resumeTabBusiness: "Business",
-    resumeTabHRRecruiter: "HR Recruiter",
-    resumeTabManager: "Manager",
-    resumeTabAnalyst: "Analyst",
-    resumeTabSDET: "SDET",
+    resumeTabHRRecruiter: "HR/Recruitment",
+    resumeTabManager: "Management",
+    resumeTabAnalyst: "Analytics",
+    resumeTabSDET: "Software",
 
     resumeCardTitle1: "Gene Sequence",
     resumeCardDescription1: "Developed two versions of a dynamic programming algorithm to determine the minimal cost of aligning gene sequences and extract an optimal alignment.",
@@ -669,10 +669,10 @@ const translations = {
     resumeTopTextSearchBar: "Busca habilidades o palabras clave para ver el currículum más relevante",
 
     resumeTabBusiness: "Negocios",
-    resumeTabHRRecruiter: "Reclutador",
-    resumeTabManager: "Gerente",
-    resumeTabAnalyst: "Analista",
-    resumeTabSDET: "Ingeniero",
+    resumeTabHRRecruiter: "Recursos Humanos",
+    resumeTabManager: "Gestión",
+    resumeTabAnalyst: "Analítica",
+    resumeTabSDET: "Software",
 
     resumeCardTitle1: "Secuencia Genética",
     resumeCardDescription1: "Desarrolladas dos versiones de un algoritmo de programación dinámica para determinar el coste mínimo de alineación de secuencias genéticas y extraer una alineación óptima.",
@@ -1059,10 +1059,10 @@ const translations = {
     resumeTopTextSearchBar: "Cerca habilitats o paraules clau per veure el currículum més rellevant",
 
     resumeTabBusiness: "Negocis",
-    resumeTabHRRecruiter: "Reclutador",
-    resumeTabManager: "Gerent",
-    resumeTabAnalyst: "Analista",
-    resumeTabSDET: "Enginyer",
+    resumeTabHRRecruiter: "Recursos Humans",
+    resumeTabManager: "Gestió",
+    resumeTabAnalyst: "Analítica",
+    resumeTabSDET: "Programari",
 
     resumeCardTitle1: "Seqüència Genètica",
     resumeCardDescription1: "Desenvolupades dues versions d'un algorisme de programació dinàmica per determinar el cost mínim d'alineació de seqüències genètiques i extreure una alineació òptima.",
