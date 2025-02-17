@@ -200,7 +200,7 @@ const translations = {
     aboutEndPage: (
       <>
         <p>
-        Discover how I can help you or your organization achieve meaningful results. Explore my <a href="#/qualifications" rel="noopener noreferrer">qualifications</a> and <a href="#/service" rel="noopener noreferrer">services</a>, or <a href="#/contact" target="_blank" rel="noopener noreferrer">contact</a> me directly to connect and learn more.
+        Discover how I can help you or your organization achieve meaningful results. Explore my <a href="/qualifications" rel="noopener noreferrer">qualifications</a> and <a href="/service" rel="noopener noreferrer">services</a>, or <a href="/contact" target="_blank" rel="noopener noreferrer">contact</a> me directly to connect and learn more.
         </p>
       </>
     ),
@@ -366,7 +366,7 @@ const translations = {
         My services and strategies focus on three core pillars that drive success in today’s evolving industries—business, technology, and people.
         Strong business management ensures efficiency and growth, technology enhances decision-making and innovation, and people are the foundation 
         of every thriving organization. By aligning these key elements, I help businesses navigate challenges, strengthen leadership,
-        and optimize operations. Let’s work together to build a stronger future for your business. <a href="#/contact" rel="noopener noreferrer" className="serviceTrioContactLink">Contact</a> me today to explore how we can collaborate.
+        and optimize operations. Let’s work together to build a stronger future for your business. <a href="/contact" rel="noopener noreferrer" className="serviceTrioContactLink">Contact</a> me today to explore how we can collaborate.
       </>
     ),
 
@@ -592,7 +592,7 @@ const translations = {
     aboutEndPage: (
       <>
         <p>
-          Descubre cómo puedo ayudarte a ti o a tu organización a lograr resultados impactantes. No dudes en explorar mis <a href="#/service" target="_blank" rel="noopener noreferrer">servicios</a> o <a href="#/contact" target="_blank" rel="noopener noreferrer">contactarme</a> directamente para conectar y saber más.
+          Descubre cómo puedo ayudarte a ti o a tu organización a lograr resultados impactantes. No dudes en explorar mis <a href="/service" target="_blank" rel="noopener noreferrer">servicios</a> o <a href="/contact" target="_blank" rel="noopener noreferrer">contactarme</a> directamente para conectar y saber más.
         </p>
       </>
     ),
@@ -980,7 +980,7 @@ const translations = {
     aboutEndPage: (
       <>
         <p>
-          Descobreix com puc ajudar-te a tu o a la teva organització a aconseguir resultats impactants. No dubtis a explorar els meus <a href="#/service" target="_blank" rel="noopener noreferrer">serveis</a> o a <a href="#/contact" target="_blank" rel="noopener noreferrer">contactar-me</a> directament per connectar i saber-ne més.
+          Descobreix com puc ajudar-te a tu o a la teva organització a aconseguir resultats impactants. No dubtis a explorar els meus <a href="/service" target="_blank" rel="noopener noreferrer">serveis</a> o a <a href="/contact" target="_blank" rel="noopener noreferrer">contactar-me</a> directament per connectar i saber-ne més.
         </p>
       </>
     ),
