@@ -205,7 +205,7 @@ const ResumePage = ({ translations, language }) => {
       content: translations.resumeCardContentBusiness,
     },
     "pdfs/hr_recruiter.pdf": {
-      image: "pdfs/pdf_images/hr_recruiter.png",
+      image: "pdfs/pdf_images/hr_recruitment.png",
       title: translations.resumeCardTitleHR,
       content: translations.resumeCardContentHR,
     },
