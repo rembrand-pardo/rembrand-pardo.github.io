@@ -90,8 +90,9 @@ const ResumePage = ({ translations, language }) => {
       const files = [
         { file: 'business_dictionary.json' },
         { file: 'management_dictionary.json' },
+        { file: 'analytics_dictionary.json' },
         { file: 'other_dictionary.json' },
-        { file: 'qa_dictionary.json' },
+        { file: 'software_dictionary.json' },
         { file: 'recruitment_dictionary.json' }
       ];
       
@@ -215,12 +216,12 @@ const ResumePage = ({ translations, language }) => {
       content: translations.resumeCardContentManagement,
     },
     "pdfs/public_relations.pdf": {
-      image: "pdfs/pdf_images/public_relations.png",
+      image: "pdfs/pdf_images/analytics.png",
       title: translations.resumeCardTitlePR,
       content: translations.resumeCardContentPR,
     },
     "pdfs/sdet.pdf": {
-      image: "pdfs/pdf_images/sdet.png",
+      image: "pdfs/pdf_images/software.png",
       title: translations.resumeCardTitleSDET,
       content: translations.resumeCardContentSDET,
     },
