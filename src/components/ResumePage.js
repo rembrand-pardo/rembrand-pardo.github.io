@@ -205,7 +205,7 @@ const ResumePage = ({ translations, language }) => {
       title: translations.resumeCardTitleBusiness,
       content: translations.resumeCardContentBusiness,
     },
-    "pdfs/hr_recruiter.pdf": {
+    "pdfs/hr_recruitment.pdf": {
       image: "pdfs/pdf_images/hr_recruitment.png",
       title: translations.resumeCardTitleHR,
       content: translations.resumeCardContentHR,
@@ -215,12 +215,12 @@ const ResumePage = ({ translations, language }) => {
       title: translations.resumeCardTitleManagement,
       content: translations.resumeCardContentManagement,
     },
-    "pdfs/public_relations.pdf": {
+    "pdfs/analytics.pdf": {
       image: "pdfs/pdf_images/analytics.png",
       title: translations.resumeCardTitlePR,
       content: translations.resumeCardContentPR,
     },
-    "pdfs/sdet.pdf": {
+    "pdfs/software.pdf": {
       image: "pdfs/pdf_images/software.png",
       title: translations.resumeCardTitleSDET,
       content: translations.resumeCardContentSDET,
@@ -229,18 +229,18 @@ const ResumePage = ({ translations, language }) => {
 
   const pdfToFocusCardsMap = {
     "pdfs/business.pdf": {
-      newCardSet: analysiscards,
+      newCardSet: cards,
     },
-    "pdfs/hr_recruiter.pdf": {
+    "pdfs/hr_recruitment.pdf": {
       newCardSet: recruitmentcards,
     },
     "pdfs/management.pdf": {
       newCardSet: managementcards,
     },
-    "pdfs/public_relations.pdf": {
-      newCardSet: cards,
+    "pdfs/analytics.pdf": {
+      newCardSet: analysiscards,
     },
-    "pdfs/sdet.pdf": {
+    "pdfs/software.pdf": {
       newCardSet: othercards,
     },
   };
