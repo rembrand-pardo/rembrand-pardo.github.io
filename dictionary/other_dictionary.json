@@ -1,16 +1,18 @@
 {
-    "pdfs/management.pdf": [
-      "public relations",
-      "marketing",
-      "human resources",
-      "risk management",
-      "cisco",
-      "cisco systems",
+  "pdfs/management.pdf": [
+    "analytics",
+    "public relations",
+    "marketing",
+    "human resources",
+    "risk management",
+    "cisco",
+    "cisco systems",
+    
 
 
 
-      "analista"
-    ]
+    "analista"
+  ]
 }
   
     
