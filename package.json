@@ -35,12 +35,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     
-    "postbuild": "cp build/index.html build/404.html", 
+    "postbuild": "cp build/index.html build/404.html && echo '<meta http-equiv=\"refresh\" content=\"0;url=/\">' > build/404.html", 
 
     "test": "react-scripts test",
     "eject": "react-scripts eject",
 
-    "predeploy": "npm run build && npm run postbuild",
+    "predeploy": "npm run build",
     
     "deploy": "gh-pages -d build",
     "clean": "rimraf build"
